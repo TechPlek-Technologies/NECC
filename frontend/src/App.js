@@ -19,6 +19,9 @@ import HomeFour from "./pages/HomeFour";
 import HomeFive from "./pages/HomeFive";
 import ChairmanDesk from "./pages/ChairmanDesk";
 import CorporateOverview from "./pages/CorporateOverview";
+import VisionAndQualityPolicy from "./pages/VisionAndQualityPolicy";
+import Career from "./pages/Career";
+import Feedback from "./pages/Feedback";
 
 function App() {
   useEffect(() => {
@@ -48,6 +51,9 @@ function App() {
         <Route exact path='/contact' element={<Contact />} />
         <Route exact path='/ChairmanDesk' element={<ChairmanDesk/>} />
         <Route exact path='/CorporateOverview' element={<CorporateOverview/>} />
+        <Route exact path='/VisionAndQualityPolicy' element={<VisionAndQualityPolicy/>} />
+        <Route exact path='/Career' element={<Career/>} />
+        <Route exact path='/Feedback' element={<Feedback/>} />
       </Routes>
       <ScrollToTop smooth color='#FA4318' />
     </BrowserRouter>

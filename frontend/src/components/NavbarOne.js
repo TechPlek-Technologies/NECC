@@ -192,7 +192,7 @@ const NavbarOne = () => {
                       <Link to='/home-3'>HISTORY</Link>
                     </li>
                     <li>
-                      <Link to='/home-4'>VISION & QUALITY POLICY</Link>
+                      <Link to='/VisionAndQualityPolicy'>VISION & QUALITY POLICY</Link>
                     </li>
                   </ul>
                 </li>
@@ -251,7 +251,7 @@ const NavbarOne = () => {
                   <Link to='/contact'>Contact Us</Link>
                   <ul className='sub-menu'>
                       <li>
-                        <Link to='/'>CAREERS</Link>
+                        <Link to='/Career'>CAREERS</Link>
                       </li>
                       <li>
                         <Link to='/home-2'>CUSTOMER CARE</Link>
@@ -260,7 +260,7 @@ const NavbarOne = () => {
                       <Link to='/faq'>FAQ</Link>
                       </li>
                       <li>
-                        <Link to='/home-4'>FEEDBACK</Link>
+                        <Link to='/Feedback'>FEEDBACK</Link>
                       </li>
                       </ul>
                 </li>

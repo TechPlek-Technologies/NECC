@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ModalVideo from "react-modal-video";
 
 
-const CareerInner= () => {
+const FeedbackInner= () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
@@ -70,4 +70,4 @@ const CareerInner= () => {
   );
 };
 
-export default CareerInner;
+export default FeedbackInner;
