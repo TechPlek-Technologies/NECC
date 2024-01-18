@@ -172,27 +172,29 @@ const NavbarOne = () => {
             >
               <ul className='navbar-nav menu-open'>
                 <li className='menu-item-has-children current-menu-item'>
-                  <Link to='#'>Home</Link>
+                  <Link to='/'>Home</Link>
                   <ul className='sub-menu'>
                     <li>
-                      <Link to='/'>Home 01</Link>
-                    </li>
-                    <li>
-                      <Link to='/home-2'>Home 02</Link>
-                    </li>
-                    <li>
-                      <Link to='/home-3'>Home 03</Link>
-                    </li>
-                    <li>
-                      <Link to='/home-4'>Home 04</Link>
-                    </li>
-                    <li>
-                      <Link to='/home-5'>Home 05</Link>
+                      <Link to='/'>Home</Link>
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li className='menu-item-has-children current-menu-item'>
                   <Link to='/about'>About Us</Link>
+                  <ul className='sub-menu'>
+                    <li>
+                      <Link to='/ChairmanDesk'>CHAIRMAN DESK</Link>
+                    </li>
+                    <li>
+                      <Link to='/CorporateOverview'>CORPORATE OVERVIEW</Link>
+                    </li>
+                    <li>
+                      <Link to='/home-3'>HISTORY</Link>
+                    </li>
+                    <li>
+                      <Link to='/home-4'>VISION & QUALITY POLICY</Link>
+                    </li>
+                  </ul>
                 </li>
                 <li className='menu-item-has-children'>
                   <Link to='#'>Services</Link>
@@ -245,8 +247,22 @@ const NavbarOne = () => {
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li className='menu-item-has-children current-menu-item'>
                   <Link to='/contact'>Contact Us</Link>
+                  <ul className='sub-menu'>
+                      <li>
+                        <Link to='/'>CAREERS</Link>
+                      </li>
+                      <li>
+                        <Link to='/home-2'>CUSTOMER CARE</Link>
+                      </li>
+                      <li>
+                      <Link to='/faq'>FAQ</Link>
+                      </li>
+                      <li>
+                        <Link to='/home-4'>FEEDBACK</Link>
+                      </li>
+                      </ul>
                 </li>
               </ul>
             </div>
