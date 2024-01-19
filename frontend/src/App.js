@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeOne from "./pages/HomeOne";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ScrollToTop from "react-scroll-to-top";
 import HomeTwo from "./pages/HomeTwo";
 import About from "./pages/About";
@@ -19,6 +19,8 @@ import HomeFour from "./pages/HomeFour";
 import HomeFive from "./pages/HomeFive";
 import ChairmanDesk from "./pages/ChairmanDesk";
 import CorporateOverview from "./pages/CorporateOverview";
+import SignIn from "./pages/SignIn";
+import Dashboard from "./pages/Dashboard/layout/Dashboard";
 
 function App() {
   useEffect(() => {
@@ -29,6 +31,9 @@ function App() {
     });
     AOS.refresh();
   }, []);
+
+  const [isAuthenticated,setIsAuthenticated]=useState(window.localStorage.getItem('isAuthenticated'))
+
   return (
     <BrowserRouter>
       <RouteScrollToTop />
@@ -48,6 +53,12 @@ function App() {
         <Route exact path='/contact' element={<Contact />} />
         <Route exact path='/ChairmanDesk' element={<ChairmanDesk/>} />
         <Route exact path='/CorporateOverview' element={<CorporateOverview/>} />
+        {
+          isAuthenticated? <Route exact path='/admin' element={<Dashboard/>} />:
+          <Route exact path='/admin' element={<SignIn setIsAuthenticated={setIsAuthenticated}/>} />
+        }
+        
+        {/* Add more protected routes as needed */}
       </Routes>
       <ScrollToTop smooth color='#FA4318' />
     </BrowserRouter>
