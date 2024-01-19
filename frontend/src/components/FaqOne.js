@@ -8,12 +8,12 @@ const FaqOne = () => {
       <div>
         <div className='container p-sm-0'>
           <div className='row'>
-            <div className='col-xl-6 col-lg-5 order-lg-2'>
+            {/* <div className='col-xl-6 col-lg-5 order-lg-2'>
               <div className='thumb text-center mb-4 mb-lg-0'>
                 <img src='assets/img/faq/1.png' alt='Transpro' />
               </div>
-            </div>
-            <div className='col-xl-6 col-lg-7 order-lg-1'>
+            </div> */}
+            <div className='col-xl-12 col-lg-7 order-lg-1'>
               <div className='section-title'>
                 <h4 className='subtitle'>FAQ</h4>
                 <h2 className='title'>FREQUENTLY ASKED ANY QUESTION</h2>
@@ -139,15 +139,14 @@ const FaqOne = () => {
                     </div>
                   </div>
                 </div>
-
-                <div className='accordion-item single-accordion-inner'>
+                 <div className='accordion-item single-accordion-inner'>
                   <h2 className='accordion-header' id='headingSix'>
                     <button
-                      className='accordion-button'
+                      className='accordion-button collapsed'
                       type='button'
                       data-bs-toggle='collapse'
                       data-bs-target='#collapseSix'
-                      aria-expanded='true'
+                      aria-expanded='false'
                       aria-controls='collapseSix'
                     >
                       <span>6.</span> Why should one need Insurance Cover for goods in transit ?
@@ -155,7 +154,7 @@ const FaqOne = () => {
                   </h2>
                   <div
                     id='collapseSix'
-                    className='accordion-collapse collapse show'
+                    className='accordion-collapse collapse'
                     aria-labelledby='headingSix'
                     data-bs-parent='#accordionExample'
                   >
@@ -167,11 +166,11 @@ const FaqOne = () => {
                 <div className='accordion-item single-accordion-inner'>
                   <h2 className='accordion-header' id='headingSeven'>
                     <button
-                      className='accordion-button'
+                      className='accordion-button collapsed'
                       type='button'
                       data-bs-toggle='collapse'
                       data-bs-target='#collapseSeven'
-                      aria-expanded='true'
+                      aria-expanded='false'
                       aria-controls='collapseSeven'
                     >
                       <span>7.</span> When does Storage/ demurrage charges become applicable?
@@ -179,7 +178,7 @@ const FaqOne = () => {
                   </h2>
                   <div
                     id='collapseSeven'
-                    className='accordion-collapse collapse show'
+                    className='accordion-collapse collapse'
                     aria-labelledby='headingSeven'
                     data-bs-parent='#accordionExample'
                   >
@@ -191,19 +190,19 @@ const FaqOne = () => {
                 <div className='accordion-item single-accordion-inner'>
                   <h2 className='accordion-header' id='headingEight'>
                     <button
-                      className='accordion-button'
+                      className='accordion-button collapsed'
                       type='button'
                       data-bs-toggle='collapse'
                       data-bs-target='#collapseEight'
-                      aria-expanded='true'
+                      aria-expanded='false'
                       aria-controls='collapseEight'
                     >
-                      <span>8.</span>Do N.E.C.C. undertake booking of the household consignments ?
+                      <span>8.</span> Do N.E.C.C. undertake booking of the household consignments ?
                     </button>
                   </h2>
                   <div
                     id='collapseEight'
-                    className='accordion-collapse collapse show'
+                    className='accordion-collapse collapse'
                     aria-labelledby='headingEight'
                     data-bs-parent='#accordionExample'
                   >
@@ -215,11 +214,11 @@ const FaqOne = () => {
                 <div className='accordion-item single-accordion-inner'>
                   <h2 className='accordion-header' id='headingNine'>
                     <button
-                      className='accordion-button'
+                      className='accordion-button collapsed'
                       type='button'
                       data-bs-toggle='collapse'
                       data-bs-target='#collapseNine'
-                      aria-expanded='true'
+                      aria-expanded='false'
                       aria-controls='collapseNine'
                     >
                       <span>9.</span> What are the prohibited materials which we can not carry? 
@@ -227,7 +226,7 @@ const FaqOne = () => {
                   </h2>
                   <div
                     id='collapseNine'
-                    className='accordion-collapse collapse show'
+                    className='accordion-collapse collapse'
                     aria-labelledby='headingNine'
                     data-bs-parent='#accordionExample'
                   >
@@ -235,7 +234,7 @@ const FaqOne = () => {
                     Please check the link below
                     </div>
                   </div>
-                </div>
+                </div>     
                 <div className='accordion-item single-accordion-inner mb-0'>
                   <h2 className='accordion-header' id='headingTen'>
                     <button

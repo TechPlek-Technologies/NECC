@@ -1,0 +1,31 @@
+.customstyle-Carrier{
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feedbackheader{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--heading-color);
+}
+
+.feedbackbox{
+    border: 0;
+    margin-bottom: 15px;
+    background: #ffffff;
+    box-shadow: 0px 10px 20px rgba(8, 12, 36, 0.08);
+}
+
+.customstyle-Service{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list-Investors{
+    margin-left:90px;
+}

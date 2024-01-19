@@ -9,7 +9,7 @@ const CareerOneAll = () => {
       <div className='service-area style-2 pd-top-115 pd-bottom-80'>
         <div className='container'>
           <div className='row justify-content-center'>
-            <div className='col-lg-7'>
+            <div className='col-lg-12'>
               <div className='section-title text-center'>
                 {/* <h4 className='subtitle'>SERVICES</h4> */}
                 <h2 className='title'>CURRENT OPENINGS</h2>
@@ -17,7 +17,7 @@ const CareerOneAll = () => {
             </div>
           </div>
 
-          <div className='row justify-content-center'>
+          <div className='row justify-content-center' >
             <div className='col-lg-4'>
               <div className='single-service-wrap'>
                 <div className='thumb'>
@@ -29,7 +29,7 @@ const CareerOneAll = () => {
                     />
                   </div>
                 </div>
-                <div className='details'>
+                <div className='details customstyle-Carrier'>
                   <h5>Branch Manager/ Supervisors</h5>
                   <p>
                   The candidate should be capable enough to manage the Branch with profitability and should be preferably from Transport industry. The incumbent should preferably be a graduate with effective communication skills and should be in the age group of 25-40 years.
@@ -56,7 +56,7 @@ const CareerOneAll = () => {
                     />
                   </div>
                 </div>
-                <div className='details'>
+                 <div className='details customstyle-Carrier'>
                   <h5>Marketing Executives </h5>
                   <p>
                   Preferably should have some experience in sales and marketing. The candidate should have strong flair for marketing and good communication skills and convincing power.
@@ -83,7 +83,7 @@ const CareerOneAll = () => {
                     />
                   </div>
                 </div>
-                <div className='details'>
+                <div className='details customstyle-Carrier'>
                   <h5>Operations Executives</h5>
                   <p>
                   The Candidate should be capable enough to perform all operational activities and maintain high level of service. He should have an experience in similar post for minimum 2 years.
@@ -110,7 +110,7 @@ const CareerOneAll = () => {
                     />
                   </div>
                 </div>
-                <div className='details'>
+                <div className='details customstyle-Carrier'>
                   <h5>Account Executives</h5>
                   <p>
                   The Candidate should be a graduate in commerce with 1-2 years of experience.
@@ -137,7 +137,7 @@ const CareerOneAll = () => {
                     />
                   </div>
                 </div>
-                <div className='details'>
+                <div className='details customstyle-Carrier'>
                   <h5>Data Entry Operators</h5>
                   <p>
                   The candidate should have basic knowledge of Windows operating system. MS Access, SQL server 2000, data base etc.

@@ -19,7 +19,7 @@ const VisionAndQualityPolicyInner= () => {
       <div className='service-area pd-top-120 pd-bottom-120'>
         <div className='container'>
           <div className='row justify-content-center'>
-            <div className='col-lg-8'>
+            <div className='col-lg-10'>
               <div className='service-details-wrap'>
                 <div className='thumb'>
                   <img src='assets/img/service/7.png' alt='Transpro' />

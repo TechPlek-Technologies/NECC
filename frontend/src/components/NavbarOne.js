@@ -189,7 +189,7 @@ const NavbarOne = () => {
                       <Link to='/CorporateOverview'>CORPORATE OVERVIEW</Link>
                     </li>
                     <li>
-                      <Link to='/home-3'>HISTORY</Link>
+                      <Link to='/'>HISTORY</Link>
                     </li>
                     <li>
                       <Link to='/VisionAndQualityPolicy'>VISION & QUALITY POLICY</Link>
@@ -204,6 +204,14 @@ const NavbarOne = () => {
                     </li>
                     <li>
                       <Link to='/service-details'>Service Details Page</Link>
+                    </li>
+                  </ul>
+                </li>
+                <li className='menu-item-has-children'>
+                  <Link to='#'>Investors</Link>
+                  <ul className='sub-menu'>
+                    <li>
+                      <Link to='/Investors'>Disclosures under Regulation 46 of SEBI (LODR)<br/>Regulations,2015</Link>
                     </li>
                   </ul>
                 </li>
@@ -254,7 +262,7 @@ const NavbarOne = () => {
                         <Link to='/Career'>CAREERS</Link>
                       </li>
                       <li>
-                        <Link to='/home-2'>CUSTOMER CARE</Link>
+                        <Link to='/'>CUSTOMER CARE</Link>
                       </li>
                       <li>
                       <Link to='/faq'>FAQ</Link>
