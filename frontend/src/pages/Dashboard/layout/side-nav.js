@@ -1,6 +1,5 @@
 import React from 'react';
 import {  Link as ReactRouterLink, useLocation,} from 'react-router-dom';
-import PropTypes from 'prop-types';
 import ChevronUpDownIcon from '@heroicons/react/24/solid/ChevronUpDownIcon';
 import {
   Box,
@@ -161,7 +160,3 @@ export const SideNav = (props) => {
   );
 };
 
-SideNav.propTypes = {
-  onClose: PropTypes.func,
-  open: PropTypes.bool
-};

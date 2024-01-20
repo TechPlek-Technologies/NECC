@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeOne from "./pages/HomeOne";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import ScrollToTop from "react-scroll-to-top";
 import HomeTwo from "./pages/HomeTwo";
 import About from "./pages/About";
@@ -22,10 +22,12 @@ import VisionAndQualityPolicy from "./pages/VisionAndQualityPolicy";
 import Career from "./pages/Career";
 import Feedback from "./pages/Feedback";
 import Faq from "./pages/Faq";
-import "./custum-css/style.css"
+import "./custum-css/style.css";
 import Investors from "./pages/Investors";
 import SignIn from "./pages/SignIn";
-import Dashboard from "./pages/Dashboard/layout/Dashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Home from "./pages/Dashboard/pages/Home";
+import About1 from "./pages/Dashboard/pages/About";
 
 function App() {
   useEffect(() => {
@@ -37,39 +39,57 @@ function App() {
     AOS.refresh();
   }, []);
 
-  const [isAuthenticated,setIsAuthenticated]=useState(window.localStorage.getItem('isAuthenticated'))
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    window.localStorage.getItem("isAuthenticated")
+  );
 
   return (
     <BrowserRouter>
       <RouteScrollToTop />
-      <Routes>
-        <Route exact path='/' element={<HomeOne />} />
-        <Route exact path='/home-2' element={<HomeTwo />} />
-        <Route exact path='/home-3' element={<HomeThree />} />
-        <Route exact path='/home-4' element={<HomeFour />} />
-        <Route exact path='/home-5' element={<HomeFive />} />
-        <Route exact path='/about' element={<About />} />
-        <Route exact path='/service' element={<Service />} />
-        <Route exact path='/service-details' element={<ServiceDetails />} />
-        <Route exact path='/blog' element={<Blog />} />
-        <Route exact path='/blog-details' element={<BlogDetails />} />
-        <Route exact path='/pricing' element={<Pricing />} />
-        <Route exact path='/faq' element={<Faq/>} />
-        <Route exact path='/contact' element={<Contact />} />
-        <Route exact path='/ChairmanDesk' element={<ChairmanDesk/>} />
-        <Route exact path='/CorporateOverview' element={<CorporateOverview/>} />
-        <Route exact path='/VisionAndQualityPolicy' element={<VisionAndQualityPolicy/>} />
-        <Route exact path='/Career' element={<Career/>} />
-        <Route exact path='/Feedback' element={<Feedback/>} />
-        <Route exact path='/Investors' element={<Investors/>} />
-        {
-          isAuthenticated? <Route exact path='/admin' element={<Dashboard/>} />:
-          <Route exact path='/admin' element={<SignIn setIsAuthenticated={setIsAuthenticated}/>} />
-        }
-        
-        {/* Add more protected routes as needed */}
-      </Routes>
-      <ScrollToTop smooth color='#FA4318' />
+      <Fragment>
+        <Routes>
+          <Route exact path="/" element={<HomeOne />} />
+          <Route exact path="/home-2" element={<HomeTwo />} />
+          <Route exact path="/home-3" element={<HomeThree />} />
+          <Route exact path="/home-4" element={<HomeFour />} />
+          <Route exact path="/home-5" element={<HomeFive />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/service" element={<Service />} />
+          <Route exact path="/service-details" element={<ServiceDetails />} />
+          <Route exact path="/blog" element={<Blog />} />
+          <Route exact path="/blog-details" element={<BlogDetails />} />
+          <Route exact path="/pricing" element={<Pricing />} />
+          <Route exact path="/faq" element={<Faq />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/ChairmanDesk" element={<ChairmanDesk />} />
+          <Route
+            exact
+            path="/CorporateOverview"
+            element={<CorporateOverview />}
+          />
+          <Route
+            exact
+            path="/VisionAndQualityPolicy"
+            element={<VisionAndQualityPolicy />}
+          />
+          <Route exact path="/Career" element={<Career />} />
+          <Route exact path="/Feedback" element={<Feedback />} />
+          <Route exact path="/Investors" element={<Investors />} />
+
+          {/* Admin Section */}
+          <Route exact path="/admin" element={<SignIn />} />
+
+          <Route exact path="/dashboard" element={<ProtectedRoute />}>
+            <Route exact path="/dashboard" element={<Home />} />
+          </Route>
+          <Route exact path="/demo" element={<ProtectedRoute />}>
+            <Route exact path="/demo" element={<About1 />} />
+          </Route>
+
+          {/* Add more protected routes as needed */}
+        </Routes>
+      </Fragment>
+      <ScrollToTop smooth color="#FA4318" />
     </BrowserRouter>
   );
 }
