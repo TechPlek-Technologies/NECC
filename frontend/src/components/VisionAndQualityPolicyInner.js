@@ -11,7 +11,7 @@ import {
 import ModalVideo from "react-modal-video";
 import { Link } from "react-router-dom";
 
-const ChairmanDeskInner= () => {
+const VisionAndQualityPolicyInner= () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
@@ -19,7 +19,7 @@ const ChairmanDeskInner= () => {
       <div className='service-area pd-top-120 pd-bottom-120'>
         <div className='container'>
           <div className='row justify-content-center'>
-            <div className='col-lg-12'>
+            <div className='col-lg-10'>
               <div className='service-details-wrap'>
                 <div className='thumb'>
                   <img src='assets/img/service/7.png' alt='Transpro' />
@@ -30,39 +30,28 @@ const ChairmanDeskInner= () => {
                     />
                   </div>
                 </div>
-                <h2>CHAIRMAN DESK</h2>
+                <h2>VISION STATEMENT</h2>
                 <p>
-                We being a premier cargo transportation and solution provider in India, have set a goal to provide seamless transit of material across national and international borders using multimode solutions for a speedier movement at the lowest cost.If one has to name some domestic cargo and Logistics companies, which are in aggressive mode in expanding their operations all over India, the name of NECC GROUP of Companies should certainly appear in a prominent way in the list.
+                To Provide Seamless Transit of Materials Across National and International Borders
+                Using Multi-Model Solutions for Speedier Movement at Lowest Cost.
                 </p>
-                <p>
-                Established in the year 1968, North Eastern Carrying Corporation Limited (NECC) is one of the leading logistic solution providers with offices  spread across all over India, Nepal & Bhutan. NECC offers a wide range of logistics related solutions to meet every customer requirement. NECC offers services for small parcels, Full Truck Load consignments, project consignments and over dimensional consignment (ODC). It also provides containerized movement of cargo, packing and moving, warehousing, 3PL and storage facilities all under one roof. The company has chalked out short to medium term plans for expansion as we Envisage greater opportunity unfolding in India.
-                </p>
-                <p>
-                We leverage our operational expertise, technology and a high capacity network of transportation vehicles, to identify logistics problems and provided end-to-end supply chain solution from a unique perspective- “clients”.
-                </p>
-                <p>
-                Since inception, NECC has been providing its clients with the flexibility, responsiveness and services they deserve, using our deep operating knowledge to create solutions as unique as per our client’s needs. However, keeping in mind the changing demands and the global economic landscape, NECC has invested in people, new technologies and equipments that ensure that its clients achieve their desired goals. “Team NECC is committed to exceed clients expectations”.  That is why many of our original clients rely on us even now with longer associations.
-                </p>
-                <h6>Sunil Kumar Jain</h6>
-                <h6>CMD, NECC Ltd.</h6>
-                {/* <div className='row'>
+
+                <div className='row'>
                   <div className='col-lg-6 align-self-center'>
                     <div className='thumb mb-lg-0 mb-4'>
                       <img src='assets/img/service/8.png' alt='Transpro' />
                     </div>
                   </div>
                   <div className='col-lg-6 align-self-center'>
-                    <h4 className='subtitle'>Global Transaction Advisory</h4>
+                    <h4 className='subtitle'>Quality Policy</h4>
+                    <p>Team NECC will strive to attain delivery and Distribution Excellence : </p>
                     <ul className='list-inner-wrap'>
-                      <li> Customer engagement matters</li>
-                      <li> The Love Boat promis someg for Plan</li>
-                      <li> Research beyond the business plan</li>
-                      <li> Logistics ground in Asia Pacific</li>
-                      <li> Logistics ground in South America</li>
-                      <li> Transportation across Europe</li>
+                      <li> By Aligning All Organizational Resources and Internal Systems.</li>
+                      <li> By Adopting Appropriate and Current Electronic Communication Technology to facilitate Easier Exchange of Information ,Intrenally and Externally.</li>
+                      <li> By Offering Customized Service and Products Through Specialized Divisions.</li>
                     </ul>
                   </div>
-                </div> */}
+                </div>
                 {/* <h4 className='subtitle mt-3'>How It Works</h4> */}
                 {/* <p>
                   Holisticly conceptualize go forward customer service rather
@@ -215,4 +204,4 @@ const ChairmanDeskInner= () => {
   );
 };
 
-export default ChairmanDeskInner;
+export default VisionAndQualityPolicyInner;
