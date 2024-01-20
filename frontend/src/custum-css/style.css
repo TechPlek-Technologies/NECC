@@ -27,5 +27,45 @@
 }
 
 .list-Investors{
-    margin-left:90px;
+    margin-left:10px;
+}
+
+.list-Investors1{
+    margin-left:1px;
+    list-style-type: none;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.list-Investors2{
+    margin-right:5px;
+}
+
+.CorporateInformation{
+    font-size: 22px;
+}
+
+.CorporateInformation1{
+    font-size: 18px;
+}
+
+.CorporateInformation2{
+    margin-top: 10px;
+    border-bottom: 1px solid rgb(195, 191, 191);
+    padding:4px;
+}
+.CorporateInformation3{
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.list-Corporate1{
+    margin-top:30px;
+    list-style-type: none;
+    font-size: 15px;
+    color: rgb(53, 52, 52);
+}
+
+.list-Corporate2{
+    margin-right:12px;
 }

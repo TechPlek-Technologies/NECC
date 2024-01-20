@@ -28,6 +28,7 @@ import SignIn from "./pages/SignIn";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Home from "./pages/Dashboard/pages/Home";
 import About1 from "./pages/Dashboard/pages/About";
+import CorporateInformation from "./pages/CorporateInformation";
 
 function App() {
   useEffect(() => {
@@ -75,6 +76,7 @@ function App() {
           <Route exact path="/Career" element={<Career />} />
           <Route exact path="/Feedback" element={<Feedback />} />
           <Route exact path="/Investors" element={<Investors />} />
+        <Route exact path='/CorporateInformation' element={<CorporateInformation/>} />
 
           {/* Admin Section */}
           <Route exact path="/admin" element={<SignIn />} />

@@ -215,7 +215,7 @@ const NavbarOne = () => {
                     </li>
                   </ul>
                 </li>
-                <li className='menu-item-has-children'>
+                {/* <li className='menu-item-has-children'>
                   <Link to='#'>Pages</Link>
                   <ul className='sub-menu'>
                     <li>
@@ -243,8 +243,8 @@ const NavbarOne = () => {
                       <Link to='/contact'>Contact</Link>
                     </li>
                   </ul>
-                </li>
-                <li className='menu-item-has-children'>
+                </li> */}
+                {/* <li className='menu-item-has-children'>
                   <Link to='#'>Blog</Link>
                   <ul className='sub-menu'>
                     <li>
@@ -254,7 +254,7 @@ const NavbarOne = () => {
                       <Link to='/blog-details'>Blog Details</Link>
                     </li>
                   </ul>
-                </li>
+                </li> */}
                 <li className='menu-item-has-children current-menu-item'>
                   <Link to='/contact'>Contact Us</Link>
                   <ul className='sub-menu'>

@@ -45,12 +45,12 @@ const PartnerOne = () => {
   return (
     <>
       {/*partner-area start*/}
-      <div className='partner-area pd-top-90 pd-bottom-120'>
+      <div className='partner-area pd-top-20 pd-bottom-20'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-7'>
               <div className='section-title text-center'>
-                <h4 className='subtitle'>HAPPY CLIENTS</h4>
+                {/* <h4 className='subtitle'>HAPPY CLIENTS</h4> */}
                 <h2 className='title'>TRUSTED BY OUR 365,000 CLIENTS</h2>
                 <p className='content'>
                   Dramatically enhance interactive metrics for reliable
