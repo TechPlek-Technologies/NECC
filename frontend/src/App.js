@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeOne from "./pages/HomeOne";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ScrollToTop from "react-scroll-to-top";
 import HomeTwo from "./pages/HomeTwo";
 import About from "./pages/About";
@@ -24,6 +24,8 @@ import Feedback from "./pages/Feedback";
 import Faq from "./pages/Faq";
 import "./custum-css/style.css"
 import Investors from "./pages/Investors";
+import SignIn from "./pages/SignIn";
+import Dashboard from "./pages/Dashboard/layout/Dashboard";
 
 function App() {
   useEffect(() => {
@@ -34,6 +36,9 @@ function App() {
     });
     AOS.refresh();
   }, []);
+
+  const [isAuthenticated,setIsAuthenticated]=useState(window.localStorage.getItem('isAuthenticated'))
+
   return (
     <BrowserRouter>
       <RouteScrollToTop />
@@ -57,6 +62,12 @@ function App() {
         <Route exact path='/Career' element={<Career/>} />
         <Route exact path='/Feedback' element={<Feedback/>} />
         <Route exact path='/Investors' element={<Investors/>} />
+        {
+          isAuthenticated? <Route exact path='/admin' element={<Dashboard/>} />:
+          <Route exact path='/admin' element={<SignIn setIsAuthenticated={setIsAuthenticated}/>} />
+        }
+        
+        {/* Add more protected routes as needed */}
       </Routes>
       <ScrollToTop smooth color='#FA4318' />
     </BrowserRouter>
