@@ -26,6 +26,7 @@ import "./custum-css/style.css"
 import Investors from "./pages/Investors";
 import SignIn from "./pages/SignIn";
 import Dashboard from "./pages/Dashboard/layout/Dashboard";
+import CorporateInformation from "./pages/CorporateInformation";
 
 function App() {
   useEffect(() => {
@@ -62,6 +63,7 @@ function App() {
         <Route exact path='/Career' element={<Career/>} />
         <Route exact path='/Feedback' element={<Feedback/>} />
         <Route exact path='/Investors' element={<Investors/>} />
+        <Route exact path='/CorporateInformation' element={<CorporateInformation/>} />
         {
           isAuthenticated? <Route exact path='/admin' element={<Dashboard/>} />:
           <Route exact path='/admin' element={<SignIn setIsAuthenticated={setIsAuthenticated}/>} />

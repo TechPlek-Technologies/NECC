@@ -22,7 +22,7 @@ const InvestorsInner= () => {
                   <div className='col-lg-12 align-self-center'>
                     <h6 className='subtitle list-Investors'>Disclosures under Regulation 46 of SEBI (LODR) Regulations,2015</h6>
                     <ul className='list-Investors1' >
-                      <li> <Link to='#'>
+                      <li> <Link to='/CorporateInformation'>
                         <span className='list-Investors2'>
                           <FaArrowRight />
                         </span>

@@ -1,7 +1,7 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
 const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
-const ContactOne = React.lazy(() => import("../components/ContactOne"));
+// const ContactOne = React.lazy(() => import("../components/ContactOne"));
 const FaqOne = React.lazy(() => import("../components/FaqOne"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
@@ -30,12 +30,12 @@ const Faq = () => {
           </div>
 
           {/* Contact One */}
-          <div
+          {/* <div
             className='call-to-contact-area pd-top-140  mt-0'
             style={{ background: "#F9F9F9" }}
           >
             <ContactOne />
-          </div>
+          </div> */}
 
           {/* Partner One */}
           <PartnerOne />
