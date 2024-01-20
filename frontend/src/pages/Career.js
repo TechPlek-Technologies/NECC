@@ -1,17 +1,15 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
 import SearchPopup from "../elements/SearchPopup";
-// import ServiceDetailsInner from "../components/ServiceDetailsInner";
-// import PartnerOne from "../components/PartnerOne";
-import FooterBottomOne from "../components/FooterBottomOne";
+import NavbarOne from "../components/NavbarOne";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
-import ChairmanDeskInner from "../components/ChairmanDeskInner";
-import CorporateOverviewInner from "../components/CorporateOverviewInner";
+import FooterBottomOne from "../components/FooterBottomOne";
 import PartnerOne from "../components/PartnerOne";
-const NavbarOne = React.lazy(() => import("../components/NavbarOne"));
+import CareerInner from "../components/CareerInner";
+import CareerOneAll from "../components/CareerOneAll";
 
-const CorporateOverview = () => {
+const Career = () => {
     return (
       <>
         <Fragment>
@@ -23,11 +21,14 @@ const CorporateOverview = () => {
             <NavbarOne />
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"CORPORATE OVERVIEW"} />
-
-            {/* Service Details Inner */}
-            <CorporateOverviewInner/>
+            <Breadcrumb title={"CAREERS"} />
   
+            {/* Service Details Inner */}
+            <CareerInner/>
+
+            {/* Service One All */}
+          <CareerOneAll />
+
             {/* Partner One */}
             <PartnerOne />
   
@@ -36,11 +37,10 @@ const CorporateOverview = () => {
   
             {/* Footer Bottom One */}
             <FooterBottomOne />
-          </Suspense>
+          </Suspense>{" "}
         </Fragment>
       </>
     );
   };
   
-  export default CorporateOverview;
-  
+  export default Career;

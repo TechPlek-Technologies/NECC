@@ -11,7 +11,6 @@ import ServiceDetails from "./pages/ServiceDetails";
 import Blog from "./pages/Blog";
 import BlogDetails from "./pages/BlogDetails";
 import Pricing from "./pages/Pricing";
-import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
 import RouteScrollToTop from "./elements/RouteScrollToTop";
 import HomeThree from "./pages/HomeThree";
@@ -19,6 +18,12 @@ import HomeFour from "./pages/HomeFour";
 import HomeFive from "./pages/HomeFive";
 import ChairmanDesk from "./pages/ChairmanDesk";
 import CorporateOverview from "./pages/CorporateOverview";
+import VisionAndQualityPolicy from "./pages/VisionAndQualityPolicy";
+import Career from "./pages/Career";
+import Feedback from "./pages/Feedback";
+import Faq from "./pages/Faq";
+import "./custum-css/style.css"
+import Investors from "./pages/Investors";
 
 function App() {
   useEffect(() => {
@@ -44,10 +49,14 @@ function App() {
         <Route exact path='/blog' element={<Blog />} />
         <Route exact path='/blog-details' element={<BlogDetails />} />
         <Route exact path='/pricing' element={<Pricing />} />
-        <Route exact path='/faq' element={<Faq />} />
+        <Route exact path='/faq' element={<Faq/>} />
         <Route exact path='/contact' element={<Contact />} />
         <Route exact path='/ChairmanDesk' element={<ChairmanDesk/>} />
         <Route exact path='/CorporateOverview' element={<CorporateOverview/>} />
+        <Route exact path='/VisionAndQualityPolicy' element={<VisionAndQualityPolicy/>} />
+        <Route exact path='/Career' element={<Career/>} />
+        <Route exact path='/Feedback' element={<Feedback/>} />
+        <Route exact path='/Investors' element={<Investors/>} />
       </Routes>
       <ScrollToTop smooth color='#FA4318' />
     </BrowserRouter>
