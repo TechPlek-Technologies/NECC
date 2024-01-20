@@ -1,11 +1,19 @@
 import { Box, Divider, MenuItem, MenuList, Popover, Typography } from '@mui/material';
+import { useContext } from 'react';
+import { AuthContext } from '../../../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 export const AccountPopover = (props) => {
   const { anchorEl, onClose, open } = props;
-
+  const {  setIsAuthenticated } = useContext(AuthContext);
+  const navigate=useNavigate();
   const handleSignOut =()=>{
-    console.log("signout")
-  }
+    console.log("signout");
+    setIsAuthenticated(false);
+    localStorage.removeItem('Token');
+    localStorage.removeItem('userData');
+    navigate('./../admin')
+    }
   return (
     <Popover
       anchorEl={anchorEl}
