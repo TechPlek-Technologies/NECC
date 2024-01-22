@@ -11,7 +11,7 @@ import {
 import ModalVideo from "react-modal-video";
 import { Link } from "react-router-dom";
 
-const ServiceDetailsInner = () => {
+const ServiceDetailsInner = () => { 
   const [isOpen, setOpen] = useState(false);
   return (
     <>

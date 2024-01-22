@@ -21,15 +21,6 @@ const CareerInner= () => {
           <div className='row justify-content-center'>
             <div className='col-lg-12'>
               <div className='service-details-wrap'>
-                <div className='thumb'>
-                  <img src='assets/img/service/7.png' alt='Transpro' />
-                  <div className='icon'>
-                    <img
-                      src='assets/img/service/service-icon-1.png'
-                      alt='Transpro'
-                    />
-                  </div>
-                </div>
                 <h2>CAREERS</h2>
                 <p>
                 We at NECC value employee relationships and focus on career growth and are committed to invest on talent. NECC grooms young minds and is the preferred place for career in the Indian logistic industry.
