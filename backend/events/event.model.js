@@ -9,6 +9,7 @@ function model(sequelize) {
         name: { type: DataTypes.STRING, allowNull: false },
         pdfFile: { type: DataTypes.STRING, allowNull: false },
         section: { type: DataTypes.STRING, allowNull: false },
+        date: { type: DataTypes.STRING, allowNull: true },
         categoryId: { type: DataTypes.INTEGER, allowNull: false },
         // You can add more attributes as needed
     };
