@@ -12,7 +12,7 @@ export const AccountPopover = (props) => {
     setIsAuthenticated(false);
     localStorage.removeItem('Token');
     localStorage.removeItem('userData');
-    navigate('./../admin')
+    navigate('/admin')
     }
   return (
     <Popover

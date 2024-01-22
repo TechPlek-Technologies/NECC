@@ -5,14 +5,14 @@ import UserIcon from '@heroicons/react/24/solid/UserIcon';
 import UserPlusIcon from '@heroicons/react/24/solid/UserPlusIcon';
 import UsersIcon from '@heroicons/react/24/solid/UsersIcon';
 import XCircleIcon from '@heroicons/react/24/solid/XCircleIcon';
-import ServerIcon from '@heroicons/react/24/solid/ServerIcon';
+import BriefcaseIcon from '@heroicons/react/24/solid/BriefcaseIcon';
 
 import { SvgIcon } from '@mui/material';
 
 export const items = [
   {
     title: 'Account',
-    path: '/dashboard',
+    path: '/admin/dashboard',
     icon: (
       <SvgIcon fontSize="small">
         <UserIcon />
@@ -20,11 +20,11 @@ export const items = [
     )
   },
   {
-    title: 'Customers',
-    path: '/demo',
+    title: 'Career',
+    path: '/admin/career',
     icon: (
       <SvgIcon fontSize="small">
-         <ServerIcon />
+         <BriefcaseIcon />
       </SvgIcon>
     )
   },
