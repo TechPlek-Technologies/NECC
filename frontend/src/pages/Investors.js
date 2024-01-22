@@ -20,7 +20,7 @@ const Investors = () => {
             <NavbarOne />
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"INVESTORS"} />
+            <Breadcrumb title={"INVESTORS"} imgSrc={"assets/img/banner/breadcrumb.png"} />
 
             {/*Investors Inner */}
             <InvestorsInner/>

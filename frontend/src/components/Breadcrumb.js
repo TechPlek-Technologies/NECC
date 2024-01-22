@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Breadcrumb = ({ title }) => {
+const Breadcrumb = ({ title,imgSrc }) => {
   return (
     <>
       {/* breadcrumb start */}
       <div
         className='breadcrumb-area bg-overlay-2'
-        style={{ backgroundImage: 'url("assets/img/banner/breadcrumb.png")' }}
+        style={{ backgroundImage: `url("${imgSrc}")` }}
       >
         <div className='container'>
           <div className='row'>

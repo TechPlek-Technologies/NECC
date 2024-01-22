@@ -1,41 +1,77 @@
 import React, { useState } from "react";
 import {
-  FaArrowRight,
-  FaPhoneAlt,
-  FaPlay,
-  FaRegEnvelope,
-  FaRegFileAlt,
-  FaRegFilePdf,
-  FaSearch,
+ 
+  FaBox,
+  FaMoneyBillAlt,
+  FaShieldAlt,
+  FaTruck,
 } from "react-icons/fa";
 import ModalVideo from "react-modal-video";
-import { Link } from "react-router-dom";
 
 const VisionAndQualityPolicyInner= () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
       {/* service area start */}
-      <div className='service-area pd-top-120 pd-bottom-120'>
+      <div className='features-area style-02'>
+        <div className='container'>
+          <div className='row justify-content-start'>
+            <div className='col-lg-4 offset-lg-1 d-flex'>
+              <div className='section-title white  text-left m-auto'>
+                <h2 className='title active'>VISION STATEMENT</h2>
+                <p className='des'>
+                To Provide Seamless Transit of Materials Across National and International Borders
+                Using Multi-Model Solutions for Speedier Movement at Lowest Cost.
+                </p>
+                <div className='btn-wrapper animated fadeInUpBig text-left'>
+                  <a href='#' className='boxed-btn btn-bounce mt-3'>
+                    Contact us
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-6'>
+              <div className='features-item'>
+                <div className='row'>
+                  <div className='col-lg-6'>
+                    <div className='single-features-item'>
+                      <div className='icon'>
+                        <FaMoneyBillAlt />
+                      </div>
+                      <h4>Plan</h4>
+                    </div>
+                    <div className='single-features-item'>
+                      <div className='icon'>
+                        <FaTruck />
+                      </div>
+                      <h4>Act</h4>
+                    </div>
+                  </div>
+                  <div className='col-lg-6 mg-top-60'>
+                    <div className='single-features-item'>
+                      <div className='icon'>
+                        <FaBox />
+                      </div>
+                      <h4>Do</h4>
+                    </div>
+                    <div className='single-features-item'>
+                      <div className='icon'>
+                        <FaShieldAlt />
+                      </div>
+                      <h4>Check</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='service-area pd-top-20 pd-bottom-160'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-10'>
               <div className='service-details-wrap'>
-                <div className='thumb'>
-                  <img src='assets/img/service/7.png' alt='Transpro' />
-                  <div className='icon'>
-                    <img
-                      src='assets/img/service/service-icon-1.png'
-                      alt='Transpro'
-                    />
-                  </div>
-                </div>
-                <h2>VISION STATEMENT</h2>
-                <p>
-                To Provide Seamless Transit of Materials Across National and International Borders
-                Using Multi-Model Solutions for Speedier Movement at Lowest Cost.
-                </p>
-
                 <div className='row'>
                   <div className='col-lg-6 align-self-center'>
                     <div className='thumb mb-lg-0 mb-4'>
@@ -43,7 +79,7 @@ const VisionAndQualityPolicyInner= () => {
                     </div>
                   </div>
                   <div className='col-lg-6 align-self-center'>
-                    <h4 className='subtitle'>Quality Policy</h4>
+                    <h2 className='subtitle'>QUALITY POLICY</h2>
                     <p>Team NECC will strive to attain delivery and Distribution Excellence : </p>
                     <ul className='list-inner-wrap'>
                       <li> By Aligning All Organizational Resources and Internal Systems.</li>
@@ -52,143 +88,24 @@ const VisionAndQualityPolicyInner= () => {
                     </ul>
                   </div>
                 </div>
-                {/* <h4 className='subtitle mt-3'>How It Works</h4> */}
-                {/* <p>
-                  Holisticly conceptualize go forward customer service rather
-                  than transparent infomediaries. Continually envisioneer 2.0
-                  potentialities without team building processes. Dramatically
-                  pursue client-centric human capital before client-centered
-                  sources.
-                </p> */}
-                {/* <div className='video-thumb-wrap pt-1 pb-4'>
-                  <img src='assets/img/service/9.png' alt='Transpro' />
-                  <span
-                    className='video-play-btn cursor-pointer'
-                    data-effect='mfp-zoom-in'
-                    onClick={() => setOpen(true)}
-                  >
-                    <FaPlay />
-                  </span>
-                </div> */}
-                {/* <p className='last-para'>
-                  Dramatically morph extensive users before market-driven
-                  partnerships. Conveniently initiate best-of-breed resources
-                  and enabled architectures.
-                </p> */}
               </div>
             </div>
-            {/* <div className='col-lg-4'>
-              <div className='sidebar-area'>
-                <div className='widget widget_search'>
-                  <form className='search-form'>
-                    <div className='form-group'>
-                      <input type='text' placeholder='Search here...' />
-                    </div>
-                    <button className='submit-btn' type='submit'>
-                      <FaSearch />
-                    </button>
-                  </form>
-                </div>
-                <div className='widget widget_catagory'>
-                  <h4 className='widget-title'>
-                    SERVICE LIST
-                    <span className='dot' />
-                  </h4>
-                  <ul className='catagory-items'>
-                    <li>
-                      <Link to='/blog'>
-                        Air Transportation{" "}
-                        <span>
-                          <FaArrowRight />
-                        </span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/blog'>
-                        Sea Transportation{" "}
-                        <span>
-                          <FaArrowRight />
-                        </span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/blog'>
-                        Warehouse{" "}
-                        <span>
-                          <FaArrowRight />
-                        </span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/blog'>
-                        Road Transportation{" "}
-                        <span>
-                          <FaArrowRight />
-                        </span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/blog'>
-                        Train Transportation{" "}
-                        <span>
-                          <FaArrowRight />
-                        </span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/blog'>
-                        Land Transportation{" "}
-                        <span>
-                          <FaArrowRight />
-                        </span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className='widget widget_download'>
-                  <h4 className='widget-title'>
-                    DOWNLOAD BROCHURE
-                    <span className='dot' />
-                  </h4>
-                  <ul className='download-items'>
-                    <li>
-                      <a href='#'>
-                        {" "}
-                        <FaRegFilePdf /> DOWNLOAD PDF
-                      </a>
-                    </li>
-                    <li>
-                      <a href='#'>
-                        {" "}
-                        <FaRegFileAlt /> DOWNLOAD DOC{" "}
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  className='widget widget_support text-center mb-0'
-                  style={{
-                    background: "url(assets/img/widget/support-bg.png)",
-                  }}
-                >
-                  <h4 className='widget-title style-white'>
-                    24/7 ONLINE SUPPORT <span className='dot' />
-                  </h4>
-                  <p>
-                    Assertively pontificate high standards in scenarios rather
-                    than sustainable system. Interactively empower.
-                  </p>
-                  <p className='contact'>
-                    <FaRegEnvelope />
-                    info@transpro.com
-                  </p>
-                  <p className='contact mb-0'>
-                    <FaPhoneAlt />
-                    +1 800-435-7106
-                  </p>
+          </div>
+        </div>
+      </div>
+      <div className='fact-area' style={{ background: "#F9F9F9" }}>
+        <div className='container'>
+          <div
+            className='fact-counter-area CorporateOverview'
+            style={{ background: "url(assets/img/fact/bg.png)" }}
+          >
+            <div className='row justify-content-center'>
+              <div className='col-lg-12 col-md-6'>
+                <div>
+                  <h5 className='visionStat'><i>TEAM NECC IS COMMITED TO EXCEED CLIENT EXPECTATIONS</i></h5>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

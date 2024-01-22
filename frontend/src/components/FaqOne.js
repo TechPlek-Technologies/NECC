@@ -15,7 +15,6 @@ const FaqOne = () => {
             </div> */}
             <div className='col-xl-12 col-lg-7 order-lg-1'>
               <div className='section-title'>
-                <h4 className='subtitle'>FAQ</h4>
                 <h2 className='title'>FREQUENTLY ASKED ANY QUESTION</h2>
               </div>
               <div className='accordion faq-accordion' id='accordionExample'>

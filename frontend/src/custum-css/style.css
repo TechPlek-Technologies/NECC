@@ -48,9 +48,9 @@
     line-height: 30px;
 }
 
-.list-Investors2{
+/* .list-Investors2{
     margin-right:5px;
-}
+} */
 
 .CorporateInformation{
     font-size: 22px;
@@ -80,3 +80,19 @@
 .list-Corporate2{
     margin-right:12px;
 }
+
+.visionStat{
+    margin-top: -10px;
+    color:#ffffff;
+    margin-left: 180px;
+}
+
+/* .solutionBg{
+    background-size: cover;
+    display: block;
+    height: 100%;
+    position: relative;
+    right: 100px;
+    top: 45px;
+    z-index: 1;
+} */
