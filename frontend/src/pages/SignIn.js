@@ -51,7 +51,7 @@ export default function SignIn() {
           window.localStorage.setItem("Token",response.data.token)
           setIsAuthenticated(true)
           setError(null);
-          navigate("/dashboard");
+          navigate("/admin/dashboard");
           
         } catch (error) {
           // Handle authentication failure

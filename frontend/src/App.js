@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeOne from "./pages/HomeOne";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect } from "react";
 import ScrollToTop from "react-scroll-to-top";
 import HomeTwo from "./pages/HomeTwo";
 import About from "./pages/About";
@@ -27,8 +27,8 @@ import Investors from "./pages/Investors";
 import SignIn from "./pages/SignIn";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Home from "./pages/Dashboard/pages/Home";
-import About1 from "./pages/Dashboard/pages/About";
 import CorporateInformation from "./pages/CorporateInformation";
+import Carrier from "./pages/Dashboard/pages/Carrier";
 
 function App() {
   useEffect(() => {
@@ -39,10 +39,6 @@ function App() {
     });
     AOS.refresh();
   }, []);
-
-  const [isAuthenticated, setIsAuthenticated] = useState(
-    window.localStorage.getItem("isAuthenticated")
-  );
 
   return (
     <BrowserRouter>
@@ -76,16 +72,23 @@ function App() {
           <Route exact path="/Career" element={<Career />} />
           <Route exact path="/Feedback" element={<Feedback />} />
           <Route exact path="/Investors" element={<Investors />} />
-        <Route exact path='/CorporateInformation' element={<CorporateInformation/>} />
+          <Route
+            exact
+            path="/CorporateInformation"
+            element={<CorporateInformation />}
+          />
 
           {/* Admin Section */}
           <Route exact path="/admin" element={<SignIn />} />
 
-          <Route exact path="/dashboard" element={<ProtectedRoute />}>
-            <Route exact path="/dashboard" element={<Home />} />
-          </Route>
-          <Route exact path="/demo" element={<ProtectedRoute />}>
-            <Route exact path="/demo" element={<About1 />} />
+          <Route exact path="/admin" element={<ProtectedRoute />}>
+            <Route exact path="/admin/dashboard" element={<Home />} />
+            <Route
+              exact
+              path="/admin/career"
+              element={<Carrier />}
+            ></Route>
+            
           </Route>
 
           {/* Add more protected routes as needed */}

@@ -9,7 +9,7 @@ function Home() {
   const theme = createTheme();
   return (
     <>
-      <ThemeProvider theme={theme}>
+       <ThemeProvider theme={theme}>
         <Layout>
           <>
           
@@ -27,10 +27,10 @@ function Home() {
                   </div>
                   <div>
                     <Grid container spacing={3}>
-                      <Grid item  xs={12} md={6} lg={4}>
+                      <Grid xs={12} md={6} lg={4}>
                         <AccountProfile />
                       </Grid>
-                      <Grid item  xs={12} md={6} lg={8}>
+                      <Grid xs={12} md={6} lg={8}>
                         <AccountProfileDetails />
                       </Grid>
                     </Grid>

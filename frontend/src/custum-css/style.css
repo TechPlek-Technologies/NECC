@@ -12,6 +12,17 @@
     color: var(--heading-color);
 }
 
+.simplebar-placeholder{
+    height: 10px !important;
+}
+
+.fixed-width-column {
+    width: 500px; /* Adjust the width as needed */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
 .feedbackbox{
     border: 0;
     margin-bottom: 15px;
