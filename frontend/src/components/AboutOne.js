@@ -6,7 +6,7 @@ const AboutOne = () => {
   return (
     <>
       {/* about area start */}
-      <div className='about-area pd-bottom-120'>
+      <div className='about-area pd-bottom-140'>
         <div className='container'>
           <div className='about-area-inner'>
             <div className='row'>

@@ -1,124 +1,186 @@
-import React, { useState } from "react";
-import ModalVideo from "react-modal-video";
-
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import {
+  FaCalculator,
+  FaFileAlt,
+  FaMapMarkerAlt,
+  FaPencilAlt,
+  FaPhoneAlt,
+  FaRegEnvelope,
+  FaUserAlt,
+} from "react-icons/fa";
+import { toast, Toaster } from "react-hot-toast";
 
 const FeedbackInner= () => {
-  const [isOpen, setOpen] = useState(false);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  const form = useRef();
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleSubjectChange = (e) => {
-    setSubject(e.target.value);
-  };
-
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // Reset the form after submission
-    setName('');
-    setEmail('');
-    setSubject('');
-    setMessage('');
+    // Please See Documentation for more information
+    emailjs
+      .sendForm(
+        "service_yipk4xg", //YOUR_SERVICE_ID
+        "template_71bgc2q", //YOUR_TEMPLATE_ID
+        form.current,
+        "cwf8kROl5o3__96Ti" //YOUR_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          if (result.text === "OK") {
+            toast.success("Massage Sent Successfully!");
+            form.current[0].value = "";
+            form.current[1].value = "";
+            form.current[2].value = "";
+            form.current[3].value = "";
+          }
+        },
+        (error) => {
+          if (error.text !== "OK") {
+            toast.success("Massage Not Sent!");
+          }
+        }
+      );
   };
-
-
   return (
     <>
-      {/* service area start */}
-      <div className='pricing-area pd-top-15 pd-bottom-10 col-lg-12'>
-        <div className='container'>
-          <div className='row justify-content-center'>
-            <div className='col-lg-12'>
-              <div className='service-details-wrap'>
-                <h2>FEEDBACK</h2>
-                <p>
-                Comments or questions are welcome.<br/> * indicates required field
-                </p>
-                <form className='container' onSubmit={handleSubmit}>
-                <div className="row justify-content-center">
-                      <div>
-                      <label className='feedbackheader'>Name:*</label><br/>
-                        <input
-                          className='col-lg-10 feedbackbox'
-                          id="name"
-                          name="name"
-                          placeholder="Name*"
-                          type="text"
-                          value={name}
-                          onChange={handleNameChange}
-                        />
-                      </div>
-                      <div>
-                      <label className='feedbackheader'>Email:*</label><br/>
-                        <input
-                         className='col-lg-10 feedbackbox'
-                          id="email"
-                          name="email"
-                          placeholder="Email*"
-                          type="email"
-                          value={email}
-                          onChange={handleEmailChange}
-                        />
-                      </div>
-                      <div>
-                      <label className='feedbackheader'>Subject:*</label><br/>
-                        <input
-                         className='col-lg-10 feedbackbox'
-                          id="subject"
-                          name="phone"
-                          placeholder="Subject*"
-                          type="text"
-                          value={subject}
-                          onChange={handleSubjectChange}
-                        />
-                      </div>
-                      <div>
-                      <label className='feedbackheader'>Message:*</label><br/>
-                        <textarea
-                          className='col-lg-10 feedbackbox'
-                          id="message"
-                          name="message"
-                          placeholder="Your Message*"
-                          value={message}
-                          onChange={handleMessageChange}
-                        />
-                      </div>
-                      <div>
-                      <button className='btn btn-base' type="submit">
-                          SEND
-                        </button>
-                      </div>
+      {/* Feedback area start */}
+      <div className='container'>
+        <div className='contact-area mg-top-120 mb-120'>
+          <div className='row g-0 justify-content-center'>
+          {/* <div className='col-lg-5'>
+              <div className='contact-information-wrap'>
+                <h3>CONTACT INFORMATION</h3>
+                <div className='single-contact-info-wrap'>
+                  <h6>Contact Number:</h6>
+                  <div className='media'>
+                    <div className='icon'>
+                      <FaPhoneAlt />
                     </div>
-                </form>
-
-
-
+                    <div className='media-body'>
+                      <p>+1 952-435-7106</p>
+                      <p>+1 932-654-9874</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='single-contact-info-wrap'>
+                  <h6>Mail Address:</h6>
+                  <div className='media'>
+                    <div className='icon' style={{ background: "#080C24" }}>
+                      <FaRegEnvelope />
+                    </div>
+                    <div className='media-body'>
+                      <p>info@transpro.com</p>
+                      <p>info.example@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='single-contact-info-wrap mb-0'>
+                  <h6>Office Location:</h6>
+                  <div className='media'>
+                    <div className='icon' style={{ background: "#565969" }}>
+                      <FaMapMarkerAlt />
+                    </div>
+                    <div className='media-body'>
+                      <p>2245 Gilbert Ave, Cincinnati, OH</p>
+                      <p>45206, United States</p>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div> */}
+            {/* <div className='col-lg-5'>
+              <div>
+                <div className='img-file'>
+                  <img src='assets/img/solution/solution-bg.png' alt='' />
+                </div>
+              </div>
+            </div> */}
+            <div class="col-lg-5">
+              <div class="thumb text-center mb-4 mb-lg-0">
+                <img src="assets/img/faq/1.png" alt="img"/>
+                  </div>
+            </div>
+            <div className='col-lg-7'>
+              <form
+                className='contact-form text-center'
+                ref={form}
+                onSubmit={sendEmail}
+              >
+                <h3>FEEDBACK</h3>
+                {/* <h2>FEEDBACK</h2> */}
+                {/* <p>
+                Comments or questions are welcome.<br/> * indicates required field
+                </p> */}
+                <div className='row'>
+                  <div className='col-md-6'>
+                    <div className='single-input-inner'>
+                      <label>
+                        <FaUserAlt />
+                      </label>
+                      <input
+                        type='text'
+                        placeholder='Your name'
+                        name='user_name'
+                      />
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='single-input-inner'>
+                      <label>
+                        <FaRegEnvelope />
+                      </label>
+                      <input
+                        type='text'
+                        placeholder='Your email'
+                        name='user_email'
+                      />
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='single-input-inner'>
+                      <label>
+                        <FaCalculator />
+                      </label>
+                      <input type='text' placeholder=' Phone number' />
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='single-select-inner'>
+                      <label>
+                        <FaFileAlt />
+                      </label>
+                      <select className='single-select'>
+                        <option>Subject</option>
+                        <option value={1}>Some option</option>
+                        <option value={2}>Another option</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className='col-12'>
+                    <div className='single-input-inner'>
+                      <label>
+                        <FaPencilAlt />
+                      </label>
+                      <textarea
+                        placeholder='Write message'
+                        defaultValue={""}
+                        id='massage'
+                      />
+                    </div>
+                  </div>
+                  <div className='col-12'>
+                    <button className='btn btn-base' type='submit'>
+                      {" "}
+                      SEND MESSAGE
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-      {/* service area end */}
-      <ModalVideo
-        channel='youtube'
-        autoplay
-        isOpen={isOpen}
-        videoId='XM6kTQPzzpQ'
-        onClose={() => setOpen(false)}
-       />
+      {/* Feedback area end */}
     </>
   );
 };

@@ -58,28 +58,30 @@ const NavbarThree = () => {
               id='transpro_main_menu'
             >
               <ul className='navbar-nav menu-open'>
-                <li className='menu-item-has-children current-menu-item'>
-                  <Link to='#'>Home</Link>
+              <li className='menu-item-has-children current-menu-item'>
+                  <Link to='/'>Home</Link>
                   <ul className='sub-menu'>
                     <li>
-                      <Link to='/'>Home 01</Link>
-                    </li>
-                    <li>
-                      <Link to='/home-2'>Home 02</Link>
-                    </li>
-                    <li>
-                      <Link to='/home-3'>Home 03</Link>
-                    </li>
-                    <li>
-                      <Link to='/home-4'>Home 04</Link>
-                    </li>
-                    <li>
-                      <Link to='/home-5'>Home 05</Link>
+                      <Link to='/'>Home</Link>
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li className='menu-item-has-children current-menu-item'>
                   <Link to='/about'>About Us</Link>
+                  <ul className='sub-menu'>
+                    <li>
+                      <Link to='/ChairmanDesk'>CHAIRMAN DESK</Link>
+                    </li>
+                    <li>
+                      <Link to='/CorporateOverview'>CORPORATE OVERVIEW</Link>
+                    </li>
+                    <li>
+                      <Link to='/'>HISTORY</Link>
+                    </li>
+                    <li>
+                      <Link to='/VisionAndQualityPolicy'>VISION & QUALITY POLICY</Link>
+                    </li>
+                  </ul>
                 </li>
                 <li className='menu-item-has-children'>
                   <Link to='#'>Services</Link>
@@ -93,47 +95,29 @@ const NavbarThree = () => {
                   </ul>
                 </li>
                 <li className='menu-item-has-children'>
-                  <Link to='#'>Pages</Link>
+                  <Link to='#'>Investors</Link>
                   <ul className='sub-menu'>
                     <li>
-                      <Link to='/about'>About Us</Link>
-                    </li>
-                    <li>
-                      <Link to='/service'>Service Page</Link>
-                    </li>
-                    <li>
-                      <Link to='/service-details'>Service Details Page</Link>
-                    </li>
-                    <li>
-                      <Link to='/blog'>Blog Page</Link>
-                    </li>
-                    <li>
-                      <Link to='/blog-details'>Blog Details</Link>
-                    </li>
-                    <li>
-                      <Link to='/pricing'>Pricing</Link>
-                    </li>
-                    <li>
-                      <Link to='/faq'>FAQ</Link>
-                    </li>
-                    <li>
-                      <Link to='/contact'>Contact</Link>
+                      <Link to='/Investors'>Disclosures under Regulation 46 of SEBI (LODR)<br/>Regulations,2015</Link>
                     </li>
                   </ul>
                 </li>
-                <li className='menu-item-has-children'>
-                  <Link to='#'>Blog</Link>
-                  <ul className='sub-menu'>
-                    <li>
-                      <Link to='/blog'>Blog</Link>
-                    </li>
-                    <li>
-                      <Link to='/blog-details'>Blog Details</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
+                <li className='menu-item-has-children current-menu-item'>
                   <Link to='/contact'>Contact Us</Link>
+                  <ul className='sub-menu'>
+                      <li>
+                        <Link to='/Career'>CAREERS</Link>
+                      </li>
+                      <li>
+                        <Link to='/'>CUSTOMER CARE</Link>
+                      </li>
+                      <li>
+                      <Link to='/faq'>FAQ</Link>
+                      </li>
+                      <li>
+                        <Link to='/Feedback'>FEEDBACK</Link>
+                      </li>
+                      </ul>
                 </li>
               </ul>
             </div>
