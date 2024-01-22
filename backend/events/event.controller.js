@@ -34,6 +34,7 @@ function createEventSchema(req, res, next) {
         name: Joi.string().required(),
         pdfFile: Joi.string().required(),
         section: Joi.string().required(),
+        date: Joi.string(),
         categoryId: Joi.number().required(),
         // Add more validation for other attributes if needed
     });
@@ -50,6 +51,7 @@ async function createEvent(req, res, next) {
             name: req.body.name,
             pdfFile: req.body.pdfFile,
             section: req.body.section,
+            date: req.body.date,
             categoryId: categoryId, // Associate the event with the specified category
         });
 
