@@ -1,18 +1,13 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-const AboutOne = React.lazy(() => import("../components/AboutOne"));
+import AboutTwo from "../components/AboutTwo";
+import WhyChooseUsTwo from "../components/WhyChooseUsTwo";
 const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
-const CounterOne = React.lazy(() => import("../components/CounterOne"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
 );
 const FooterOne = React.lazy(() => import("../components/FooterOne"));
 const NavbarOne = React.lazy(() => import("../components/NavbarOne"));
-const PartnerOne = React.lazy(() => import("../components/PartnerOne"));
-const SkillOne = React.lazy(() => import("../components/SkillOne"));
-const TeamOne = React.lazy(() => import("../components/TeamOne"));
-const TestimonialTwo = React.lazy(() => import("../components/TestimonialTwo"));
-const VideoAreaOne = React.lazy(() => import("../components/VideoAreaOne"));
 const SearchPopup = React.lazy(() => import("../elements/SearchPopup"));
 const About = () => {
   return (
@@ -29,32 +24,37 @@ const About = () => {
           <Breadcrumb title={"ABOUT US"} />
 
           {/* About One */}
-          <div className='pd-top-120 pd-bottom-120'>
+          {/* <div className='pd-top-120 pd-bottom-120'>
             <AboutOne />
-          </div>
+          </div> */}
+
+          {/* About Two */}
+          <AboutTwo/>
+
+          {/* Why Choose Us Two */}
+          <WhyChooseUsTwo />
 
           {/* Counter One */}
-
-          <div className='fact-area' style={{ background: "#f9f9f9" }}>
+          {/* <div className='fact-area' style={{ background: "#f9f9f9" }}>
             <CounterOne />
-          </div>
+          </div> */}
 
           {/* Skill One */}
-          <SkillOne />
+          {/* <SkillOne /> */}
 
           {/* Video Area One */}
-          <VideoAreaOne />
+          {/* <VideoAreaOne /> */}
 
           {/* Team One */}
-          <div className='pd-bottom-80'>
+          {/* <div className='pd-bottom-80'>
             <TeamOne />
-          </div>
+          </div> */}
 
           {/* Testimonial Two */}
-          <TestimonialTwo />
+          {/* <TestimonialTwo /> */}
 
           {/* Partner One */}
-          <PartnerOne />
+          {/* <PartnerOne /> */}
 
           {/* Footer One */}
           <FooterOne />

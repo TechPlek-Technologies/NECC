@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import {
   FaCalculator,
@@ -13,14 +12,7 @@ import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "react-hot-toast";
 const ContactInner = () => {
   const form = useRef();
-  function SampleNextArrow(props) {
-    const { className, onClick } = props;
-    return <FaArrowLeft className={className} onClick={onClick} />;
-  }
-  function SamplePrevArrow(props) {
-    const { className, onClick } = props;
-    return <FaArrowRight className={className} onClick={onClick} />;
-  }
+  
   const sendEmail = (e) => {
     e.preventDefault();
     // Please See Documentation for more information
@@ -48,50 +40,12 @@ const ContactInner = () => {
         }
       );
   };
-  const settings = {
-    dots: false,
-    arrows: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-        },
-      },
-    ],
-  };
   return (
     <>
       <Toaster position='bottom-center' reverseOrder={false} />
       {/* contact area start */}
       <div className='container'>
-        <div className='contact-area mg-top-120 mb-120'>
+        <div className='contact-area mg-top-60 mb-20'>
           <div className='row g-0 justify-content-center'>
             <div className='col-lg-7'>
               <form
@@ -191,7 +145,7 @@ const ContactInner = () => {
           </div>
         </div>
       </div>
-      {/* contact area end */}
+   
       <div className='service-area style-2 pd-bottom-80'>
         <div className='container'>
         <div className='row justify-content-center'>
@@ -280,7 +234,7 @@ const ContactInner = () => {
                   <h5>GUWAHATI</h5>
                   <p>
                   M.S.Road,<br/>
-                  Guwahati-781 001.<br/>
+                  Guwahati-<br/>781 001.<br/>
                   Phone : 0361-2736754<br/>
                   E-mail: guwahati@neccgroup.com
                   </p>
@@ -290,11 +244,11 @@ const ContactInner = () => {
             </div>
          </div>
       </div>
-      
-
+    
       <div className='contact-g-map'>
         <iframe src='https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d29208.601361499546!2d90.3598076!3d23.7803374!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1589109092857!5m2!1sen!2sbd' />
       </div>
+      {/* contact area end */}
     </>
   );
 };
