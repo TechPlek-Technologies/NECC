@@ -94,15 +94,15 @@ const VisionAndQualityPolicyInner= () => {
         </div>
       </div>
       <div className='fact-area' style={{ background: "#F9F9F9" }}>
-        <div className='container'>
+        <div className='container col-lg-9'>
           <div
-            className='fact-counter-area CorporateOverview'
+            className='fact-counter-area '
             style={{ background: "url(assets/img/fact/bg.png)" }}
           >
             <div className='row justify-content-center'>
-              <div className='col-lg-12 col-md-6'>
+              <div className='col-lg-9'>
                 <div>
-                  <h5 className='visionStat'><i>TEAM NECC IS COMMITED TO EXCEED CLIENT EXPECTATIONS</i></h5>
+                  <h6 className='visionStat'><i>TEAM NECC IS COMMITED TO EXCEED CLIENT EXPECTATIONS</i></h6>
                 </div>
               </div>
             </div>

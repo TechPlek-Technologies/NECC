@@ -29,6 +29,8 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Home from "./pages/Dashboard/pages/Home";
 import CorporateInformation from "./pages/CorporateInformation";
 import Carrier from "./pages/Dashboard/pages/Carrier";
+import History from "./pages/History";
+import ConsignmentTrackingaAndEnquiry from "./pages/ConsignmentTrackingaAndEnquiry";
 import Office from "./pages/Dashboard/pages/Office";
 import OfficeContact from "./pages/Dashboard/pages/Contact";
 import InvestorsTab from "./pages/Dashboard/pages/InvestorsTab";
@@ -88,6 +90,8 @@ function App() {
           <Route exact path="/Career" element={<Career />} />
           <Route exact path="/Feedback" element={<Feedback />} />
           <Route exact path="/Investors" element={<Investors />} />
+          <Route exact path="/History" element={<History/>} />
+          <Route exact path="/ConsignmentTrackingaAndEnquiry" element={<ConsignmentTrackingaAndEnquiry/>} />
           <Route
             exact
             path="/CorporateInformation"

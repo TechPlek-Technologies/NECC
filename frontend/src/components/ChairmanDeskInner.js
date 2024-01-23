@@ -41,7 +41,7 @@ const ChairmanDeskInner= () => {
           </div>
         </div>
       </div>
-      <div className='service-area pd-top-20 pd-bottom-20'>
+      <div className='service-area pd-top-90 pd-bottom-20'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-12 align-self-center'>
