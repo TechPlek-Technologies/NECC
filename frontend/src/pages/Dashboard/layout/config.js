@@ -1,9 +1,9 @@
-import CogIcon from '@heroicons/react/24/solid/CogIcon';
-import LockClosedIcon from '@heroicons/react/24/solid/LockClosedIcon';
-import ShoppingBagIcon from '@heroicons/react/24/solid/ShoppingBagIcon';
+import CurrencyRupeeIcon from '@heroicons/react/24/solid/CurrencyRupeeIcon';
+import EyeIcon from '@heroicons/react/24/solid/EyeIcon';
+import BuildingLibraryIcon from '@heroicons/react/24/solid/BuildingLibraryIcon';
 import UserIcon from '@heroicons/react/24/solid/UserIcon';
-import UserPlusIcon from '@heroicons/react/24/solid/UserPlusIcon';
-import UsersIcon from '@heroicons/react/24/solid/UsersIcon';
+import DocumentArrowDownIcon from '@heroicons/react/24/solid/DocumentArrowDownIcon';
+import EnvelopeIcon from '@heroicons/react/24/solid/EnvelopeIcon';
 import XCircleIcon from '@heroicons/react/24/solid/XCircleIcon';
 import BriefcaseIcon from '@heroicons/react/24/solid/BriefcaseIcon';
 
@@ -20,7 +20,7 @@ export const items = [
     )
   },
   {
-    title: 'Career',
+    title: 'Careers',
     path: '/admin/career',
     icon: (
       <SvgIcon fontSize="small">
@@ -29,50 +29,51 @@ export const items = [
     )
   },
   {
-    title: 'Companies',
-    path: '/companies',
+    title: 'Offices',
+    path: '/admin/office',
     icon: (
       <SvgIcon fontSize="small">
-        <ShoppingBagIcon />
+        <BuildingLibraryIcon />
       </SvgIcon>
     )
   },
   {
-    title: 'user',
-    path: '/account',
+    title: 'Contacts',
+    path: '/admin/contact',
     icon: (
       <SvgIcon fontSize="small">
-        <UsersIcon />
+        <EnvelopeIcon />
       </SvgIcon>
     )
   },
   {
-    title: 'Settings',
-    path: '/settings',
+    title: 'Investors',
+    path: '/admin/investor',
     icon: (
       <SvgIcon fontSize="small">
-        <CogIcon />
+        <CurrencyRupeeIcon />
       </SvgIcon>
     )
   },
   {
-    title: 'Login',
-    path: '/auth/login',
+    title: 'Magazines',
+    path: '/admin/magazines',
     icon: (
       <SvgIcon fontSize="small">
-        <LockClosedIcon />
+        <EyeIcon />
       </SvgIcon>
     )
   },
   {
-    title: 'Register',
-    path: '/auth/register',
+    title: 'Downloads',
+    path: '/admin/downloads',
     icon: (
       <SvgIcon fontSize="small">
-        <UserPlusIcon />
+        <DocumentArrowDownIcon />
       </SvgIcon>
     )
   },
+ 
   {
     title: 'Error',
     path: '/404',
