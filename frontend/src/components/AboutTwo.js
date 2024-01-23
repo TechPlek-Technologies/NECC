@@ -9,27 +9,27 @@ const AboutTwo = () => {
   return (
     <>
       {/* about area start */}
-      <div className='about-area-2 pd-top-120 pd-bottom-240'>
+      <div className='about-area-2 pd-top-120 pd-bottom-100'>
         <div className='container'>
           <div className='about-area-inner'>
             <div className='row'>
               <div className='col-lg-5 order-lg-2'>
                 <div className='about-thumb-wrap mb-lg-0 mb-4'>
-                  <img
+                  {/* <img
                     className='img-1'
                     src='assets/img/about/shape.png'
                     alt='Transpro'
-                  />
+                  /> */}
                   <img
                     className='img-2'
                     src='assets/img/about/7.png'
                     alt='Transpro'
                   />
-                  <img
+                  {/* <img
                     className='img-3'
                     src='assets/img/about/8.png'
                     alt='Transpro'
-                  />
+                  /> */}
                   <div className='exprience-wrap'>
                     <img src='assets/img/about/shape-3.png' alt='Transpro' />
                     <div className='details'>
@@ -50,15 +50,12 @@ const AboutTwo = () => {
               <div className='col-lg-7 align-self-center order-lg-1'>
                 <div className='about-inner-wrap ms-0'>
                   <div className='section-title mb-0'>
-                    <h4 className='subtitle'>ABOUT US</h4>
+                    {/* <h4 className='subtitle'>ABOUT US</h4> */}
                     <h2 className='title mb-2'>
-                      BEST WORLD’S LEADING LOGISTIC &amp; TRANSPORT COMPANY
+                    ABOUT US
                     </h2>
                     <p>
-                      Objectively transition 24/365 e-tailers before cross
-                      functional collaboration and idea-sharing. Competently
-                      iterate plug-and-play deliverables vis-a-vis parallel
-                      relationships.
+                    Since inception, we provide our clients flexible, responsive and affordable services that they deserve. We use our deep operating knowledge to offer extraordinary solutions as unique as our client’s needs. North Eastern Carrying Corporation is specialized in offering domestic goods transportation, international goods transportation, commercial goods transportation services, industrial goods transportation along with warehousing services.
                     </p>
                     <div className='row'>
                       <div className='col-xl-6'>

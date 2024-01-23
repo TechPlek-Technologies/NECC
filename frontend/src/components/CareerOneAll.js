@@ -13,7 +13,7 @@ const CareerOneAll = () => {
             <div className='col-lg-12'>
               <div className='section-title text-center'>
                 {/* <h4 className='subtitle'>SERVICES</h4> */}
-                <h2 className='title'>CURRENT OPENINGS</h2>
+                <h2 className='subtitle'>CURRENT OPENINGS</h2>
               </div>
             </div>
           </div>

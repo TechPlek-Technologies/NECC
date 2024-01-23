@@ -5,7 +5,7 @@ const WhyChooseUsTwo = () => {
     <>
       {/*wcu-area start*/}
       <div
-        className='wcu-area-2 pd-top-115'
+        className='wcu-area-2 pd-top-20'
         style={{ backgroundImage: "url(assets/img/wcu/bg-2.png)" }}
       >
         <div className='container'>
@@ -15,8 +15,7 @@ const WhyChooseUsTwo = () => {
                 <h4 className='subtitle style-2'>WHY CHOOSE US</h4>
                 <h2 className='title'>WHY CHOOSE FOR US</h2>
                 <p className='content'>
-                  Dramatically enhance interactive metrics for reliable
-                  services. Proactively unleash fully researched e-commerce.
+                North Eastern Carrying Corporation is among the leading freight forwarding companies in India. If you are looking to transport goods from one destination to another, we are offering cost-effective solutions for you.
                 </p>
               </div>
             </div>
@@ -28,7 +27,7 @@ const WhyChooseUsTwo = () => {
                   <img src='assets/img/wcu/icon-4.png' alt='Transpro' />
                 </div>
                 <div className='details'>
-                  <h6>FAST TRANSPORTION SERVICE</h6>
+                  <h6>WE LISTEN</h6>
                   <p>
                     Enhance interactive metrics for reliable services.
                     Proactively unleash fully researched.
@@ -40,7 +39,7 @@ const WhyChooseUsTwo = () => {
                   <img src='assets/img/wcu/icon-5.png' alt='Transpro' />
                 </div>
                 <div className='details'>
-                  <h6>SAFETY AND RELIABILITY</h6>
+                  <h6>WE WALK WITH CLIENTS</h6>
                   <p>
                     Enhance interactive metrics for reliable services.
                     Proactively unleash fully researched.
@@ -59,7 +58,7 @@ const WhyChooseUsTwo = () => {
                   <img src='assets/img/wcu/icon-6.png' alt='Transpro' />
                 </div>
                 <div className='details'>
-                  <h6>24/7 ONLINE SUPPORT</h6>
+                  <h6>WE CREATE SOLUTIONS</h6>
                   <p>
                     Enhance interactive metrics for reliable services.
                     Proactively unleash fully researched.
@@ -71,7 +70,7 @@ const WhyChooseUsTwo = () => {
                   <img src='assets/img/wcu/icon-7.png' alt='Transpro' />
                 </div>
                 <div className='details'>
-                  <h6>ONLINE TRACKING</h6>
+                  <h6>WE LOOK INTO THE FUTURE</h6>
                   <p>
                     Enhance interactive metrics for reliable services.
                     Proactively unleash fully researched.
