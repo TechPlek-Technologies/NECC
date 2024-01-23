@@ -15,6 +15,7 @@ import {
   TableHead,
   TablePagination,
   TableRow,
+  TextField,
   Tooltip,
   Typography,
 } from "@mui/material";
@@ -28,15 +29,10 @@ export const CarrierTable = (props) => {
   const {
     count = 0,
     items = [],
-    onDeselectAll,
-    onDeselectOne,
     onPageChange = () => {},
     onRowsPerPageChange,
-    onSelectAll,
-    onSelectOne,
     page = 0,
     rowsPerPage = 0,
-    selected = [],
   } = props;
 
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
@@ -66,62 +62,94 @@ export const CarrierTable = (props) => {
     //     designation: editedDesignation,
     //     description: editedDescription,
     //   });
-      console.log(editedDesignation)
-      console.log(editedDescription)
+    console.log(editedDesignation);
+    console.log(editedDescription);
 
-      // Handle the response, e.g., show success message
-      console.log("Update successful");
+    // Handle the response, e.g., show success message
+    console.log("Update successful");
 
-      setText(editedDescription)
-      // Close the edit dialog
-      handleCloseEditDialog();
+    setText(editedDescription);
+    // Close the edit dialog
+    handleCloseEditDialog();
     // } catch (error) {
     //   // Handle errors, e.g., show error message
     //   console.error("Update failed", error);
     // }
   };
 
-  const selectedSome = selected.length > 0 && selected.length < items.length;
-  const selectedAll = items.length > 0 && selected.length === items.length;
 
-  const modules = useMemo(() => ({
-    toolbar: {
-      container: [
-        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-        ['bold', 'italic', 'underline', "strike"],
-        [{ 'list': 'ordered' }, { 'list': 'bullet' },
-        { 'indent': '-1' }, { 'indent': '+1' }],
-        ['image', "link",],
-        [{ 'color': ['#000000', '#e60000', '#ff9900', '#ffff00', '#008a00', '#0066cc', '#9933ff', '#ffffff', '#facccc', '#ffebcc', '#ffffcc', '#cce8cc', '#cce0f5', '#ebd6ff', '#bbbbbb', '#f06666', '#ffc266', '#ffff66', '#66b966', '#66a3e0', '#c285ff', '#888888', '#a10000', '#b26b00', '#b2b200', '#006100', '#0047b2', '#6b24b2', '#444444', '#5c0000', '#663d00', '#666600', '#003700', '#002966', '#3d1466'] }]
-      ],
-      handlers: {
-        
-      }
-    },
-  }), [])
+  const modules = useMemo(
+    () => ({
+      toolbar: {
+        container: [
+          [{ header: [1, 2, 3, 4, 5, 6, false] }],
+          ["bold", "italic", "underline", "strike"],
+          [
+            { list: "ordered" },
+            { list: "bullet" },
+            { indent: "-1" },
+            { indent: "+1" },
+          ],
+          ["image", "link"],
+          [
+            {
+              color: [
+                "#000000",
+                "#e60000",
+                "#ff9900",
+                "#ffff00",
+                "#008a00",
+                "#0066cc",
+                "#9933ff",
+                "#ffffff",
+                "#facccc",
+                "#ffebcc",
+                "#ffffcc",
+                "#cce8cc",
+                "#cce0f5",
+                "#ebd6ff",
+                "#bbbbbb",
+                "#f06666",
+                "#ffc266",
+                "#ffff66",
+                "#66b966",
+                "#66a3e0",
+                "#c285ff",
+                "#888888",
+                "#a10000",
+                "#b26b00",
+                "#b2b200",
+                "#006100",
+                "#0047b2",
+                "#6b24b2",
+                "#444444",
+                "#5c0000",
+                "#663d00",
+                "#666600",
+                "#003700",
+                "#002966",
+                "#3d1466",
+              ],
+            },
+          ],
+        ],
+        handlers: {},
+      },
+    }),
+    []
+  );
 
   return (
     <Card>
-
-      <div><div dangerouslySetInnerHTML={{__html: text}} /></div>
+      <div>
+        <div dangerouslySetInnerHTML={{ __html: text }} />
+      </div>
       <Scrollbar>
         <Box sx={{ minWidth: 800 }}>
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell padding="checkbox">
-                  <Checkbox
-                    checked={selectedAll}
-                    indeterminate={selectedSome}
-                    onChange={(event) => {
-                      if (event.target.checked) {
-                        onSelectAll?.();
-                      } else {
-                        onDeselectAll?.();
-                      }
-                    }}
-                  />
-                </TableCell>
+              
                 <TableCell>Designation</TableCell>
                 <TableCell>Description</TableCell>
                 <Stack
@@ -136,22 +164,11 @@ export const CarrierTable = (props) => {
             </TableHead>
             <TableBody>
               {items.map((customer) => {
-                const isSelected = selected.includes(customer.id);
+                
 
                 return (
-                  <TableRow hover key={customer.id} selected={isSelected}>
-                    <TableCell padding="checkbox">
-                      <Checkbox
-                        checked={isSelected}
-                        onChange={(event) => {
-                          if (event.target.checked) {
-                            onSelectOne?.(customer.id);
-                          } else {
-                            onDeselectOne?.(customer.id);
-                          }
-                        }}
-                      />
-                    </TableCell>
+                  <TableRow hover key={customer.id}>
+                 
                     <TableCell>
                       <Stack alignItems="center" direction="row" spacing={2}>
                         <Typography variant="subtitle2">
@@ -199,7 +216,7 @@ export const CarrierTable = (props) => {
                           <IconButton
                             sx={{
                               "&:hover": {
-                                backgroundColor: "#ffebee", // Light green background on hover
+                                backgroundColor: "#ffebee", // Light red background on hover
                               },
                             }}
                           >
@@ -228,13 +245,15 @@ export const CarrierTable = (props) => {
       {/* Edit Dialog */}
       <Dialog open={isEditDialogOpen} onClose={handleCloseEditDialog}>
         <DialogContent>
-          <h5>Designaton</h5>
-          <Input
+          <TextField
+            label="Designation"
+            name="designation"
             value={editedDesignation}
             onChange={(value) => setEditedDesignation(value)}
-            style={{ minHeight: "30px" }}
+            fullWidth
           />
-          <h6>Description</h6>
+          
+          <h6 style={{"marginTop":"15px"}} >Description</h6>
           <ReactQuill
             theme="snow"
             value={editedDescription}
