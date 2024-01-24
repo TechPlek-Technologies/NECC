@@ -1,29 +1,29 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-import ConsignmentTrackingaAndEnquiryInner from "../components/ConsignmentTrackingaAndEnquiryInner";
 import NavbarThree from "../components/NavbarThree";
+import NeccTelecomInner from "../components/NeccTelecomInner";
 import SupportBarOne from "../components/SupportBarOne";
 const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
 );
 const FooterOne = React.lazy(() => import("../components/FooterOne"));
-const ConsignmentTrackingaAndEnquiry = () => {
+const NeccTelecom = () => {
   return (
     <>
       <Fragment>
         <Suspense fallback={<Preloader />}>
-          {/* SupportBarOne */}
-          <SupportBarOne/>
+         {/* SupportBarOne */}
+         <SupportBarOne/>
 
-          {/* Navbar Three */}
-          <NavbarThree/>
+          {/* Navbar Three*/}
+          <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"CONSIGNMENT TRACKING AND ENQUIRY"} />
+          <Breadcrumb title={"NECC TELECOM"} />
 
-          {/* Request Quote One */}
-          <ConsignmentTrackingaAndEnquiryInner/>
+         {/* Necc Group Inner*/}
+         <NeccTelecomInner/>
 
           {/* Footer One */}
           <FooterOne />
@@ -36,4 +36,4 @@ const ConsignmentTrackingaAndEnquiry = () => {
   );
 };
 
-export default ConsignmentTrackingaAndEnquiry;
+export default NeccTelecom;

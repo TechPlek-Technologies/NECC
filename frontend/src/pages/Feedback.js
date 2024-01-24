@@ -1,23 +1,23 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-import SearchPopup from "../elements/SearchPopup";
-import NavbarOne from "../components/NavbarOne";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
 import PartnerOne from "../components/PartnerOne";
 import FeedbackInner from "../components/FeedbackInner";
+import NavbarThree from "../components/NavbarThree";
+import SupportBarOne from "../components/SupportBarOne";
 
 const Feedback = () => {
     return (
       <>
         <Fragment>
           <Suspense fallback={<Preloader />}>
-            {/* Search Popup */}
-            <SearchPopup />
+           {/* SupportBarOne */}
+          <SupportBarOne/>
   
-            {/* Navbar One */}
-            <NavbarOne />
+            {/* Navbar Three */}
+            <NavbarThree/>
   
             {/* Breadcrumb */}
             <Breadcrumb title={"FEEDBACK"} />

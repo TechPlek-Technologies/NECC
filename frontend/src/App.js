@@ -47,6 +47,11 @@ import AdminListingInformation from "./pages/Dashboard/pages/AdminListingInforma
 import AdminCorporateGovernance from "./pages/Dashboard/pages/AdminCorporateGovernance";
 import AdminMagazines from "./pages/Dashboard/pages/AdminMagazines";
 import AdminDownloads from "./pages/Dashboard/pages/AdminDownloads";
+import NeccGroup from "./pages/NeccGroup";
+import NeccLogistics from "./pages/NeccLogistics";
+import NeccTelecom from "./pages/NeccTelecom";
+import Necc from "./pages/Necc";
+import NeccEcomSolution from "./pages/NeccEcomSolution";
 
 function App() {
   useEffect(() => {
@@ -92,6 +97,11 @@ function App() {
           <Route exact path="/Investors" element={<Investors />} />
           <Route exact path="/History" element={<History/>} />
           <Route exact path="/ConsignmentTrackingaAndEnquiry" element={<ConsignmentTrackingaAndEnquiry/>} />
+          <Route exact path="/NeccGroup" element={<NeccGroup/>} />
+          <Route exact path="/NeccLogistics" element={<NeccLogistics/>} />
+          <Route exact path="/NeccTelecom" element={<NeccTelecom/>} />
+          <Route exact path="/Necc" element={<Necc/>} />
+          <Route exact path="/NeccEcomSolution" element={<NeccEcomSolution/>} />
           <Route
             exact
             path="/CorporateInformation"

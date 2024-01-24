@@ -1,14 +1,15 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-import ConsignmentTrackingaAndEnquiryInner from "../components/ConsignmentTrackingaAndEnquiryInner";
 import NavbarThree from "../components/NavbarThree";
+import NeccGroupInner from "../components/NeccGroupInner";
+import NeccInner from "../components/NeccInner";
 import SupportBarOne from "../components/SupportBarOne";
 const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
 );
 const FooterOne = React.lazy(() => import("../components/FooterOne"));
-const ConsignmentTrackingaAndEnquiry = () => {
+const Necc = () => {
   return (
     <>
       <Fragment>
@@ -16,14 +17,14 @@ const ConsignmentTrackingaAndEnquiry = () => {
           {/* SupportBarOne */}
           <SupportBarOne/>
 
-          {/* Navbar Three */}
-          <NavbarThree/>
+          {/* Navbar Three*/}
+          <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"CONSIGNMENT TRACKING AND ENQUIRY"} />
+          <Breadcrumb title={"NORTH EASTERN CARRYING CORPORATION"} />
 
-          {/* Request Quote One */}
-          <ConsignmentTrackingaAndEnquiryInner/>
+         {/* Necc Group Inner*/}
+         <NeccInner/>
 
           {/* Footer One */}
           <FooterOne />
@@ -36,4 +37,4 @@ const ConsignmentTrackingaAndEnquiry = () => {
   );
 };
 
-export default ConsignmentTrackingaAndEnquiry;
+export default Necc;

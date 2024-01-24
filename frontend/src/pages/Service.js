@@ -1,39 +1,33 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
+import SupportBarOne from "../components/SupportBarOne";
+import NavbarThree from "../components/NavbarThree";
+import ServiceInner from "../components/ServiceInner";
+import ServiceInner2 from "../components/ServiceInner2";
 const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
-const ContactOne = React.lazy(() => import("../components/ContactOne"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
 );
 const FooterOne = React.lazy(() => import("../components/FooterOne"));
-const NavbarOne = React.lazy(() => import("../components/NavbarOne"));
-const PartnerOne = React.lazy(() => import("../components/PartnerOne"));
-const ServiceOneAll = React.lazy(() => import("../components/ServiceOneAll"));
-const SearchPopup = React.lazy(() => import("../elements/SearchPopup"));
 const Service = () => {
   return (
     <>
       <Fragment>
         <Suspense fallback={<Preloader />}>
-          {/* Search Popup */}
-          <SearchPopup />
+          {/* SupportBarOne */}
+          <SupportBarOne/>
 
-          {/* Navbar One */}
-          <NavbarOne />
+          {/* Navbar Three*/}
+          <NavbarThree />
 
           {/* Breadcrumb */}
           <Breadcrumb title={"SERVICES"} />
 
-          {/* Service One All */}
-          <ServiceOneAll />
+          {/* Service Inner*/}
+          <ServiceInner/>
 
-          {/* Contact One */}
-          <div className='call-to-contact-area pd-top-140  mt-0'>
-            <ContactOne />
-          </div>
-
-          {/* Partner One */}
-          <PartnerOne />
+           {/* Service Inner*/}
+           <ServiceInner2/>
 
           {/* Footer One */}
           <FooterOne />
