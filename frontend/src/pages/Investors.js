@@ -1,23 +1,23 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-import SearchPopup from "../elements/SearchPopup";
-import NavbarOne from "../components/NavbarOne";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
 import PartnerOne from "../components/PartnerOne";
 import InvestorsInner from "../components/InvestorsInner";
+import NavbarThree from "../components/NavbarThree";
+import SupportBarOne from "../components/SupportBarOne";
 
 const Investors = () => {
     return (
       <>
         <Fragment>
           <Suspense fallback={<Preloader />}>
-            {/* Search Popup */}
-            <SearchPopup />
+            {/* SupportBarOne */}
+          <SupportBarOne/>
   
-            {/* Navbar One */}
-            <NavbarOne />
+           {/* Navbar Three */}
+           <NavbarThree/>
   
             {/* Breadcrumb */}
             <Breadcrumb title={"INVESTORS"} imgSrc={"assets/img/banner/breadcrumb.png"} />

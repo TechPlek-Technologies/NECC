@@ -1,23 +1,23 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-import SearchPopup from "../elements/SearchPopup";
 import FooterBottomOne from "../components/FooterBottomOne";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import ChairmanDeskInner from "../components/ChairmanDeskInner";
 import PartnerOne from "../components/PartnerOne";
-const NavbarOne = React.lazy(() => import("../components/NavbarOne"));
+import NavbarThree from "../components/NavbarThree";
+import SupportBarOne from "../components/SupportBarOne";
 
 const ChairmanDesk = () => {
     return (
       <>
         <Fragment>
           <Suspense fallback={<Preloader />}>
-            {/* Search Popup */}
-            <SearchPopup />
+            {/* SupportBarOne */}
+          <SupportBarOne/>
   
-            {/* Navbar One */}
-            <NavbarOne />
+            {/* Navbar Three */}
+            <NavbarThree/>
   
             {/* Breadcrumb */}
             <Breadcrumb title={"CHAIRMAN DESK"} />

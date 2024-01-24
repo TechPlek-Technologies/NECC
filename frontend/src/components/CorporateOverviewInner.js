@@ -1,17 +1,7 @@
 import React, { useState } from "react";
 import CountUp from "react-countup";
-import {
-  FaArrowRight,
-  FaPhoneAlt,
-  FaPlay,
-  FaRegEnvelope,
-  FaRegFileAlt,
-  FaRegFilePdf,
-  FaSearch,
-} from "react-icons/fa";
 import ModalVideo from "react-modal-video";
 import TrackVisibility from "react-on-screen";
-import { Link } from "react-router-dom";
 
 const CorporateOverviewInner= () => {
   const [isOpen, setOpen] = useState(false);

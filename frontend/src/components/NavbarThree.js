@@ -70,16 +70,16 @@ const NavbarThree = () => {
                   <Link to='/about'>About Us</Link>
                   <ul className='sub-menu'>
                     <li>
-                      <Link to='/ChairmanDesk'>CHAIRMAN DESK</Link>
+                      <Link to='/ChairmanDesk'>Chairman Desk</Link>
                     </li>
                     <li>
-                      <Link to='/CorporateOverview'>CORPORATE OVERVIEW</Link>
+                      <Link to='/CorporateOverview'>Corporate Overview</Link>
                     </li>
                     <li>
-                      <Link to='/'>HISTORY</Link>
+                      <Link to='/'>History</Link>
                     </li>
                     <li>
-                      <Link to='/VisionAndQualityPolicy'>VISION & QUALITY POLICY</Link>
+                      <Link to='/VisionAndQualityPolicy'>Vision & Quality Policy</Link>
                     </li>
                   </ul>
                 </li>
@@ -88,9 +88,6 @@ const NavbarThree = () => {
                   <ul className='sub-menu'>
                     <li>
                       <Link to='/service'>Service</Link>
-                    </li>
-                    <li>
-                      <Link to='/service-details'>Service Details Page</Link>
                     </li>
                   </ul>
                 </li>
@@ -102,20 +99,43 @@ const NavbarThree = () => {
                     </li>
                   </ul>
                 </li>
+                 <li className='menu-item-has-children'>
+                  <Link to='#'>Sitemap</Link>
+                  <ul className='sub-menu'>
+                    <li>
+                      <Link to='/ConsignmentTrackingaAndEnquiry'>Consignment Tracking and Enquiry</Link>
+                    </li>
+                    <li>
+                      <Link to='/NeccGroup'>NECC GROUP</Link>
+                    </li>
+                    <li>
+                      <Link to='/NeccLogistics'>NECC Logistics</Link>
+                    </li>
+                    <li>
+                      <Link to='/NeccTelecom'>NECC Telecom</Link>
+                    </li>
+                    <li>
+                      <Link to='/Necc'>North Eastern Carrying Corporation</Link>
+                    </li>
+                    <li>
+                      <Link to='/NeccEcomSolution'>NECC Ecom Solutions</Link>
+                    </li>
+                  </ul>
+                </li>
                 <li className='menu-item-has-children current-menu-item'>
                   <Link to='/contact'>Contact Us</Link>
                   <ul className='sub-menu'>
                       <li>
-                        <Link to='/Career'>CAREERS</Link>
+                        <Link to='/Career'>Careers</Link>
                       </li>
                       <li>
-                        <Link to='/'>CUSTOMER CARE</Link>
+                        <Link to='/'>Customer Care</Link>
                       </li>
                       <li>
                       <Link to='/faq'>FAQ</Link>
                       </li>
                       <li>
-                        <Link to='/Feedback'>FEEDBACK</Link>
+                        <Link to='/Feedback'>Feedback</Link>
                       </li>
                       </ul>
                 </li>

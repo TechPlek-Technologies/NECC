@@ -2,23 +2,23 @@ import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
 import AboutTwo from "../components/AboutTwo";
 import WhyChooseUsTwo from "../components/WhyChooseUsTwo";
+import NavbarThree from "../components/NavbarThree";
+import SupportBarOne from "../components/SupportBarOne";
 const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
 );
 const FooterOne = React.lazy(() => import("../components/FooterOne"));
-const NavbarOne = React.lazy(() => import("../components/NavbarOne"));
-const SearchPopup = React.lazy(() => import("../elements/SearchPopup"));
 const About = () => {
   return (
     <>
       <Fragment>
         <Suspense fallback={<Preloader />}>
-          {/* Search Popup */}
-          <SearchPopup />
+          {/* SupportBarOne */}
+          <SupportBarOne/>
 
-          {/* Navbar One */}
-          <NavbarOne />
+          {/* Navbar Three*/}
+          <NavbarThree />
 
           {/* Breadcrumb */}
           <Breadcrumb title={"ABOUT US"} />

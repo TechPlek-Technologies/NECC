@@ -93,8 +93,8 @@ const VisionAndQualityPolicyInner= () => {
           </div>
         </div>
       </div>
-      <div className='fact-area' style={{ background: "#F9F9F9" }}>
-        <div className='container col-lg-9'>
+      {/* <div className='fact-area' style={{ background: "#F9F9F9" }}>
+        <div className='container col-lg-12'>
           <div
             className='fact-counter-area '
             style={{ background: "url(assets/img/fact/bg.png)" }}
@@ -108,7 +108,7 @@ const VisionAndQualityPolicyInner= () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* service area end */}
       <ModalVideo
         channel='youtube'

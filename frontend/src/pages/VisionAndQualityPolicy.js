@@ -1,23 +1,22 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-import SearchPopup from "../elements/SearchPopup";
-import NavbarOne from "../components/NavbarOne";
 import Breadcrumb from "../components/Breadcrumb";
 import VisionAndQualityPolicyInner from "../components/VisionAndQualityPolicyInner";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
-import PartnerOne from "../components/PartnerOne";
+import NavbarThree from "../components/NavbarThree";
+import SupportBarOne from "../components/SupportBarOne";
 
 const VisionAndQualityPolicy = () => {
     return (
       <>
         <Fragment>
           <Suspense fallback={<Preloader />}>
-            {/* Search Popup */}
-            <SearchPopup />
+            {/* SupportBarOne */}
+          <SupportBarOne/>
   
-            {/* Navbar One */}
-            <NavbarOne />
+            {/* Navbar Three */}
+            <NavbarThree/>
   
             {/* Breadcrumb */}
             <Breadcrumb title={"VISION & QUALITY POLICY"} />
@@ -25,9 +24,6 @@ const VisionAndQualityPolicy = () => {
             {/* Service Details Inner */}
             <VisionAndQualityPolicyInner />
 
-            {/* Partner One */}
-            <PartnerOne />
-  
             {/* Footer One */}
             <FooterOne />
   
