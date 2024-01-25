@@ -15,7 +15,7 @@ const ServiceInner2 = () => {
             </div>
           </div>
           <div className='row transport-service-single'>
-            <div className='col-lg-5'>
+            <div className='col-lg-6'>
               <div className='transport-service-image wow fadeInLeft'>
                 <img
                   src='assets/img/service/01.png'
@@ -31,7 +31,7 @@ const ServiceInner2 = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-5 offset-lg-1 d-flex'>
+            <div className='col-lg-4 offset-lg-1 d-flex'>
               <div className='transport-service-content wow fadeInRight'>
                 <h3 className='title'>PART TRUCK LOAD (PTL)</h3>
                 <p>
@@ -41,7 +41,7 @@ const ServiceInner2 = () => {
             </div>
           </div>
           <div className='row transport-service-single'>
-            <div className='col-lg-5 offset-lg-1 order-lg-2'>
+            <div className='col-lg-6 offset-lg-1 order-lg-2'>
               <div className='transport-service-image wow fadeInRight'>
                 <img
                   src='assets/img/service/02.png'
@@ -57,7 +57,7 @@ const ServiceInner2 = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-5 offset-lg-1 d-flex '>
+            <div className='col-lg-4 offset-lg-1 d-flex '>
               <div className='transport-service-content wow fadeInLeft'>
                 <h3 className='title'>FULL TRUCK LOAD (FTL)</h3>
                 <p>
@@ -67,7 +67,7 @@ const ServiceInner2 = () => {
             </div>
           </div>
           <div className='row transport-service-single'>
-            <div className='col-lg-5'>
+            <div className='col-lg-6'>
               <div className='transport-service-image wow fadeInLeft'>
                 <img
                   src='assets/img/service/03.png'
@@ -83,7 +83,7 @@ const ServiceInner2 = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-5 offset-lg-1 d-flex'>
+            <div className='col-lg-4 offset-lg-1 d-flex'>
               <div className='transport-service-content wow fadeInRight'>
                 <h3 className='title'>BULK MOVEMENTS</h3>
                 <p>
@@ -93,7 +93,7 @@ const ServiceInner2 = () => {
             </div>
           </div>
           <div className='row transport-service-single'>
-            <div className='col-lg-5 offset-lg-1 order-lg-2'>
+            <div className='col-lg-6 offset-lg-1 order-lg-2'>
               <div className='transport-service-image wow fadeInRight'>
                 <img
                   src='assets/img/service/02.png'
@@ -109,7 +109,7 @@ const ServiceInner2 = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-5 offset-lg-1 d-flex '>
+            <div className='col-lg-4 offset-lg-1 d-flex '>
               <div className='transport-service-content wow fadeInLeft'>
                 <h3 className='title'>ODC MOVEMENTS</h3>
                 <p>
@@ -119,7 +119,7 @@ const ServiceInner2 = () => {
             </div>
           </div>
           <div className='row transport-service-single'>
-            <div className='col-lg-5'>
+            <div className='col-lg-6'>
               <div className='transport-service-image wow fadeInLeft'>
                 <img
                   src='assets/img/service/03.png'
@@ -135,7 +135,7 @@ const ServiceInner2 = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-5 offset-lg-1 d-flex'>
+            <div className='col-lg-4 offset-lg-1 d-flex'>
               <div className='transport-service-content wow fadeInRight'>
                 <h3 className='title'>WAREHOUSING & 3PL</h3>
                 <p>

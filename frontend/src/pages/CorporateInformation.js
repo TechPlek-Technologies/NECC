@@ -1,12 +1,12 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-import SearchPopup from "../elements/SearchPopup";
-import NavbarOne from "../components/NavbarOne";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
 import PartnerOne from "../components/PartnerOne";
 import CorporateInformationInner from "../components/CorporateInformationInner";
+import SupportBarOne from "../components/SupportBarOne";
+import NavbarThree from "../components/NavbarThree";
 
 
 const CorporateInformation = () => {
@@ -14,12 +14,12 @@ const CorporateInformation = () => {
       <>
         <Fragment>
           <Suspense fallback={<Preloader />}>
-            {/* Search Popup */}
-            <SearchPopup />
-  
-            {/* Navbar One */}
-            <NavbarOne />
-  
+            {/* SupportBarOne */}
+          <SupportBarOne/>
+
+          {/* Navbar Three*/}
+          <NavbarThree/>
+            
             {/* Breadcrumb */}
             <Breadcrumb title={"CORPORATE INFORMATION"} />
 

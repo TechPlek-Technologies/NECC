@@ -52,14 +52,12 @@ const ConsignmentTrackingaAndEnquiryInner = () => {
                         </div>
                       </div>
                     </div>
-                    <h6 className='subtitle mt-4'>Shipment Information :</h6>
+                    <h6 className='subtitle mt-4'>Company Information :</h6>
                     <div className='row'>
                       <div className='col-lg-4'>
                         <div className='single-select-inner style-border'>
                           <select className='single-select'>
                             <option>G.R. Number</option>
-                            <option value={1}>Some option</option>
-                            <option value={2}>Another option</option>
                           </select>
                         </div>
                       </div>
@@ -73,8 +71,6 @@ const ConsignmentTrackingaAndEnquiryInner = () => {
                         <div className='single-select-inner style-border'>
                           <select className='single-select'>
                             <option>Query Details</option>
-                            <option value={1}>Some option</option>
-                            <option value={2}>Another option</option>
                           </select>
                         </div>
                       </div>

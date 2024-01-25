@@ -65,7 +65,7 @@ const CorporateOverviewInner= () => {
           </div>
         </div>
       </div>
-      <div className='service-area pd-top-45 pd-bottom-140'>
+      <div className='service-area pd-top-45 pd-bottom-140 '>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-12 align-self-center'>

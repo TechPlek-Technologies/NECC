@@ -50,7 +50,7 @@ const ServiceInner = () => {
       },
     ],
   };
-  return (
+  return ( 
     <>
       {/* portfolio area start */}
       <div

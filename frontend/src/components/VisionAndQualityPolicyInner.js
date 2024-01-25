@@ -67,7 +67,7 @@ const VisionAndQualityPolicyInner= () => {
           </div>
         </div>
       </div>
-      <div className='service-area pd-top-20 pd-bottom-160'>
+      <div className='service-area pd-top-20 pd-bottom-60'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-10'>
@@ -93,23 +93,18 @@ const VisionAndQualityPolicyInner= () => {
           </div>
         </div>
       </div>
-      {/* <div className='fact-area' style={{ background: "#F9F9F9" }}>
-        <div className='container col-lg-12'>
-          <div
-            className='fact-counter-area '
-            style={{ background: "url(assets/img/fact/bg.png)" }}
-          >
-            <div className='row justify-content-center'>
-              <div className='col-lg-9'>
-                <div>
-                  <h6 className='visionStat'><i>TEAM NECC IS COMMITED TO EXCEED CLIENT EXPECTATIONS</i></h6>
-                </div>
-              </div>
+      <div class="divider-area divider-default-area">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-sm-11 col-md-12">
+            <div class="content">
+              <p class="title">TEAM NECC IS COMMITED TO EXCEED CLIENT EXPECTATIONS</p>
             </div>
           </div>
         </div>
-      </div> */}
-      {/* service area end */}
+      </div>
+    </div>
+      
       <ModalVideo
         channel='youtube'
         autoplay

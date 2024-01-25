@@ -1,15 +1,8 @@
 import React, { useState } from "react";
 import {
-  FaArrowRight,
-  FaPhoneAlt,
-  FaPlay,
-  FaRegEnvelope,
-  FaRegFileAlt,
   FaRegFilePdf,
-  FaSearch,
 } from "react-icons/fa";
 import ModalVideo from "react-modal-video";
-import { Link } from "react-router-dom";
 
 const DirectorsComponent = ({ executiveDirectors }) => {
     return (
