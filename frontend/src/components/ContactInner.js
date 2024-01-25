@@ -40,6 +40,158 @@ const ContactInner = () => {
         }
       );
   };
+
+  const companies = [
+    {
+        id: "2569ce0d517a7f06d3ea1f25",
+        city: "Mumbai",
+        name: "Navratan",
+        addressLine1: "2 Mezzanine Floor",
+        addressLine2: " 69, P.D'Mellow Road",
+        addressLine3: "Carnace Bunder",
+        pincode: "400009",
+        phone: ["022-66317261", "022-66317262"],
+        tollfreeNo: ["1800 11 7080", "9711797516"],
+        email: "mumbairo@neccgroup.com",
+    },
+    {
+        id: "2569ce0d517a7f06d3ea1f25",
+        city: "Mumbai",
+        name: "Navratan",
+        addressLine1: "2 Mezzanine Floor",
+        addressLine2: " 69, P.D'Mellow Road",
+        addressLine3: "Carnace Bunder",
+        pincode: "400009",
+        phone: ["022-66317261", "022-66317262"],
+        tollfreeNo: ["1800 11 7080", "9711797516"],
+        email: "mumbairo@neccgroup.com",
+    },
+    {
+        id: "2569ce0d517a7f06d3ea1f25",
+        city: "Mumbai",
+        name: "Navratan",
+        addressLine1: "2 Mezzanine Floor",
+        addressLine2: " 69, P.D'Mellow Road",
+        addressLine3: "Carnace Bunder",
+        pincode: "400009",
+        phone: ["022-66317261", "022-66317262"],
+        tollfreeNo: ["1800 11 7080", "9711797516"],
+        email: "mumbairo@neccgroup.com",
+    },
+    {
+        id: "2569ce0d517a7f06d3ea1f25",
+        city: "Mumbai",
+        name: "Navratan",
+        addressLine1: "2 Mezzanine Floor",
+        addressLine2: " 69, P.D'Mellow Road",
+        addressLine3: "Carnace Bunder",
+        pincode: "400009",
+        phone: ["022-66317261", "022-66317262"],
+        tollfreeNo: ["1800 11 7080", "9711797516"],
+        email: "mumbairo@neccgroup.com",
+    },
+    {
+        id: "2569ce0d517a7f06d3ea1f25",
+        city: "Mumbai",
+        name: "Navratan",
+        addressLine1: "2 Mezzanine Floor",
+        addressLine2: " 69, P.D'Mellow Road",
+        addressLine3: "Carnace Bunder",
+        pincode: "400009",
+        phone: ["022-66317261", "022-66317262"],
+        tollfreeNo: ["1800 11 7080", "9711797516"],
+        email: "mumbairo@neccgroup.com",
+    },
+    {
+      id: "2569ce0d517a7f06d3ea1f25",
+      city: "Mumbai",
+      name: "Navratan",
+      addressLine1: "2 Mezzanine Floor",
+      addressLine2: " 69, P.D'Mellow Road",
+      addressLine3: "Carnace Bunder",
+      pincode: "400009",
+      phone: ["022-66317261", "022-66317262"],
+      tollfreeNo: ["1800 11 7080", "9711797516"],
+      email: "mumbairo@neccgroup.com",
+  },
+    // Add other company objects here...
+];
+ 
+const corporate = [
+  {
+      id: "2569ce0d517a7f06d3ea1f25",
+      city: "Mumbai",
+      name: "Navratan",
+      addressLine1: "2 Mezzanine Floor",
+      addressLine2: " 69, P.D'Mellow Road",
+      addressLine3: "Carnace Bunder",
+      pincode: "400009",
+      phone: ["022-66317261", "022-66317262"],
+      tollfreeNo: ["1800 11 7080", "9711797516"],
+      email: "mumbairo@neccgroup.com",
+  },
+  {
+      id: "2569ce0d517a7f06d3ea1f25",
+      city: "Mumbai",
+      name: "Navratan",
+      addressLine1: "2 Mezzanine Floor",
+      addressLine2: " 69, P.D'Mellow Road",
+      addressLine3: "Carnace Bunder",
+      pincode: "400009",
+      phone: ["022-66317261", "022-66317262"],
+      tollfreeNo: ["1800 11 7080", "9711797516"],
+      email: "mumbairo@neccgroup.com",
+  },
+  {
+      id: "2569ce0d517a7f06d3ea1f25",
+      city: "Mumbai",
+      name: "Navratan",
+      addressLine1: "2 Mezzanine Floor",
+      addressLine2: " 69, P.D'Mellow Road",
+      addressLine3: "Carnace Bunder",
+      pincode: "400009",
+      phone: ["022-66317261", "022-66317262"],
+      tollfreeNo: ["1800 11 7080", "9711797516"],
+      email: "mumbairo@neccgroup.com",
+  },
+  {
+      id: "2569ce0d517a7f06d3ea1f25",
+      city: "Mumbai",
+      name: "Navratan",
+      addressLine1: "2 Mezzanine Floor",
+      addressLine2: " 69, P.D'Mellow Road",
+      addressLine3: "Carnace Bunder",
+      pincode: "400009",
+      phone: ["022-66317261", "022-66317262"],
+      tollfreeNo: ["1800 11 7080", "9711797516"],
+      email: "mumbairo@neccgroup.com",
+  },
+  {
+      id: "2569ce0d517a7f06d3ea1f25",
+      city: "Mumbai",
+      name: "Navratan",
+      addressLine1: "2 Mezzanine Floor",
+      addressLine2: " 69, P.D'Mellow Road",
+      addressLine3: "Carnace Bunder",
+      pincode: "400009",
+      phone: ["022-66317261", "022-66317262"],
+      tollfreeNo: ["1800 11 7080", "9711797516"],
+      email: "mumbairo@neccgroup.com",
+  },
+  {
+    id: "2569ce0d517a7f06d3ea1f25",
+    city: "Mumbai",
+    name: "Navratan",
+    addressLine1: "2 Mezzanine Floor",
+    addressLine2: " 69, P.D'Mellow Road",
+    addressLine3: "Carnace Bunder",
+    pincode: "400009",
+    phone: ["022-66317261", "022-66317262"],
+    tollfreeNo: ["1800 11 7080", "9711797516"],
+    email: "mumbairo@neccgroup.com",
+},
+  // Add other company objects here...
+];
   return (
     <>
       <Toaster position='bottom-center' reverseOrder={false} />
@@ -145,6 +297,38 @@ const ContactInner = () => {
           </div>
         </div>
       </div>
+
+      <div className='service-area style-2 pd-bottom-80'>
+        <div className='container'>
+        <div className='row justify-content-center'>
+            <div className='col-lg-12'>
+              <div className='section-title text-center'>
+                {/* <h4 className='subtitle'>SERVICES</h4> */}
+                <h2 className='title'>CORPORATE OFFICE</h2>
+              </div>
+            </div>
+          </div>
+            <div className='row'>
+                {corporate.map((company) => (
+                  <div className='col-lg-4' key={company.id}>
+                    <div className='single-service-wrap'>
+                      <div className='details'>
+                        <h5>{company.city}</h5>
+                        <p>
+                          {company.name}<br />
+                          {company.addressLine1},<br />
+                          {company.addressLine2},<br />
+                          {company.addressLine3}-{company.pincode}<br />
+                          Phone: {company.phone.join(', ')}<br />
+                          E-mail: {company.email}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+             </div>
+         </div>
+      </div>
    
       <div className='service-area style-2 pd-bottom-80'>
         <div className='container'>
@@ -156,92 +340,25 @@ const ContactInner = () => {
               </div>
             </div>
           </div>
-        <div className='row' >
-          <div className='col-lg-4'>
-              <div className='single-service-wrap'>
-                <div className='details'>
-                  <h5>MUMBAI</h5>
-                  <p>
-                  "Navratan"<br/>
-                  2, Mezzanine Floor,<br/>
-                  69, P.D' Mellow Road ,<br/>
-                  Carnace Bunder-400009<br/>
-                  Phone: 022-66317261, 66317262<br/>
-                  E-mail: mumbairo@neccgroup.com
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className='col-lg-4'>
-              <div className='single-service-wrap'>
-                <div className='details'>
-                  <h5>KOLKATA</h5>
-                  <p>
-                  34 A, Brabourne Road,<br/>
-                  IInd FLoor,<br/>
-                  Raghunath Building,<br/>
-                  Kolkata-700001<br/>
-                  Phone : 033-22354330, 22354349<br/>
-                  E-mail : kolkata@neccgroup.com
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className='col-lg-4'>
-              <div className='single-service-wrap'>
-                <div className='details'>
-                  <h5>BANGALORE</h5>
-                  <p>
-                  "NECC HOUSE",<br/>
-                  6-S.G. Narayana Layout,<br/>
-                  Lal Bagh Road,<br/>
-                  Bangalore-560027<br/>
-                  Phone : 080-22485725, 22485727<br/>
-                  E-mail : bangalore@neccgroup.com
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className='col-lg-4'>
-              <div className='single-service-wrap'>
-                <div className='details'>
-                  <h5>HYDERABAD</h5>
-                  <p>
-                  Plot no.93-96, Block No. 36A,<br/> Auto Nagar Telengana, Hyderabad-500070<br/>
-                  Phone-040 24023824<br/>
-                  E-mail : hyderabad@neccgroup.com
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className='col-lg-4'>
-              <div className='single-service-wrap'>
-                <div className='details'>
-                  <h5>PATNA</h5>
-                  <p>
-                  C-1,1st Floor,Durga Vihar,
-                  S.P.Verma Road,
-                  Patna . - 800 001.<br/>
-                  Phone : 0612-2222912, 2222084, 2227615<br/>
-                  E-mail: patna@neccgroup.com
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className='col-lg-4'>
-              <div className='single-service-wrap'>
-                <div className='details'>
-                  <h5>GUWAHATI</h5>
-                  <p>
-                  M.S.Road,<br/>
-                  Guwahati-<br/>781 001.<br/>
-                  Phone : 0361-2736754<br/>
-                  E-mail: guwahati@neccgroup.com
-                  </p>
-                </div>
-              </div>
-            </div>
-            </div>
+            <div className='row'>
+                {companies.map((company) => (
+                  <div className='col-lg-4' key={company.id}>
+                    <div className='single-service-wrap'>
+                      <div className='details'>
+                        <h5>{company.city}</h5>
+                        <p>
+                          {company.name}<br />
+                          {company.addressLine1},<br />
+                          {company.addressLine2},<br />
+                          {company.addressLine3}-{company.pincode}<br />
+                          Phone: {company.phone.join(', ')}<br />
+                          E-mail: {company.email}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+             </div>
          </div>
       </div>
     

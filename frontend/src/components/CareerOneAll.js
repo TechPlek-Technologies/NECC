@@ -9,13 +9,8 @@ const CareerOneAll = () => {
       {/* service area start */}
       <div className='service-area style-2 pd-top-115 pd-bottom-80'>
         <div className='container'>
-          <div className='row justify-content-center'>
-            <div className='col-lg-12'>
-              <div className='section-title text-center'>
-                {/* <h4 className='subtitle'>SERVICES</h4> */}
-                <h2 className='subtitle'>CURRENT OPENINGS</h2>
-              </div>
-            </div>
+          <div class="heading text-center mb-50">
+              <h2 class="heading__title">CURRENT OPENINGS</h2>
           </div>
 
           <div className='row' >

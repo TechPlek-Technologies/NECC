@@ -4,30 +4,27 @@ import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
 import PartnerOne from "../components/PartnerOne";
-import CareerInner from "../components/CareerInner";
-import CareerOneAll from "../components/CareerOneAll";
-import NavbarThree from "../components/NavbarThree";
+import KeyManagementPersonnelInner from "../components/KeyManagementPersonnelInner";
 import SupportBarOne from "../components/SupportBarOne";
+import NavbarThree from "../components/NavbarThree";
 
-const Career = () => {
+
+const KeyManagementPersonnel = () => {
     return (
       <>
         <Fragment>
           <Suspense fallback={<Preloader />}>
-            {/* SupportBarOne */}
+             {/* SupportBarOne */}
           <SupportBarOne/>
-  
-            {/* Navbar Three */}
+
+            {/* Navbar Three*/}
             <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"CAREERS"} />
-  
-            {/* Service Details Inner */}
-            <CareerInner/>
+            <Breadcrumb title={"KEY MANAGEMENT PERSONNEL"} />
 
-            {/* Service One All */}
-          <CareerOneAll/>
+            {/*Investors Inner */}
+            <KeyManagementPersonnelInner/>
 
             {/* Partner One */}
             <PartnerOne />
@@ -43,4 +40,4 @@ const Career = () => {
     );
   };
   
-  export default Career;
+  export default KeyManagementPersonnel;

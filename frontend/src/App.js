@@ -52,6 +52,7 @@ import NeccLogistics from "./pages/NeccLogistics";
 import NeccTelecom from "./pages/NeccTelecom";
 import Necc from "./pages/Necc";
 import NeccEcomSolution from "./pages/NeccEcomSolution";
+import KeyManagementPersonnel from "./pages/KeyManagementPersonnel";
 
 function App() {
   useEffect(() => {
@@ -102,6 +103,7 @@ function App() {
           <Route exact path="/NeccTelecom" element={<NeccTelecom/>} />
           <Route exact path="/Necc" element={<Necc/>} />
           <Route exact path="/NeccEcomSolution" element={<NeccEcomSolution/>} />
+          <Route exact path="/KeyManagementPersonnel" element={<KeyManagementPersonnel/>} />
           <Route
             exact
             path="/CorporateInformation"

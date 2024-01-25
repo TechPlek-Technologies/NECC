@@ -120,6 +120,9 @@ const NavbarThree = () => {
                     <li>
                       <Link to='/NeccEcomSolution'>NECC Ecom Solutions</Link>
                     </li>
+                    <li>
+                      <Link to='/KeyManagementPersonnel'>Key Management Personnel</Link>
+                    </li>
                   </ul>
                 </li>
                 <li className='menu-item-has-children current-menu-item'>

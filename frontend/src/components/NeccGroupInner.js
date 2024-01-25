@@ -10,7 +10,8 @@ const NeccGroupInner = () => {
             <div className='col-lg-6 col-md-12'>
               <div className='service-content'>
                 <div className='section-title white  text-left'>
-                  <span className='subtitles'>NECC GROUP</span>
+                  {/* <span className='subtitles'>NECC GROUP</span> */}
+                  <h2 className='title'>NECC GROUP</h2>
                   
                   <p>
                   Established in Year 1968, NECC Group is one of the top logistic companies in India. Our offices are located throughout the India. We offer a wide range of transport related services to meet every customer requirement.<br/>
@@ -46,13 +47,13 @@ const NeccGroupInner = () => {
                     </div>
                   </div>
                 </div>
-                <div className='row justify-content-center'>
+                {/* <div className='row justify-content-center'>
                       <div className='col-lg-12'>
                         <div className='section-title text-center'>
                           <h2 className='subtitle'>TEAM NECC IS COMMITTED TO EXCEED CLIENT EXPECTATIONS</h2>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
               </div>
             </div>
             <div className='col-lg-6 remove-col-padding'>
@@ -66,6 +67,17 @@ const NeccGroupInner = () => {
           </div>
         </div>
       </div>
+      <div class="divider-area divider-default-area">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-sm-11 col-md-12">
+            <div class="content">
+              <p class="title">TEAM NECC IS COMMITED TO EXCEED CLIENT EXPECTATIONS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
       {/* End Services area  */}
     </>
   );

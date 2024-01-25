@@ -87,13 +87,26 @@
     margin-left: 60px;
 }
 
-/* .solutionBg{
-    background-size: cover;
-    display: block;
-    height: 100%;
+.divider-area.divider-default-area {
+    background-color: #fa4318;
+    overflow: hidden;
     position: relative;
-    right: 100px;
-    top: 45px;
-    z-index: 1;
-} */
+    padding: 20px 0 20px;
+    color: #ffffff;
+}
 
+.divider-area.divider-default-area .content .title {
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.2889;
+    margin-bottom: 0;
+    font-style: italic;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.heading__title {
+    font-size: 40px;
+    color: #ff5e14;
+    margin-bottom: 15px;
+}

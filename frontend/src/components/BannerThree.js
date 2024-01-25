@@ -35,7 +35,7 @@ const BannerThree = () => {
                 className='item'
                 style={{ background: "url('/assets/img/slide-v1/bg-01.png')" }}
               >
-                <div className='container'>
+                <div className='container'> 
                   <div className='row'>
                     <div className='col-lg-8'>
                       <div className='banner-inner style-white'>

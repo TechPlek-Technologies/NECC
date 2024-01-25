@@ -2,8 +2,7 @@ import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
 import SupportBarOne from "../components/SupportBarOne";
 import NavbarThree from "../components/NavbarThree";
-import ServiceInner from "../components/ServiceInner";
-import ServiceInner2 from "../components/ServiceInner2";
+import ServiceInnerOne from "../components/ServiceInnerOne";
 const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
@@ -23,11 +22,8 @@ const Service = () => {
           {/* Breadcrumb */}
           <Breadcrumb title={"SERVICES"} />
 
-          {/* Service Inner*/}
-          <ServiceInner/>
-
-           {/* Service Inner*/}
-           <ServiceInner2/>
+          {/* {Service Inner} */}
+          <ServiceInnerOne/>
 
           {/* Footer One */}
           <FooterOne />
