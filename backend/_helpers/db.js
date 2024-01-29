@@ -16,9 +16,10 @@ async function initialize() {
     const sequelize = new Sequelize(database, user, password, { dialect: 'mysql' });
 
     // init models and add them to the exported db object
-    db.User = require('../users/user.model')(sequelize);
-    db.Category = require('../categories/category.model')(sequelize);
-    db.Event = require('../events/event.model')(sequelize);
+    db.User = require('../mvc/users/user.model')(sequelize);
+    db.Category = require('../mvc/categories/category.model')(sequelize);
+    db.Event = require('../mvc/events/event.model')(sequelize);
+    db.PdfFile = require('../mvc/pdfFile/pdfFile.model')(sequelize);
 
     // sync all models with database
     await sequelize.sync();

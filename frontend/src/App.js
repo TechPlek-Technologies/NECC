@@ -53,6 +53,7 @@ import NeccTelecom from "./pages/NeccTelecom";
 import Necc from "./pages/Necc";
 import NeccEcomSolution from "./pages/NeccEcomSolution";
 import KeyManagementPersonnel from "./pages/KeyManagementPersonnel";
+import AdminPdfReports from "./pages/Dashboard/pages/AdminPdfReports";
 
 function App() {
   useEffect(() => {
@@ -132,6 +133,7 @@ function App() {
             <Route exact path="/admin/right-issues" element={<AdminRightIssues />}></Route>
             <Route exact path="/admin/magazines" element={<AdminMagazines />}></Route>
             <Route exact path="/admin/downloads" element={<AdminDownloads />}></Route>
+            <Route path="/admin/pdfReports/:reportId" element={<AdminPdfReports />} />
           </Route>
 
           {/* Add more protected routes as needed */}

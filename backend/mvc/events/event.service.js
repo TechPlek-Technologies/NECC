@@ -5,9 +5,7 @@ module.exports = {
     getEventById,
     createEvent,
     updateEvent,
-    deleteEvent,
-    getEventsBySection,
-    getAllSections
+    deleteEvent
 };
 
 async function getAllEvents() {
@@ -47,19 +45,6 @@ async function updateEvent(id, params) {
 async function deleteEvent(id) {
     const event = await getEvent(id);
     await event.destroy();
-}
-
-async function getEventsBySection(section) {
-    const events = await db.Event.findAll({
-        where: { section: section },
-        attributes: ['id', 'name', 'pdfFile', 'section', 'categoryId', 'createdAt', 'updatedAt']
-    });
-
-    return events;
-}
-
-async function getAllSections() {
-    return await db.Event.findAll();
 }
 
 

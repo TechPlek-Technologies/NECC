@@ -10,9 +10,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // api routes
-app.use("/users", require("./users/user.controller"));
-app.use("/categories", require("./categories/category.controller"));
-app.use("/events", require("./events/event.controller"));
+app.use("/users", require("./mvc/users/user.controller"));
+app.use("/categories", require("./mvc/categories/category.controller"));
+app.use("/events", require("./mvc/events/event.controller"));
+app.use("/uploads", require("./mvc/pdfFile/pdfFile.controller"));
 
 // global error handler
 app.use(errorHandler);

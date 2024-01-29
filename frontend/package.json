@@ -34,6 +34,7 @@
     "react-scripts": "5.0.1",
     "react-scroll-to-top": "^3.0.0",
     "react-slick": "^0.29.0",
+    "reactstrap": "^9.2.2",
     "read-more-react": "^1.0.10",
     "simplebar-react": "^3.2.4",
     "slick-carousel": "^1.8.1",

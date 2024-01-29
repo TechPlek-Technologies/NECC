@@ -46,7 +46,7 @@ export const InvestorsInnerTab = (props) => {
           alignItems="flex-start"
           direction="row"
           justifyContent="space-between"
-          spacing={3}
+          spacing={1}
         >
           <Stack spacing={1}>
             <Typography
