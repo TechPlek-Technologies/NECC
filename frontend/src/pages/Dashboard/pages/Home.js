@@ -9,48 +9,34 @@ function Home() {
   const theme = createTheme();
   return (
     <>
-       <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <Layout>
           <>
-          
-          <Box
-      component="main"
-      sx={{
-        flexGrow: 1,
-        py: 8
-      }}
-    >
-      <Container maxWidth="lg">
-        <Stack spacing={3}>
-          <div>
-            <Typography variant="h4">
-              Account
-            </Typography>
-          </div>
-          <div>
-            <Grid
-              container
-              spacing={3}
+            <Box
+              component="main"
+              sx={{
+                flexGrow: 1,
+                py: 8,
+              }}
             >
-              <Grid
-                xs={12}
-                md={6}
-                lg={4}
-              >
-                <AccountProfile />
-              </Grid>
-              <Grid
-                xs={12}
-                md={6}
-                lg={8}
-              >
-                <AccountProfileDetails />
-              </Grid>
-            </Grid>
-          </div>
-        </Stack>
-      </Container>
-    </Box>
+              <Container maxWidth="lg">
+                <Stack spacing={3}>
+                  <div>
+                    <Typography variant="h4">Account</Typography>
+                  </div>
+                  <div>
+                    <Grid container spacing={3}>
+                      <Grid item xs={12} md={6} lg={4}>
+                        <AccountProfile />
+                      </Grid>
+                      <Grid item xs={12} md={6} lg={8}>
+                        <AccountProfileDetails />
+                      </Grid>
+                    </Grid>
+                  </div>
+                </Stack>
+              </Container>
+            </Box>
           </>
         </Layout>
       </ThemeProvider>
