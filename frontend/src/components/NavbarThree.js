@@ -100,28 +100,10 @@ const NavbarThree = () => {
                   </ul>
                 </li>
                  <li className='menu-item-has-children'>
-                  <Link to='#'>Sitemap</Link>
+                  <Link to='#'>SiteMap</Link>
                   <ul className='sub-menu'>
                     <li>
-                      <Link to='/ConsignmentTrackingaAndEnquiry'>Consignment Tracking and Enquiry</Link>
-                    </li>
-                    <li>
-                      <Link to='/NeccGroup'>NECC GROUP</Link>
-                    </li>
-                    <li>
-                      <Link to='/NeccLogistics'>NECC Logistics</Link>
-                    </li>
-                    <li>
-                      <Link to='/NeccTelecom'>NECC Telecom</Link>
-                    </li>
-                    <li>
-                      <Link to='/Necc'>North Eastern Carrying Corporation</Link>
-                    </li>
-                    <li>
-                      <Link to='/NeccEcomSolution'>NECC Ecom Solutions</Link>
-                    </li>
-                    <li>
-                      <Link to='/KeyManagementPersonnel'>Key Management Personnel</Link>
+                    <Link to='/SiteMap'>SiteMap</Link>
                     </li>
                   </ul>
                 </li>
