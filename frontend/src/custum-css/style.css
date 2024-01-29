@@ -110,3 +110,17 @@
     color: #ff5e14;
     margin-bottom: 15px;
 }
+
+.widget_tags .tagcloud p {
+    background: #080c24;
+    border-radius: 0;
+    box-shadow: 0 2px 14px rgba(4,6,66,.05);
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 39px;
+    margin: 0 7px 10px 0;
+    padding: 0 20px;
+}

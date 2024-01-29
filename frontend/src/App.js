@@ -53,6 +53,16 @@ import NeccTelecom from "./pages/NeccTelecom";
 import Necc from "./pages/Necc";
 import NeccEcomSolution from "./pages/NeccEcomSolution";
 import KeyManagementPersonnel from "./pages/KeyManagementPersonnel";
+import ServiceDetail1 from "./pages/ServiceDetail1";
+import ServiceDetail2 from "./pages/ServiceDetail2";
+import ServiceDetail3 from "./pages/ServiceDetail3";
+import ServiceDetail4 from "./pages/ServiceDetail4";
+import ServiceDetail5 from "./pages/ServiceDetail5";
+import BoardOfDirectors from "./pages/BoardOfDirectors";
+import SiteMap from "./pages/SiteMap";
+import CorporateGovernance from "./pages/CorporateGovernance";
+import AnnualReport from "./pages/AnnualReport";
+import QuarterlyCompliances from "./pages/QuarterlyCompliances";
 
 function App() {
   useEffect(() => {
@@ -104,6 +114,16 @@ function App() {
           <Route exact path="/Necc" element={<Necc/>} />
           <Route exact path="/NeccEcomSolution" element={<NeccEcomSolution/>} />
           <Route exact path="/KeyManagementPersonnel" element={<KeyManagementPersonnel/>} />
+          <Route exact path="/ServiceDetail1" element={<ServiceDetail1/>} />
+          <Route exact path="/ServiceDetail2" element={<ServiceDetail2/>} />
+          <Route exact path="/ServiceDetail3" element={<ServiceDetail3/>} />
+          <Route exact path="/ServiceDetail4" element={<ServiceDetail4/>} />
+          <Route exact path="/ServiceDetail5" element={<ServiceDetail5/>} />
+          <Route exact path="/BoardOfDirectors" element={<BoardOfDirectors/>} />
+          <Route exact path="/SiteMap" element={<SiteMap/>} />
+          <Route exact path="/CorporateGovernance" element={<CorporateGovernance/>} />
+          <Route exact path="/AnnualReport" element={<AnnualReport/>} />
+          <Route exact path="/QuarterlyCompliances" element={<QuarterlyCompliances/>} />
           <Route
             exact
             path="/CorporateInformation"
