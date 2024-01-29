@@ -19,7 +19,7 @@ const ServiceInnerOne = () => {
               </div>
             </div>
           </div>
-          <div className='row justify-content-center'>
+          <div className='row'>
             <div className='col-lg-4'>
               <div className='single-service-wrap'>
                 <div className='thumb'>
@@ -37,7 +37,7 @@ const ServiceInnerOne = () => {
                   Movement of goods/small parcels (less than 50kg’s) from all over India to the eastern and north eastern part of the country.
                   </p>
                   <div className='btn-wrap'>
-                    <Link className='read-more-text' to='/service-details'>
+                    <Link className='read-more-text' to='/ServiceDetail1'>
                       READ MORE{" "}
                       <span>
                         <FaArrowRight />
@@ -64,7 +64,7 @@ const ServiceInnerOne = () => {
                   We provide this service to all major corporate where we can place the truck from anywhere to anywhere depending on the client’s needs.
                   </p>
                   <div className='btn-wrap'>
-                    <Link className='read-more-text' to='/service-details'>
+                    <Link className='read-more-text' to='/ServiceDetail2'>
                       READ MORE{" "}
                       <span>
                         <FaArrowRight />
@@ -91,7 +91,7 @@ const ServiceInnerOne = () => {
                   We offer services like mining logistics,chrome/iron/manganese ore transportation from mines for processing.
                   </p>
                   <div className='btn-wrap'>
-                    <Link className='read-more-text' to='/service-details'>
+                    <Link className='read-more-text' to='/ServiceDetail3'>
                       READ MORE{" "}
                       <span>
                         <FaArrowRight />
@@ -118,7 +118,7 @@ const ServiceInnerOne = () => {
                   Over dimensional consignments require special expertise and safety measures to be transported over long distance.
                   </p>
                   <div className='btn-wrap'>
-                    <Link className='read-more-text' to='/service-details'>
+                    <Link className='read-more-text' to='/ServiceDetail4'>
                       READ MORE{" "}
                       <span>
                         <FaArrowRight />
@@ -145,7 +145,7 @@ const ServiceInnerOne = () => {
                   We have more than 1.5 million sq ft of warehousing space all over India.Providing our clients with complete solution.
                   </p>
                   <div className='btn-wrap'>
-                    <Link className='read-more-text' to='/service-details'>
+                    <Link className='read-more-text' to='/ServiceDetail5'>
                       READ MORE{" "}
                       <span>
                         <FaArrowRight />
