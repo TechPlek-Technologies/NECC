@@ -5,7 +5,8 @@ module.exports = {
     getEventById,
     createEvent,
     updateEvent,
-    deleteEvent
+    deleteEvent,
+    getEventByCategory
 };
 
 async function getAllEvents() {
@@ -17,10 +18,7 @@ async function getEventById(id) {
 }
 
 async function createEvent(params) {
-    // validate
-    if (await db.Event.findOne({ where: { name: params.name } })) {
-        throw 'Event with name "' + params.name + '" already exists';
-    }
+   
 
     // save event
     await db.Event.create(params);
@@ -47,6 +45,13 @@ async function deleteEvent(id) {
     await event.destroy();
 }
 
+async function getEventByCategory(categoryID) {
+    const event = await db.Event.findAll({
+        where: { categoryID: categoryID }
+    });
+
+    return event;
+}
 
 
 // helper functions

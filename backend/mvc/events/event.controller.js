@@ -6,7 +6,8 @@ const authorize = require("_middleware/authorize");
 const eventService = require("./event.service");
 
 // routes
-router.get("/", authorize(), getAllEvents);
+router.get("/", getAllEvents);
+router.get("/page/:categoryID", getEventByCategory);
 router.get("/:id", authorize(), getEventById);
 router.post("/", authorize(), createEventSchema, createEvent);
 router.put("/:id", authorize(), updateEventSchema, updateEvent);
@@ -31,7 +32,7 @@ function getEventById(req, res, next) {
 function createEventSchema(req, res, next) {
   const schema = Joi.object({
     name: Joi.string().required(),
-    categoryId: Joi.number().required(),
+    categoryID: Joi.number().required(),
     // Add more validation for other attributes if needed
   });
   validateRequest(req, next, schema);
@@ -41,15 +42,15 @@ async function createEvent(req, res, next) {
   try {
     // Extract categoryId from request body or any other source
     console.log(req.body)
-    const categoryId = req.body.categoryId;
+    const categoryID = req.body.categoryID;
 
     // Create the event with the associated categoryId
     await eventService.createEvent({
       name: req.body.name,
-      categoryId: categoryId, // Associate the event with the specified category
+      categoryID: categoryID, // Associate the event with the specified category
     });
 
-    res.json({ message: "Event created successfully" });
+    res.json({ message: "Section created successfully" });
   } catch (error) {
     next(error);
   }
@@ -76,19 +77,14 @@ function deleteEvent(req, res, next) {
     .then(() => res.json({ message: "Event deleted successfully" }))
     .catch(next);
 }
-
-function getEventsBySection(req, res, next) {
-  const section = req.params.section;
-
-  eventService
-    .getEventsBySection(section)
-    .then((events) => res.json(events))
-    .catch(next);
+async function getEventByCategory(req, res, next) {
+  try {
+      const categoryID = req.params.categoryID;
+      const events = await eventService.getEventByCategory(categoryID);
+      res.json(events);
+  } catch (error) {
+      next(error);
+  }
 }
 
-function getAllSections(req, res, next) {
-  eventService
-    .getAllSections()
-    .then((sections) => res.json(sections))
-    .catch(next);
-}
+

@@ -26,17 +26,7 @@ import ConsignmentTrackingaAndEnquiry from "./pages/ConsignmentTrackingaAndEnqui
 import Office from "./pages/Dashboard/pages/Office";
 import OfficeContact from "./pages/Dashboard/pages/Contact";
 import InvestorsTab from "./pages/Dashboard/pages/InvestorsTab";
-import AdminCorporateInformation from "./pages/Dashboard/pages/CorporateInformation";
-import AdminAnnualReport from "./pages/Dashboard/pages/AnnualReport";
-import AdminNewspaperPublication from "./pages/Dashboard/pages/AdminNewspaperPublication";
-import AdminNewsEvents from "./pages/Dashboard/pages/AdminNewsEvents";
-import AdminFinancials from "./pages/Dashboard/pages/AdminFinancials";
 import AdminQuaterlyCompliance from "./pages/Dashboard/pages/AdminQuaterlyCompliance";
-import AdminCodeOfConduct from "./pages/Dashboard/pages/AdminCodeOfConduct";
-import AdminCSR from "./pages/Dashboard/pages/AdminCSR";
-import AdminRightIssues from "./pages/Dashboard/pages/AdminRightIssues";
-import AdminListingInformation from "./pages/Dashboard/pages/AdminListingInformation";
-import AdminCorporateGovernance from "./pages/Dashboard/pages/AdminCorporateGovernance";
 import AdminMagazines from "./pages/Dashboard/pages/AdminMagazines";
 import AdminDownloads from "./pages/Dashboard/pages/AdminDownloads";
 import NeccGroup from "./pages/NeccGroup";
@@ -130,20 +120,10 @@ function App() {
             <Route exact path="/admin/office" element={<Office />}></Route>
             <Route exact path="/admin/contact" element={<OfficeContact />}></Route>
             <Route exact path="/admin/investor" element={<InvestorsTab />}></Route>
-            <Route exact path="/admin/corporate-information" element={<AdminCorporateInformation />}></Route>
-            <Route exact path="/admin/annual-report" element={<AdminAnnualReport />}></Route>
-            <Route exact path="/admin/newspaper-publication" element={<AdminNewspaperPublication />}></Route>
-            <Route exact path="/admin/news-events" element={<AdminNewsEvents />}></Route>
-            <Route exact path="/admin/financials" element={<AdminFinancials />}></Route>
-            <Route exact path="/admin/quarterly-compliances" element={<AdminQuaterlyCompliance />}></Route>
-            <Route exact path="/admin/code-of-conduct" element={<AdminCodeOfConduct />}></Route>
-            <Route exact path="/admin/csr" element={<AdminCSR />}></Route>
-            <Route exact path="/admin/listing-information" element={<AdminListingInformation />}></Route>
-            <Route exact path="/admin/corporate-governance" element={<AdminCorporateGovernance />}></Route>
-            <Route exact path="/admin/right-issues" element={<AdminRightIssues />}></Route>
+            <Route exact path="/admin/:pagename/:id" element={<AdminQuaterlyCompliance />}></Route>
             <Route exact path="/admin/magazines" element={<AdminMagazines />}></Route>
             <Route exact path="/admin/downloads" element={<AdminDownloads />}></Route>
-            <Route path="/admin/pdfReports/:reportId" element={<AdminPdfReports />} />
+            <Route path="/admin/pdfReports/:reportName/:id" element={<AdminPdfReports />} />
           </Route>
 
           {/* Add more protected routes as needed */}

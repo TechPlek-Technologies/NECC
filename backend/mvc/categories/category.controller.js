@@ -6,7 +6,7 @@ const authorize = require('_middleware/authorize');
 const categoryService = require('./category.service');
 
 // routes
-router.get('/', authorize(), getAllCategories);
+router.get('/',  getAllCategories);
 router.get('/:id', authorize(), getCategoryById);
 router.post('/', authorize(), createCategorySchema, createCategory);
 router.put('/:id', authorize(), updateCategorySchema, updateCategory);
