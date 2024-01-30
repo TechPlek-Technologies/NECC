@@ -60,7 +60,22 @@ const SiteMapInner= () => {
                       QUARTERLY COMPLIANCES{" "}
                       </Link></li>
 
-                      
+                      <li> <Link to='/Download'>
+                        
+                      DOWNLOAD{" "}
+                        </Link></li>
+
+                        <li> <Link to='/AnnualReportFinancial'>
+                        
+                        ANNUAL REPORT & FINANCIALS{" "}
+                        </Link></li>
+
+                        <li> <Link to='/Polices'>
+                        
+                        POLICES & CODE{" "}
+                        </Link></li>
+
+
                     </ul>
                    
                   </div>

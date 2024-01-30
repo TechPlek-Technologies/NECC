@@ -10,7 +10,7 @@ const ChairmanDeskInner= () => {
         <div className='container'>
           <div className='about-area-inner'>
             <div className='row'>
-              <div className='col-lg-3'>
+              <div className='col-lg-2'>
                 <div className='about-thumb-wrap'>
                   {/* <img
                     className='img-1'
@@ -24,7 +24,7 @@ const ChairmanDeskInner= () => {
                   />
                 </div>
               </div>
-              <div className='col-lg-9 align-self-center'>
+              <div className='col-lg-10 align-self-center'>
                 <div className='about-inner-wrap'>
                   <div className='section-title mb-0'>
             
@@ -41,7 +41,7 @@ const ChairmanDeskInner= () => {
           </div>
         </div>
       </div>
-      <div className='service-area pd-top-90 pd-bottom-20'>
+      <div className='service-area pd-top-20 pd-bottom-20'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-12 align-self-center'>
