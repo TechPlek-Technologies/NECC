@@ -5,12 +5,12 @@ const authorize = require('../../_middleware/authorize');
 const pdfFileService = require('./pdfFile.service');
 
 // Routes
-router.get('/pdfFiles',authorize(), getAllPdfFiles);
+router.get('/pdfFiles', getAllPdfFiles);
 router.get('/pdfFiles/:id',authorize(), getPdfFileById);
 router.post('/pdfFiles',authorize(),upload.single('file'), createPdfFile);
 router.put('/pdfFiles/:id',authorize(),upload.single('file'), updatePdfFile);
 router.delete('/pdfFiles/:id',authorize(), deletePdfFile);
-router.get('/pdfFiles/sections/:section',authorize(), getPdfFilesBySection);
+router.get('/pdfFiles/sections/:section', getPdfFilesBySection);
 router.get('/pdfFiles/pages/:page',authorize(), getPdfFilesByPages);
 router.get('/pdfFiles/sections',authorize(), getAllSections);
 
@@ -41,8 +41,8 @@ async function createPdfFile(req, res, next) {
 
     try {
         const params = req.body;
+        console.log(params)
         const file = req.file; // Assuming multer or similar middleware handles file upload
-        console.log("hello")
         await pdfFileService.createPdfFile(params, file);
         res.json({ message: 'PDF file created successfully' });
     } catch (error) {
@@ -73,8 +73,8 @@ async function deletePdfFile(req, res, next) {
 
 async function getPdfFilesBySection(req, res, next) {
     try {
-        const section = req.params.section;
-        const pdfFiles = await pdfFileService.getPdfFilesBySection(section);
+        const eventId = req.params.section;
+        const pdfFiles = await pdfFileService.getPdfFilesBySection(eventId);
         res.json(pdfFiles);
     } catch (error) {
         next(error);

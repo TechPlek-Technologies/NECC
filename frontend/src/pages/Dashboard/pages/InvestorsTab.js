@@ -1,27 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "../../../theme";
 import Layout from "../layout/Layout";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import { InvestorsInnerTab } from "../sections/InvestorsTab/investors-tab-inner";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function InvestorsTab() {
   const theme = createTheme();
-  const tabs = [
-    { route: "/admin/corporate-information", name: "Corporate Information" },
-    { route: "/admin/newspaper-publication", name: "Newspaper Publication" },
-    { route: "/admin/news-events", name: "News Events" },
-    { route: "/admin/financials", name: "Financials" },
-    { route: "/admin/annual-report", name: "Annual Report & Notice Of AGM" },
-    { route: "/admin/quarterly-compliances", name: "Quarterly Compliances" },
-    { route: "/admin/code-of-conduct", name: "Code Of Conduct" },
-    { route: "/admin/csr", name: "CSR" },
-    { route: "/admin/listing-information", name: "Listing Information" },
-    { route: "/admin/corporate-governance", name: "Corporate Governance" },
-    { route: "/admin/right-issues", name: "Right Issues" },
-    // Add more tabs as needed
-  ];
+  const domain = process.env.REACT_APP_API_DOMAIN;
+  const [tabs, setTabs] = useState([]);
+  // const tabs = [
+  //   { route: "/admin/corporate-information", name: "Corporate Information" },
+  //   { route: "/admin/newspaper-publication", name: "Newspaper Publication" },
+  //   { route: "/admin/news-events", name: "News Events" },
+  //   { route: "/admin/financials", name: "Financials" },
+  //   { route: "/admin/annual-report", name: "Annual Report & Notice Of AGM" },
+  //   { route: "/admin/quarterly-compliances", name: "Quarterly Compliances" },
+  //   { route: "/admin/code-of-conduct", name: "Code Of Conduct" },
+  //   { route: "/admin/csr", name: "CSR" },
+  //   { route: "/admin/listing-information", name: "Listing Information" },
+  //   { route: "/admin/corporate-governance", name: "Corporate Governance" },
+  //   { route: "/admin/right-issues", name: "Right Issues" },
+  //   // Add more tabs as needed
+  // ];
+
+  useEffect(() => {
+    // Function to fetch data
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${domain}/categories`);
+        console.log(response.data);
+        setTabs(response.data); // Set the fetched data into state
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    // Call the fetch data function
+    fetchData();
+  }, []); // Empty dependency array to ensure this effect runs only once
 
   return (
     <>
@@ -52,7 +71,7 @@ function InvestorsTab() {
                           style={{ margin: "4px 0" }}
                         >
                           <Link
-                            to={tab.route}
+                            to={`/admin/${tab.name}/${tab.id}`}
                             style={{ textDecoration: "none", color: "inherit" }}
                           >
                             <InvestorsInnerTab

@@ -1,108 +1,126 @@
 import {
-    Avatar,
-    Box,
-    Button,
-    Card,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogTitle,
-    Grid,
-    IconButton,
-    Stack,
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TablePagination,
-    TableRow,
-    TextField,
-    Tooltip,
-    Typography,
-  } from "@mui/material";
-  import { Scrollbar } from "../../components/Scrollbar";
-  import { getInitials } from "../../utils/get-initials";
-  import { useState } from "react";
-  import { RiDeleteBin2Line, RiExpandRightFill } from "react-icons/ri";
-  
-  export const PdfTable = (props) => {
-    const {
-      count = 0,
-      items = [],
-      onPageChange = () => {},
-      onRowsPerPageChange,
-      page = 0,
-      rowsPerPage = 0,
-    } = props;
-  
-    const [isEditOpen, setEditOpen] = useState(false);
-    const [editedOffice, setEditedOffice] = useState({});
-  
-  
-    const handleEditClick = (customer) => {
-      setEditedOffice({
-          id:customer.id,
-        name: customer.name,
-        pdfFile: customer.pdfFile,
-        
-      });
-      setEditOpen(true);
-    };
-  
-    const handleEditClose = () => {
-      setEditOpen(false);
-    };
-  
-  
-    
-    const handleInputChange = (event) => {
-      const { name, value } = event.target;
-      setEditedOffice((prev) => ({ ...prev, [name]: value }));
-    };
-  
-    return (
-      <Card>
-        <Scrollbar>
-          <Box sx={{ minWidth: 800 }}>
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Name</TableCell>
-                  <TableCell>File Name</TableCell>
-                  <Stack
-                    alignItems="center"
-                    justifyContent="center"
-                    direction="row"
-                    spacing={2}
-                  >
-                    <TableCell>Action</TableCell>
-                  </Stack>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {items.map((customer) => {
-              
-  
-                  return (
-                    <TableRow hover key={customer.id} >
-                      <TableCell>
-                        <Stack alignItems="center" direction="row" spacing={2}>
-                          <Avatar src={customer.avatar}>
-                            {getInitials(customer.name)}
-                          </Avatar>
-                          <Typography variant="subtitle2">
-                            {customer.name}
-                          </Typography>
-                        </Stack>
-                      </TableCell>
-                      <TableCell>{customer.pdfFile}</TableCell>
-                     
-                      <Stack
-                        alignItems="center"
-                        justifyContent="center"
-                        direction="row"
-                        spacing={2}
-                      >
+  Alert,
+  Avatar,
+  Box,
+  Button,
+  Card,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Grid,
+  IconButton,
+  Snackbar,
+  Stack,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TablePagination,
+  TableRow,
+  TextField,
+  Tooltip,
+  Typography,
+} from "@mui/material";
+import { Scrollbar } from "../../components/Scrollbar";
+import { getInitials } from "../../utils/get-initials";
+import { useState } from "react";
+import { RiDeleteBin2Line, RiExpandRightFill } from "react-icons/ri";
+import { FormGroup, Input } from "reactstrap";
+import { capitalizeFirstLetterOfEachWord } from "../../utils/capitalise-word";
+
+export const PdfTable = (props) => {
+  const {
+    count = 0,
+    items = [],
+    onPageChange = () => {},
+    onRowsPerPageChange,
+    page = 0,
+    rowsPerPage = 0,
+    section = "",
+  } = props;
+  console.log(items);
+
+  const [isEditOpen, setEditOpen] = useState(false);
+  const [editedOffice, setEditedOffice] = useState({});
+  const [success, setSuccess] = useState(false);
+  const [failure, setFailure] = useState(false);
+  const [file, setFile] = useState(null); // Define file state
+
+  const handleEditClick = (customer) => {
+    console.log(customer)
+    setEditedOffice({
+      ...customer,
+      name: customer.name,
+      file:file // 
+  });
+
+    setEditOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setFailure(false);
+    setSuccess(false);
+  };
+
+  const handleEditClose = () => {
+    setEditOpen(false);
+  };
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setEditedOffice((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleFileChange = (event) => {
+    setFile(event.target.files[0]);
+  };
+
+  return (
+    <Card>
+      <Scrollbar>
+        <Box sx={{ minWidth: 800 }}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>Name</TableCell>
+                <TableCell>File Name</TableCell>
+                <Stack
+                  alignItems="center"
+                  justifyContent="center"
+                  direction="row"
+                  spacing={2}
+                >
+                  <TableCell>Action</TableCell>
+                </Stack>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {items.map((customer) => {
+                return (
+                  <TableRow hover key={customer.id}>
+                    <TableCell>
+                      <Stack alignItems="center" direction="row" spacing={2}>
+                        <Avatar src={customer.avatar}>
+                          {getInitials(customer.name)}
+                        </Avatar>
+                        <Typography variant="subtitle2">
+                          {customer.name}
+                        </Typography>
+                      </Stack>
+                    </TableCell>
+                    <TableCell>{customer.pdfFileName}</TableCell>
+
+                    <Stack
+                      alignItems="center"
+                      justifyContent="center"
+                      direction="row"
+                      spacing={2}
+                    >
                       <TableCell>
                         <Tooltip title="Edit" arrow>
                           <IconButton
@@ -111,7 +129,7 @@ import {
                                 backgroundColor: "#e8f5e9", // Light green background on hover
                               },
                             }}
-                            onClick={()=>{
+                            onClick={() => {
                               handleEditClick(customer);
                             }}
                           >
@@ -130,79 +148,105 @@ import {
                           </IconButton>
                         </Tooltip>
                       </TableCell>
-                      </Stack>
-                    </TableRow>
-                  );
-                })}
-              </TableBody>
-            </Table>
-          </Box>
-        </Scrollbar>
-        <TablePagination
-          component="div"
-          count={count}
-          onPageChange={onPageChange}
-          onRowsPerPageChange={onRowsPerPageChange}
-          page={page}
-          rowsPerPage={rowsPerPage}
-          rowsPerPageOptions={[5, 10, 25]}
-        />
-        <Dialog open={isEditOpen} onClose={handleEditClose}>
-          <DialogTitle>Edit Office Address</DialogTitle>
-          <DialogContent>
-            <Grid container spacing={2}>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  label="Name"
-                  name="name"
-                  defaultValue={editedOffice.name}
-                  onChange={handleInputChange}
-                  fullWidth
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  label="E-mail"
-                  name="email"
-                  defaultValue={editedOffice.email}
-                  onChange={handleInputChange}
-                  fullWidth
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  label="Phone"
-                  name="phone"
-                  defaultValue={editedOffice.phone}
-                  onChange={handleInputChange}
-                  fullWidth
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  label="Location"
-                  name="location"
-                  defaultValue={editedOffice.location}
-                  onChange={handleInputChange}
-                  fullWidth
-                />
-              </Grid>
-             
+                    </Stack>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </Box>
+      </Scrollbar>
+      <TablePagination
+        component="div"
+        count={count}
+        onPageChange={onPageChange}
+        onRowsPerPageChange={onRowsPerPageChange}
+        page={page}
+        rowsPerPage={rowsPerPage}
+        rowsPerPageOptions={[5, 10, 25]}
+      />
+      <Dialog open={isEditOpen} onClose={handleEditClose}>
+        <DialogTitle>Edit PDF</DialogTitle>
+        <DialogContent>
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={6}>
+              <TextField
+                margin="normal"
+                fullWidth
+                id="section"
+                label="Section"
+                name="section"
+                inputProps={{ readOnly: true }}
+                defaultValue={capitalizeFirstLetterOfEachWord(section) || ""}
+              />
             </Grid>
-          </DialogContent>
-  
-          <DialogActions>
-            <Button onClick={()=>{setEditOpen(false)}} color="primary">
-              Cancel
-            </Button>
-            <Button onClick={()=>{
-              console.log(editedOffice)
-            }} color="primary">
-              Save
-            </Button>
-          </DialogActions>
-        </Dialog>
-      </Card>
-    );
-  };
-  
+            <Grid item xs={12} md={6}>
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="name"
+                label="Name"
+                id="name"
+                autoFocus
+                onChange={handleInputChange}
+                value={editedOffice.name || ""}
+              />
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <FormGroup>
+                <Input
+                  id="inputEmpGroupFile"
+                  name="file"
+                  type="file"
+                  onChange={handleFileChange}
+                  accept="application/pdf"
+                />
+              </FormGroup>
+            </Grid>
+          </Grid>
+        </DialogContent>
+
+        <DialogActions>
+          <Button
+            onClick={() => {
+              setEditOpen(false);
+            }}
+            color="primary"
+          >
+            Cancel
+          </Button>
+          <Button
+            // disabled={!file || !name}
+            onClick={() => {
+              console.log(editedOffice);
+            }}
+            color="primary"
+          >
+            Update
+          </Button>
+        </DialogActions>
+      </Dialog>
+      <Snackbar open={success} autoHideDuration={6000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity="success"
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          File Uploaded Successfully
+        </Alert>
+      </Snackbar>
+      <Snackbar open={failure} autoHideDuration={6000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity="error"
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          File Upload Failed
+        </Alert>
+      </Snackbar>
+    </Card>
+  );
+};

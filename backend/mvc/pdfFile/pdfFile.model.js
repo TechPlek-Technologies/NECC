@@ -11,13 +11,18 @@ function model(sequelize) {
         section: { type: DataTypes.STRING, allowNull: false },
         pdfFileName: { type: DataTypes.STRING, allowNull: false }, 
         pdfFilePath: { type: DataTypes.STRING, allowNull: false }, 
-    };
+    }; 
 
     const options = {
-        // Any specific options for this model
+
     };
 
     const PdfUpload = sequelize.define('PdfUpload', attributes, options);
+
+    PdfUpload.belongsTo(sequelize.models.Event, {
+        foreignKey: 'eventID', // Name of the foreign key in the Event model
+        allowNull: false,
+    });
 
     return PdfUpload;
 }

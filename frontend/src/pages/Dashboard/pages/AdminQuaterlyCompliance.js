@@ -5,6 +5,7 @@ import {
   Alert,
   Box,
   Button,
+  CircularProgress,
   Container,
   Dialog,
   DialogActions,
@@ -18,29 +19,34 @@ import {
   Typography,
 } from "@mui/material";
 import PlusIcon from "@heroicons/react/24/solid/PlusIcon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { SectionInnerTab } from "../sections/InvestorsTab/section-inner-tab";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+
+
+
 function AdminQuaterlyCompliance() {
+  const [data, setData] = useState([]);
   const [isEditOpen, setEditOpen] = useState(false);
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
   const [section, setSection] = useState("");
+  const [message, setMessage] = useState("");
   const [category, setCategory] = useState("Quaterly Compliance");
   const domain = process.env.REACT_APP_API_DOMAIN;
+  const token = window.localStorage.getItem("Token");
 
+  let { pagename,id } = useParams();
   const theme = createTheme();
   const handleEditClose = () => {
     setEditOpen(false);
   };
   const handleSubmit = async () => {
     try {
-      const token = window.localStorage.getItem("Token");
-
       const formData = {
         name: section, // Assuming section is defined somewhere in your code
-        categoryId: 1,
+        categoryID: id,
       };
 
       console.log(formData);
@@ -52,14 +58,17 @@ function AdminQuaterlyCompliance() {
       });
 
       if (response.status !== 200) {
+        setMessage("Failed to Create Section");
         setFailure(true);
         throw new Error("Failed to Create Section");
       }
 
       // Handle successful upload
+      setMessage(response.data.message);
       setSuccess(true);
       console.log("Section created successfully");
     } catch (error) {
+      setMessage("Failed to Create Section");
       setFailure(true);
       console.error("Error creating new section:", error.message);
     }
@@ -75,21 +84,21 @@ function AdminQuaterlyCompliance() {
     setSuccess(false);
   };
 
-  const tabs = [
-    { route: '/admin/pdfReports/new world', name: 'Corporate Information' },
-    { route: '/admin/newspaper-publication', name: 'Newspaper Publication' },
-    { route: '/admin/news-events', name: 'News Events' },
-    { route: '/admin/financials', name: 'Financials' },
-    { route: '/admin/annual-report', name: 'Annual Report & Notice Of AGM' },
-    { route: '/admin/quarterly-compliances', name: 'Quarterly Compliances' },
-    { route: '/admin/code-of-conduct', name: 'Code Of Conduct' },
-    { route: '/admin/csr', name: 'CSR' },
-    { route: '/admin/listing-information', name: 'Listing Information' },
-    { route: '/admin/corporate-governance', name: 'Corporate Governance' },
-    { route: '/admin/right-issues', name: 'Right Issues' },
-    // Add more tabs as needed
-  ];
-  
+  useEffect(() => {
+    // Function to fetch data
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${domain}/events/page/${id}`);
+        setData(response.data); // Set the fetched data into state
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    // Call the fetch data function
+    fetchData();
+  }, [success]); // Empty dependency array to ensure this effect runs only once
+
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -110,7 +119,7 @@ function AdminQuaterlyCompliance() {
                     spacing={3}
                   >
                     <Stack spacing={1}>
-                      <Typography variant="h4">Quaterly Compliance</Typography>
+                      <Typography variant="h4">{pagename.toUpperCase()}</Typography>
                     </Stack>
                     <div>
                       <Button
@@ -129,37 +138,39 @@ function AdminQuaterlyCompliance() {
                 </div>
                 <div>
                   <Grid container spacing={1}>
-                    {tabs.map((tab, index) => (
-                      <Grid
-                        item
-                        key={index}
-                        xs={12}
-                        sm={6}
-                        lg={3}
-                        style={{ margin: "4px 0" }}
-                      >
-                         <Link
-                            to={tab.route}
+                    {data.length === 0 ? (
+                      <CircularProgress />
+                    ) : (
+                      data.map((tab, index) => (
+                        <Grid
+                          item
+                          key={tab.id}
+                          xs={12}
+                          sm={6}
+                          lg={3}
+                          style={{ margin: "4px 0" }}
+                        >
+                          <Link
+                            to={`/admin/pdfReports/${tab.name}/${tab.id}`}
                             style={{ textDecoration: "none", color: "inherit" }}
                           >
-
-                          <SectionInnerTab
-                            sx={{
-                              height: "100%",
-                              boxShadow: "0 7px 14px rgba(0, 0, 0, 0.3)",
-                              cursor: "pointer",
-                              transition: "box-shadow 0.3s",
-                              "&:hover": {
-                                boxShadow: "0 8px 16px rgba(0, 0, 0, 0.4)",
-                              },
-                              margin: "4px", // Adjust the margin to control the gap between tabs
-                            }}
-                            name={tab.name}
+                            <SectionInnerTab
+                              sx={{
+                                height: "100%",
+                                boxShadow: "0 7px 14px rgba(0, 0, 0, 0.3)",
+                                cursor: "pointer",
+                                transition: "box-shadow 0.3s",
+                                "&:hover": {
+                                  boxShadow: "0 8px 16px rgba(0, 0, 0, 0.4)",
+                                },
+                                margin: "4px", // Adjust the margin to control the gap between tabs
+                              }}
+                              name={tab.name}
                             />
-                        
-                            </Link>
-                      </Grid>
-                    ))}
+                          </Link>
+                        </Grid>
+                      ))
+                    )}
                   </Grid>
                 </div>
               </Container>
@@ -224,7 +235,7 @@ function AdminQuaterlyCompliance() {
                 variant="filled"
                 sx={{ width: "100%" }}
               >
-                New Section created Successfully
+                {message}
               </Alert>
             </Snackbar>
             <Snackbar
@@ -238,7 +249,7 @@ function AdminQuaterlyCompliance() {
                 variant="filled"
                 sx={{ width: "100%" }}
               >
-                Section already exists
+                {message}
               </Alert>
             </Snackbar>
           </>

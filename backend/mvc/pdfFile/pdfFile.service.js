@@ -20,15 +20,12 @@ async function getPdfFileById(id) {
 }
 
 async function createPdfFile(params, file) {
-    // validate
-    if (await db.PdfFile.findOne({ where: { name: params.name } })) {
-        throw 'Event with name "' + params.name + '" already exists';
-    }
-
+ 
 
     // Save file to disk or any storage mechanism
     const pdfFileName = file.originalname;
     const pdfFilePath = './uploads/' + file.filename;
+   
 
     // Save PDF file
     await db.PdfFile.create({ ...params, pdfFileName, pdfFilePath });
@@ -55,10 +52,9 @@ async function deletePdfFile(id) {
     await pdfFile.destroy();
 }
 
-async function getPdfFilesBySection(section) {
+async function getPdfFilesBySection(eventId) {
     const pdfFiles = await db.PdfFile.findAll({
-        where: { section: section },
-        attributes: ['id', 'name', 'pdfFile', 'section', 'categoryId', 'createdAt', 'updatedAt']
+        where: { eventId: eventId }
     });
 
     return pdfFiles;
