@@ -67,8 +67,11 @@ const NavbarThree = () => {
                   </ul>
                 </li>
                 <li className='menu-item-has-children current-menu-item'>
-                  <Link to='/about'>About Us</Link>
+                  <Link to='#'>About Us</Link>
                   <ul className='sub-menu'>
+                  <li>
+                      <Link to='/about'>About Us</Link>
+                    </li>
                     <li>
                       <Link to='/ChairmanDesk'>Chairman Desk</Link>
                     </li>
@@ -108,8 +111,11 @@ const NavbarThree = () => {
                   </ul>
                 </li>
                 <li className='menu-item-has-children current-menu-item'>
-                  <Link to='/contact'>Contact Us</Link>
+                  <Link to='#'>Contact Us</Link>
                   <ul className='sub-menu'>
+                  <li>
+                        <Link to='/contact'>Contact Us</Link>
+                      </li>
                       <li>
                         <Link to='/Career'>Careers</Link>
                       </li>
