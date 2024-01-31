@@ -50,6 +50,7 @@ import Download from "./pages/Download";
 import Polices from "./pages/Polices";
 import AnnualReportFinancial from "./pages/AnnualReportFinancial";
 import CurrentOpening from "./pages/CurrentOpening";
+import NewspaperPublication from "./pages/NewspaperPublication";
 
 function App() {
   useEffect(() => {
@@ -107,6 +108,7 @@ function App() {
           <Route exact path="/Polices" element={<Polices/>} />
           <Route exact path="/AnnualReportFinancial" element={<AnnualReportFinancial/>} />
           <Route exact path="/CurrentOpening" element={<CurrentOpening/>} />
+          <Route exact path="/NewspaperPublication" element={<NewspaperPublication/>} />
           <Route
             exact
             path="/CorporateInformation"
