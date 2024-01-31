@@ -7,7 +7,7 @@ const Breadcrumb = ({ title,imgSrc }) => {
       {/* breadcrumb start */}
       <div
         className='breadcrumb-area bg-overlay-2'
-        style={{ backgroundImage: `url("${imgSrc}")` }}
+        style={{ backgroundImage: `url("${imgSrc}")`,maxHeight:'300px' }}
       >
         <div className='container'>
           <div className='row'>

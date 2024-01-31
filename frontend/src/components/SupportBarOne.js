@@ -89,7 +89,7 @@ const SupportBarOne = () => {
                     </ul>
                   </li>
                   <li className='sign-nav ps-3'>
-                    <a className='sen-signin' href='#0'>
+                    <a className='sen-signin' href='/admin'>
                       <FaUserAlt />
                       Sign In
                     </a>
