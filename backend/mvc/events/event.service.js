@@ -19,7 +19,21 @@ async function getEventById(id) {
 
 async function createEvent(params) {
    
+    const categoryName = params.name;
+    const categoryID = params.categoryID;
 
+    // Check if categoryName and categoryID already exist in the database
+    const existingEvent = await db.Event.findOne({
+      where: {
+        name: categoryName,
+        categoryID: categoryID
+      }
+    });
+
+    // If an event with the same name and categoryID already exists, return an error
+    if (existingEvent) {
+      return res.status(400).json({ message: "An event with the same name and categoryID already exists" });
+    }
     // save event
     await db.Event.create(params);
 }

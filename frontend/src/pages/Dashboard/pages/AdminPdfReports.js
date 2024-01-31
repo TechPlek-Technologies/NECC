@@ -16,7 +16,6 @@ import {
   SvgIcon,
   TextField,
   Typography,
-  styled,
 } from "@mui/material";
 import {  FormGroup, Input, } from "reactstrap";
 import Layout from "../layout/Layout";
@@ -52,8 +51,12 @@ const AdminPdfReports = () => {
   const [name, setName] = useState('');
   const [section, setSection] = useState(reportName);
     const [file, setFile]=useState(null);
+    const [key, setKey] = useState(0); 
 
+    const handleKeyChange=()=>{
+      setKey((prevKey) => prevKey + 1);
 
+    }
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
@@ -87,13 +90,12 @@ const AdminPdfReports = () => {
         throw new Error("No file selected");
       }
   
-      console.log("section",typeof(section))
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("section", section); // Add demo data
-      formData.append("page", "Corporate Information"); // Add demo data
-      formData.append("name", name); // Add demo data
-      formData.append("eventID", id); // Add demo data
+      formData.append("section", section); 
+      formData.append("page", "Corporate Information"); 
+      formData.append("name", name); 
+      formData.append("eventID", id); 
   
       const response = await axios.post(`${domain}/uploads/pdfFiles`, formData, {
         headers: {
@@ -109,6 +111,7 @@ const AdminPdfReports = () => {
   
       // Handle successful upload
       setSuccess(true)
+      setKey((prevKey) => prevKey + 1);
       console.log("PDF file uploaded successfully");
       setEditOpen(false);
     } catch (error) {
@@ -126,6 +129,7 @@ const AdminPdfReports = () => {
       try {
         const response = await axios.get(`${domain}/uploads/pdfFiles/sections/${id}`);
         setData(response.data); 
+        console.log(response.data)
         setLoading(false); 
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -135,7 +139,7 @@ const AdminPdfReports = () => {
   
     // Call the fetch data function
     fetchData();
-  }, [id, success]); // Empty dependency array to ensure this effect runs only once
+  }, [key]); // Empty dependency array to ensure this effect runs only once
   
   return (
     <>
@@ -178,7 +182,17 @@ const AdminPdfReports = () => {
                 </Stack>
 
                 {loading ? (
-                  <CircularProgress />
+                     <Box
+                     sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent:'center',
+                      height: '60vh',
+                      width:'80vw' // Set to 100% of the viewport height
+                    }}
+                   >
+                     <CircularProgress />
+                   </Box>
                 ) : (
                   <PdfTable
                     count={data.length}
@@ -188,6 +202,8 @@ const AdminPdfReports = () => {
                     page={page}
                     rowsPerPage={rowsPerPage}
                     section={section}
+                    handleKeyChange={handleKeyChange}
+                    key={key}
                   />
                 )}
               </Stack>

@@ -139,7 +139,17 @@ function AdminQuaterlyCompliance() {
                 <div>
                   <Grid container spacing={1}>
                     {data.length === 0 ? (
-                      <CircularProgress />
+                         <Box
+                         sx={{
+                           display: 'flex',
+                           alignItems: 'center',
+                           justifyContent:'center',
+                           height: '60vh',
+                           width:'80vw' // Set to 100% of the viewport height
+                         }}
+                       >
+                         <CircularProgress />
+                       </Box>
                     ) : (
                       data.map((tab, index) => (
                         <Grid
