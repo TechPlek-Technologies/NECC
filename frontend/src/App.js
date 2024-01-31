@@ -49,6 +49,7 @@ import AdminPdfReports from "./pages/Dashboard/pages/AdminPdfReports";
 import Download from "./pages/Download";
 import Polices from "./pages/Polices";
 import AnnualReportFinancial from "./pages/AnnualReportFinancial";
+import CurrentOpening from "./pages/CurrentOpening";
 
 function App() {
   useEffect(() => {
@@ -105,6 +106,7 @@ function App() {
           <Route exact path="/Download" element={<Download/>} />
           <Route exact path="/Polices" element={<Polices/>} />
           <Route exact path="/AnnualReportFinancial" element={<AnnualReportFinancial/>} />
+          <Route exact path="/CurrentOpening" element={<CurrentOpening/>} />
           <Route
             exact
             path="/CorporateInformation"
