@@ -105,7 +105,7 @@ const InvestorsInner= () => {
                         
                         SHAREHOLDING PATTERN{" "}
                       </Link></li>
-                      <li> <Link to='#'>
+                      <li> <Link to='/NewspaperPublication'>
                         
                         NEWSPAPER PUBLICATION{" "}
                       </Link></li>
