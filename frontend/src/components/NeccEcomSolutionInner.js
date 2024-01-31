@@ -1,12 +1,50 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useRef  } from "react";
+import {
+  FaCalculator,
+  FaFileAlt,
+  FaMapMarkerAlt,
+  FaPencilAlt,
+  FaPhoneAlt,
+  FaRegEnvelope,
+  FaUserAlt,
+} from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import { toast, Toaster } from "react-hot-toast";
 import { FaPlay } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
 import TrackVisibility from "react-on-screen";
 import CountUp from "react-countup";
 import ModalVideo from "react-modal-video";
 const NeccEcomSolutionInner = () => {
   const [isOpen, setOpen] = useState(false);
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    // Please See Documentation for more information
+    emailjs
+      .sendForm(
+        "service_yipk4xg", //YOUR_SERVICE_ID
+        "template_71bgc2q", //YOUR_TEMPLATE_ID
+        form.current,
+        "cwf8kROl5o3__96Ti" //YOUR_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          if (result.text === "OK") {
+            toast.success("Massage Sent Successfully!");
+            form.current[0].value = "";
+            form.current[1].value = "";
+            form.current[2].value = "";
+            form.current[3].value = "";
+          }
+        },
+        (error) => {
+          if (error.text !== "OK") {
+            toast.success("Massage Not Sent!");
+          }
+        }
+      );
+  };
   return (
     <>
       {/* about area start */}
@@ -140,7 +178,7 @@ const NeccEcomSolutionInner = () => {
       </div>
       {/*wcu-area end*/}
       {/*partner-area start*/}
-      <div className='partner-area pd-top-20 pd-bottom-20'>
+      <div className='partner-area pd-top-45 pd-bottom-80'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-12'>
@@ -159,7 +197,7 @@ const NeccEcomSolutionInner = () => {
       {/*partner-area end*/}
       {/*contact-area start*/}
       <div
-            className='call-to-contact-area pd-top-60'
+            className='call-to-contact-area pd-top-80 pd-bottom-20'
             style={{ background: "#F9F9F9" }}
           >
         <div>
@@ -187,7 +225,7 @@ const NeccEcomSolutionInner = () => {
       </div>
       {/*contact-area end*/}
       {/*request-quote-area start*/}
-      <div className='request-quote-area  pd-top-45'>
+      {/* <div className='request-quote-area  pd-top-45'>
         <div className='container'>
           <div className='request-quote-inner'>
             <ul className='nav nav-pills' id='pills-tab' role='tablist'>
@@ -203,7 +241,7 @@ const NeccEcomSolutionInner = () => {
                   aria-selected='true'
                 >
                   <img src='assets/img/request-quote/1.png' alt='Transpro' />
-                  CONSIGNMENT TRACKING AND ENQUIRY
+                  CONTACT U
                 </button>
               </li>
             </ul>
@@ -284,6 +322,125 @@ const NeccEcomSolutionInner = () => {
                       <Link className='btn btn-white' to='mailto:customercare1@neccgroup.com'>
                         CONTACT US
                       </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
+      <div className='container'>
+        <div className='contact-area mg-top-120 mb-120'>
+          <div className='row g-0 justify-content-center'>
+            <div className='col-lg-7'>
+              <form
+                className='contact-form text-center'
+                ref={form}
+                onSubmit={sendEmail}
+              >
+                <h3>CONTACT US</h3>
+                <div className='row'>
+                  <div className='col-md-6'>
+                    <div className='single-input-inner'>
+                      <label>
+                        <FaUserAlt />
+                      </label>
+                      <input
+                        type='text'
+                        placeholder='Your name'
+                        name='user_name'
+                      />
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='single-input-inner'>
+                      <label>
+                        <FaRegEnvelope />
+                      </label>
+                      <input
+                        type='text'
+                        placeholder='Your email'
+                        name='user_email'
+                      />
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='single-input-inner'>
+                      <label>
+                        <FaCalculator />
+                      </label>
+                      <input type='text' placeholder=' Phone number' />
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='single-select-inner'>
+                      <label>
+                        <FaFileAlt />
+                      </label>
+                      <select className='single-select'>
+                        <option>Subject</option>
+                        <option value={1}>Some option</option>
+                        <option value={2}>Another option</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className='col-12'>
+                    <div className='single-input-inner'>
+                      <label>
+                        <FaPencilAlt />
+                      </label>
+                      <textarea
+                        placeholder='Write massage'
+                        defaultValue={""}
+                        id='massage'
+                      />
+                    </div>
+                  </div>
+                  <div className='col-12'>
+                    <button className='btn btn-base' type='submit'>
+                      {" "}
+                      SEND MESSAGE
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div className='col-lg-5'>
+              <div className='contact-information-wrap'>
+                <h3>CONTACT INFORMATION</h3>
+                <div className='single-contact-info-wrap'>
+                  <h6>Contact Number:</h6>
+                  <div className='media'>
+                    <div className='icon'>
+                      <FaPhoneAlt />
+                    </div>
+                    <div className='media-body'>
+                      <p>011-23517516-19</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='single-contact-info-wrap'>
+                  <h6>Mail Address:</h6>
+                  <div className='media'>
+                    <div className='icon' style={{ background: "#080C24" }}>
+                      <FaRegEnvelope />
+                    </div>
+                    <div className='media-body'>
+                      <p>ccdel@neccgroup.com</p>
+                      <p>vinod.s@neccgroup.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='single-contact-info-wrap mb-0'>
+                  <h6>Office Location:</h6>
+                  <div className='media'>
+                    <div className='icon' style={{ background: "#565969" }}>
+                      <FaMapMarkerAlt />
+                    </div>
+                    <div className='media-body'>
+                      <p>NECC House, 9062/47, Ram Bagh Road,</p>
+                      <p>Azad Market, Delhi-110006</p>
                     </div>
                   </div>
                 </div>

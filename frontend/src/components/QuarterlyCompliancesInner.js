@@ -842,7 +842,7 @@ const QuarterlyCompliancesInner = () => {
       <div className='blog-details-area pd-top-120 pd-bottom-120'>
         <div className='container'>
           <div className='row justify-content-center'>
-          <h2 className='title'>ANNUAL REPORT & NOTICE OF AGM</h2>
+          <h2 className='title'>QUARTERLY COMPLIANCES</h2>
              <div className='col-lg-12'>
                 <div className='sidebar-area'>
                     <div className='widget widget_tags'>
