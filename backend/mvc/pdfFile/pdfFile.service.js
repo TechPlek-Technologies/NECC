@@ -20,7 +20,22 @@ async function getPdfFileById(id) {
 }
 
 async function createPdfFile(params, file) {
- 
+
+    const pdfName = params.name;
+    const eventID = params.eventID;
+
+    // Check if categoryName and categoryID already exist in the database
+    const existingEvent = await db.PdfFile.findOne({
+      where: {
+        name: pdfName,
+        eventID: eventID
+      }
+    });
+
+    // If an event with the same name and categoryID already exists, return an error
+    if (existingEvent) {
+      return res.status(400).json({ message: "An event with the same name and categoryID already exists" });
+    }
 
     // Save file to disk or any storage mechanism
     const pdfFileName = file.originalname;
@@ -34,12 +49,7 @@ async function createPdfFile(params, file) {
 async function updatePdfFile(id, params) {
     const pdfFile = await getPdfFile(id);
 
-    // validate
-    const nameChanged = params.name && pdfFile.name !== params.name;
-    if (nameChanged && await db.PdfFile.findOne({ where: { name: params.name } })) {
-        throw 'PDF file with name "' + params.name + '" already exists';
-    }
-
+   
     // copy params to PDF file and save
     Object.assign(pdfFile, params);
     await pdfFile.save();

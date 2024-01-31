@@ -28,6 +28,7 @@ import { useState } from "react";
 import { RiDeleteBin2Line, RiExpandRightFill } from "react-icons/ri";
 import { FormGroup, Input } from "reactstrap";
 import { capitalizeFirstLetterOfEachWord } from "../../utils/capitalise-word";
+import axios from "axios";
 
 export const PdfTable = (props) => {
   const {
@@ -38,6 +39,8 @@ export const PdfTable = (props) => {
     page = 0,
     rowsPerPage = 0,
     section = "",
+    key=0,
+    handleKeyChange=()=>{}
   } = props;
   console.log(items);
 
@@ -45,15 +48,15 @@ export const PdfTable = (props) => {
   const [editedOffice, setEditedOffice] = useState({});
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
-  const [file, setFile] = useState(null); // Define file state
+  const [file, setFile] = useState(null); 
+  
 
   const handleEditClick = (customer) => {
-    console.log(customer)
+    console.log(customer);
     setEditedOffice({
       ...customer,
       name: customer.name,
-      file:file // 
-  });
+    });
 
     setEditOpen(true);
   };
@@ -80,8 +83,71 @@ export const PdfTable = (props) => {
     setFile(event.target.files[0]);
   };
 
+
+  const handleUpload = async () => {
+    const token = window.localStorage.getItem("Token");
+    const domain = process.env.REACT_APP_API_DOMAIN;
+    try {
+      
+        if (!editedOffice|| !file) {
+            throw new Error("No office data available for upload");
+        }
+  
+        const formData = new FormData();
+        formData.append("name", editedOffice.name); // Assuming name is part of the office data
+        formData.append("eventID", editedOffice.eventID); // Assuming name is part of the office data
+        formData.append("file", file); // Assuming file is a new file to upload
+
+  
+      const response = await axios.put(`${domain}/uploads/pdfFiles/${editedOffice.id}`, formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'multipart/form-data'
+        },
+      });
+  
+      if (response.status !== 200) {
+        setFailure(true);
+        throw new Error("Failed to update PDF file");
+      }
+  
+      // Handle successful upload
+      setSuccess(true)
+      handleKeyChange();
+      console.log("PDF file updated successfully");
+      setEditOpen(false);
+    } catch (error) {
+        setFailure(true);
+      console.error("Error uploading PDF file:", error.message);
+    }
+  };
+  const handleDelete = async (officeId) => {
+    const token = window.localStorage.getItem("Token");
+    const domain = process.env.REACT_APP_API_DOMAIN;
+    try {
+      const response = await axios.delete(`${domain}/uploads/pdfFiles/${officeId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+  
+      if (response.status !== 200) {
+        setFailure(true);
+        throw new Error("Failed to delete PDF file");
+      }
+  
+      // Handle successful delete
+      setSuccess(true);
+      handleKeyChange(); // Trigger re-render
+      console.log("PDF file deleted successfully");
+    } catch (error) {
+      setFailure(true);
+      console.error("Error deleting PDF file:", error.message);
+    }
+  };
+  
   return (
-    <Card>
+    <Card key={key}>
       <Scrollbar>
         <Box sx={{ minWidth: 800 }}>
           <Table>
@@ -142,6 +208,9 @@ export const PdfTable = (props) => {
                               "&:hover": {
                                 backgroundColor: "#ffebee", // Light red background on hover
                               },
+                            }}
+                            onClick={()=>{
+                              handleDelete(customer.id);
                             }}
                           >
                             <RiDeleteBin2Line />
@@ -220,6 +289,7 @@ export const PdfTable = (props) => {
             // disabled={!file || !name}
             onClick={() => {
               console.log(editedOffice);
+              handleUpload();
             }}
             color="primary"
           >

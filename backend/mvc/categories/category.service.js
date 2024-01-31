@@ -5,7 +5,8 @@ module.exports = {
     getCategoryById,
     createCategory,
     updateCategory,
-    deleteCategory
+    deleteCategory,
+    getCategoryDataByName
 };
 
 async function getAllCategories() {
@@ -15,7 +16,27 @@ async function getAllCategories() {
 async function getCategoryById(id) {
     return await getCategory(id);
 }
+async function getCategoryDataByName(categoryName) {
+    try {
+        // Find the category by name and include associated events and PDF uploads
+        const category = await db.Category.findOne({
+            where: { name: categoryName },
+            include: [
+                { model: db.Event }, // Include associated events
+               
+            ]
+        });
 
+        if (!category) {
+            throw new Error('Category not found');
+        }
+
+        return category; // Return the category and its associated data
+    } catch (error) {
+        // Rethrow the error to be caught by the caller
+        throw new Error('Error fetching category: ' + error.message);
+    }
+}
 async function createCategory(params) {
     // validate
 

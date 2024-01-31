@@ -20,6 +20,8 @@ async function initialize() {
     db.Category = require('../mvc/categories/category.model')(sequelize);
     db.Event = require('../mvc/events/event.model')(sequelize);
     db.PdfFile = require('../mvc/pdfFile/pdfFile.model')(sequelize);
+    db.Contact = require('../mvc/contact/contact.model')(sequelize);
+    db.Address = require('../mvc/address/address.model')(sequelize);
 
     // sync all models with database
     await sequelize.sync();
