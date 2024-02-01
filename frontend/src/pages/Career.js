@@ -5,9 +5,10 @@ import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
 import PartnerOne from "../components/PartnerOne";
 import CareerInner from "../components/CareerInner";
-import CareerOneAll from "../components/CareerOneAll";
+// import CareerOneAll from "../components/CareerOneAll";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
+import CurrentOpeningInner from "../components/CurrentOpeningInner";
 
 const Career = () => {
     return (
@@ -27,7 +28,8 @@ const Career = () => {
             <CareerInner/>
 
             {/* Service One All */}
-          <CareerOneAll/>
+          {/* <CareerOneAll/> */}
+          <CurrentOpeningInner/>
 
             {/* Partner One */}
             <PartnerOne />
