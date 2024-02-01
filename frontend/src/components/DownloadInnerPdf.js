@@ -1,4 +1,9 @@
+import {
+  FaArrowRight,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 const DownloadInnerPdf = ({id}) => {
+
     const data2 = [
       {
         id: 1,
@@ -24,18 +29,18 @@ const DownloadInnerPdf = ({id}) => {
       },
     ];
     return (
-      <div className="tagcloud">
-        {data2.map((item) => (
-          <a
-            key={item.id}
-            href={item.pdfFilePath}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <ul className='catagory-items'>
+      {data2.map((item) => (
+        <li key={item.id}>
+          <Link to={`/download/${item.name}`}>
             {item.name}
-          </a>
-        ))}
-      </div>
+            <span>
+              <FaArrowRight />
+            </span>
+          </Link>
+        </li>
+      ))}
+    </ul>
     );
   };
   
