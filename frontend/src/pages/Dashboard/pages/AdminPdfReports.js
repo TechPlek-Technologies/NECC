@@ -17,7 +17,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import {  FormGroup, Input, } from "reactstrap";
+import { FormGroup, Input } from "reactstrap";
 import Layout from "../layout/Layout";
 import { applyPagination } from "../utils/apply-pagination";
 import { createTheme } from "../../../theme";
@@ -29,34 +29,30 @@ import axios from "axios";
 
 const domain = process.env.REACT_APP_API_DOMAIN;
 
-
 const useCarriers = (data, page, rowsPerPage) => {
   return useMemo(() => {
     return applyPagination(data, page, rowsPerPage);
-  }, [data,page, rowsPerPage]);
+  }, [data, page, rowsPerPage]);
 };
-
-
 
 const AdminPdfReports = () => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
-  const [data,setData]=useState([]);
+  const [data, setData] = useState([]);
   const carriers = useCarriers(data, page, rowsPerPage);
   const [loading, setLoading] = useState(true);
-  let { reportName,id } = useParams();
+  let { reportName, id } = useParams();
   const [isEditOpen, setEditOpen] = useState(false);
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
   const [section, setSection] = useState(reportName);
-    const [file, setFile]=useState(null);
-    const [key, setKey] = useState(0); 
+  const [file, setFile] = useState(null);
+  const [key, setKey] = useState(0);
 
-    const handleKeyChange=()=>{
-      setKey((prevKey) => prevKey + 1);
-
-    }
+  const handleKeyChange = () => {
+    setKey((prevKey) => prevKey + 1);
+  };
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
@@ -89,58 +85,61 @@ const AdminPdfReports = () => {
       if (!file) {
         throw new Error("No file selected");
       }
-  
+
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("section", section); 
-      formData.append("page", "Corporate Information"); 
-      formData.append("name", name); 
-      formData.append("eventID", id); 
-  
-      const response = await axios.post(`${domain}/uploads/pdfFiles`, formData, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'multipart/form-data'
-        },
-      });
-  
+      formData.append("section", section);
+      formData.append("page", "Corporate Information");
+      formData.append("name", name);
+      formData.append("eventID", id);
+
+      const response = await axios.post(
+        `${domain}/uploads/pdfFiles`,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+
       if (response.status !== 200) {
         setFailure(true);
         throw new Error("Failed to upload PDF file");
       }
-  
+
       // Handle successful upload
-      setSuccess(true)
+      setSuccess(true);
       setKey((prevKey) => prevKey + 1);
       console.log("PDF file uploaded successfully");
       setEditOpen(false);
     } catch (error) {
-        setFailure(true);
+      setFailure(true);
       console.error("Error uploading PDF file:", error.message);
     }
   };
   const theme = createTheme();
 
-
   useEffect(() => {
-
     const fetchData = async () => {
-      setLoading(true); 
+      setLoading(true);
       try {
-        const response = await axios.get(`${domain}/uploads/pdfFiles/sections/${id}`);
-        setData(response.data); 
-        console.log(response.data)
-        setLoading(false); 
+        const response = await axios.get(
+          `${domain}/uploads/pdfFiles/sections/${id}`
+        );
+        setData(response.data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
         setLoading(false);
       }
     };
-  
+
     // Call the fetch data function
     fetchData();
   }, [key]); // Empty dependency array to ensure this effect runs only once
-  
+
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -182,17 +181,17 @@ const AdminPdfReports = () => {
                 </Stack>
 
                 {loading ? (
-                     <Box
-                     sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent:'center',
-                      height: '60vh',
-                      width:'80vw' // Set to 100% of the viewport height
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      height: "60vh",
+                      width: "80vw", // Set to 100% of the viewport height
                     }}
-                   >
-                     <CircularProgress />
-                   </Box>
+                  >
+                    <CircularProgress />
+                  </Box>
                 ) : (
                   <PdfTable
                     count={data.length}
@@ -212,64 +211,65 @@ const AdminPdfReports = () => {
           <Dialog open={isEditOpen} onClose={handleEditClose}>
             <DialogTitle>Add New File</DialogTitle>
             <DialogContent>
-
-            <Grid container spacing={2}>
-              <Grid item xs={12} md={6}>
-              <TextField
-                  margin="normal"
-                  fullWidth
-                  id="section"
-                  label="Section"
-                  name="section"
-                  inputProps={{ readOnly: true }}
-                  defaultValue={capitalizeFirstLetterOfEachWord(section)}
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-              <TextField
-                  margin="normal"
-                  required
-                  fullWidth
-                  name="name"
-                  label="Name"
-                  id="name"
-                  autoFocus
-                  value={name}
-                  onChange={(e)=>{
-                    setName(e.target.value)
-                  }}
-                 
-                />
-              </Grid>
-              <Grid item xs={12} md={12}>
-                
-              <FormGroup>
-                  <Input
-                    id="inputEmpGroupFile"
-                    name="file"
-                    type="file"
-                    onChange={handleFileChange}
-                    accept="application/pdf"
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    margin="normal"
+                    fullWidth
+                    id="section"
+                    label="Section"
+                    name="section"
+                    inputProps={{ readOnly: true }}
+                    defaultValue={capitalizeFirstLetterOfEachWord(section)}
                   />
-                </FormGroup>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="name"
+                    label="Name"
+                    id="name"
+                    autoFocus
+                    value={name}
+                    onChange={(e) => {
+                      setName(e.target.value);
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={12} md={12}>
+                  <FormGroup>
+                    <Input
+                      id="inputEmpGroupFile"
+                      name="file"
+                      type="file"
+                      onChange={handleFileChange}
+                      accept="application/pdf"
+                    />
+                  </FormGroup>
+                </Grid>
               </Grid>
-             
-            </Grid>
-          
             </DialogContent>
 
             <DialogActions>
               <Button
                 onClick={() => {
                   setEditOpen(false);
-                  setFile(null)
-                  setName('')
+                  setFile(null);
+                  setName("");
                 }}
                 color="primary"
               >
                 Cancel
               </Button>
-              <Button disabled={!file || !name} onClick={() => {handleUpload()}} color="primary">
+              <Button
+                disabled={!file || !name}
+                onClick={() => {
+                  handleUpload();
+                }}
+                color="primary"
+              >
                 Save
               </Button>
             </DialogActions>

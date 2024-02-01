@@ -3,10 +3,13 @@ const db = require('_helpers/db');
 module.exports = {
     createContact,
     updateContact,
-    deleteContact
+    deleteContact,
+    getAllContacts
 };
 
 async function createContact(contactData) {
+  
+   
     return await db.Contact.create(contactData);
 }
 
@@ -25,5 +28,10 @@ async function deleteContact(contactId) {
 async function getContactById(contactId) {
     const contact = await db.Contact.findByPk(contactId);
     if (!contact) throw new Error('Contact not found');
+    return contact;
+}
+async function getAllContacts() {
+    const contact = await db.Contact.findAll();
+    if (!contact) throw new Error('Contact not Available');
     return contact;
 }

@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Box,
   Button,
   Card,
@@ -9,20 +8,29 @@ import {
   DialogContent,
   DialogTitle,
   Divider,
+  FormControl,
   Grid,
+  InputLabel,
+  MenuItem,
+  Select,
   Stack,
   SvgIcon,
   TextField,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { RiDeleteBin2Line, RiExpandRightFill } from "react-icons/ri";
 
-export const CompanyCard = (props) => {
-  const { office } = props;
+const token = window.localStorage.getItem("Token");
+const domain = process.env.REACT_APP_API_DOMAIN;
+
+export const CompanyCard = ({office,key,handleKeyChange,id}) => {
 
   const [isEditOpen, setEditOpen] = useState(false);
   const [editedOffice, setEditedOffice] = useState({ ...office });
+  const [success, setSuccess] = useState(false);
+  const [failure, setFailure] = useState(false);
 
   const handleEditClick = () => {
     setEditedOffice({ ...office });
@@ -30,7 +38,6 @@ export const CompanyCard = (props) => {
   };
 
   const handleEditClose = () => {
-    console.log("editedOffice", editedOffice);
     setEditOpen(false);
   };
 
@@ -39,8 +46,83 @@ export const CompanyCard = (props) => {
     setEditedOffice((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleUpdate = async () => {
+    try {
+      if (!editedOffice) {
+        throw new Error("No file selected");
+      }
+
+      const formData = {
+        type: editedOffice.type,
+        tollfreeNo: editedOffice.tollfree,
+        pincode: editedOffice.pincode,
+        phone: editedOffice.phone,
+        name: editedOffice.name,
+        email: editedOffice.email,
+        addressLine3: editedOffice.addressLine3,
+        addressLine2: editedOffice.addressLine2,
+        addressLine1: editedOffice.addressLine1,
+        city: editedOffice.city,
+      };
+
+      const response = await axios.put(
+        `${domain}/office/${editedOffice.id}`,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.status !== 200) {
+        setFailure(true);
+        throw new Error("Failed to update PDF file");
+      }
+
+      // Handle successful upload
+      setSuccess(true);
+      handleKeyChange();
+      console.log("PDF file updated successfully");
+      setEditOpen(false);
+    } catch (error) {
+      setFailure(true);
+      console.error("Error uploading PDF file:", error.message);
+    }
+  };
+
+  const handleDelete = async (officeId) => {
+    try {
+      const response = await axios.delete(`${domain}/office/${officeId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (response.status !== 200) {
+        setFailure(true);
+        throw new Error("Failed to delete PDF file");
+      }
+
+      // Handle successful delete
+      setSuccess(true);
+      handleKeyChange(); // Trigger re-render
+      console.log("PDF file deleted successfully");
+    } catch (error) {
+      setFailure(true);
+      console.error("Error deleting PDF file:", error.message);
+    }
+  };
+
+  useEffect(() => {
+    // Function to fetch data
+   
+  }, [success]);
+
   return (
     <Card
+      key={key}
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -75,9 +157,9 @@ export const CompanyCard = (props) => {
           {office?.pincode}
           <br />
           {"Toll Free No : "}
-          {office?.tollfreeNo?.join(" & ")} <br />
+          {office?.tollfreeNo} <br />
           {"Phone : "}
-          {office?.phone?.join(", ")} <br />
+          {office?.phone} <br />
           {"E-mail : "}
           {office?.email}{" "}
         </Typography>
@@ -115,7 +197,7 @@ export const CompanyCard = (props) => {
               },
             }}
           >
-            edit
+            Edit
           </Typography>
         </Stack>
         <Stack
@@ -126,6 +208,9 @@ export const CompanyCard = (props) => {
             "&:hover": {
               cursor: "pointer",
             },
+          }}
+          onClick={()=>{
+            handleDelete(id);
           }}
         >
           <SvgIcon color="action" fontSize="small">
@@ -141,7 +226,7 @@ export const CompanyCard = (props) => {
               },
             }}
           >
-            delete
+            Delete
           </Typography>
         </Stack>
       </Stack>
@@ -149,6 +234,15 @@ export const CompanyCard = (props) => {
         <DialogTitle>Edit Office Address</DialogTitle>
         <DialogContent>
           <Grid container spacing={2}>
+            <Grid item xs={12} md={6}>
+              <TextField
+                label="City"
+                name="city"
+                defaultValue={office.city}
+                onChange={handleInputChange}
+                fullWidth
+              />
+            </Grid>
             <Grid item xs={12} md={6}>
               <TextField
                 label="Name"
@@ -221,6 +315,25 @@ export const CompanyCard = (props) => {
                 fullWidth
               />
             </Grid>
+
+            <Grid item xs={12} md={6}>
+              <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">Category</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="type"
+                  label="Category"
+                  name="type"
+                  value={office.type || ""} // Make sure to bind the value of the Select to the state
+                  onChange={handleInputChange}
+                >
+                  <MenuItem value={"Corporate office"}>
+                    Corporate office
+                  </MenuItem>
+                  <MenuItem value={"Regional office"}>Regional office</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
           </Grid>
         </DialogContent>
 
@@ -228,7 +341,12 @@ export const CompanyCard = (props) => {
           <Button onClick={handleEditClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={handleEditClose} color="primary">
+          <Button
+            onClick={() => {
+              handleUpdate();
+            }}
+            color="primary"
+          >
             Save
           </Button>
         </DialogActions>

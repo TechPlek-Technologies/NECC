@@ -24,6 +24,11 @@ import { Scrollbar } from "../../components/Scrollbar";
 import { getInitials } from "../../utils/get-initials";
 import { useState } from "react";
 import { RiDeleteBin2Line, RiExpandRightFill } from "react-icons/ri";
+import axios from "axios";
+
+
+const token = window.localStorage.getItem("Token");
+const domain = process.env.REACT_APP_API_DOMAIN;
 
 export const ContactTable = (props) => {
   const {
@@ -33,11 +38,15 @@ export const ContactTable = (props) => {
     onRowsPerPageChange,
     page = 0,
     rowsPerPage = 0,
+    handleKeyChange=()=>{},
+    key=0
   } = props;
+
 
   const [isEditOpen, setEditOpen] = useState(false);
   const [editedOffice, setEditedOffice] = useState({});
-
+  const [success, setSuccess] = useState(false);
+  const [failure, setFailure] = useState(false);
 
   const handleEditClick = (customer) => {
     setEditedOffice({
@@ -45,7 +54,7 @@ export const ContactTable = (props) => {
       name: customer.name,
       email: customer.email,
       phone: customer.phone,
-      location: `${customer.address.city}`,
+      location: `${customer.location}`,
     });
     setEditOpen(true);
   };
@@ -55,14 +64,77 @@ export const ContactTable = (props) => {
   };
 
 
-  
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setEditedOffice((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleUpdate = async () => {
+   
+    try {
+      
+        if (!editedOffice) {
+            throw new Error("No data available for upload");
+        }
+  
+        const formData = {
+          name: editedOffice.name, // Assuming section is defined somewhere in your code
+          email: editedOffice.email,
+          location: editedOffice.location,
+          phone: editedOffice.phone,
+          type: editedOffice.type,
+        };
+        console.log(formData)
+  
+      const response = await axios.put(`${domain}/contact/${editedOffice.id}`, formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
+  
+      if (response.status !== 200) {
+        setFailure(true);
+        throw new Error("Failed to update PDF file");
+      }
+  
+      // Handle successful upload
+      setSuccess(true)
+      handleKeyChange();
+      console.log("PDF file updated successfully");
+      setEditOpen(false);
+    } catch (error) {
+        setFailure(true);
+      console.error("Error uploading PDF file:", error.message);
+    }
+  };
+
+  const handleDelete = async (officeId) => {
+    
+    try {
+      const response = await axios.delete(`${domain}/contact/${officeId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+  
+      if (response.status !== 200) {
+        setFailure(true);
+        throw new Error("Failed to delete PDF file");
+      }
+  
+      // Handle successful delete
+      setSuccess(true);
+      handleKeyChange(); // Trigger re-render
+      console.log("PDF file deleted successfully");
+    } catch (error) {
+      setFailure(true);
+      console.error("Error deleting PDF file:", error.message);
+    }
+  };
+
   return (
-    <Card>
+    <Card key={key}>
       <Scrollbar>
         <Box sx={{ minWidth: 800 }}>
           <Table>
@@ -100,7 +172,7 @@ export const ContactTable = (props) => {
                     </TableCell>
                     <TableCell>{customer.email}</TableCell>
                     <TableCell>
-                      {customer.address.city}
+                      {customer.location}
                     </TableCell>
                     <TableCell>
                       {customer.phone}
@@ -132,6 +204,9 @@ export const ContactTable = (props) => {
                             "&:hover": {
                               backgroundColor: "#ffebee", // Light red background on hover
                             },
+                          }}
+                          onClick={()=>{
+                            handleDelete(customer.id)
                           }}
                         >
                           <RiDeleteBin2Line />
@@ -204,9 +279,9 @@ export const ContactTable = (props) => {
             Cancel
           </Button>
           <Button onClick={()=>{
-            console.log(editedOffice)
+            handleUpdate();
           }} color="primary">
-            Save
+            Update
           </Button>
         </DialogActions>
       </Dialog>

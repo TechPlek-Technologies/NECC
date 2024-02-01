@@ -3,11 +3,13 @@ const db = require('_helpers/db');
 module.exports = {
     addAddress,
     updateAddress,
-    deleteAddress
+    deleteAddress,
+    getAllAddresses
 };
 
 async function addAddress(addressData) {
     // Extract address data
+    console.log(addressData)
     const { city, name, addressLine1, addressLine2, addressLine3, pincode, phone, tollfreeNo, email, type } = addressData;
 
     // Check if the address already exists
@@ -40,6 +42,18 @@ async function addAddress(addressData) {
 
     return newAddress;
 }
+
+async function getAllAddresses() {
+    // Find the address by ID
+    const address = await db.Address.findAll();
+
+    // If the address doesn't exist, throw an error
+    if (!address) {
+        throw new Error('Address not found');
+    }
+    return address;
+}
+
 
 async function updateAddress(addressId, addressData) {
     // Find the address by ID
