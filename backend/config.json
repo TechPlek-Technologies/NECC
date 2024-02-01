@@ -1,10 +1,10 @@
 {
     "database": {
-        "host": "sql.freedb.tech",
+        "host": "localhost",
         "port": 3306,
-        "user": "freedb_neccsample",
-        "password": "CVH5%kRA3Fv*ca$",
-        "database": "freedb_mydb123231123"
+        "user": "root",
+        "password": "deepak@123",
+        "database": "mydb"
     },
     "secret": "THIS IS USED TO SIGN AND VERIFY JWT TOKENS, REPLACE IT WITH YOUR OWN SECRET, IT CAN BE ANY STRING"
 }

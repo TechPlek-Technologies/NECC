@@ -51,6 +51,7 @@ import Polices from "./pages/Polices";
 import AnnualReportFinancial from "./pages/AnnualReportFinancial";
 import CurrentOpening from "./pages/CurrentOpening";
 import NewspaperPublication from "./pages/NewspaperPublication";
+import Content from "./pages/Dashboard/pages/Content";
 
 function App() {
   useEffect(() => {
@@ -121,6 +122,8 @@ function App() {
           <Route exact path="/admin" element={<ProtectedRoute />}>
             <Route exact path="/admin/dashboard" element={<Home />} />
             <Route exact path="/admin/career" element={<Carrier />}></Route>
+            <Route exact path="/admin/content" element={<Content />}></Route>
+            <Route exact path="/admin/content/:pagename/:id" element={<AdminQuaterlyCompliance />}></Route>
             <Route exact path="/admin/office" element={<Office />}></Route>
             <Route exact path="/admin/contact" element={<OfficeContact />}></Route>
             <Route exact path="/admin/investor" element={<InvestorsTab />}></Route>
