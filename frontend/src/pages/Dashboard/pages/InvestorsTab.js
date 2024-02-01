@@ -11,27 +11,13 @@ function InvestorsTab() {
   const theme = createTheme();
   const domain = process.env.REACT_APP_API_DOMAIN;
   const [tabs, setTabs] = useState([]);
-  // const tabs = [
-  //   { route: "/admin/corporate-information", name: "Corporate Information" },
-  //   { route: "/admin/newspaper-publication", name: "Newspaper Publication" },
-  //   { route: "/admin/news-events", name: "News Events" },
-  //   { route: "/admin/financials", name: "Financials" },
-  //   { route: "/admin/annual-report", name: "Annual Report & Notice Of AGM" },
-  //   { route: "/admin/quarterly-compliances", name: "Quarterly Compliances" },
-  //   { route: "/admin/code-of-conduct", name: "Code Of Conduct" },
-  //   { route: "/admin/csr", name: "CSR" },
-  //   { route: "/admin/listing-information", name: "Listing Information" },
-  //   { route: "/admin/corporate-governance", name: "Corporate Governance" },
-  //   { route: "/admin/right-issues", name: "Right Issues" },
-  //   // Add more tabs as needed
-  // ];
+
 
   useEffect(() => {
     // Function to fetch data
     const fetchData = async () => {
       try {
         const response = await axios.get(`${domain}/categories`);
-        console.log(response.data);
         setTabs(response.data); // Set the fetched data into state
       } catch (error) {
         console.error("Error fetching data:", error);

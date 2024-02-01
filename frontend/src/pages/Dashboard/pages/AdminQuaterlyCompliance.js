@@ -33,7 +33,7 @@ function AdminQuaterlyCompliance() {
   const [failure, setFailure] = useState(false);
   const [section, setSection] = useState("");
   const [message, setMessage] = useState("");
-  const [category, setCategory] = useState("Quaterly Compliance");
+  const [category, setCategory] = useState("Investors");
   const domain = process.env.REACT_APP_API_DOMAIN;
   const token = window.localStorage.getItem("Token");
 
@@ -49,7 +49,6 @@ function AdminQuaterlyCompliance() {
         categoryID: id,
       };
 
-      console.log(formData);
       const response = await axios.post(`${domain}/events`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,

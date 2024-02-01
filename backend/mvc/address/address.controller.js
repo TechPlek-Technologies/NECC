@@ -22,14 +22,14 @@ function getAllAddresses(req, res, next) {
 
 function createAddressSchema(req, res, next) {
     const schema = Joi.object({
-        city: Joi.string().required(),
         name: Joi.string().required(),
+        city: Joi.string().required(),
         addressLine1: Joi.string().required(),
         addressLine2: Joi.string(),
         addressLine3: Joi.string(),
         pincode: Joi.string().required(),
-        phone: Joi.array().items(Joi.string()).required(),
-        tollfreeNo: Joi.array().items(Joi.string()).required(),
+        phone: Joi.string().required(),
+        tollfreeNo: Joi.string(),
         email: Joi.string().required(),
         type: Joi.string().valid('Corporate office', 'Regional office').required()
     });
@@ -37,7 +37,8 @@ function createAddressSchema(req, res, next) {
 }
 
 function createAddress(req, res, next) {
-    addressService.createAddress(req.body)
+    console.log("req.body",req.body)
+    addressService.addAddress(req.body)
         .then(() => res.json({ message: 'Address created successfully' }))
         .catch(next);
 }
@@ -50,8 +51,8 @@ function updateAddressSchema(req, res, next) {
         addressLine2: Joi.string(),
         addressLine3: Joi.string(),
         pincode: Joi.string(),
-        phone: Joi.array().items(Joi.string()),
-        tollfreeNo: Joi.array().items(Joi.string()),
+        phone: Joi.string(),
+        tollfreeNo: Joi.array(),
         email: Joi.string(),
         type: Joi.string().valid('Corporate office', 'Regional office')
     });

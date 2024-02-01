@@ -14,6 +14,8 @@ app.use("/users", require("./mvc/users/user.controller"));
 app.use("/categories", require("./mvc/categories/category.controller"));
 app.use("/events", require("./mvc/events/event.controller"));
 app.use("/uploads", require("./mvc/pdfFile/pdfFile.controller"));
+app.use("/contact", require("./mvc/contact/contact.controller"));
+app.use("/office", require("./mvc/address/address.controller"));
 
 // global error handler
 app.use(errorHandler);

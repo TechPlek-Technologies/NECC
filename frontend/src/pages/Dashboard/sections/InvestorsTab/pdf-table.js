@@ -52,7 +52,6 @@ export const PdfTable = (props) => {
   
 
   const handleEditClick = (customer) => {
-    console.log(customer);
     setEditedOffice({
       ...customer,
       name: customer.name,
