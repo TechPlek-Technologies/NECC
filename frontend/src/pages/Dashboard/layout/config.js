@@ -29,6 +29,15 @@ export const items = [
     )
   },
   {
+    title: 'Content',
+    path: '/admin/content',
+    icon: (
+      <SvgIcon fontSize="small">
+         <BriefcaseIcon />
+      </SvgIcon>
+    )
+  },
+  {
     title: 'Offices',
     path: '/admin/office',
     icon: (

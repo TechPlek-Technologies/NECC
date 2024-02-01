@@ -3,11 +3,11 @@ import {
   Box,
   Button,
   Card,
-  Checkbox,
+  DialogTitle,
   Dialog,
   DialogContent,
   IconButton,
-  Input,
+  Grid,
   Stack,
   Table,
   TableBody,
@@ -25,6 +25,9 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import axios from "axios";
 
+const token = window.localStorage.getItem("Token");
+const domain = process.env.REACT_APP_API_DOMAIN;
+
 export const CarrierTable = (props) => {
   const {
     count = 0,
@@ -33,51 +36,35 @@ export const CarrierTable = (props) => {
     onRowsPerPageChange,
     page = 0,
     rowsPerPage = 0,
+    key=0,
+    handleKeyChange=()=>{}
   } = props;
 
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
   const [editedItemId, setEditedItemId] = useState(null);
-  const [editedDesignation, setEditedDesignation] = useState("");
-  const [editedDescription, setEditedDescription] = useState("");
-  const [text, setText] = useState("");
+  const [editedOffice, setEditedOffice] = useState({});
+  const [success, setSuccess] = useState(false);
+  const [failure, setFailure] = useState(false);
 
-  const handleEditClick = (itemId, designation, description) => {
-    setEditedItemId(itemId);
-    setEditedDesignation(designation);
-    setEditedDescription(description);
+  const handleEditClick = (customer) => {
+    setEditedOffice({
+      id: customer.id,
+      designation: customer.designation,
+      serial: customer.serial,
+      summary: customer.summary,
+      description: customer.description,
+    });
+    console.log(customer);
+
     setIsEditDialogOpen(true);
   };
-
-  const handleCloseEditDialog = () => {
-    setIsEditDialogOpen(false);
-    setEditedItemId(null);
-    setEditedDesignation("");
-    setEditedDescription("");
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setEditedOffice((prev) => ({ ...prev, [name]: value }));
   };
-
-  const handleSaveChanges = async () => {
-    // Implement your logic to send the updated values via Axios
-    // try {
-    //   const response = await axios.put(`/api/items/${editedItemId}`, {
-    //     designation: editedDesignation,
-    //     description: editedDescription,
-    //   });
-    console.log(editedDesignation);
-    console.log(editedDescription);
-
-    // Handle the response, e.g., show success message
-    console.log("Update successful");
-
-    setText(editedDescription);
-    // Close the edit dialog
-    handleCloseEditDialog();
-    // } catch (error) {
-    //   // Handle errors, e.g., show error message
-    //   console.error("Update failed", error);
-    // }
+  const handleQuill = (value) => {
+    setEditedOffice((prev) => ({ ...prev, description: value }));
   };
-
-
   const modules = useMemo(
     () => ({
       toolbar: {
@@ -139,18 +126,84 @@ export const CarrierTable = (props) => {
     []
   );
 
+  const handleCloseEditDialog = () => {
+    setIsEditDialogOpen(false);
+    setEditedItemId(null);
+  };
+
+  const handleUpdate = async () => {
+    try {
+      if (!editedOffice) {
+        throw new Error("No data available for upload");
+      }
+
+      const formData = {
+        designation: editedOffice.designation,
+        serial: editedOffice.serial,
+        summary: editedOffice.summary,
+        description: editedOffice.description,
+      };
+
+      const response = await axios.put(
+        `${domain}/content/${editedOffice.id}`,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.status !== 200) {
+        setFailure(true);
+        throw new Error("Failed to update PDF file");
+      }
+
+      // Handle successful upload
+      setSuccess(true);
+      handleKeyChange();
+      console.log("PDF file updated successfully");
+      setIsEditDialogOpen(false);
+    } catch (error) {
+      setFailure(true);
+      console.error("Error uploading PDF file:", error.message);
+    }
+  };
+
+  const handleDelete = async(id) => {
+    try {
+      const response = await axios.delete(`${domain}/content/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+  
+      if (response.status !== 200) {
+        setFailure(true);
+        throw new Error("Failed to delete PDF file");
+      }
+  
+      // Handle successful delete
+      setSuccess(true);
+      handleKeyChange(); // Trigger re-render
+      console.log("data deleted successfully");
+    } catch (error) {
+      setFailure(true);
+      console.error("Error deleting PDF file:", error.message);
+    }
+  };
+
   return (
     <Card>
-      <div>
-        <div dangerouslySetInnerHTML={{ __html: text }} />
-      </div>
       <Scrollbar>
         <Box sx={{ minWidth: 800 }}>
           <Table>
             <TableHead>
               <TableRow>
-              
+                <TableCell>S.no</TableCell>
                 <TableCell>Designation</TableCell>
+                <TableCell>Summary</TableCell>
                 <TableCell>Description</TableCell>
                 <Stack
                   alignItems="center"
@@ -164,27 +217,31 @@ export const CarrierTable = (props) => {
             </TableHead>
             <TableBody>
               {items.map((customer) => {
-                
-
                 return (
                   <TableRow hover key={customer.id}>
-                 
+                    <TableCell>
+                      <div>{1}</div>
+                    </TableCell>
                     <TableCell>
                       <Stack alignItems="center" direction="row" spacing={2}>
                         <Typography variant="subtitle2">
-                          {customer.name}
+                          {customer.designation}
                         </Typography>
                       </Stack>
                     </TableCell>
-                    <TableCell
-                      style={{
-                        width: "200px",
-                        overflow: "hidden",
-                        whiteSpace: "nowrap",
-                        textOverflow: "ellipsis",
-                      }}
-                    >
-                      <div className="fixed-width-column">{customer.email}</div>
+
+                    <TableCell>
+                      <div className="fixed-width-column">
+                        {customer.summary}
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div
+                        className="fixed-width-column"
+                        dangerouslySetInnerHTML={{
+                          __html: customer.description,
+                        }}
+                      ></div>
                     </TableCell>
                     <Stack
                       alignItems="center"
@@ -201,13 +258,7 @@ export const CarrierTable = (props) => {
                                 backgroundColor: "#e8f5e9", // Light green background on hover
                               },
                             }}
-                            onClick={() =>
-                              handleEditClick(
-                                customer.id,
-                                customer.name,
-                                customer.email
-                              )
-                            }
+                            onClick={() => handleEditClick(customer)}
                           >
                             <RiExpandRightFill />
                           </IconButton>
@@ -218,6 +269,9 @@ export const CarrierTable = (props) => {
                               "&:hover": {
                                 backgroundColor: "#ffebee", // Light red background on hover
                               },
+                            }}
+                            onClick={() => {
+                              handleDelete(customer.id);
                             }}
                           >
                             <RiDeleteBin2Line />
@@ -245,24 +299,50 @@ export const CarrierTable = (props) => {
       {/* Edit Dialog */}
       <Dialog open={isEditDialogOpen} onClose={handleCloseEditDialog}>
         <DialogContent>
-          <TextField
-            label="Designation"
-            name="designation"
-            value={editedDesignation}
-            onChange={(value) => setEditedDesignation(value)}
-            fullWidth
-          />
-          
-          <h6 style={{"marginTop":"15px"}} >Description</h6>
-          <ReactQuill
-            theme="snow"
-            value={editedDescription}
-            onChange={(value) => setEditedDescription(value)}
-            style={{ minHeight: "200px" }}
-            modules={modules}
-          />
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={2}>
+              <TextField
+                label="S. No"
+                name="serial"
+                value={editedOffice.serial}
+                onChange={handleInputChange}
+                fullWidth
+              />
+            </Grid>
+            <Grid item xs={12} md={10}>
+              <TextField
+                label="Designation"
+                name="designation"
+                value={editedOffice.designation}
+                onChange={handleInputChange}
+                fullWidth
+              />
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <TextField
+                label="Summary"
+                name="summary"
+                value={editedOffice.summary}
+                onChange={handleInputChange}
+                fullWidth
+              />
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <Typography variant="subtitle1" component="div">
+                Description
+              </Typography>
+              <ReactQuill
+                theme="snow"
+                value={editedOffice.description}
+                onChange={handleQuill}
+                style={{ minHeight: "200px" }}
+                modules={modules}
+              />
+            </Grid>
+          </Grid>
+
           <Button onClick={handleCloseEditDialog}>Close</Button>
-          <Button onClick={handleSaveChanges}>Save Changes</Button>
+          <Button onClick={handleUpdate}>Save Changes</Button>
         </DialogContent>
       </Dialog>
     </Card>

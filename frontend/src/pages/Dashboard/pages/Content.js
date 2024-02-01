@@ -7,8 +7,9 @@ import { InvestorsInnerTab } from "../sections/InvestorsTab/investors-tab-inner"
 import { Link } from "react-router-dom";
 import axios from "axios";
 import PlusIcon from "@heroicons/react/24/solid/PlusIcon";
+import { ContentInnerTab } from "../sections/Content/content-inner-tab";
 
-function InvestorsTab() {
+function Content() {
   const theme = createTheme();
   const domain = process.env.REACT_APP_API_DOMAIN;
 const token = window.localStorage.getItem("Token");
@@ -32,7 +33,7 @@ const token = window.localStorage.getItem("Token");
       };
 
 
-      const response = await axios.post(`${domain}/categories`, formData, {
+      const response = await axios.post(`${domain}/page`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
@@ -58,7 +59,7 @@ const token = window.localStorage.getItem("Token");
     // Function to fetch data
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${domain}/categories`);
+        const response = await axios.get(`${domain}/page`);
         setTabs(response.data); // Set the fetched data into state
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -89,7 +90,7 @@ const token = window.localStorage.getItem("Token");
                     spacing={4}
                   >
                     <Stack spacing={1}>
-                      <Typography variant="h4">Investors Section</Typography>
+                      <Typography variant="h4">Content Section</Typography>
                     </Stack>
                     <div>
                     <Button
@@ -119,10 +120,10 @@ const token = window.localStorage.getItem("Token");
                           style={{ margin: "4px 0" }}
                         >
                           <Link
-                            to={`/admin/${tab.name}/${tab.id}`}
+                            to={`/admin/content/${tab.name}/${tab.id}`}
                             style={{ textDecoration: "none", color: "inherit" }}
                           >
-                            <InvestorsInnerTab
+                            <ContentInnerTab
                               sx={{
                                 height: "100%",
                                 boxShadow: "0 7px 14px rgba(0, 0, 0, 0.3)",
@@ -184,4 +185,4 @@ const token = window.localStorage.getItem("Token");
   );
 }
 
-export default InvestorsTab;
+export default Content;
