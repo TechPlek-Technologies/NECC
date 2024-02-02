@@ -80,6 +80,31 @@ const SiteMapInner= () => {
                         CURRENT OPENINGS{" "}
                         </Link></li>
 
+                        <li> <Link to='/CodeOfConduct'>
+                        
+                        CODE OF CONDUCT{" "}
+                        </Link></li>
+
+                        <li> <Link to='/NewspaperPublication'>
+                        
+                        NEWSPAPER PUBLICATION{" "}
+                        </Link></li>
+
+                        <li> <Link to='/NewsEvents'>
+                        
+                        NEWS & EVENTS{" "}
+                        </Link></li>
+
+                        <li> <Link to='/RightIssues'>
+                        
+                        RIGHT ISSUES{" "}
+                        </Link></li>
+
+                        <li> <Link to='/Networks'>
+                        
+                        NETWORKS{" "}
+                        </Link></li>
+
 
                     </ul>
                    
