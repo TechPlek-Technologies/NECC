@@ -1,34 +1,20 @@
 import React, { useState } from "react";
 import ModalVideo from "react-modal-video";
-import DirectorComponent from "./BoardOfDirectorsInnerPdf";
+import CodeOfConductInnerPdf from "./CodeOfConductInnerPdf";
 
-const section = [
-  {
-    id: 1,
-    designation: "VICE PRESIDENT",
-    createdAt: "2024-01-31T09:41:07.000Z",
-    updatedAt: "2024-01-31T09:41:07.000Z",
-    categoryID: 1,
-  },
-  {
-    id: 2,
-    designation: " ASSISTANT VICE PRESIDENT",
-    createdAt: "2024-01-31T10:13:44.000Z",
-    updatedAt: "2024-01-31T10:13:44.000Z",
-    categoryID: 1,
-  },
-  {
-    id: 3,
-    designation: " GENERAL MANAGER",
-    createdAt: "2024-01-31T10:13:49.000Z",
-    updatedAt: "2024-01-31T10:13:49.000Z",
-    categoryID: 1,
-  },
-];
+  const section = [
+    {
+      id: 1,
+      designation: "CODE OF CONDUCT FOR DIRECTORS AND SENIOR MANAGEMENT OF THE COMPANY",
+      createdAt: "2024-01-31T09:41:07.000Z",
+      updatedAt: "2024-01-31T09:41:07.000Z",
+      categoryID: 1,
+    },
+  ];
 
-const BoardOfDirectorsInner = () => {
+const CodeOfConductInner = () => {
   const [isOpen, setOpen] = useState(false);
-
+  
   return (
     <>
       {/* Investors area start */}
@@ -36,19 +22,22 @@ const BoardOfDirectorsInner = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="service-details-wrap">
-              <h2 className="subtitle">BOARD OF DIRECTORS</h2>
+              <h2>CODE OF CONDUCT</h2>
               <div className="row">
                 <div className="col-lg-12 align-self-center">
                 {section.map((item) => (
-                  <div className="service-details-wrap">
+                  <div className="service-details-wrap" key={item.id}>
                     <div className="thumb"></div>
                     <div className="row">
                       <div className="col-lg-12 align-self-center">
-                      <DirectorComponent id={item.id}/>
+                        <h4 className="subtitle CorporateInformation1">
+                        {item.designation}
+                        </h4>
+                        <CodeOfConductInnerPdf id={item.id}/>
                       </div>
                     </div>
                   </div>
-                  ))}
+                    ))}
                 </div>
               </div>
             </div>
@@ -67,4 +56,4 @@ const BoardOfDirectorsInner = () => {
   );
 };
 
-export default BoardOfDirectorsInner;
+export default CodeOfConductInner;

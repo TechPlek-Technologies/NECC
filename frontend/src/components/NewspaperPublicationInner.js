@@ -1,21 +1,30 @@
 import React from "react";
+import NewspaperPublicationInnerPdf from "./NewspaperPublicationInnerPdf";
 
-const Data1 = [
+const section = [
   {
-    name: "Before Dispatch of Notice",
-    section: "Notice of EGM",
+    id: 1,
+    name: "Notice of EGM",
     subsection:"2023-2024",
-    page: "NEWSPAPER PUBLICATION",
-    pdfFileName: "Report1.pdf",
-    pdfFilePath: "/path/to/Report1.pdf",
+    createdAt: "2024-01-31T09:41:07.000Z",
+    updatedAt: "2024-01-31T09:41:07.000Z",
+    categoryID: 1,
   },
   {
-    name: "After Completion of Dispatch of Notice ",
-    section: "Notice of EGM",
+    id: 2,
+    name: "1234",
     subsection:"2023-2024",
-    page: "NEWSPAPER PUBLICATION",
-    pdfFileName: "Report1.pdf",
-    pdfFilePath: "/path/to/Report1.pdf",
+    createdAt: "2024-01-31T10:13:44.000Z",
+    updatedAt: "2024-01-31T10:13:44.000Z",
+    categoryID: 1,
+  },
+  {
+    id: 3,
+    name: "123456",
+    subsection:"2023-2024",
+    createdAt: "2024-01-31T10:13:49.000Z",
+    updatedAt: "2024-01-31T10:13:49.000Z",
+    categoryID: 1,
   },
 ];
 
@@ -27,24 +36,20 @@ const NewspaperPublicationInner= () => {
         <div className='container'>
           <div className='row justify-content-center'>
           <h2 className='title'>NEWSPAPER PUBLICATION</h2>
-             <div className='col-lg-12'>
+          {section.map((item) => (
+             <div className='col-lg-12' key={item.id}>
                 <div className='sidebar-area'>
                     <div className='widget widget_tags'>
                     <h4 className='widget-title'>
-                        {Data1[0].section}
+                        {item.name}
                         <span className='dot' />
                     </h4>
-                    <h6>{Data1[0].subsection}</h6>
-                    <div className='tagcloud'>
-                        {Data1.map((item, index) => (
-                        <a key={index} href={item.pdfFilePath} target="_blank" rel="noopener noreferrer">
-                            {item.name}
-                        </a>
-                        ))}
-                    </div>
+                    <h6>{item.subsection}</h6>
+                    <NewspaperPublicationInnerPdf id={item.id}/>
                     </div>
                 </div>
             </div>
+             ))}
           </div>
         </div>
       </div>
