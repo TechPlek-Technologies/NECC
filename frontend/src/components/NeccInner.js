@@ -88,7 +88,7 @@ const NeccInner = () => {
               <div
                 className='service-image'
                 style={{
-                  backgroundImage: 'url("assets/img/service/service.png")',
+                  backgroundImage: 'url("/assets/img/service/necc2.webp")',
                 }}
               />
             </div>

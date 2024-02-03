@@ -23,10 +23,10 @@ const ServiceInnerOne = () => {
             <div className='col-lg-4'>
               <div className='single-service-wrap'>
                 <div className='thumb'>
-                  <img src='assets/img/service/1.png' alt='Transpro' />
+                  <img src='/assets/img/service/part-truck-loa.webp' alt='Transpro' />
                   <div className='icon'>
                     <img
-                      src='assets/img/service/service-icon-1.png'
+                      src='/assets/img/service/part-time-load.webp'
                       alt='Transpro'
                     />
                   </div>
@@ -50,10 +50,10 @@ const ServiceInnerOne = () => {
             <div className='col-lg-4'>
               <div className='single-service-wrap'>
                 <div className='thumb'>
-                  <img src='assets/img/service/2.png' alt='Transpro' />
+                  <img src='/assets/img/service/full-truck-load.webp' alt='Transpro' />
                   <div className='icon'>
                     <img
-                      src='assets/img/service/service-icon-2.png'
+                      src='/assets/img/service/full-truck-load (1).webp'
                       alt='Transpro'
                     />
                   </div>
@@ -77,10 +77,10 @@ const ServiceInnerOne = () => {
             <div className='col-lg-4'>
               <div className='single-service-wrap'>
                 <div className='thumb'>
-                  <img src='assets/img/service/3.png' alt='Transpro' />
+                  <img src='/assets/img/service/bulk-movements.webp' alt='Transpro' />
                   <div className='icon'>
                     <img
-                      src='assets/img/service/service-icon-3.png'
+                      src='/assets/img/service/bulk-movement.webp'
                       alt='Transpro'
                     />
                   </div>
@@ -104,10 +104,10 @@ const ServiceInnerOne = () => {
             <div className='col-lg-4'>
               <div className='single-service-wrap'>
                 <div className='thumb'>
-                  <img src='assets/img/service/4.png' alt='Transpro' />
+                  <img src='/assets/img/service/ODC-truck (1).webp' alt='Transpro' />
                   <div className='icon'>
                     <img
-                      src='assets/img/service/service-icon-4.png'
+                      src='/assets/img/service/ODC-truck.webp'
                       alt='Transpro'
                     />
                   </div>
@@ -131,10 +131,10 @@ const ServiceInnerOne = () => {
             <div className='col-lg-4'>
               <div className='single-service-wrap'>
                 <div className='thumb'>
-                  <img src='assets/img/service/5.png' alt='Transpro' />
+                  <img src='/assets/img/service/warehousing-&-3pl.webp' alt='Transpro' />
                   <div className='icon'>
                     <img
-                      src='assets/img/service/service-icon-5.png'
+                      src='/assets/img/service/warehouse.webp'
                       alt='Transpro'
                     />
                   </div>

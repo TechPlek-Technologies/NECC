@@ -19,7 +19,7 @@ const ChairmanDeskInner= () => {
                   /> */}
                   <img
                     className='img-2'
-                    src='./assets/img/about/1.png'
+                    src='./assets/img/about/chairman-2.webp'
                     alt='Transpro'
                   />
                 </div>

@@ -19,7 +19,7 @@ const CorporateOverview = () => {
            <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"CORPORATE OVERVIEW"} />
+            <Breadcrumb title={"CORPORATE OVERVIEW"} imgSrc={"/assets/img/banner/corporate-overview.webp"} />
 
             {/* Service Details Inner */}
             <CorporateOverviewInner/>

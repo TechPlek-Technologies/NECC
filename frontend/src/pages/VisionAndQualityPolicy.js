@@ -19,7 +19,7 @@ const VisionAndQualityPolicy = () => {
             <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"VISION & QUALITY POLICY"} />
+            <Breadcrumb title={"VISION & QUALITY POLICY"} imgSrc={"/assets/img/banner/vision-&-quality-policy.webp"}/>
   
             {/* Service Details Inner */}
             <VisionAndQualityPolicyInner />

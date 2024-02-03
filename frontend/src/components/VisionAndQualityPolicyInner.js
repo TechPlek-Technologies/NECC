@@ -13,7 +13,7 @@ const VisionAndQualityPolicyInner= () => {
   return (
     <>
       {/* service area start */}
-      <div className='features-area style-02'>
+      <div className='features-area style-02' >
         <div className='container'>
           <div className='row justify-content-start'>
             <div className='col-lg-4 offset-lg-1 d-flex'>
@@ -37,6 +37,12 @@ const VisionAndQualityPolicyInner= () => {
                     <div className='single-features-item'>
                       <div className='icon'>
                         <FaMoneyBillAlt />
+                        
+                            {/* <img
+                              src='assets/img/about/icon-1.png'
+                              alt='Transpro'
+                            /> */}
+                          
                       </div>
                       <h4>Plan</h4>
                     </div>
@@ -73,9 +79,9 @@ const VisionAndQualityPolicyInner= () => {
             <div className='col-lg-10'>
               <div className='service-details-wrap'>
                 <div className='row'>
-                  <div className='col-lg-6 align-self-center'>
+                  <div className='col-lg-6 align-self-center pd-top-120'>
                     <div className='thumb mb-lg-0 mb-4'>
-                      <img src='assets/img/service/8.png' alt='Transpro' />
+                      <img src='/assets/img/service/quality (2).webp' alt='Transpro' />
                     </div>
                   </div>
                   <div className='col-lg-6 align-self-center'>
