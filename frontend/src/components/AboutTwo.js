@@ -22,7 +22,7 @@ const AboutTwo = () => {
                   /> */}
                   <img
                     className='img-2'
-                    src='assets/img/about/7.png'
+                    src='/assets/img/about/22-years-experiance.webp'
                     alt='Transpro'
                   />
                   {/* <img

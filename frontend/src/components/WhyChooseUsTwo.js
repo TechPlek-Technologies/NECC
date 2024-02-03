@@ -24,7 +24,7 @@ const WhyChooseUsTwo = () => {
             <div className='col-lg-4'>
               <div className='single-wcu-wrap style-2'>
                 <div className='icon'>
-                  <img src='assets/img/wcu/icon-4.png' alt='Transpro' />
+                  <img src='/assets/img/wcu/we-listen.webp' alt='Transpro' />
                 </div>
                 <div className='details'>
                   <h6>WE LISTEN</h6>
@@ -36,7 +36,7 @@ const WhyChooseUsTwo = () => {
               </div>
               <div className='single-wcu-wrap style-2'>
                 <div className='icon'>
-                  <img src='assets/img/wcu/icon-5.png' alt='Transpro' />
+                  <img src='/assets/img/wcu/walk.webp' alt='Transpro' />
                 </div>
                 <div className='details'>
                   <h6>WE WALK WITH CLIENTS</h6>
@@ -49,13 +49,13 @@ const WhyChooseUsTwo = () => {
             </div>
             <div className='col-lg-4'>
               <div className='thumb text-center'>
-                <img src='assets/img/wcu/delivery-man.png' alt='Transpro' />
+                <img src='/assets/img/wcu/why-choose-us.webp' alt='Transpro' />
               </div>
             </div>
             <div className='col-lg-4'>
               <div className='single-wcu-wrap style-2'>
                 <div className='icon'>
-                  <img src='assets/img/wcu/icon-6.png' alt='Transpro' />
+                  <img src='/assets/img/wcu/solution.webp' alt='Transpro' />
                 </div>
                 <div className='details'>
                   <h6>WE CREATE SOLUTIONS</h6>
@@ -67,7 +67,7 @@ const WhyChooseUsTwo = () => {
               </div>
               <div className='single-wcu-wrap style-2'>
                 <div className='icon'>
-                  <img src='assets/img/wcu/icon-7.png' alt='Transpro' />
+                  <img src='/assets/img/wcu/future.webp' alt='Transpro' />
                 </div>
                 <div className='details'>
                   <h6>WE LOOK INTO THE FUTURE</h6>
