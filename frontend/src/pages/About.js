@@ -21,7 +21,7 @@ const About = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"ABOUT US"} />
+          <Breadcrumb title={"ABOUT US"} imgSrc={"/assets/img/banner/About-us.webp"} />
 
           {/* About One */}
           {/* <div className='pd-top-120 pd-bottom-120'>
