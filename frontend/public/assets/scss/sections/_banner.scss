@@ -84,8 +84,9 @@
 }
 .banner-area-1 {
   overflow: hidden;
+  max-height: 700px;
   .banner-inner {
-    padding: 350px 0 277px;
+    padding: 150px 0 277px;
     position: relative;
     &:after {
       position: absolute;
@@ -154,7 +155,7 @@
     }
     .slick-next {
       left: 10px;
-      top: 59%;
+      top: 60%;
       z-index: 9;
       width: 60px;
       height: 60px;

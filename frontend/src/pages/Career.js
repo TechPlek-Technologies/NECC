@@ -3,7 +3,7 @@ import Preloader from "../elements/Preloader";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
-import PartnerOne from "../components/PartnerOne";
+// import PartnerOne from "../components/PartnerOne";
 import CareerInner from "../components/CareerInner";
 // import CareerOneAll from "../components/CareerOneAll";
 import NavbarThree from "../components/NavbarThree";
@@ -32,7 +32,7 @@ const Career = () => {
           <CurrentOpeningInner/>
 
             {/* Partner One */}
-            <PartnerOne />
+            {/* <PartnerOne /> */}
   
             {/* Footer One */}
             <FooterOne />

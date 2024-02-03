@@ -4,7 +4,7 @@ import FooterBottomOne from "../components/FooterBottomOne";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import ChairmanDeskInner from "../components/ChairmanDeskInner";
-import PartnerOne from "../components/PartnerOne";
+// import PartnerOne from "../components/PartnerOne";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
 
@@ -26,7 +26,7 @@ const ChairmanDesk = () => {
             <ChairmanDeskInner/>
 
             {/* Partner One */}
-            <PartnerOne/>
+            {/* <PartnerOne/> */}
         
             <FooterOne />
   

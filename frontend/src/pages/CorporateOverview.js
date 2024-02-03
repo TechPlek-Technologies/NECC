@@ -4,7 +4,7 @@ import FooterBottomOne from "../components/FooterBottomOne";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import CorporateOverviewInner from "../components/CorporateOverviewInner";
-import PartnerOne from "../components/PartnerOne";
+// import PartnerOne from "../components/PartnerOne";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
 
@@ -25,7 +25,7 @@ const CorporateOverview = () => {
             <CorporateOverviewInner/>
   
             {/* Partner One */}
-            <PartnerOne />
+            {/* <PartnerOne /> */}
   
             {/* Footer One */}
             <FooterOne />
