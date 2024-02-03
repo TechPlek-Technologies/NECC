@@ -88,7 +88,7 @@ const CorporateOverviewInner= () => {
           </div>
         </div>
       </div>
-      <div className='fact-area' style={{ background: "#F9F9F9" }}>
+      <div className='fact-area pd-bottom-45' style={{ background: "#F9F9F9" }}>
         <div className='container'>
           <div
             className='fact-counter-area CorporateOverview'

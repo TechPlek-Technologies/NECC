@@ -9,7 +9,7 @@ const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
 );
 const FooterOne = React.lazy(() => import("../components/FooterOne"));
-const PartnerOne = React.lazy(() => import("../components/PartnerOne"));
+// const PartnerOne = React.lazy(() => import("../components/PartnerOne"));
 
 const Faq = () => {
   return (
@@ -26,12 +26,12 @@ const Faq = () => {
           <Breadcrumb title={"FAQ"} />
 
           {/* Faq One */}
-          <div className='faq-area pd-top-120 pd-bottom-120'>
+          <div className='faq-area pd-top-120 pd-bottom-20'>
             <FaqOne />
           </div>
 
           {/* Partner One */}
-          <PartnerOne />
+          {/* <PartnerOne /> */}
 
           {/* Footer One */}
           <FooterOne />

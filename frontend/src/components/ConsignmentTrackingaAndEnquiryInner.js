@@ -54,28 +54,28 @@ const ConsignmentTrackingaAndEnquiryInner = () => {
                     </div>
                     <h6 className='subtitle mt-4'>Company Information :</h6>
                     <div className='row'>
-                      <div className='col-lg-4'>
+                      {/* <div className='col-lg-4'>
                         <div className='single-select-inner style-border'>
                           <select className='single-select'>
                             <option>G.R. Number</option>
                           </select>
                         </div>
-                      </div>
-                      <div className='col-lg-8'>
+                      </div> */}
+                      <div className='col-lg-12'>
                         <div className='single-input-inner style-border'>
                           <input type='text' placeholder='G.R. Number' />
                         </div>
                       </div>
                       
-                      <div className='col-lg-4'>
+                      {/* <div className='col-lg-4'>
                         <div className='single-select-inner style-border'>
                           <select className='single-select'>
                             <option>Query Details</option>
                           </select>
                         </div>
-                      </div>
+                      </div> */}
   
-                      <div className='col-lg-8'>
+                      <div className='col-lg-12'>
                         <div className='single-input-inner style-border'>
                           <input type='text' placeholder='Query Details' />
                         </div>

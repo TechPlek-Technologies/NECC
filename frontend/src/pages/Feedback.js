@@ -3,7 +3,7 @@ import Preloader from "../elements/Preloader";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
-import PartnerOne from "../components/PartnerOne";
+// import PartnerOne from "../components/PartnerOne";
 import FeedbackInner from "../components/FeedbackInner";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
@@ -26,7 +26,7 @@ const Feedback = () => {
             <FeedbackInner/>
 
             {/* Partner One */}
-            <PartnerOne />
+            {/* <PartnerOne /> */}
   
             {/* Footer One */}
             <FooterOne />
