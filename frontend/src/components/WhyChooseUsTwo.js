@@ -49,7 +49,7 @@ const WhyChooseUsTwo = () => {
             </div>
             <div className='col-lg-4'>
               <div className='thumb text-center'>
-                <img src='/assets/img/wcu/why-choose-us.webp' alt='Transpro' />
+                <img src='/assets/img/about/why-choose-us (1).webp' alt='Transpro' />
               </div>
             </div>
             <div className='col-lg-4'>

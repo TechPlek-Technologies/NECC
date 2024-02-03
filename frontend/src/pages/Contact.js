@@ -20,7 +20,7 @@ const Contact = () => {
           <NavbarThree/>
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"CONTACT US"} />
+          <Breadcrumb title={"CONTACT US"} imgSrc={"/assets/img/banner/contsct-us.webp"}/>
 
           {/* Breadcrumb */}
           <ContactInner />

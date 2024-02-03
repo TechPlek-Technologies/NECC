@@ -44,7 +44,7 @@ const NavbarThree = () => {
             </div>
             <div className='logo'>
               <Link to='/'>
-                <img src='assets/img/logo-2.png' alt='Transpro' />
+                <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
               </Link>
             </div>
             <div className='nav-left-part'></div>
@@ -78,9 +78,9 @@ const NavbarThree = () => {
                     <li>
                       <Link to='/CorporateOverview'>Corporate Overview</Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link to='/'>History</Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link to='/VisionAndQualityPolicy'>Vision & Quality Policy</Link>
                     </li>
@@ -90,38 +90,53 @@ const NavbarThree = () => {
                   <Link to='#'>Services</Link>
                   <ul className='sub-menu'>
                     <li>
-                      <Link to='/service'>Service</Link>
+                      <Link to='/service'>All Service</Link>
+                    </li>
+                    <li>
+                      <Link to='/ServiceDetail1'>Part Truck Load</Link>
+                    </li>
+                    <li>
+                      <Link to='/ServiceDetail2'>Full Truck Load</Link>
+                    </li>
+                    <li>
+                      <Link to='/ServiceDetail3'>Bulk Movements</Link>
+                    </li>
+                    <li>
+                      <Link to='/ServiceDetail4'>ODC Movements</Link>
+                    </li>
+                    <li>
+                      <Link to='/ServiceDetail5'>Warehousing & 3PL</Link>
                     </li>
                   </ul>
                 </li>
-                <li className='menu-item-has-children'>
+                {/* <li className='menu-item-has-children'>
                   <Link to='#'>Investors</Link>
                   <ul className='sub-menu'>
                     <li>
                       <Link to='/Investors'>Disclosures under Regulation 46 of SEBI (LODR)<br/>Regulations,2015</Link>
                     </li>
                   </ul>
-                </li>
-                 <li className='menu-item-has-children'>
+                </li> */}
+                 {/* <li className='menu-item-has-children'>
                   <Link to='#'>SiteMap</Link>
                   <ul className='sub-menu'>
                     <li>
                     <Link to='/SiteMap'>SiteMap</Link>
                     </li>
                   </ul>
-                </li>
+                </li> */}
                 <li className='menu-item-has-children current-menu-item'>
                   <Link to='#'>Contact Us</Link>
                   <ul className='sub-menu'>
                   <li>
                         <Link to='/contact'>Contact Us</Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link to='/Career'>Careers</Link>
-                      </li>
-                      <li>
-                        <Link to='/'>Customer Care</Link>
-                      </li>
+                      </li> */}
+                      {/* <li>
+                        <Link to='#'>Customer Care</Link>
+                      </li> */}
                       <li>
                       <Link to='/faq'>FAQ</Link>
                       </li>

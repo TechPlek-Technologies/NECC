@@ -21,7 +21,7 @@ const CorporateOverviewInner= () => {
                   />
                   <img
                     className='img-2'
-                    src='./assets/img/about/1.png'
+                    src='./assets/img/about/22-years (2).webp'
                     alt='Transpro'
                   />
                   {/* <img

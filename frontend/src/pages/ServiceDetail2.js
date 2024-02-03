@@ -21,7 +21,7 @@ const ServiceDetail2 = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"SERVICES DETAILS"} />
+          <Breadcrumb title={"FULL TRUCK LOAD (FTL)"} />
 
           {/* Service Details Inner */}
           <ServiceDetailsInner2 />

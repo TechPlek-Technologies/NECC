@@ -20,7 +20,7 @@ const ConsignmentTrackingaAndEnquiry = () => {
           <NavbarThree/>
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"CONSIGNMENT TRACKING AND ENQUIRY"} />
+          <Breadcrumb title={"CONSIGNMENT TRACKING AND ENQUIRY"} imgSrc={"/assets/img/banner/consignment.webp"} />
 
           {/* Request Quote One */}
           <ConsignmentTrackingaAndEnquiryInner/>

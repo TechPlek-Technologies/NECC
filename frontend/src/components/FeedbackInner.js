@@ -47,57 +47,9 @@ const FeedbackInner= () => {
       <div className='container'>
         <div className='contact-area mg-top-120 mb-120'>
           <div className='row g-0 justify-content-center'>
-          {/* <div className='col-lg-5'>
-              <div className='contact-information-wrap'>
-                <h3>CONTACT INFORMATION</h3>
-                <div className='single-contact-info-wrap'>
-                  <h6>Contact Number:</h6>
-                  <div className='media'>
-                    <div className='icon'>
-                      <FaPhoneAlt />
-                    </div>
-                    <div className='media-body'>
-                      <p>+1 952-435-7106</p>
-                      <p>+1 932-654-9874</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='single-contact-info-wrap'>
-                  <h6>Mail Address:</h6>
-                  <div className='media'>
-                    <div className='icon' style={{ background: "#080C24" }}>
-                      <FaRegEnvelope />
-                    </div>
-                    <div className='media-body'>
-                      <p>info@transpro.com</p>
-                      <p>info.example@gmail.com</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='single-contact-info-wrap mb-0'>
-                  <h6>Office Location:</h6>
-                  <div className='media'>
-                    <div className='icon' style={{ background: "#565969" }}>
-                      <FaMapMarkerAlt />
-                    </div>
-                    <div className='media-body'>
-                      <p>2245 Gilbert Ave, Cincinnati, OH</p>
-                      <p>45206, United States</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-            {/* <div className='col-lg-5'>
-              <div>
-                <div className='img-file'>
-                  <img src='assets/img/solution/solution-bg.png' alt='' />
-                </div>
-              </div>
-            </div> */}
             <div class="col-lg-5">
               <div class="thumb text-center mb-4 mb-lg-0">
-                <img src="assets/img/faq/1.png" alt="img"/>
+                <img src="/assets/img/faq/feedback-form.webp" alt="img"/>
                   </div>
             </div>
             <div className='col-lg-7'>
@@ -107,10 +59,6 @@ const FeedbackInner= () => {
                 onSubmit={sendEmail}
               >
                 <h3>FEEDBACK</h3>
-                {/* <h2>FEEDBACK</h2> */}
-                {/* <p>
-                Comments or questions are welcome.<br/> * indicates required field
-                </p> */}
                 <div className='row'>
                   <div className='col-md-6'>
                     <div className='single-input-inner'>

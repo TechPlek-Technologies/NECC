@@ -39,23 +39,6 @@ const About = () => {
             <CounterOne />
           </div> */}
 
-          {/* Skill One */}
-          {/* <SkillOne /> */}
-
-          {/* Video Area One */}
-          {/* <VideoAreaOne /> */}
-
-          {/* Team One */}
-          {/* <div className='pd-bottom-80'>
-            <TeamOne />
-          </div> */}
-
-          {/* Testimonial Two */}
-          {/* <TestimonialTwo /> */}
-
-          {/* Partner One */}
-          {/* <PartnerOne /> */}
-
           {/* Footer One */}
           <FooterOne />
 

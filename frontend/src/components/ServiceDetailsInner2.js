@@ -86,7 +86,7 @@ const ServiceDetailsInner2 = () => {
             </div>
             <div className='col-lg-4'>
               <div className='sidebar-area'>
-                <div className='widget widget_search'>
+                {/* <div className='widget widget_search'>
                   <form className='search-form'>
                     <div className='form-group'>
                       <input type='text' placeholder='Search here...' />
@@ -95,7 +95,7 @@ const ServiceDetailsInner2 = () => {
                       <FaSearch />
                     </button>
                   </form>
-                </div>
+                </div> */}
                 <div className='widget widget_catagory'>
                   <h4 className='widget-title'>
                     SERVICE LIST

@@ -20,7 +20,7 @@ const Service = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"SERVICES"} />
+          <Breadcrumb title={"SERVICES"} imgSrc={"/assets/img/banner/our-service.webp"} />
 
           {/* {Service Inner} */}
           <ServiceInnerOne/>
