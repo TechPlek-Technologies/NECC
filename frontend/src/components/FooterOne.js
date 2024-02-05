@@ -27,8 +27,10 @@ const FooterOne = () => {
                   </div>
                   <div className='details'>
                     <h6>OFFICE ADDRESS:</h6>
-                    <p>2245 Gilbert Ave, Cincinnati,</p>
-                    <p>OH 45206, United States</p>
+                    <p>DELHI
+                    "NECC HOUSE" 9062/47,</p>
+                    <p> Ram Bagh Road ,Azad Market<br/> Delhi-110 006</p>
+                    
                   </div>
                 </div>
               </div>
@@ -39,8 +41,8 @@ const FooterOne = () => {
                   </div>
                   <div className='details'>
                     <h6>CONTACT US:</h6>
-                    <p>info.logic@transpro.com</p>
-                    <p>+1 800-226-4054</p>
+                    <p>co@neccgroup.com</p>
+                    <p>011-23517516, 17, 18, 19</p>
                   </div>
                 </div>
               </div>
@@ -52,7 +54,7 @@ const FooterOne = () => {
                   <div className='details'>
                     <h6>WORKING HOURS:</h6>
                     <p>Weekdays - Mon-Fri: 8am-21pm</p>
-                    <p>Weekend - Sta &amp; Sun: Closed</p>
+                    <p>Weekend - Sat &amp; Sun: Closed</p>
                   </div>
                 </div>
               </div>
@@ -64,7 +66,7 @@ const FooterOne = () => {
             <div className='col-xl-4 col-md-6'>
               <div className='widget widget_about'>
                 <div className='thumb'>
-                  <img src='assets/img/logo-white.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/logo (1).webp' alt='Transpro' />
                 </div>
                 <div className='details'>
                   <p>
@@ -112,16 +114,16 @@ const FooterOne = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to='#'>
-                      <FaArrowRight /> Portfolio
+                    <Link to='/SiteMap'>
+                      <FaArrowRight /> SiteMap
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to='/blog'>
                       <FaArrowRight />
                       Blog
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link to='/contact'>
                       <FaArrowRight /> Contact Us
@@ -135,28 +137,28 @@ const FooterOne = () => {
                 <h4 className='widget-title'>OUR SERVICES</h4>
                 <ul>
                   <li>
-                    <a href='#'>
-                      <FaArrowRight /> Air Freight
+                    <a href='/ServiceDetail1'>
+                      <FaArrowRight /> Part Truck Load
                     </a>
                   </li>
                   <li>
-                    <a href='#'>
-                      <FaArrowRight /> Ocean Freight
+                    <a href='/ServiceDetail2'>
+                      <FaArrowRight /> Full Truck Load
                     </a>
                   </li>
                   <li>
-                    <a href='#'>
-                      <FaArrowRight /> Railway Freight
+                    <a href='/ServiceDetail3'>
+                      <FaArrowRight /> Bulk Movements
                     </a>
                   </li>
                   <li>
-                    <a href='#'>
-                      <FaArrowRight /> Warehousing
+                    <a href='/ServiceDetail4'>
+                      <FaArrowRight /> ODC Movements
                     </a>
                   </li>
                   <li>
-                    <a href='#'>
-                      <FaArrowRight /> Distribution
+                    <a href='/ServiceDetail5'>
+                      <FaArrowRight /> Warehousing & 3PL
                     </a>
                   </li>
                 </ul>
