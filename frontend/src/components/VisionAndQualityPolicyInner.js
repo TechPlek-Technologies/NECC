@@ -13,7 +13,7 @@ const VisionAndQualityPolicyInner= () => {
   return (
     <>
       {/* service area start */}
-      <div className='features-area style-02' >
+      <div className='features-area style-02' style={{ backgroundImage: `url("/assets/img/service-1/vision and quality/vision-statement (1).webp")`}}>
         <div className='container'>
           <div className='row justify-content-start'>
             <div className='col-lg-4 offset-lg-1 d-flex'>
@@ -34,7 +34,7 @@ const VisionAndQualityPolicyInner= () => {
               <div className='features-item'>
                 <div className='row'>
                   <div className='col-lg-6'>
-                    <div className='single-features-item'>
+                    <div className='single-features-item' style={{ backgroundImage: `url("/assets/img/service-1/vision and quality/plan.webp")`}}>
                       <div className='icon'>
                         <FaMoneyBillAlt />
                         
@@ -46,7 +46,7 @@ const VisionAndQualityPolicyInner= () => {
                       </div>
                       <h4>Plan</h4>
                     </div>
-                    <div className='single-features-item'>
+                    <div className='single-features-item' style={{ backgroundImage: `url("/assets/img/service-1/vision and quality/action.webp")`}}>
                       <div className='icon'>
                         <FaTruck />
                       </div>
@@ -54,13 +54,13 @@ const VisionAndQualityPolicyInner= () => {
                     </div>
                   </div>
                   <div className='col-lg-6 mg-top-60'>
-                    <div className='single-features-item'>
+                    <div className='single-features-item' style={{ backgroundImage: `url("/assets/img/service-1/vision and quality/do.webp")`}}>
                       <div className='icon'>
                         <FaBox />
                       </div>
                       <h4>Do</h4>
                     </div>
-                    <div className='single-features-item'>
+                    <div className='single-features-item' style={{ backgroundImage: `url("/assets/img/service-1/vision and quality/check.webp")`}}>
                       <div className='icon'>
                         <FaShieldAlt />
                       </div>
