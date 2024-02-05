@@ -34,7 +34,7 @@ const SupportBarOne = () => {
                   <li>
                     <a href='mailTo:example@example.com'>
                       <FaRegEnvelope />
-                      example@example.com
+                      co@neccgroup.com
                     </a>
                   </li>
                   <li>
@@ -42,7 +42,7 @@ const SupportBarOne = () => {
                     <a href='tel:+8801-728-123-456'>
                       {" "}
                       <FaPhoneAlt />
-                      +8801-728-123-456
+                      +011-23517516, 17, 18, 19
                     </a>
                   </li>
                 </ul>
@@ -75,7 +75,7 @@ const SupportBarOne = () => {
                       </li>
                       <li>
                         <a
-                          href='https://www.youtube.com/channel/UCz1tS-oRzKeElBOd6pIjgLQ'
+                          href='https://www.youtube.com/@necchouse4334'
                           className='youtube'
                         >
                           <FaYoutube />

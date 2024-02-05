@@ -74,8 +74,9 @@ const BannerOne = () => {
             <div>
               <div
                 className='item'
-                style={{ backgroundImage: 'url("./assets/img/banner/2.png")' }}
+                 style={{ backgroundImage: 'url("./assets/img/banner/2.png")' }}
               >
+               
                 <div className='container'>
                   <div className='row'>
                     <div className='col-lg-7 col-md-8'>
