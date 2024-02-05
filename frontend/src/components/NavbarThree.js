@@ -117,14 +117,14 @@ const NavbarThree = () => {
                     </li>
                   </ul>
                 </li> */}
-                 {/* <li className='menu-item-has-children'>
+                 <li className='menu-item-has-children'>
                   <Link to='#'>SiteMap</Link>
                   <ul className='sub-menu'>
                     <li>
                     <Link to='/SiteMap'>SiteMap</Link>
                     </li>
                   </ul>
-                </li> */}
+                </li>
                 <li className='menu-item-has-children current-menu-item'>
                   <Link to='#'>Contact Us</Link>
                   <ul className='sub-menu'>

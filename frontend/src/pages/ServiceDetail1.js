@@ -21,7 +21,7 @@ const ServiceDetail1 = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"PART TRUCK LOAD (PTL)"} />
+          <Breadcrumb title={"PART TRUCK LOAD (PTL)"} imgSrc={"/assets/img/service-1/ptl/part-truck-load.webp"} />
 
           {/* Service Details Inner */}
           <ServiceDetailsInner1 />
