@@ -30,19 +30,19 @@ const VisionAndQualityPolicyInner= () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-6'>
+            <div className='col-lg-6 align-self-center pd-top-120'>
+                    <div className='thumb mb-lg-0 mb-4'>
+                      <img src='/assets/img/service-1/vision and quality/vision-2.webp' alt='Transpro' />
+                    </div>
+                  </div>
+            {/* <div className='col-lg-6'>
               <div className='features-item'>
                 <div className='row'>
                   <div className='col-lg-6'>
                     <div className='single-features-item' style={{ backgroundImage: `url("/assets/img/service-1/vision and quality/plan.webp")`}}>
                       <div className='icon'>
                         <FaMoneyBillAlt />
-                        
-                            {/* <img
-                              src='assets/img/about/icon-1.png'
-                              alt='Transpro'
-                            /> */}
-                          
+                         
                       </div>
                       <h4>Plan</h4>
                     </div>
@@ -69,7 +69,7 @@ const VisionAndQualityPolicyInner= () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
