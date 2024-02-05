@@ -124,7 +124,7 @@ const corporate = [
     <>
       <Toaster position='bottom-center' reverseOrder={false} />
       {/* contact area start */}
-      <div className='container'>
+      <div className='container pd-bottom-45'>
         <div className='contact-area mg-top-60 mb-20'>
           <div className='row g-0 justify-content-center'>
             <div className='col-lg-7'>
@@ -226,13 +226,13 @@ const corporate = [
         </div>
       </div>
 
-      <div className='service-area style-2 pd-bottom-80'>
+      <div className='service-area style-2 pd-top-45 pd-bottom-80' style={{ background : "var(--button-color)"}}>
         <div className='container'>
         <div className='row justify-content-center'>
             <div className='col-lg-12'>
               <div className='section-title text-center'>
                 {/* <h4 className='subtitle'>SERVICES</h4> */}
-                <h2 className='title'>CORPORATE OFFICE</h2>
+                <h2 className='title' style={{ color : "#ffff"}}>CORPORATE OFFICE</h2>
               </div>
             </div>
           </div>
@@ -258,13 +258,13 @@ const corporate = [
          </div>
       </div>
    
-      <div className='service-area style-2 pd-bottom-80'>
+      <div className='service-area style-2 pd-bottom-80' style={{ background : "var(--button-color)"}}>
         <div className='container'>
         <div className='row justify-content-center'>
             <div className='col-lg-12'>
               <div className='section-title text-center'>
                 {/* <h4 className='subtitle'>SERVICES</h4> */}
-                <h2 className='title'>REGIONAL OFFICES</h2>
+                <h2 className='title' style={{ color : "#ffff"}}>REGIONAL OFFICES</h2>
               </div>
             </div>
           </div>

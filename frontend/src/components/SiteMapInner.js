@@ -7,7 +7,7 @@ const SiteMapInner= () => {
   return (
     <>
       {/* Investors area start */} 
-      <div className='service-area pd-top-120 pd-bottom-120'>
+      <div className='service-area pd-top-120 pd-bottom-45'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-8'></div>
@@ -40,70 +40,70 @@ const SiteMapInner= () => {
                        
                       NECC ECOM SOLUTIONS{" "}
                       </Link></li>
-                      <li> <Link to='/KeyManagementPersonnel'>
+                      {/* <li> <Link to='/KeyManagementPersonnel'>
                         
                       KEY MANAGEMENT PERSONNEL{" "}
-                      </Link></li>
+                      </Link></li> */}
 
-                      <li> <Link to='/AnnualReport'>
+                      {/* <li> <Link to='/AnnualReport'>
                         
                         ANNUAL REPORT & NOTICE OF AGM{" "}
-                        </Link></li>
+                        </Link></li> */}
 
-                      <li> <Link to='/CorporateGovernance'>
+                      {/* <li> <Link to='/CorporateGovernance'>
                         
                       CORPORATE GOVERNANCE{" "}
-                      </Link></li>
+                      </Link></li> */}
 
-                      <li> <Link to='/QuarterlyCompliances'>
+                      {/* <li> <Link to='/QuarterlyCompliances'>
                         
                       QUARTERLY COMPLIANCES{" "}
-                      </Link></li>
+                      </Link></li> */}
 
-                      <li> <Link to='/Download'>
+                      {/* <li> <Link to='/Download'>
                         
                       DOWNLOAD{" "}
-                        </Link></li>
+                        </Link></li> */}
 
-                        <li> <Link to='/AnnualReportFinancial'>
+                        {/* <li> <Link to='/AnnualReportFinancial'>
                         
                         ANNUAL REPORT & FINANCIALS{" "}
-                        </Link></li>
+                        </Link></li> */}
 
-                        <li> <Link to='/Polices'>
+                        {/* <li> <Link to='/Polices'>
                         
                         POLICES & CODE{" "}
-                        </Link></li>
+                        </Link></li> */}
 
-                        <li> <Link to='/CurrentOpening'>
+                        {/* <li> <Link to='/CurrentOpening'>
                         
                         CURRENT OPENINGS{" "}
-                        </Link></li>
+                        </Link></li> */}
 
-                        <li> <Link to='/CodeOfConduct'>
+                        {/* <li> <Link to='/CodeOfConduct'>
                         
                         CODE OF CONDUCT{" "}
-                        </Link></li>
+                        </Link></li> */}
 
-                        <li> <Link to='/NewspaperPublication'>
+                        {/* <li> <Link to='/NewspaperPublication'>
                         
                         NEWSPAPER PUBLICATION{" "}
-                        </Link></li>
+                        </Link></li> */}
 
-                        <li> <Link to='/NewsEvents'>
+                        {/* <li> <Link to='/NewsEvents'>
                         
                         NEWS & EVENTS{" "}
-                        </Link></li>
+                        </Link></li> */}
 
-                        <li> <Link to='/RightIssues'>
+                        {/* <li> <Link to='/RightIssues'>
                         
                         RIGHT ISSUES{" "}
-                        </Link></li>
+                        </Link></li> */}
 
-                        <li> <Link to='/Networks'>
+                        {/* <li> <Link to='/Networks'>
                         
                         NETWORKS{" "}
-                        </Link></li>
+                        </Link></li> */}
 
 
                     </ul>

@@ -20,7 +20,7 @@ const ChairmanDesk = () => {
             <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"CHAIRMAN DESK"} imgSrc={"/assets/img/banner/cahirmen.webp"}/>
+            <Breadcrumb title={"CHAIRMAN DESK"} imgSrc={"/assets/img/banner/cahirmen (1).webp"}/>
 
             {/* Service Details Inner */}
             <ChairmanDeskInner/>
