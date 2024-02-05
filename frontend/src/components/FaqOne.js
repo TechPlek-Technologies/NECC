@@ -100,7 +100,7 @@ const FaqOne = () => {
                       aria-expanded='false'
                       aria-controls='collapseFour'
                     >
-                      <span>4.</span> How can we keep track of consignments booked<br/> through N.E.C.C. ? 
+                      <span>4.</span> How can we keep track of consignments booked through N.E.C.C. ? 
                     </button>
                   </h2>
                   <div

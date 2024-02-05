@@ -197,7 +197,7 @@ const NeccEcomSolutionInner = () => {
       {/*partner-area end*/}
       {/*contact-area start*/}
       <div
-            className='call-to-contact-area pd-top-80 pd-bottom-20'
+            className='call-to-contact-area pd-top-115 pd-bottom-20'
             style={{ background: "#F9F9F9" }}
           >
         <div>

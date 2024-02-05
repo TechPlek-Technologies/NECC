@@ -3,7 +3,7 @@ import Preloader from "../elements/Preloader";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
-import PartnerOne from "../components/PartnerOne";
+// import PartnerOne from "../components/PartnerOne";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
 import SiteMapInner from "../components/SiteMapInner";
@@ -20,13 +20,13 @@ const SiteMap = () => {
            <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"SITEMAP"} imgSrc={"assets/img/banner/breadcrumb.png"} />
+            <Breadcrumb title={"SITEMAP"} imgSrc={"/assets/img/banner/sitemap.webp"} />
 
             {/*Investors Inner */}
             <SiteMapInner/>
 
             {/* Partner One */}
-            <PartnerOne />
+            {/* <PartnerOne /> */}
   
             {/* Footer One */}
             <FooterOne />
