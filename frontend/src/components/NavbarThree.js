@@ -58,13 +58,16 @@ const NavbarThree = () => {
               id='transpro_main_menu'
             >
               <ul className='navbar-nav menu-open'>
-              <li className='menu-item-has-children current-menu-item'>
+              {/* <li className='menu-item-has-children current-menu-item'>
                   <Link to='/'>Home</Link>
                   <ul className='sub-menu'>
                     <li>
                       <Link to='/'>Home</Link>
                     </li>
                   </ul>
+                </li> */}
+                <li>
+                  <Link to='/'>Home</Link>
                 </li>
                 <li className='menu-item-has-children current-menu-item'>
                   <Link to='#'>About Us</Link>
