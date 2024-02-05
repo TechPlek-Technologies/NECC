@@ -190,7 +190,7 @@ const NeccEcomSolutionInner = () => {
                 </p>
               </div>
             </div>
-            <img src='/assets/img/service-1/network (1).webp' alt='Transpro' />
+            <img src='/assets/img/service-1/ecom/network (2).webp' alt='Transpro' />
           </div>
         </div>
       </div>
@@ -201,7 +201,7 @@ const NeccEcomSolutionInner = () => {
             style={{ background: "#F9F9F9" }}
           >
         <div>
-            <img src='/assets/img/service-1/career (1) (1).webp' alt='Transpro' />
+            <img src='/assets/img/service-1/career/career.webp' alt='Transpro' />
             <div className='container'>
             <div className='row justify-content-end'>
                 <div className='col-xl-6 col-lg-7'>

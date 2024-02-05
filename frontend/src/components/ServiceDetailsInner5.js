@@ -22,7 +22,7 @@ const ServiceDetailsInner5 = () => {
             <div className='col-lg-8'>
               <div className='service-details-wrap'>
                 <div className='thumb'>
-                  <img src='/assets/img/service-1/ptl/ptl.webp' alt='Transpro' />
+                  <img src='/assets/img/service-1/warehousing/warehouse (1).webp' alt='Transpro' />
                   <div className='icon'>
                     <img
                       src='/assets/img/service/warehouse.webp'
@@ -44,7 +44,7 @@ const ServiceDetailsInner5 = () => {
                 <div className='row'>
                   <div className='col-lg-6 align-self-center'>
                     <div className='thumb mb-lg-0 mb-4'>
-                      <img src='/assets/img/service-1/ptl/Global-Transaction-Advisory.webp' alt='Transpro' />
+                      <img src='/assets/img/service-1/warehousing/Global-Transaction-Advisory (4).webp' alt='Transpro' />
                     </div>
                   </div>
                   <div className='col-lg-6 align-self-center'>
@@ -68,7 +68,7 @@ const ServiceDetailsInner5 = () => {
                   sources.
                 </p>
                 <div className='video-thumb-wrap pt-1 pb-4'>
-                  <img src='/assets/img/service-1/ptl/How-It-Works.webp' alt='Transpro' />
+                  <img src='/assets/img/service-1/warehousing/how-it-works (3).webp' alt='Transpro' />
                   <span
                     className='video-play-btn cursor-pointer'
                     data-effect='mfp-zoom-in'
