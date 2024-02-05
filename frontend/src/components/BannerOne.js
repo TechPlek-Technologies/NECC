@@ -26,6 +26,8 @@ const BannerOne = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
+
+
   return (
     <>
       {/* banner start */}
@@ -35,9 +37,13 @@ const BannerOne = () => {
             <div>
               <div
                 className='item'
-                style={{ backgroundImage: 'url("./assets/img/banner/1.png")' }}
+                // style={{ backgroundImage: 'url("./assets/img/banner/1.png")' }}
               >
-                <div className='container'>
+                <video autoPlay loop muted style={{position:"fixed"}}>
+                  <source src="/assets/img/video/NECC LTD..mp4" type="video/mp4"/>
+                </video>
+                
+             <div className='container'>
                   <div className='row'>
                     <div className='col-lg-7 col-md-8'>
                       <div className='banner-inner style-white'>
@@ -68,14 +74,18 @@ const BannerOne = () => {
                     </div>
                   </div>
                 </div>
+                
               </div>
             </div>
 
             <div>
               <div
                 className='item'
-                 style={{ backgroundImage: 'url("./assets/img/banner/2.png")' }}
+                //  style={{ backgroundImage: 'url("./assets/img/banner/2.png")' }}
               >
+                <video autoPlay loop muted style={{position:"fixed"}}>
+                  <source src="/assets/img/video/NECC LTD..mp4" type="video/mp4"/>
+                </video>
                
                 <div className='container'>
                   <div className='row'>
