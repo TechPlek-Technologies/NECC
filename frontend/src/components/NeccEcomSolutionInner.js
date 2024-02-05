@@ -56,7 +56,7 @@ const NeccEcomSolutionInner = () => {
                 <div className='about-thumb-wrap mb-lg-0 mb-4'>
                   <img
                     className='img-2'
-                    src='assets/img/about/7.png'
+                    src='/assets/img/service-1/about.webp'
                     alt='Transpro'
                   />
                   <div className='exprience-wrap'>
@@ -108,19 +108,19 @@ const NeccEcomSolutionInner = () => {
         style={{ background: "url(assets/img/wcu/bg.png)" }}
       >
         {/* <img className='img-1' src='assets/img/wcu/1.png' alt='Transpro' /> */}
-        <img className='img-2' src='assets/img/wcu/2.png' alt='Transpro' />
+        {/* <img className='img-2' src='assets/img/wcu/2.png' alt='Transpro' /> */}
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-xl-7 col-lg-6 order-lg-2'>
-              <div className='video-thumb-wrap'>
-                <img src='assets/img/wcu/video.png' alt='Transpro' />
-                <span
+              <div className='video-thumb-wrap pd-top-20'>
+                <img src='/assets/img/service-1/service (1).webp' alt='Transpro' />
+                {/* <span
                   className='video-play-btn cursor-pointer'
                   data-effect='mfp-zoom-in'
                   onClick={() => setOpen(true)}
                 >
                   <FaPlay />
-                </span>
+                </span> */}
               </div>
             </div>
             <div className='col-xl-5 col-lg-6 order-lg-1'>
@@ -190,7 +190,7 @@ const NeccEcomSolutionInner = () => {
                 </p>
               </div>
             </div>
-            <img src='assets/img/contact/1.png' alt='Transpro' />
+            <img src='/assets/img/service-1/network (1).webp' alt='Transpro' />
           </div>
         </div>
       </div>
@@ -201,7 +201,7 @@ const NeccEcomSolutionInner = () => {
             style={{ background: "#F9F9F9" }}
           >
         <div>
-            <img src='assets/img/contact/1.png' alt='Transpro' />
+            <img src='/assets/img/service-1/career (1) (1).webp' alt='Transpro' />
             <div className='container'>
             <div className='row justify-content-end'>
                 <div className='col-xl-6 col-lg-7'>
@@ -224,112 +224,6 @@ const NeccEcomSolutionInner = () => {
         </div>
       </div>
       {/*contact-area end*/}
-      {/*request-quote-area start*/}
-      {/* <div className='request-quote-area  pd-top-45'>
-        <div className='container'>
-          <div className='request-quote-inner'>
-            <ul className='nav nav-pills' id='pills-tab' role='tablist'>
-              <li className='nav-item' role='presentation'>
-                <button
-                  className='nav-link active'
-                  id='pills-home-tab'
-                  data-bs-toggle='pill'
-                  data-bs-target='#pills-home'
-                  type='button'
-                  role='tab'
-                  aria-controls='pills-home'
-                  aria-selected='true'
-                >
-                  <img src='assets/img/request-quote/1.png' alt='Transpro' />
-                  CONTACT U
-                </button>
-              </li>
-            </ul>
-            <div className='tab-content' id='pills-tabContent'>
-              <div
-                className='tab-pane fade show active'
-                id='pills-home'
-                role='tabpanel'
-                aria-labelledby='pills-home-tab'
-              >
-                <div className='row'>
-                  <div className='col-lg-8'>
-                    <h6 className='subtitle'>Personal Information :</h6>
-                    <div className='row'>
-                      <div className='col-lg-4'>
-                        <div className='single-input-inner style-border'>
-                          <input type='text' placeholder='Your Name' />
-                        </div>
-                      </div>
-                      <div className='col-lg-4'>
-                        <div className='single-input-inner style-border'>
-                          <input type='text' placeholder='Your Email' />
-                        </div>
-                      </div>
-                      <div className='col-lg-4'>
-                        <div className='single-input-inner style-border'>
-                          <input type='text' placeholder='Phone Number' />
-                        </div>
-                      </div>
-                    </div>
-                    <h6 className='subtitle mt-4'>Shipment Information :</h6>
-                    <div className='row'>
-                      <div className='col-lg-4'>
-                        <div className='single-select-inner style-border'>
-                          <select className='single-select'>
-                            <option>G.R. Number</option>
-                            <option value={1}>Some option</option>
-                            <option value={2}>Another option</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div className='col-lg-8'>
-                        <div className='single-input-inner style-border'>
-                          <input type='text' placeholder='G.R. Number' />
-                        </div>
-                      </div>
-                      
-                      <div className='col-lg-4'>
-                        <div className='single-select-inner style-border'>
-                          <select className='single-select'>
-                            <option>Query Details</option>
-                            <option value={1}>Some option</option>
-                            <option value={2}>Another option</option>
-                          </select>
-                        </div>
-                      </div>
-  
-                      <div className='col-lg-8'>
-                        <div className='single-input-inner style-border'>
-                          <input type='text' placeholder='Query Details' />
-                        </div>
-                      </div>
-                    </div>
-                   
-                    <a className='btn btn-base w-100' href='#'>
-                      SUBMIT
-                    </a>
-                  </div>
-                  <div className='col-lg-4 align-self-end'>
-                    <div
-                      className='quote-wrap'
-                      style={{ background: "var(--main-color)" }}
-                    >
-                      <h4>How Can We Help You!</h4>
-                      <p>
-                      Click the button below to follow, we will get back to you very soon.
-                      </p>
-                      <Link className='btn btn-white' to='mailto:customercare1@neccgroup.com'>
-                        CONTACT US
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <div className='container'>
         <div className='contact-area mg-top-120 mb-120'>
           <div className='row g-0 justify-content-center'>
