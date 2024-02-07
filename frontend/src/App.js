@@ -55,7 +55,9 @@ import Content from "./pages/Dashboard/pages/Content";
 import CodeOfConduct from "./pages/CodeOfConduct";
 import NewsEvents from "./pages/News&Events";
 import RightIssues from "./pages/RightIssues";
-import Networks from "./pages/Networks";
+import NECCPackers from "./pages/NECCPackers";
+import GetDetails from "./pages/GetDetails";
+import Magazines from "./pages/Magazines";
 
 function App() {
   useEffect(() => {
@@ -117,7 +119,9 @@ function App() {
           <Route exact path="/CodeOfConduct" element={<CodeOfConduct/>} />
           <Route exact path="/NewsEvents" element={<NewsEvents/>} />
           <Route exact path="/RightIssues" element={<RightIssues/>} />
-          <Route exact path="/Networks" element={<Networks/>} />
+          <Route exact path="/NeccPackers&Movers" element={<NECCPackers/>} />
+          <Route exact path="/GetDetails" element={<GetDetails/>} />
+          <Route exact path="/Magazines" element={<Magazines/>} />
           <Route
             exact
             path="/CorporateInformation"

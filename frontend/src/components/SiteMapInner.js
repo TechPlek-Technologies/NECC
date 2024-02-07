@@ -105,6 +105,21 @@ const SiteMapInner= () => {
                         NETWORKS{" "}
                         </Link></li> */}
 
+                        {/* <li> <Link to='/NeccPackers&Movers'>
+                        
+                        NECC PACKERS & MOVERS{" "}
+                        </Link></li> */}
+
+                        {/* <li> <Link to='/GetDetails'>
+                        
+                        GET DETAILS{" "}
+                        </Link></li> */}
+
+                        {/* <li> <Link to='/Magazines'>
+                        
+                        MAGAZINES{" "}
+                        </Link></li> */}
+
 
                     </ul>
                    
