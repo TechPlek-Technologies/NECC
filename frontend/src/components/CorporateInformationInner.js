@@ -137,6 +137,7 @@ const CorporateInformationInner = () => {
             <div className="service-details-wrap">
               <h2>Corporate Information</h2>
               <div className="row">
+                
                 <div className="col-lg-12 align-self-center">
                   <h6 className="subtitle CorporateInformation">
                     BOARD OF DIRECTORS
@@ -252,6 +253,7 @@ const CorporateInformationInner = () => {
                       </li>
                       </ul>
                 </div>
+                
               </div>
             </div>
           </div>
