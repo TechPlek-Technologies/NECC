@@ -6,9 +6,10 @@ import FooterBottomOne from "../components/FooterBottomOne";
 import CorporateInformationInner from "../components/CorporateInformationInner";
 import SupportBarOne from "../components/SupportBarOne";
 import NavbarThree from "../components/NavbarThree";
+import CorporateSocialResponsibilityInner from "../components/CorporateSocialResponsibilityInner";
 
 
-const CorporateInformation = () => {
+const CorporateSocialResponsibility = () => {
     return (
       <>
         <Fragment>
@@ -20,10 +21,10 @@ const CorporateInformation = () => {
           <NavbarThree/>
             
             {/* Breadcrumb */}
-            <Breadcrumb title={"CORPORATE INFORMATION"} />
+            <Breadcrumb title={"CORPORATE SOCIAL RESPONSIBILITY"} imgSrc={"/assets/img/banner/1.png"}/>
 
             {/*Investors Inner */}
-            <CorporateInformationInner/>
+            <CorporateSocialResponsibilityInner/>
 
             {/* Footer One */}
             <FooterOne />
@@ -36,4 +37,4 @@ const CorporateInformation = () => {
     );
   };
   
-  export default CorporateInformation;
+  export default CorporateSocialResponsibility;

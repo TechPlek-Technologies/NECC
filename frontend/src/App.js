@@ -58,6 +58,7 @@ import RightIssues from "./pages/RightIssues";
 import NECCPackers from "./pages/NECCPackers";
 import GetDetails from "./pages/GetDetails";
 import Magazines from "./pages/Magazines";
+import CorporateSocialResponsibility from "./pages/CorporateSocialResponsibility";
 
 function App() {
   useEffect(() => {
@@ -122,6 +123,7 @@ function App() {
           <Route exact path="/NeccPackers&Movers" element={<NECCPackers/>} />
           <Route exact path="/GetDetails" element={<GetDetails/>} />
           <Route exact path="/Magazines" element={<Magazines/>} />
+          <Route exact path="/CorporateSocialResponsibility" element={<CorporateSocialResponsibility/>} />
           <Route
             exact
             path="/CorporateInformation"

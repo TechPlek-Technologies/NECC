@@ -120,6 +120,11 @@ const SiteMapInner= () => {
                         MAGAZINES{" "}
                         </Link></li> */}
 
+                        {/* <li> <Link to='/CorporateSocialResponsibility'>
+                        
+                        CORPORATE SOCIAL RESPONSIBILITY{" "}
+                        </Link></li> */}
+
 
                     </ul>
                    

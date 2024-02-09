@@ -1,0 +1,322 @@
+import React from "react";
+import {
+    FaArrowLeft,
+    FaArrowRight,
+    FaFacebookF,
+    FaLinkedinIn,
+    FaPlus,
+    FaTwitter,
+    FaWhatsapp,
+  } from "react-icons/fa";
+  import Slider from "react-slick";
+import CorporateSocialResponsibilityPdf from "./CorporateSocialResponsibilityPdf";
+
+const CorporateSocialResponsibilityInner = () => {
+    function SampleNextArrow(props) {
+        const { className, onClick } = props;
+        return <FaArrowLeft className={className} onClick={onClick} />;
+      }
+      function SamplePrevArrow(props) {
+        const { className, onClick } = props;
+        return <FaArrowRight className={className} onClick={onClick} />;
+      }
+      const settings = {
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        initialSlide: 1,
+        // autoplay: true,
+        autoplaySpeed: 5000,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              infinite: true,
+            },
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 2,
+              arrows: false,
+            },
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+            },
+          },
+        ],
+      };
+  return (
+    <>
+      {/* Start Solution area  */}
+      <div className='csr_area text-center'>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-12'>
+              <div className='section-title   text-center'>
+                <span className='subtitles'>Experience</span>
+                <h2 className='title'>Our CSR Initiatives</h2>
+                <p>
+                The Company has its “Corporate Social Responsibility Policy” in consonance with the CSR Policy framework enshrined in Section 135 of the Companies Act, 2013, Companies (Corporate Social Responsibility & Sustainability Policy)Rules, 2014 notified by the Ministry of Corporate Affairs, Government of India.
+                </p>
+                <p>
+                NECC’s CSR policy is aimed at demonstrating care for the community through its focus on education & skill development. Also embedded in this objective is support to the marginalized cross section of the society by providing opportunities to improve their quality of life. In line with the above, the Company ensures carrying out CSR projects/ programs in line with activities prescribed under Schedule VII of the Companies Act, 2013
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* End Solution area  */}
+      {/*Csr initiative area  */}
+      <div
+        className='features-area-2'
+        style={{
+          backgroundImage: 'url("assets/img/bg/feature-bg.png")',
+        }}
+      >
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-xl-4'>
+                <div className='row'>
+                    <div className='col-md-6'>
+                    <div className='thumb'>
+                        <img
+                        className='w-100'
+                        src='assets/img/about/5.png'
+                        alt='Transpro'
+                        />
+                    </div>
+                    </div>
+                    <div className='col-md-6'>
+                    <div className='thumb csrimg'>
+                        <img
+                        className='w-100'
+                        src='assets/img/about/6.png'
+                        alt='Transpro'
+                        />
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div className='col-xl-8 d-flex'>
+              <div className='section-title white  text-left m-auto'>
+                <h2 className='title'>Overview of the activities/projects undertaken</h2>
+                <p>
+                The Company supports Sewa Bharati, a NGO working towards the upliftment & empowerment of the neglected and under-privileged sections of the society. Sewa Bharati has numerous hostels for the economically underprivileged children across the country, especially the tribal and the rural poor. The organization supports primary education centers in rural areas and in slums. It also helps students from the remote tribal areas to enroll in schools in different parts of the country and sponsors all their educational and other needs.
+                </p>
+                {/* <div className='btn-wrapper animated fadeInUpBig text-left'>
+                  <a href='#' className='btn-bounce'>
+                    Contact us
+                  </a>
+                </div> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*Csr initiative area  */}
+      <div className='team-area pd-top-45'>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-12'>
+              <div className='section-title text-center'>
+                <h4 className='subtitle'>COMPOSITION OF CSR COMMITTEE</h4>
+                {/* <h2 className='title'>COMPOSITION OF CSR COMMITTEE</h2> */}
+                <p>
+                The Company has constituted CSR Committee in accordance with the provisions of Section 135 of the Companies Act, 2013 comprising of the following Members
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className='row justify-content-center'>
+            <div className='col-lg-12'>
+              <div className='team-slider owl-carousel'>
+                <Slider {...settings}>
+                  <div className='item'>
+                    <div className='single-team-wrap'>
+                      <div className='thumb'>
+                        <img src='assets/img/team/1.png' alt='Transpro' />
+                      </div>
+                      <div className='details'>
+                        <h5>Mr. Sunil Kumar Jain</h5>
+                        <p>Chairman</p>
+                        <div className='hover-icon'>
+                          <FaPlus />
+                          <ul className='social-area'>
+                            <li>
+                              <a href='#'>
+                                <FaFacebookF />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='#'>
+                                <FaTwitter />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='#'>
+                                <FaWhatsapp />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='#'>
+                                <FaLinkedinIn />
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='item'>
+                    <div className='single-team-wrap'>
+                      <div className='thumb'>
+                        <img src='assets/img/team/2.png' alt='Transpro' />
+                      </div>
+                      <div className='details'>
+                        <h5>Mr. Utsav Jain</h5>
+                        <p>Member</p>
+                        <div className='hover-icon'>
+                          <FaPlus />
+                          <ul className='social-area'>
+                            <li>
+                              <a href='#'>
+                                <FaFacebookF />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='#'>
+                                <FaTwitter />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='#'>
+                                <FaWhatsapp />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='#'>
+                                <FaLinkedinIn />
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='item'>
+                    <div className='single-team-wrap'>
+                      <div className='thumb'>
+                        <img src='assets/img/team/3.png' alt='Transpro' />
+                      </div>
+                      <div className='details'>
+                        <h5>Mr. Shyam Lal Yadav</h5>
+                        <p>Executive Member</p>
+                        <div className='hover-icon'>
+                          <FaPlus />
+                          <ul className='social-area'>
+                            <li>
+                              <a href='#'>
+                                <FaFacebookF />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='#'>
+                                <FaTwitter />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='#'>
+                                <FaWhatsapp />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='#'>
+                                <FaLinkedinIn />
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='item'>
+                    <div className='single-team-wrap'>
+                      <div className='thumb'>
+                        <img src='assets/img/team/2.png' alt='Transpro' />
+                      </div>
+                      <div className='details'>
+                        <h5>Mr. Vinod Nair</h5>
+                        <p>Executive Member</p>
+                        <div className='hover-icon'>
+                          <FaPlus />
+                          <ul className='social-area'>
+                            <li>
+                              <a href='#'>
+                                <FaFacebookF />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='#'>
+                                <FaTwitter />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='#'>
+                                <FaWhatsapp />
+                              </a>
+                            </li>
+                            <li>
+                              <a href='#'>
+                                <FaLinkedinIn />
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Slider>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*pdf download area  */}
+      <div className='blog-details-area pd-top-120 pd-bottom-120'>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-12'>
+              <div className='sidebar-area'>
+                <div className='widget widget-recent-post'>
+                <div className='widget widget_tags'>
+                  <h4 className='widget-title'>
+                    DOWNLOADS
+                    <span className='dot' />
+                  </h4>
+                  <CorporateSocialResponsibilityPdf/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      {/*pdf download area  */}
+    </>
+  );
+};
+
+export default CorporateSocialResponsibilityInner;
