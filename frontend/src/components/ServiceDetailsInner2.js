@@ -9,10 +9,12 @@ import {
   FaSearch,
 } from "react-icons/fa";
 import ModalVideo from "react-modal-video";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 
 const ServiceDetailsInner2 = () => { 
   const [isOpen, setOpen] = useState(false);
+  const location = useLocation();
+
   return (
     <>
       {/* service area start */}
@@ -96,7 +98,7 @@ const ServiceDetailsInner2 = () => {
                     </button>
                   </form>
                 </div> */}
-                <div className='widget widget_catagory'>
+                {/* <div className='widget widget_catagory'>
                   <h4 className='widget-title'>
                     SERVICE LIST
                     <span className='dot' />
@@ -143,7 +145,40 @@ const ServiceDetailsInner2 = () => {
                       </Link>
                     </li>
                   </ul>
-                </div>
+                </div> */}
+                  <div className='widget widget_catagory'>
+                      <h4 className='widget-title'>
+                        SERVICE LIST
+                        <span className='dot' />
+                      </h4>
+                      <ul className='catagory-items'>
+                        <li className={location.pathname === '/ServiceDetail1' ? 'active' : ''}>
+                          <Link to='/ServiceDetail1'>
+                            PART TRUCK LOAD (PTL) <span><FaArrowRight /></span>
+                          </Link>
+                        </li>
+                        <li className={location.pathname === '/ServiceDetail2' ? 'active' : ''}>
+                          <Link to='/ServiceDetail2'>
+                            FULL TRUCK LOAD (FTL) <span><FaArrowRight /></span>
+                          </Link>
+                        </li>
+                        <li className={location.pathname === '/ServiceDetail3' ? 'active' : ''}>
+                          <Link to='/ServiceDetail3'>
+                            BULK MOVEMENTS <span><FaArrowRight /></span>
+                          </Link>
+                        </li>
+                        <li className={location.pathname === '/ServiceDetail4' ? 'active' : ''}>
+                          <Link to='/ServiceDetail4'>
+                            ODC MOVEMENTS <span><FaArrowRight /></span>
+                          </Link>
+                        </li>
+                        <li className={location.pathname === '/ServiceDetail5' ? 'active' : ''}>
+                          <Link to='/ServiceDetail5'>
+                            WAREHOUSING & 3PL <span><FaArrowRight /></span>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                 <div className='widget widget_download'>
                   <h4 className='widget-title'>
                     DOWNLOAD BROCHURE
