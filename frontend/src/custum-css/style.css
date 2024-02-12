@@ -171,9 +171,6 @@ section {
 .project-item .project__img {
     position: relative;
     transition: all .6s linear;
-    img:hover {
-        transform: scale(1.5);
-      }
 }
 
 .project-item .project__img img {

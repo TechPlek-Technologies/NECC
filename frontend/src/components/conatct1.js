@@ -15,11 +15,11 @@ import {
 import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "react-hot-toast";
 
-// const useOfficeDivide = (data) => {
-//   return useMemo(() => {
-//     return divideArrayByType(data);
-//   }, [data]);
-// };
+const useOfficeDivide = (data) => {
+  return useMemo(() => {
+    return divideArrayByType(data);
+  }, [data]);
+};
 
 
 const ContactInner = () => {
@@ -53,110 +53,31 @@ const ContactInner = () => {
       );
   };
 
-  const companies = [
-    {
-        id: "2569ce0d517a7f06d3ea1f25",
-        city: "Mumbai",
-        name: "Navratan",
-        addressLine1: "2 Mezzanine Floor",
-        addressLine2: " 69, P.D'Mellow Road",
-        addressLine3: "Carnace Bunder",
-        pincode: "400009",
-        phone: ["022-66317261", "022-66317262"],
-        tollfreeNo: ["1800 11 7080", "9711797516"],
-        email: "mumbairo@neccgroup.com",
-    },
-    {
-        id: "2569ce0d517a7f06d3ea1f25",
-        city: "Mumbai",
-        name: "Navratan",
-        addressLine1: "2 Mezzanine Floor",
-        addressLine2: " 69, P.D'Mellow Road",
-        addressLine3: "Carnace Bunder",
-        pincode: "400009",
-        phone: ["022-66317261", "022-66317262"],
-        tollfreeNo: ["1800 11 7080", "9711797516"],
-        email: "mumbairo@neccgroup.com",
-    },
-    {
-        id: "2569ce0d517a7f06d3ea1f25",
-        city: "Mumbai",
-        name: "Navratan",
-        addressLine1: "2 Mezzanine Floor",
-        addressLine2: " 69, P.D'Mellow Road",
-        addressLine3: "Carnace Bunder",
-        pincode: "400009",
-        phone: ["022-66317261", "022-66317262"],
-        tollfreeNo: ["1800 11 7080", "9711797516"],
-        email: "mumbairo@neccgroup.com",
-    },
-    // Add other company objects here...
-];
- 
-const corporate = [
-  {
-      id: "2569ce0d517a7f06d3ea1f25",
-      city: "Mumbai",
-      name: "Navratan",
-      addressLine1: "2 Mezzanine Floor",
-      addressLine2: " 69, P.D'Mellow Road",
-      addressLine3: "Carnace Bunder",
-      pincode: "400009",
-      phone: ["022-66317261", "022-66317262"],
-      tollfreeNo: ["1800 11 7080", "9711797516"],
-      email: "mumbairo@neccgroup.com",
-  },
-  {
-      id: "2569ce0d517a7f06d3ea1f25",
-      city: "Mumbai",
-      name: "Navratan",
-      addressLine1: "2 Mezzanine Floor",
-      addressLine2: " 69, P.D'Mellow Road",
-      addressLine3: "Carnace Bunder",
-      pincode: "400009",
-      phone: ["022-66317261", "022-66317262"],
-      tollfreeNo: ["1800 11 7080", "9711797516"],
-      email: "mumbairo@neccgroup.com",
-  },
-  {
-      id: "2569ce0d517a7f06d3ea1f25",
-      city: "Mumbai",
-      name: "Navratan",
-      addressLine1: "2 Mezzanine Floor",
-      addressLine2: " 69, P.D'Mellow Road",
-      addressLine3: "Carnace Bunder",
-      pincode: "400009",
-      phone: ["022-66317261", "022-66317262"],
-      tollfreeNo: ["1800 11 7080", "9711797516"],
-      email: "mumbairo@neccgroup.com",
-  },
-  // Add other company objects here...
-];
 
-// const domain = process.env.REACT_APP_API_DOMAIN;
-// const [key, setKey] = useState(0);
-// const [loading, setLoading] = useState(true);
-// const [data, setData] = useState([]);
-// const [corporateOffice, companies] = useOfficeDivide(data);
+const domain = process.env.REACT_APP_API_DOMAIN;
+const [key, setKey] = useState(0);
+const [loading, setLoading] = useState(true);
+const [data, setData] = useState([]);
+const [corporateOffice, companies] = useOfficeDivide(data);
 
-// useEffect(() => {
-//   // Function to fetch data
-//   setLoading(true)
-//   const fetchData = async () => {
-//     try {
-//       const response = await axios.get(`${domain}/office`);
+useEffect(() => {
+  // Function to fetch data
+  setLoading(true)
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(`${domain}/office`);
 
-//       setData(response.data); // Set the fetched data into state
-//       setLoading(false);
-//     } catch (error) {
-//       console.error("Error fetching data:", error);
-//       setLoading(true);
-//     }
-//   };
+      setData(response.data); // Set the fetched data into state
+      setLoading(false);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setLoading(true);
+    }
+  };
 
-//   // Call the fetch data function
-//   fetchData();
-// }, [key]);
+  // Call the fetch data function
+  fetchData();
+}, [key]);
 
   return (
     <>
@@ -275,7 +196,7 @@ const corporate = [
             </div>
           </div>
             <div className='row'>
-                {corporate.map((company) => (
+                {corporateOffice.map((company) => (
                   <div className='col-lg-4' key={company.id}>
                     <div className='single-service-wrap'>
                       <div className='details'>
