@@ -152,27 +152,27 @@ const ServiceDetailsInner2 = () => {
                         <span className='dot' />
                       </h4>
                       <ul className='catagory-items'>
-                        <li className={location.pathname === '/ServiceDetail1' ? 'active' : ''}>
+                        <li className={location.pathname === '/ServiceDetail1' ? 'active1' : ''}>
                           <Link to='/ServiceDetail1'>
                             PART TRUCK LOAD (PTL) <span><FaArrowRight /></span>
                           </Link>
                         </li>
-                        <li className={location.pathname === '/ServiceDetail2' ? 'active' : ''}>
+                        <li className={location.pathname === '/ServiceDetail2' ? 'active1' : ''}>
                           <Link to='/ServiceDetail2'>
                             FULL TRUCK LOAD (FTL) <span><FaArrowRight /></span>
                           </Link>
                         </li>
-                        <li className={location.pathname === '/ServiceDetail3' ? 'active' : ''}>
+                        <li className={location.pathname === '/ServiceDetail3' ? 'active1' : ''}>
                           <Link to='/ServiceDetail3'>
                             BULK MOVEMENTS <span><FaArrowRight /></span>
                           </Link>
                         </li>
-                        <li className={location.pathname === '/ServiceDetail4' ? 'active' : ''}>
+                        <li className={location.pathname === '/ServiceDetail4' ? 'active1' : ''}>
                           <Link to='/ServiceDetail4'>
                             ODC MOVEMENTS <span><FaArrowRight /></span>
                           </Link>
                         </li>
-                        <li className={location.pathname === '/ServiceDetail5' ? 'active' : ''}>
+                        <li className={location.pathname === '/ServiceDetail5' ? 'active1' : ''}>
                           <Link to='/ServiceDetail5'>
                             WAREHOUSING & 3PL <span><FaArrowRight /></span>
                           </Link>
