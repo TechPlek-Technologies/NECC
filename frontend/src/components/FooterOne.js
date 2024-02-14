@@ -174,7 +174,7 @@ const FooterOne = () => {
                 </p>
                 <div className='single-subscribe-inner'>
                   <input type='text' placeholder='Email Address' />
-                  <a className='btn btn-base' href='#'>
+                  <a className='btn btn-base1' href='#'>
                     <FaPaperPlane />
                   </a>
                 </div>

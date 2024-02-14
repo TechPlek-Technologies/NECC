@@ -54,7 +54,7 @@
       i,
       svg {
         margin-right: 10px;
-        color: var(--main-color);
+        color: #29176d;
       }
       &:last-child {
         margin-right: 0;
@@ -68,15 +68,15 @@
     box-shadow: 0px 6px 30px rgba(7, 36, 95, 0.08);
     h4 {
       margin-bottom: 0px;
-      font-weight: 500;
+       font-weight: 0;
       font-size: 30px;
       line-height: 38px;
       &:hover a {
-        color: #fb493d;
+        color: #29176d;
       }
     }
     .read-more-text {
-      font-weight: 600;
+      font-weight: 0;
       font-size: 14px;
     }
     p {
@@ -100,7 +100,7 @@
     top: 50%;
     border: 0;
     border-radius: 50%;
-    background: var(--main-color);
+    background: #29176d;;
     color: #fff;
     font-size: 30px;
     cursor: pointer;
@@ -139,18 +139,18 @@
       text-decoration: none;
       @include transition(all, 0.4s, ease);
       display: block;
-      font-weight: 500;
+       font-weight: 0;
       font-size: 16px;
       font-family: var(--heading-font);
       &:active,
       &:focus,
       &:hover {
-        background: var(--main-color);
+        background: #29176d;;
         color: #fff;
         box-shadow: 0px 8px 19px rgba(255, 76, 19, 0.3);
       }
       &.active {
-        background: var(--main-color);
+        background: #29176d;;
         color: #fff;
         box-shadow: 0px 8px 19px rgba(255, 76, 19, 0.3);
       }
@@ -159,7 +159,7 @@
         background: transparent;
         font-weight: 700;
         font-size: 14px;
-        color: var(--main-color);
+        color: #29176d;
         margin-left: 10px;
         &:hover {
           box-shadow: none;
@@ -185,9 +185,9 @@ blockquote {
   margin: 30px 0px;
   padding: 31px 50px 38px;
   position: relative;
-  border-left: 5px solid var(--main-color);
+  border-left: 5px solid #29176d;
   span {
-    font-weight: 500;
+     font-weight: 0;
     font-size: 20px;
     line-height: 26px;
     font-family: var(--heading-font);
@@ -199,13 +199,13 @@ blockquote {
       content: "";
       left: 0;
       top: 50%;
-      background: var(--main-color);
+      background: #29176d;;
       height: 4px;
       width: 59px;
     }
   }
   p {
-    font-weight: 600;
+    font-weight: 0;
     font-size: 18px;
     font-style: italic;
     line-height: 30px;
@@ -227,7 +227,7 @@ blockquote {
       &:after {
         height: 100px;
         width: 100px;
-        background: var(--main-color);
+        background: #29176d;;
         opacity: 0.3;
         border: 0;
         left: -20px;
@@ -257,12 +257,12 @@ blockquote {
       line-height: 40px;
       padding: 0 20px;
       margin: 0 0 0 10px;
-      font-weight: 600;
+      font-weight: 0;
       font-size: 14px;
       color: var(--heading-color);
       margin-bottom: 10px;
       &:hover {
-        background: var(--main-color);
+        background: #29176d;;
         color: #fff;
       }
     }
@@ -277,7 +277,7 @@ blockquote {
         font-size: 14px;
         color: var(--paragraph-color);
         &:hover {
-          background: var(--main-color);
+          background: #29176d;;
           color: #fff;
         }
       }
@@ -360,7 +360,7 @@ blockquote {
         font-weight: 700;
         font-size: 14px;
         line-height: 26px;
-        color: var(--main-color);
+        color: #29176d;
         i,
         svg {
           margin-right: 6px;

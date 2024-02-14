@@ -55,7 +55,7 @@ h3 {
 }
 
 h4 {
-  font-size: 30px;
+  // font-size: 30px;
   line-height: 1.3380952380952381;
 }
 h5 {
@@ -73,7 +73,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-weight: 700;
+  // font-weight: 700;
   font-family: var(--heading-font);
 }
 
@@ -101,7 +101,7 @@ a:active {
   color: inherit;
 }
 a:hover {
-  color: var(--main-color);
+  color: #d8251e;
 }
 pre {
   word-break: break-word;
@@ -128,7 +128,7 @@ ol li {
 ol li:before {
   counter-increment: counter;
   content: counter(counter);
-  font-weight: 500;
+   font-weight: 0;
   margin-right: 10px;
 }
 
@@ -199,7 +199,7 @@ code {
       top: 0;
       font-family: "fontawesome";
       content: "\f105";
-      color: var(--main-color);
+      color: #29176d;
     }
   }
 }
@@ -240,7 +240,7 @@ code {
 .comment-navigation .nav-next:hover > a,
 .posts-navigation .nav-next:hover > a,
 .post-navigation .nav-next:hover > a {
-  color: var(--main-color);
+  color: #29176d;
 }
 
 .comment-list li {
@@ -450,9 +450,9 @@ object {
 
 .wp-link-pages .current,
 .wp-link-pages a:hover {
-  background-color: var(--main-color);
+  background-color: #29176d;
   color: #fff;
-  border-color: var(--main-color);
+  border-color: #29176d;
 }
 
 .wp-link-pages span:first-child {
@@ -474,17 +474,17 @@ ul {
 }
 
 .post-password-form label {
-  font-weight: 600;
+  font-weight: 0;
   color: #333;
 }
 
 .post-password-form input[type="submit"] {
   width: 100px;
   height: 50px;
-  background-color: var(--main-color);
+  background-color: #29176d;
   color: #fff;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 0;
   letter-spacing: 1px;
   border: none;
   cursor: pointer;
@@ -509,6 +509,6 @@ ul {
 }
 
 .active1{
-  background: var(--main-color);
+  background: #29176d;;
   color:#fff;
 }

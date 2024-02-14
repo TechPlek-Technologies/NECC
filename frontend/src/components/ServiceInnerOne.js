@@ -6,7 +6,7 @@ const ServiceInnerOne = () => {
   return (
     <>
       {/* service area start */}
-      <div className='service-area style-2 pd-top-115 pd-bottom-20'>
+      <div className='service-area style-2 pd-top-45 pd-bottom-20'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-7'>

@@ -13,7 +13,7 @@ const VisionAndQualityPolicyInner= () => {
   return (
     <>
       {/* service area start */}
-      <div className='features-area style-02' style={{ backgroundImage: `url("/assets/img/service-1/vision and quality/vision-statement (1).webp")`}}>
+      <div className='features-area style-02'>
         <div className='container'>
           <div className='row justify-content-start'>
             <div className='col-lg-4 offset-lg-1 d-flex'>

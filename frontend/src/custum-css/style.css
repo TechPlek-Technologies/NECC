@@ -90,7 +90,7 @@
 }
 
 .divider-area.divider-default-area {
-    background-color: #fa4318;
+    background-color: #d8251e;
     overflow: hidden;
     position: relative;
     padding: 20px 0 20px;
@@ -120,7 +120,7 @@
     color: #fff;
     display: inline-block;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 0;
     height: 40px;
     line-height: 39px;
     margin: 0 7px 10px 0;
@@ -224,4 +224,17 @@ section {
     display: block;
     max-width: inherit;
     border-radius: 3px;
+}
+
+.img-chairman{
+    /* margin-top: 10px; */
+    /* margin-left: 0px; */
+    padding: 10px 0px;}
+
+.button-color{
+    background: #d8251e;
+}
+
+.para-color{
+color: black;
 }

@@ -1,8 +1,4 @@
 import React, { useRef } from "react";
-import { useEffect,useMemo , useState } from "react";
-import axios from "axios";
-// import { divideArrayByType } from "../utils/contact-divide";
-import { divideArrayByType } from "../pages/Dashboard/utils/contact-divide";
 
 import {
   FaCalculator,
@@ -15,11 +11,7 @@ import {
 import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "react-hot-toast";
 
-// const useOfficeDivide = (data) => {
-//   return useMemo(() => {
-//     return divideArrayByType(data);
-//   }, [data]);
-// };
+
 
 
 const ContactInner = () => {
@@ -92,7 +84,7 @@ const ContactInner = () => {
     },
     // Add other company objects here...
 ];
- 
+
 const corporate = [
   {
       id: "2569ce0d517a7f06d3ea1f25",
@@ -133,30 +125,6 @@ const corporate = [
   // Add other company objects here...
 ];
 
-// const domain = process.env.REACT_APP_API_DOMAIN;
-// const [key, setKey] = useState(0);
-// const [loading, setLoading] = useState(true);
-// const [data, setData] = useState([]);
-// const [corporateOffice, companies] = useOfficeDivide(data);
-
-// useEffect(() => {
-//   // Function to fetch data
-//   setLoading(true)
-//   const fetchData = async () => {
-//     try {
-//       const response = await axios.get(`${domain}/office`);
-
-//       setData(response.data); // Set the fetched data into state
-//       setLoading(false);
-//     } catch (error) {
-//       console.error("Error fetching data:", error);
-//       setLoading(true);
-//     }
-//   };
-
-//   // Call the fetch data function
-//   fetchData();
-// }, [key]);
 
   return (
     <>
@@ -230,7 +198,7 @@ const corporate = [
                     </div>
                   </div>
                   <div className='col-12'>
-                    <button className='btn btn-base' type='submit'>
+                    <button className='btn btn-base1' type='submit'>
                       {" "}
                       SEND MESSAGE
                     </button>
@@ -264,13 +232,13 @@ const corporate = [
         </div>
       </div>
 
-      <div className='service-area style-2 pd-top-45 pd-bottom-80' style={{ background : "var(--button-color)"}}>
+      <div className='service-area style-2 pd-top-45 pd-bottom-80' style={{ background : "#EFEDF5"}}>
         <div className='container'>
         <div className='row justify-content-center'>
             <div className='col-lg-12'>
               <div className='section-title text-center'>
                 {/* <h4 className='subtitle'>SERVICES</h4> */}
-                <h2 className='title' style={{ color : "#ffff"}}>CORPORATE OFFICE</h2>
+                <h2 className='title' style={{ color : "black"}}>CORPORATE OFFICE</h2>
               </div>
             </div>
           </div>
@@ -296,13 +264,13 @@ const corporate = [
          </div>
       </div>
    
-      <div className='service-area style-2 pd-bottom-80' style={{ background : "var(--button-color)"}}>
+      <div className='service-area style-2 pd-bottom-80' style={{ background : "#EFEDF5"}}>
         <div className='container'>
         <div className='row justify-content-center'>
             <div className='col-lg-12'>
               <div className='section-title text-center'>
                 {/* <h4 className='subtitle'>SERVICES</h4> */}
-                <h2 className='title' style={{ color : "#ffff"}}>REGIONAL OFFICES</h2>
+                <h2 className='title' style={{ color : "black"}}>REGIONAL OFFICES</h2>
               </div>
             </div>
           </div>

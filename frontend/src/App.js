@@ -150,7 +150,7 @@ function App() {
           {/* Add more protected routes as needed */}
         </Routes>
       </Fragment>
-      <ScrollToTop smooth color="#FA4318" />
+      <ScrollToTop smooth color="#d8251e" />
     </BrowserRouter>
   );
 }

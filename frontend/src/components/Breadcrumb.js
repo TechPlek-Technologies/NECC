@@ -11,7 +11,7 @@ const Breadcrumb = ({ title,imgSrc }) => {
       >
         <div className='container'>
           <div className='row'>
-            <div className='col-12'>
+            <div className='col-xl-12 col-lg-12 col-md-12'>
               <div className='breadcrumb-inner'>
                 <div className='section-title mb-0'>
                   <h2 className='page-title'>{title}</h2>

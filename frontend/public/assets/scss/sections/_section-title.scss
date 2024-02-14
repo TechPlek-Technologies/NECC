@@ -5,16 +5,16 @@
   margin-bottom: 20px;
   position: relative;
   .subtitle {
-    font-weight: 600;
+    font-weight: 0;
     font-size: 16px;
-    color: var(--main-color);
+    color: #29176d;
     background: linear-gradient(
       180deg,
       rgba(250, 67, 24, 0) 15.22%,
       rgba(250, 67, 24, 0.0833333) 33.76%,
       rgba(250, 67, 24, 0.23) 58.49%,
       rgba(250, 67, 24, 0.39383) 79.25%,
-      #fa4318 100%
+      #d8251e 100%
     );
     height: 46px;
     line-height: 46px;
@@ -51,7 +51,7 @@
     margin-bottom: 0;
     margin-top: 0;
     font-size: 40px;
-    font-weight: 900;
+    //  font-weight: 0;
     position: relative;
     z-index: 0;
   }
@@ -59,7 +59,7 @@
     margin-top: 17px;
     margin-bottom: 0;
     &.left-line {
-      border-left: 5px solid var(--main-color);
+      border-left: 5px solid #29176d;
       padding-left: 50px;
     }
   }

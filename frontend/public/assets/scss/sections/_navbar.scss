@@ -58,7 +58,7 @@
         i,
         svg {
           margin-right: 7px;
-          color: var(--main-color);
+          color: #29176d;
         }
       }
     }
@@ -76,7 +76,7 @@
       a {
         color: #fff;
         &:hover {
-          color: var(--main-color);
+          color: #29176d;
         }
       }
     }
@@ -102,17 +102,17 @@
         li {
           a {
             color: var(--heading-color);
-            font-weight: 500;
+             font-weight: 0;
             font-size: 16px;
           }
           &:hover a {
-            color: #fb493d;
+            color: #29176d;
           }
           + li {
             margin-left: 15px;
           }
           display: inline-block;
-          font-weight: 500;
+           font-weight: 0;
           line-height: 50px;
           text-transform: capitalize;
           &.menu-item-has-children {
@@ -150,7 +150,7 @@
                 opacity: 0;
               }
               &:after {
-                background: var(--main-color);
+                background: #29176d;;
               }
             }
             &:hover > .sub-menu {
@@ -191,12 +191,12 @@
                   transition: all 0.3s;
                   color: #050a30;
                   font-size: 14px;
-                  font-weight: 500;
+                   font-weight: 0;
                   @include transition(all, 0.4s, ease);
                   position: relative;
                 }
                 &:hover {
-                  background: #fb493d;
+                  background: #29176d;
                   a {
                     color: #fff;
                     &:before {
@@ -483,7 +483,7 @@
       height: 22px;
       width: 22px;
       border-radius: 50%;
-      background: #fb493d;
+      background: #29176d;
       text-align: center;
       font-size: 13px;
       line-height: 22px;
@@ -571,7 +571,7 @@
       color: var(--heading-color);
       cursor: pointer;
       &:hover {
-        background: var(--main-color);
+        background: #29176d;;
         color: #fff;
       }
     }
@@ -580,7 +580,7 @@
     background: #ced4da;
   }
   .social-media li a:hover {
-    background: var(--main-color);
+    background: #29176d;;
     color: #fff;
   }
 }
@@ -976,16 +976,16 @@
       a {
         color: #333333;
         &:hover {
-          color: var(--main-color);
+          color: #29176d;
         }
       }
       &:hover {
         a {
-          color: var(--main-color);
+          color: #29176d;
         }
       }
       &.menu-item-has-children .sub-menu li:hover a {
-        color: var(--main-color);
+        color: #29176d;
       }
     }
   }
@@ -994,16 +994,16 @@
       a {
         color: #333333;
         &:hover {
-          color: var(--main-color);
+          color: #29176d;
         }
       }
       &:hover {
         a {
-          color: var(--main-color);
+          color: #29176d;
         }
       }
       &.menu-item-has-children .sub-menu li:hover a {
-        color: var(--main-color);
+        color: #29176d;
       }
     }
   }
