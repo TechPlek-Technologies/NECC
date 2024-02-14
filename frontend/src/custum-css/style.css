@@ -238,3 +238,33 @@ section {
 .para-color{
 color: black;
 }
+
+@media (max-width: 767px) {
+    .breadcrumb-area {
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .breadcrumb-area {
+      max-height: 250px;
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    .breadcrumb-area {
+      max-height: 200px;
+    }
+  }
+
+  .navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Add your desired background color */
+    z-index: 1000; /* Adjust the z-index as needed */
+  }
+  
+  

@@ -15,7 +15,7 @@ const SupportBarOne = () => {
   return (
     <>
       {/* support bar area start */}
-      <div className='support-bar'>
+      <div className='support-bar navbar-fixed'>
         <div className='container'>
           <div className='row reorder-xs clearfix'>
             <div className='col-lg-6 align-self-center'>
