@@ -8,7 +8,7 @@ const CorporateOverviewInner= () => {
   return (
     <>
       {/* Corporate area start */}
-      <div className='about-area pd-bottom-120 pd-top-120'>
+      {/* <div className='about-area pd-bottom-120 pd-top-120'>
         <div className='container'>
           <div className='about-area-inner'>
             <div className='row'>
@@ -24,11 +24,11 @@ const CorporateOverviewInner= () => {
                     src='./assets/img/about/22-years (2).webp'
                     alt='Transpro'
                   />
-                  {/* <img
+                  <img
                     className='img-3'
                     src='./assets/img/about/2.png'
                     alt='Transpro'
-                  /> */}
+                  />
                   <div className='exprience-wrap'>
                     <img src='./assets/img/about/shape-3.png' alt='Transpro' />
                     <div className='details'>
@@ -64,13 +64,19 @@ const CorporateOverviewInner= () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className='service-area pd-top-45 pd-bottom-140 '>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-12 align-self-center'>
                 <div className='about-inner-wrap'>
                   <div className='section-title mb-0'>
+                  
+                <h2 className='title'>CORPORATE OVERVIEW</h2>
+             
+                  <p className='content'>
+                    Headquartered in Delhi, North Eastern Carrying Corporation Limited (NECC) is one of the high performance transporting companies in India. Over four decades of services, we have grown to become a 200+ branch network handling transportation and supply chain solutions throughout India, Nepal, Bhutan and Bangladesh.
+                    </p>
           
                 <p className='content'>
                 With our advanced resources and in-depth familiarity of the domain, we are able to create customized and effective solution for any kind of commercial, industrial and residential freight movement. We offer seamless Logistics Management Solutions with our high capacity network and advanced trouble-shooting capabilities.

@@ -10,7 +10,6 @@ import {
 } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "react-hot-toast";
-import { FaPlay } from "react-icons/fa";
 import TrackVisibility from "react-on-screen";
 import CountUp from "react-countup";
 import ModalVideo from "react-modal-video";
@@ -48,7 +47,7 @@ const NeccEcomSolutionInner = () => {
   return (
     <>
       {/* about area start */}
-      <div className='about-area-2 pd-top-120 pd-bottom-100'>
+      <div className='about-area-2 pd-top-45 pd-bottom-160'>
         <div className='container'>
           <div className='about-area-inner'>
             <div className='row'>
@@ -66,7 +65,7 @@ const NeccEcomSolutionInner = () => {
                         {({ isVisible }) =>
                           isVisible && (
                             <h1>
-                              <CountUp delay={0} start={0} end={22} />
+                              <CountUp delay={0} start={0} end={55} />
                             </h1>
                           )
                         }
@@ -178,10 +177,10 @@ const NeccEcomSolutionInner = () => {
       </div>
       {/*wcu-area end*/}
       {/*partner-area start*/}
-      <div className='partner-area pd-top-45 pd-bottom-80'>
+      <div className='partner-area pd-top-45 mb-120'>
         <div className='container'>
           <div className='row justify-content-center'>
-            <div className='col-lg-12'>
+            <div className='col-lg-11'>
               <div className='section-title text-center'>
                 {/* <h4 className='subtitle'>HAPPY CLIENTS</h4> */}
                 <h2 className='title'>OUR NETWORK/REACH</h2>
@@ -197,7 +196,7 @@ const NeccEcomSolutionInner = () => {
       {/*partner-area end*/}
       {/*contact-area start*/}
       <div
-            className='call-to-contact-area pd-top-115 pd-bottom-20'
+            className='call-to-contact-area pd-top-115 pd-bottom-45'
             style={{ background: "#F9F9F9" }}
           >
         <div>

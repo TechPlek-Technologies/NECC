@@ -52,7 +52,7 @@ const TestimonialOne = () => {
   return (
     <>
       {/* testimonial area start */}
-      <div className='testimonial-area pd-top-20 pd-bottom-45'>
+      <div className='testimonial-area pd-top-45 pd-bottom-45'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-6'>

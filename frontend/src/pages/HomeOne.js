@@ -4,8 +4,8 @@ import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
 const BannerOne = React.lazy(() => import("../components/BannerOne"));
 const AboutOne = React.lazy(() => import("../components/AboutOne"));
-const BlogOne = React.lazy(() => import("../components/BlogOne"));
-const ContactOne = React.lazy(() => import("../components/ContactOne"));
+// const BlogOne = React.lazy(() => import("../components/BlogOne"));
+// const ContactOne = React.lazy(() => import("../components/ContactOne"));
 const CounterOne = React.lazy(() => import("../components/CounterOne"));
 const FeatureOne = React.lazy(() => import("../components/FeatureOne"));
 const FooterBottomOne = React.lazy(() =>
@@ -14,9 +14,9 @@ const FooterBottomOne = React.lazy(() =>
 const FooterOne = React.lazy(() => import("../components/FooterOne"));
 // const NavbarOne = React.lazy(() => import("../components/NavbarOne"));
 const PartnerOne = React.lazy(() => import("../components/PartnerOne"));
-const PortfolioOne = React.lazy(() => import("../components/PortfolioOne"));
+// const PortfolioOne = React.lazy(() => import("../components/PortfolioOne"));
 const ServiceOne = React.lazy(() => import("../components/ServiceOne"));
-const TeamOne = React.lazy(() => import("../components/TeamOne"));
+// const TeamOne = React.lazy(() => import("../components/TeamOne"));
 const TestimonialOne = React.lazy(() => import("../components/TestimonialOne"));
 const WhyChooseUsOne = React.lazy(() => import("../components/WhyChooseUsOne"));
 // const SearchPopup = React.lazy(() => import("../elements/SearchPopup"));
@@ -53,24 +53,24 @@ const HomeOne = () => {
           <CounterOne />
 
           {/* Team One */}
-          <TeamOne />
+          {/* <TeamOne /> */}
 
           {/* Contact One */}
-          <div
+          {/* <div
             className='call-to-contact-area pd-top-240'
             style={{ background: "#F9F9F9" }}
           >
             <ContactOne />
-          </div>
+          </div> */}
 
           {/* Testimonial One */}
           <TestimonialOne />
 
           {/* Portfolio One */}
-          <PortfolioOne />
+          {/* <PortfolioOne /> */}
 
           {/* Blog One */}
-          <BlogOne />
+          {/* <BlogOne /> */}
 
           {/* Partner One */}
           <PartnerOne />

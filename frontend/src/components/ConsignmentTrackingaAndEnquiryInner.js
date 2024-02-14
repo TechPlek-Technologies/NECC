@@ -89,7 +89,7 @@ const ConsignmentTrackingaAndEnquiryInner = () => {
                   <div className='col-lg-4 align-self-end'>
                     <div
                       className='quote-wrap'
-                      style={{ background: "var(--main-color)" }}
+                      style={{ background: "#29176d" }}
                     >
                       <h4>How Can We Help You!</h4>
                       <p>

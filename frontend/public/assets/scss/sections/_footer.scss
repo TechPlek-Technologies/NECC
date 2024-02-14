@@ -34,7 +34,7 @@
         height: 80px;
         width: 80px;
         border-radius: 5px;
-        background: var(--main-color);
+        background: #de463f;
         line-height: 80px;
         text-align: center;
         position: relative;
@@ -42,7 +42,7 @@
         &:after {
           content: "";
           position: absolute;
-          background: #fa4318;
+          background: #de463f;
           opacity: 0.3;
           height: 80px;
           width: 80px;
@@ -91,7 +91,7 @@
       left: 0;
       background: linear-gradient(
         90.09deg,
-        #fa4318 -7.63%,
+        #d8251e -7.63%,
         rgba(250, 67, 24, 0) 99.84%
       );
       transform: translate(0, 50%);
@@ -132,7 +132,7 @@
         }
         &:hover {
           &:after {
-            background: var(--main-color);
+            background: #29176d;;
           }
         }
       }
@@ -149,7 +149,7 @@
     color: #fff;
     margin-bottom: 0;
     a {
-      color: var(--main-color);
+      color: #d8251e;
     }
   }
   ul {
@@ -209,7 +209,7 @@
         display: block;
         transition: all 0.2s linear;
         &:hover {
-          color: var(--main-color);
+          color: #d8251e;
         }
       }
     }

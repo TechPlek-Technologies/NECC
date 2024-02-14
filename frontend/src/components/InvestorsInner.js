@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaCircle } from "react-icons/fa";
 import ModalVideo from "react-modal-video";
 import { Link } from "react-router-dom";
 
