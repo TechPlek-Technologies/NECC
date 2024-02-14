@@ -19,12 +19,13 @@ const NavbarThree = () => {
   return (
     <>
       {/* navbar start */}
-      <header className='navbar-are'>
+      <header className='navbar-are navbar-fixed'>
         <nav
           className={
-            "navbar navbar-area-1  navbar-area-3 navbar-area navbar-expand-lg"
+            "navbar navbar-area-1  navbar-area-3 navbar-area navbar-expand-lg "
           }
-        >
+        > 
+       
           <div className='container nav-container'>
             <div className='responsive-mobile-menu'>
               <button
@@ -154,6 +155,7 @@ const NavbarThree = () => {
               </ul>
             </div>
           </div>
+         
         </nav>
       </header>
       {/* navbar end */}
