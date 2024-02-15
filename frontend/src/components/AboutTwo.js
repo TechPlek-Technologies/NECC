@@ -9,11 +9,11 @@ const AboutTwo = () => {
   return (
     <>
       {/* about area start */}
-      <div className='about-area-2 pd-top-120 pd-bottom-100'>
+      <div className='about-area-2 pd-top-45 pd-bottom-100'>
         <div className='container'>
           <div className='about-area-inner'>
             <div className='row'>
-              <div className='col-lg-5 order-lg-2'>
+              <div className='col-lg-5 order-lg-1'>
                 <div className='about-thumb-wrap mb-lg-0 mb-4'>
                   {/* <img
                     className='img-1'
@@ -47,7 +47,7 @@ const AboutTwo = () => {
                   </div>
                 </div>
               </div>
-              <div className='col-lg-7 align-self-center order-lg-1'>
+              <div className='col-lg-7 align-self-center order-lg-2'>
                 <div className='about-inner-wrap ms-0'>
                   <div className='section-title mb-0'>
                     {/* <h4 className='subtitle'>ABOUT US</h4> */}
