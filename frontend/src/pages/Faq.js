@@ -23,7 +23,7 @@ const Faq = () => {
          <NavbarThree/>
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"FAQ"} imgSrc={"/assets/img/banner/faq.webp"} />
+          <Breadcrumb title={"FAQ"} imgSrc={"/assets/img/banner/FAQ (1).webp"} />
 
           {/* Faq One */}
           <div className='faq-area pd-top-120 pd-bottom-20'>

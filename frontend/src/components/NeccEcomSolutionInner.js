@@ -104,7 +104,7 @@ const NeccEcomSolutionInner = () => {
       {/*wcu-area start*/}
       <div
         className='wcu-area1 bg-overlay'
-        style={{ background: "url(assets/img/wcu/bg.png)" }}
+        style={{ background: "url(/assets/img/wcu/Services-bg.webp)" }}
       >
         {/* <img className='img-1' src='assets/img/wcu/1.png' alt='Transpro' /> */}
         {/* <img className='img-2' src='assets/img/wcu/2.png' alt='Transpro' /> */}

@@ -20,7 +20,7 @@ const Feedback = () => {
             <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"FEEDBACK"} imgSrc={"/assets/img/banner/Feedback.webp"}/>
+            <Breadcrumb title={"FEEDBACK"} imgSrc={"/assets/img/banner/feedback (1).webp"}/>
 
             {/* Feedback Inner */}
             <FeedbackInner/>

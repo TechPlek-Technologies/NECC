@@ -20,7 +20,7 @@ const SiteMap = () => {
            <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"SITEMAP"} imgSrc={"/assets/img/banner/sitemap.webp"} />
+            <Breadcrumb title={"SITEMAP"} imgSrc={"/assets/img/banner/sitemap (1).webp"} />
 
             {/*Investors Inner */}
             <SiteMapInner/>
