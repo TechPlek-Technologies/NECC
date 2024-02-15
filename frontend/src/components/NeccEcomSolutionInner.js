@@ -129,7 +129,7 @@ const NeccEcomSolutionInner = () => {
               </div>
               <div className='single-wcu-wrap'>
                 <div className='icon'>
-                  <img src='assets/img/wcu/icon-1.png' alt='Transpro' />
+                  <img src='/assets/img/wcu/pre-paid.png' alt='Transpro' />
                 </div>
                 <div className='details'>
                   <h6>PRE-PAID</h6>
@@ -140,7 +140,7 @@ const NeccEcomSolutionInner = () => {
               </div>
               <div className='single-wcu-wrap'>
                 <div className='icon'>
-                  <img src='assets/img/wcu/icon-2.png' alt='Transpro' />
+                  <img src='/assets/img/wcu/CASH-ON-DELIVERY.png' alt='Transpro' />
                 </div>
                 <div className='details'>
                   <h6>CASH ON DELIVERY</h6>
@@ -151,7 +151,7 @@ const NeccEcomSolutionInner = () => {
               </div>
               <div className='single-wcu-wrap'>
                 <div className='icon'>
-                  <img src='assets/img/wcu/icon-3.png' alt='Transpro' />
+                  <img src='/assets/img/wcu/REVERSE-LOGISTICS.png' alt='Transpro' />
                 </div>
                 <div className='details'>
                   <h6>REVERSE LOGISTICS</h6>
@@ -162,7 +162,7 @@ const NeccEcomSolutionInner = () => {
               </div>
               <div className='single-wcu-wrap'>
                 <div className='icon'>
-                  <img src='assets/img/wcu/icon-3.png' alt='Transpro' />
+                  <img src='/assets/img/wcu/Untitled-1 (2).png' alt='Transpro' />
                 </div>
                 <div className='details'>
                   <h6>VAD (Value Added Delivery)</h6>
@@ -189,7 +189,7 @@ const NeccEcomSolutionInner = () => {
                 </p>
               </div>
             </div>
-            <img src='/assets/img/service-1/ecom/network (2).webp' alt='Transpro' />
+            <img src='/assets/img/service-1/ecom/network (3).webp' alt='Transpro' />
           </div>
         </div>
       </div>

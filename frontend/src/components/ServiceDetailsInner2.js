@@ -214,11 +214,11 @@ const ServiceDetailsInner2 = () => {
                   </p>
                   <p className='contact'>
                     <FaRegEnvelope />
-                    info@transpro.com
+                    co@neccgroup.com
                   </p>
                   <p className='contact mb-0'>
                     <FaPhoneAlt />
-                    +1 800-435-7106
+                    +011-23517516, 17, 18, 19
                   </p>
                 </div>
               </div>

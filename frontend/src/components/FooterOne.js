@@ -29,7 +29,7 @@ const FooterOne = () => {
                     <h6>OFFICE ADDRESS:</h6>
                     <p>DELHI
                     "NECC HOUSE" 9062/47,</p>
-                    <p> Ram Bagh Road ,Azad Market<br/> Delhi-110 006</p>
+                    <p> Ram Bagh Road ,Azad Market<br/> Delhi-110006</p>
                     
                   </div>
                 </div>
@@ -174,7 +174,7 @@ const FooterOne = () => {
                 </p>
                 <div className='single-subscribe-inner'>
                   <input type='text' placeholder='Email Address' />
-                  <a className='btn btn-base1' href='#'>
+                  <a className='btn btn-base1' href='mailto:customercare1@neccgroup.com'>
                     <FaPaperPlane />
                   </a>
                 </div>

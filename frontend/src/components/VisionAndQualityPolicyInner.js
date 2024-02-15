@@ -16,7 +16,7 @@ const VisionAndQualityPolicyInner= () => {
       <div className='features-area style-02'>
         <div className='container'>
           <div className='row justify-content-start'>
-            <div className='col-lg-4 offset-lg-1 d-flex'>
+            <div className='col-lg-4 offset-lg-1 d-flex order-lg-2'>
               <div className='section-title white  text-left m-auto'>
                 <h2 className='title active'>VISION STATEMENT</h2>
                 <p className='des'>
@@ -30,7 +30,7 @@ const VisionAndQualityPolicyInner= () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-6 align-self-center pd-top-120'>
+            <div className='col-lg-6 align-self-center pd-top-120 order-lg-1'>
                     <div className='thumb mb-lg-0 mb-4'>
                       <img src='/assets/img/service-1/vision and quality/vision-2 (1).webp' alt='Transpro' />
                     </div>
