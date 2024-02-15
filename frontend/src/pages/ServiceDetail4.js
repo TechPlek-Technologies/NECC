@@ -21,7 +21,7 @@ const ServiceDetail4 = () => {
           <NavbarThree/>
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"ODC MOVEMENTS"} imgSrc={"/assets/img/service-1/odc/ODC-movements.webp"}/>
+          <Breadcrumb title={"ODC MOVEMENTS"} imgSrc={"/assets/img/banner/odc.webp"}/>
 
           {/* Service Details Inner */}
           <ServiceDetailsInner4 />

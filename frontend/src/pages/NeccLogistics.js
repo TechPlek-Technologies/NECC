@@ -20,7 +20,7 @@ const NeccLogistics = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"NECC LOGISTICS"} imgSrc={"/assets/img/banner/necc-logistic.webp"}/>
+          <Breadcrumb title={"NECC LOGISTICS"} imgSrc={"/assets/img/banner/necc-logistic (1) (1).webp"}/>
 
          {/* Necc Group Inner*/}
          <NeccLogisticsInner/>
