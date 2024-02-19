@@ -1,11 +1,4 @@
 import React, { useState } from "react";
-import {
- 
-  FaBox,
-  FaMoneyBillAlt,
-  FaShieldAlt,
-  FaTruck,
-} from "react-icons/fa";
 import ModalVideo from "react-modal-video";
 
 const VisionAndQualityPolicyInner= () => {
@@ -16,7 +9,7 @@ const VisionAndQualityPolicyInner= () => {
       <div className='features-area style-02'>
         <div className='container'>
           <div className='row justify-content-start'>
-            <div className='col-lg-4 offset-lg-1 d-flex order-lg-2'>
+            <div className='col-lg-5 offset-lg-1 d-flex order-lg-2'>
               <div className='section-title white  text-left m-auto'>
                 <h2 className='title active'>VISION STATEMENT</h2>
                 <p className='des'>
@@ -30,46 +23,11 @@ const VisionAndQualityPolicyInner= () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-6 align-self-center pd-top-120 order-lg-1'>
+            <div className='col-lg-5 align-self-center pd-top-120 order-lg-1'>
                     <div className='thumb mb-lg-0 mb-4'>
                       <img src='/assets/img/service-1/vision and quality/vision-2 (1).webp' alt='Transpro' />
                     </div>
                   </div>
-            {/* <div className='col-lg-6'>
-              <div className='features-item'>
-                <div className='row'>
-                  <div className='col-lg-6'>
-                    <div className='single-features-item' style={{ backgroundImage: `url("/assets/img/service-1/vision and quality/plan.webp")`}}>
-                      <div className='icon'>
-                        <FaMoneyBillAlt />
-                         
-                      </div>
-                      <h4>Plan</h4>
-                    </div>
-                    <div className='single-features-item' style={{ backgroundImage: `url("/assets/img/service-1/vision and quality/action.webp")`}}>
-                      <div className='icon'>
-                        <FaTruck />
-                      </div>
-                      <h4>Act</h4>
-                    </div>
-                  </div>
-                  <div className='col-lg-6 mg-top-60'>
-                    <div className='single-features-item' style={{ backgroundImage: `url("/assets/img/service-1/vision and quality/do.webp")`}}>
-                      <div className='icon'>
-                        <FaBox />
-                      </div>
-                      <h4>Do</h4>
-                    </div>
-                    <div className='single-features-item' style={{ backgroundImage: `url("/assets/img/service-1/vision and quality/check.webp")`}}>
-                      <div className='icon'>
-                        <FaShieldAlt />
-                      </div>
-                      <h4>Check</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
@@ -79,12 +37,12 @@ const VisionAndQualityPolicyInner= () => {
             <div className='col-lg-10'>
               <div className='service-details-wrap'>
                 <div className='row'>
-                  <div className='col-lg-6 align-self-center pd-top-120'>
-                    <div className='thumb mb-lg-0 mb-4'>
+                  <div className='col-lg-6 align-self-center pd-top-60 order-lg-2'>
+                    <div className='thumb  mb-4'>
                       <img src='/assets/img/service/quality (2).webp' alt='Transpro' />
                     </div>
                   </div>
-                  <div className='col-lg-6 align-self-center'>
+                  <div className='col-lg-6 align-self-center order-lg-1'>
                     <h2 className='subtitle'>QUALITY POLICY</h2>
                     <p>Team NECC will strive to attain delivery and Distribution Excellence : </p>
                     <ul className='list-inner-wrap'>
