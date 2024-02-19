@@ -39,7 +39,7 @@ const BannerOne = () => {
                 className='item'
                 // style={{ backgroundImage: 'url("./assets/img/banner/1.png")' }}
               >
-                <video autoPlay loop muted style={{position:"fixed",width: "1580px" }}>
+                <video autoPlay loop muted style={{position:"fixed",width: "1920px" }}>
                   <source src="/assets/img/video/NECC LTD..mp4" type="video/mp4"/>
                 </video>
                 
