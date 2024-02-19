@@ -6,7 +6,7 @@ const WhyChooseUsTwo = () => {
       {/*wcu-area start*/}
       <div
         className='wcu-area-2 pd-top-60'
-        style={{ backgroundImage: "url(assets/img/wcu/bg-2.png)" }}
+        style={{ backgroundImage:' url("/assets/img/wcu/why-choose-us (2).png")' }}
       >
         <div className='container'>
           <div className='row justify-content-center'>
@@ -20,7 +20,7 @@ const WhyChooseUsTwo = () => {
               </div>
             </div>
           </div>
-          <div className='row'>
+          <div className='row mg-top-20'>
             <div className='col-lg-4'>
               <div className='single-wcu-wrap style-2'>
                 <div className='icon'>
