@@ -45,15 +45,13 @@ const BannerOne = () => {
                 
              <div className='container'>
                   <div className='row'>
-                    <div className='col-lg-7 col-md-8'>
+                    <div className='col-lg-8 col-md-7'>
                       <div className='banner-inner style-white'>
                         <h1 className='b-animate-2 title'>
-                          FAST CERTIFIED &amp; BEST WORLD WIDE SERVICE
+                        Experience Excellence & Drive Success in Logistics
                         </h1>
                         <p className='b-animate-3 content'>
-                          Professionally strategize stand-alone functionalities
-                          and cooperative total linkage. Objectively predominate
-                          virtual quality vectors with orthogonal.
+                        Experience unparalleled logistics excellence with NECC, the premier supply chain management company in India. Trust us to optimize your operations efficiently.
                         </p>
                         <div className='btn-wrap'>
                           <Link
@@ -78,7 +76,7 @@ const BannerOne = () => {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <div
                 className='item'
                 //  style={{ backgroundImage: 'url("./assets/img/banner/2.png")' }}
@@ -89,16 +87,13 @@ const BannerOne = () => {
                
                 <div className='container'>
                   <div className='row'>
-                    <div className='col-lg-7 col-md-8'>
+                    <div className='col-lg-8 col-md-7'>
                       <div className='banner-inner style-white'>
                         <h1 className='b-animate-2 title'>
-                          FAST CERTIFIED &amp; BEST WORLD WIDE SERVICE
+                        Drive Success in Your Supply Chain with India's Top-tier Logistics Management Solutions
                         </h1>
                         <p className='b-animate-3 content'>
-                          Our transport management solutions are designed to
-                          enable the effective and efficient management of the
-                          delivery of goods. Having the real-time visibility of
-                          vehicle movements.
+                        NECC offers top-tier logistics solutions to drive success in your supply chain. Partner with us for unmatched efficiency and reliability.
                         </p>
                         <div className='btn-wrap'>
                           <Link
@@ -120,7 +115,7 @@ const BannerOne = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </Slider>
         </div>
       </div>

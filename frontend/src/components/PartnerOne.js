@@ -45,16 +45,15 @@ const PartnerOne = () => {
   return (
     <>
       {/*partner-area start*/}
-      <div className='partner-area pd-top-60 pd-bottom-45'>
+      <div className='partner-area pd-top-80 pd-bottom-45'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-7'>
               <div className='section-title text-center'>
                 {/* <h4 className='subtitle'>HAPPY CLIENTS</h4> */}
-                <h2 className='title'>TRUSTED BY OUR 365,000 CLIENTS</h2>
-                <p className='content'>
-                  Dramatically enhance interactive metrics for reliable
-                  services. Proactively unleash fully researched e-commerce.
+                <h2 className='title'>THE TRUSTED CHOICE FOR OUR CLIENTS</h2>
+                <p className='content para'>
+                NECC is trusted by clients for reliable logistics solutions, exceptional service, on-time deliveries, and unparalleled expertise in the transportation industry.
                 </p>
               </div>
             </div>
@@ -63,52 +62,52 @@ const PartnerOne = () => {
             <Slider {...settings}>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='assets/img/partner/1.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/logo (1).webp' alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='assets/img/partner/2.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='assets/img/partner/3.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/logo (1).webp' alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='assets/img/partner/4.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='assets/img/partner/5.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/logo (1).webp' alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='assets/img/partner/6.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='assets/img/partner/2.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/logo (1).webp' alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='assets/img/partner/3.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='assets/img/partner/4.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/logo (1).webp' alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='assets/img/partner/5.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
                 </div>
               </div>
             </Slider>

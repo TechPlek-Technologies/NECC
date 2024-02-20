@@ -6,7 +6,7 @@ const AboutOne = () => {
   return (
     <>
       {/* about area start */}
-      <div className='about-area pd-bottom-240'>
+      <div className='about-area pd-top-45 pd-bottom-240'>
         <div className='container'>
           <div className='about-area-inner'>
             <div className='row'>
@@ -19,7 +19,7 @@ const AboutOne = () => {
                   />
                   <img
                     className='img-2'
-                    src='./assets/img/about/1.png'
+                    src='/assets/img/about/welcome.webp'
                     alt='Transpro'
                   />
                   {/* <img
@@ -34,7 +34,7 @@ const AboutOne = () => {
                         {({ isVisible }) =>
                           isVisible && (
                             <h1>
-                              <CountUp delay={0} start={0} end={55} />
+                              <CountUp delay={0} start={0} end={56} />
                             </h1>
                           )
                         }
@@ -52,53 +52,52 @@ const AboutOne = () => {
                       WELCOME WORLD WIDE BEST TRANSPORT COMPANY
                     </h2>
                     <p className='content left-line'>
-                      Competently implement efficient e-commerce without
-                      cross-unit growth strategies.
+                    Since our inception, we have provided clients with flexible, responsive, and affordable services that they deserve. We use our deep operating knowledge to offer extraordinary solutions as unique as our client’s needs. 
                     </p>
                     <div className='row'>
-                      <div className='col-xl-6 col-lg-12 col-md-6'>
+                      <div className='col-xl-12 col-lg-12 col-md-12'>
                         <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
                           <li>
                             <img
                               src='./assets/img/icon/check.png'
                               alt='Transpro'
                             />{" "}
-                            Unlimited Revisions
+                           Seamless end-to-end supply chain services.
                           </li>
                           <li>
                             <img
                               src='./assets/img/icon/check.png'
                               alt='Transpro'
                             />
-                            Best Fitness Excercise
+                            Establish distribution channels in the Eastern Region.
                           </li>
                           <li>
                             <img
                               src='./assets/img/icon/check.png'
                               alt='Transpro'
                             />
-                            Combine Fitness and
+                            Smooth flow of inventory and visibility of the product.
                           </li>
                           <li>
                             <img
                               src='./assets/img/icon/check.png'
                               alt='Transpro'
                             />
-                            Best Solutions
+                            Single window solution under one banner.
                           </li>
                         </ul>
                       </div>
-                      <div className='col-xl-6 col-lg-12 col-md-6 align-self-center'>
+                      {/* <div className='col-xl-6 col-lg-12 col-md-6 align-self-center'>
                         <div className='thumb'>
                           <img src='./assets/img/about/3.png' alt='Transpro' />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                     <div className='btn-wrap'>
                       <Link className='btn btn-base' to='/about'>
                         ABOUT MORE
                       </Link>
-                      <div className='author-wrap'>
+                      {/* <div className='author-wrap'>
                         <div className='thumb'>
                           <img src='./assets/img/about/4.png' alt='Transpro' />
                         </div>
@@ -109,7 +108,7 @@ const AboutOne = () => {
                           />
                           <p>CEO, Of Company</p>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
