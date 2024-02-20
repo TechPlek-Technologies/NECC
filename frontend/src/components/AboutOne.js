@@ -6,7 +6,7 @@ const AboutOne = () => {
   return (
     <>
       {/* about area start */}
-      <div className='about-area pd-bottom-140'>
+      <div className='about-area pd-bottom-240'>
         <div className='container'>
           <div className='about-area-inner'>
             <div className='row'>
@@ -22,11 +22,11 @@ const AboutOne = () => {
                     src='./assets/img/about/1.png'
                     alt='Transpro'
                   />
-                  <img
+                  {/* <img
                     className='img-3'
                     src='./assets/img/about/2.png'
                     alt='Transpro'
-                  />
+                  /> */}
                   <div className='exprience-wrap'>
                     <img src='./assets/img/about/shape-3.png' alt='Transpro' />
                     <div className='details'>
