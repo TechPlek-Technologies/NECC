@@ -25,8 +25,8 @@ const CounterOne = () => {
                     }
                   </TrackVisibility>
                 </h2>
-                <h5>PROJECT COMPLETE</h5>
-                <p>Conveniently impact front-end niches via maintainable.</p>
+                <h5>EXPERTISE</h5>
+                <p>Extensive knowledge, and reliable logistics solutions.</p>
               </div>
             </div>
             <div className='col-lg-3 col-md-6'>
@@ -42,8 +42,8 @@ const CounterOne = () => {
                     }
                   </TrackVisibility>
                 </h2>
-                <h5>BEST EMPLOYEES</h5>
-                <p>Conveniently impact front-end niches via maintainable.</p>
+                <h5>RELIABILITY</h5>
+                <p>Consistent, on-time deliveries, impeccable service.</p>
               </div>
             </div>
             <div className='col-lg-3 col-md-6'>
@@ -59,8 +59,8 @@ const CounterOne = () => {
                     }
                   </TrackVisibility>
                 </h2>
-                <h5>WORLDWIDE CLIENTS</h5>
-                <p>Conveniently impact front-end niches via maintainable.</p>
+                <h5>TRUST</h5>
+                <p>Client-centric approach, transparent communication channels.</p>
               </div>
             </div>
             <div className='col-lg-3 col-md-6'>
@@ -76,8 +76,8 @@ const CounterOne = () => {
                     }
                   </TrackVisibility>
                 </h2>
-                <h5>WORLD AWARDS</h5>
-                <p>Conveniently impact front-end niches via maintainable.</p>
+                <h5>EXCELLENCE</h5>
+                <p>Exceptional quality, unmatched customer satisfaction.</p>
               </div>
             </div>
           </div>

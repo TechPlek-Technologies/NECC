@@ -65,7 +65,7 @@ const NeccEcomSolutionInner = () => {
                         {({ isVisible }) =>
                           isVisible && (
                             <h1>
-                              <CountUp delay={0} start={0} end={55} />
+                              <CountUp delay={0} start={0} end={56} />
                             </h1>
                           )
                         }

@@ -52,16 +52,15 @@ const TestimonialOne = () => {
   return (
     <>
       {/* testimonial area start */}
-      <div className='testimonial-area pd-top-45 pd-bottom-45'>
+      <div className='testimonial-area pd-top-60 pd-bottom-45'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-6'>
               <div className='section-title text-center mb-0'>
                 <h4 className='subtitle'>TESTIMONIALS</h4>
-                <h2 className='title'>OUR CLIENT’S FEEDBACK</h2>
-                <p className='content'>
-                  Dramatically enhance interactive metrics for reliable
-                  services. Proactively unleash fully researched e-commerce.
+                <h2 className='title'>Hear What Our Customers Have to Say</h2>
+                <p className='content para'>
+                Discover firsthand experiences from our satisfied clients, showcasing our dedication, reliability, and excellence in delivering top-notch logistics solutions.
                 </p>
               </div>
             </div>
@@ -77,17 +76,15 @@ const TestimonialOne = () => {
                     />
                   </div>
                   <p>
-                    “Progressively strategize intermandated manufactured
-                    products after multidisci plinary sources. Conveniently
-                    iterate value-added systems with.”
+                    “As a Goods Transport Agency, NECC's services are unparalleled. Their commitment to timely deliveries and customer satisfaction is commendable.”
                   </p>
                   <div className='client-wrap'>
-                    <div className='thumb'>
+                    {/* <div className='thumb'>
                       <img src='assets/img/testimonial/1.png' alt='Transpro' />
-                    </div>
+                    </div> */}
                     <div className='details'>
-                      <h5>ANJELINA MATHEUS</h5>
-                      <p>Co-Founder</p>
+                      <h5>Emily Jones</h5>
+                      <p>Supply Chain Manager</p>
                     </div>
                   </div>
                 </div>
@@ -101,17 +98,15 @@ const TestimonialOne = () => {
                     />
                   </div>
                   <p>
-                    “Progressively strategize intermandated manufactured
-                    products after multidisci plinary sources. Conveniently
-                    iterate value-added systems with.”
+                    “NECC is undoubtedly one of the best freight forwarding companies in India. Their expertise and attention to detail make them our go-to logistics partner.”
                   </p>
                   <div className='client-wrap'>
-                    <div className='thumb'>
+                    {/* <div className='thumb'>
                       <img src='assets/img/testimonial/2.png' alt='Transpro' />
-                    </div>
+                    </div> */}
                     <div className='details'>
-                      <h5>MONISH POUL</h5>
-                      <p>Co-Founder</p>
+                      <h5>David Johnson</h5>
+                      <p>Operations Director</p>
                     </div>
                   </div>
                 </div>
@@ -125,17 +120,15 @@ const TestimonialOne = () => {
                     />
                   </div>
                   <p>
-                    “Progressively strategize intermandated manufactured
-                    products after multidisci plinary sources. Conveniently
-                    iterate value-added systems with.”
+                    “Choosing NECC as our logistics partner was one of the best decisions we made. Their dedication to excellence sets them apart from other freight forwarders.”
                   </p>
                   <div className='client-wrap'>
-                    <div className='thumb'>
+                    {/* <div className='thumb'>
                       <img src='assets/img/testimonial/3.png' alt='Transpro' />
-                    </div>
+                    </div> */}
                     <div className='details'>
-                      <h5>MICHEL CLACRK</h5>
-                      <p>Co-Founder</p>
+                      <h5>Sarah Brown</h5>
+                      <p>Procurement Manager</p>
                     </div>
                   </div>
                 </div>
@@ -149,17 +142,15 @@ const TestimonialOne = () => {
                     />
                   </div>
                   <p>
-                    “Progressively strategize intermandated manufactured
-                    products after multidisci plinary sources. Conveniently
-                    iterate value-added systems with.”
+                    “NECC has consistently delivered service as a Goods Transport Agency. Their professionalism make them a trusted partner for our transportation needs.”
                   </p>
                   <div className='client-wrap'>
-                    <div className='thumb'>
+                    {/* <div className='thumb'>
                       <img src='assets/img/testimonial/2.png' alt='Transpro' />
-                    </div>
+                    </div> */}
                     <div className='details'>
-                      <h5>MONISH POUL</h5>
-                      <p>Co-Founder</p>
+                      <h5>Michael Davis</h5>
+                      <p>Logistics Coordinator</p>
                     </div>
                   </div>
                 </div>
