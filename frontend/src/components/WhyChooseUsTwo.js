@@ -13,7 +13,7 @@ const WhyChooseUsTwo = () => {
             <div className='col-lg-6'>
               <div className='section-title style-white text-center'>
                 {/* <h4 className='subtitle style-2'>WHY CHOOSE US</h4> */}
-                <h2 className='title'>WHY CHOOSE FOR US</h2>
+                <h2 className='title1'>WHY CHOOSE FOR US</h2>
                 <p className='content'>
                 North Eastern Carrying Corporation is among the leading freight forwarding companies in India. If you are looking to transport goods from one destination to another, we are offering cost-effective solutions for you.
                 </p>
@@ -26,7 +26,7 @@ const WhyChooseUsTwo = () => {
                 <div className='icon'>
                   <img src='/assets/img/wcu/we-listen.webp' alt='Transpro' />
                 </div>
-                <div className='details'>
+                <div className='details1'>
                   <h6>WE LISTEN</h6>
                   <p>
                     Enhance interactive metrics for reliable services.
@@ -38,7 +38,7 @@ const WhyChooseUsTwo = () => {
                 <div className='icon'>
                   <img src='/assets/img/wcu/walk.webp' alt='Transpro' />
                 </div>
-                <div className='details'>
+                <div className='details1'>
                   <h6>WE WALK WITH CLIENTS</h6>
                   <p>
                     Enhance interactive metrics for reliable services.
@@ -57,7 +57,7 @@ const WhyChooseUsTwo = () => {
                 <div className='icon'>
                   <img src='/assets/img/wcu/solution.webp' alt='Transpro' />
                 </div>
-                <div className='details'>
+                <div className='details1'>
                   <h6>WE CREATE SOLUTIONS</h6>
                   <p>
                     Enhance interactive metrics for reliable services.
@@ -69,7 +69,7 @@ const WhyChooseUsTwo = () => {
                 <div className='icon'>
                   <img src='/assets/img/wcu/future.webp' alt='Transpro' />
                 </div>
-                <div className='details'>
+                <div className='details1'>
                   <h6>WE LOOK INTO THE FUTURE</h6>
                   <p>
                     Enhance interactive metrics for reliable services.
