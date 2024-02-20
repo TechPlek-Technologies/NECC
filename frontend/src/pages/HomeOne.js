@@ -6,7 +6,7 @@ const BannerOne = React.lazy(() => import("../components/BannerOne"));
 const AboutOne = React.lazy(() => import("../components/AboutOne"));
 // const BlogOne = React.lazy(() => import("../components/BlogOne"));
 // const ContactOne = React.lazy(() => import("../components/ContactOne"));
-const CounterOne = React.lazy(() => import("../components/CounterOne"));
+// const CounterOne = React.lazy(() => import("../components/CounterOne"));
 const FeatureOne = React.lazy(() => import("../components/FeatureOne"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
@@ -18,7 +18,7 @@ const PartnerOne = React.lazy(() => import("../components/PartnerOne"));
 const ServiceOne = React.lazy(() => import("../components/ServiceOne"));
 // const TeamOne = React.lazy(() => import("../components/TeamOne"));
 const TestimonialOne = React.lazy(() => import("../components/TestimonialOne"));
-const WhyChooseUsOne = React.lazy(() => import("../components/WhyChooseUsOne"));
+// const WhyChooseUsOne = React.lazy(() => import("../components/WhyChooseUsOne"));
 // const SearchPopup = React.lazy(() => import("../elements/SearchPopup"));
 const HomeOne = () => {
   return (
@@ -46,11 +46,11 @@ const HomeOne = () => {
           <ServiceOne />
 
           {/* Why Choose Us One */}
-          <WhyChooseUsOne />
+          {/* <WhyChooseUsOne /> */}
 
           {/* Counter One */}
 
-          <CounterOne />
+          {/* <CounterOne /> */}
 
           {/* Team One */}
           {/* <TeamOne /> */}
@@ -63,8 +63,6 @@ const HomeOne = () => {
             <ContactOne />
           </div> */}
 
-          {/* Testimonial One */}
-          <TestimonialOne />
 
           {/* Portfolio One */}
           {/* <PortfolioOne /> */}
@@ -74,6 +72,9 @@ const HomeOne = () => {
 
           {/* Partner One */}
           <PartnerOne />
+
+          {/* Testimonial One */}
+          <TestimonialOne />
 
           {/* Footer One */}
           <FooterOne />

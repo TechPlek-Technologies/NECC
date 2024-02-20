@@ -27,23 +27,22 @@ const ServiceOne = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-4 col-md-6'>
               <div className='single-service-wrap'>
-                <div className='thumb'>
-                  <img src='assets/img/service/1.png' alt='Transpro' />
+              <div className='thumb'>
+                  <img src='/assets/img/service/part-truck-loa.webp' alt='Transpro' />
                   <div className='icon'>
                     <img
-                      src='assets/img/service/service-icon-1.png'
+                      src='/assets/img/service/part-time-load.webp'
                       alt='Transpro'
                     />
                   </div>
                 </div>
                 <div className='details'>
-                  <h5>SEA TRANSPORTATION</h5>
+                  <h5>PART TRUCK LOAD (PTL)</h5>
                   <p>
-                    Intrinsicly exploit e-business imperative with emerging
-                    human capital.
+                  Movement of goods/small parcels (less than 50kg’s) from all over India to the eastern and north eastern part of the country.
                   </p>
                   <div className='btn-wrap'>
-                    <Link className='read-more-text' to='/service-details'>
+                    <Link className='read-more-text' to='/ServiceDetail1'>
                       READ MORE{" "}
                       <span>
                         <FaArrowRight />
@@ -55,23 +54,22 @@ const ServiceOne = () => {
             </div>
             <div className='col-lg-4 col-md-6'>
               <div className='single-service-wrap'>
-                <div className='thumb'>
-                  <img src='assets/img/service/2.png' alt='Transpro' />
+              <div className='thumb'>
+                  <img src='/assets/img/service/full-truck-load.webp' alt='Transpro' />
                   <div className='icon'>
                     <img
-                      src='assets/img/service/service-icon-2.png'
+                      src='/assets/img/service/full-truck-load (1).webp'
                       alt='Transpro'
                     />
                   </div>
                 </div>
                 <div className='details'>
-                  <h5>AIR TRANSPORTATION</h5>
+                  <h5>FULL TRUCK LOAD (FTL)</h5>
                   <p>
-                    Intrinsicly exploit e-business imperative with emerging
-                    human capital.
+                  We provide this service to all major corporate where we can place the truck from anywhere to anywhere depending on the client’s needs.
                   </p>
                   <div className='btn-wrap'>
-                    <Link className='read-more-text' to='/service-details'>
+                    <Link className='read-more-text' to='/ServiceDetail2'>
                       READ MORE{" "}
                       <span>
                         <FaArrowRight />
@@ -83,23 +81,22 @@ const ServiceOne = () => {
             </div>
             <div className='col-lg-4 col-md-6'>
               <div className='single-service-wrap'>
-                <div className='thumb'>
-                  <img src='assets/img/service/3.png' alt='Transpro' />
+              <div className='thumb'>
+                  <img src='/assets/img/service/bulk-movements.webp' alt='Transpro' />
                   <div className='icon'>
                     <img
-                      src='assets/img/service/service-icon-3.png'
+                      src='/assets/img/service/bulk-movement.webp'
                       alt='Transpro'
                     />
                   </div>
                 </div>
                 <div className='details'>
-                  <h5>WAREHOUSING</h5>
+                  <h5>BULK MOVEMENTS</h5>
                   <p>
-                    Intrinsicly exploit e-business imperative with emerging
-                    human capital.
+                  We offer services like mining logistics,chrome/iron/manganese ore transportation from mines for processing.
                   </p>
                   <div className='btn-wrap'>
-                    <Link className='read-more-text' to='/service-details'>
+                    <Link className='read-more-text' to='/ServiceDetail3'>
                       READ MORE{" "}
                       <span>
                         <FaArrowRight />
