@@ -106,13 +106,13 @@ const AboutTwo = () => {
             </div>
           </div>
         </div>
-        <ModalVideo
+        {/* <ModalVideo
           channel='youtube'
           autoplay
           isOpen={isOpen}
           videoId='XM6kTQPzzpQ'
           onClose={() => setOpen(false)}
-        />
+        /> */}
       </div>
       {/* about area end */}
     </>
