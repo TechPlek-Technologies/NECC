@@ -17,7 +17,7 @@ const VisionAndQualityPolicyInner= () => {
                 Using Multi-Model Solutions for Speedier Movement at Lowest Cost.
                 </p>
                 <div className='btn-wrapper animated fadeInUpBig text-left'>
-                  <a href='#' className='boxed-btn btn-bounce mt-3'>
+                  <a href='/contact' className='boxed-btn btn-bounce mt-3'>
                     Contact us
                   </a>
                 </div>
