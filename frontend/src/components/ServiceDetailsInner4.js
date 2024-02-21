@@ -226,13 +226,13 @@ const ServiceDetailsInner4 = () => {
         </div>
       </div>
       {/* service area end */}
-      <ModalVideo
+      {/* <ModalVideo
         channel='youtube'
         autoplay
         isOpen={isOpen}
         videoId='XM6kTQPzzpQ'
         onClose={() => setOpen(false)}
-      />
+      /> */}
     </>
   );
 };
