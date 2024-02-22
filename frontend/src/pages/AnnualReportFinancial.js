@@ -20,7 +20,7 @@ const AnnualReportFinancial = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"ANNUAL REPORT & FINANCIALS"} />
+          <Breadcrumb title={"ANNUAL REPORT & FINANCIALS"} imgSrc={"/assets/img/banner/1.png"}/>
 
           {/* {Service Inner} */}
           <AnnualReportFinancialInner/>

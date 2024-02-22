@@ -20,7 +20,7 @@ const Polices = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"POLICES & CODE"} />
+          <Breadcrumb title={"POLICES & CODE"} imgSrc={"/assets/img/banner/1.png"} />
 
           {/* {Service Inner} */}
           <PolicesInner/>

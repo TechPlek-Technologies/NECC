@@ -20,7 +20,7 @@ const RightIssues = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"RIGHT ISSUES"} />
+          <Breadcrumb title={"RIGHT ISSUES"} imgSrc={"/assets/img/banner/1.png"} />
 
           {/* {Service Inner} */}
           <RightIssuesInner/>
