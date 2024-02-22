@@ -13,12 +13,12 @@ const AboutOne = () => {
               <div className='col-lg-6'>
                 <div className='about-thumb-wrap'>
                   <img
-                    className='img-1'
+                    className='img-1 img-fluid'
                     src='./assets/img/about/shape.png'
                     alt='Transpro'
                   />
                   <img
-                    className='img-2'
+                    className='img-2 img-fluid'
                     src='/assets/img/about/welcome.webp'
                     alt='Transpro'
                   />
@@ -28,7 +28,7 @@ const AboutOne = () => {
                     alt='Transpro'
                   /> */}
                   <div className='exprience-wrap'>
-                    <img src='./assets/img/about/shape-3.png' alt='Transpro' />
+                    <img src='./assets/img/about/shape-3.png' className="img-fluid " alt='Transpro' />
                     <div className='details'>
                       <TrackVisibility once>
                         {({ isVisible }) =>
@@ -59,28 +59,28 @@ const AboutOne = () => {
                         <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
                           <li>
                             <img
-                              src='./assets/img/icon/check.png'
+                              src='./assets/img/icon/check.png' className="img-fluid "
                               alt='Transpro'
                             />{" "}
                            Seamless end-to-end supply chain services.
                           </li>
                           <li>
                             <img
-                              src='./assets/img/icon/check.png'
+                              src='./assets/img/icon/check.png' className="img-fluid "
                               alt='Transpro'
                             />
                             Establish distribution channels in the Eastern Region.
                           </li>
                           <li>
                             <img
-                              src='./assets/img/icon/check.png'
+                              src='./assets/img/icon/check.png' className="img-fluid "
                               alt='Transpro'
                             />
                             Smooth flow of inventory and visibility of the product.
                           </li>
                           <li>
                             <img
-                              src='./assets/img/icon/check.png'
+                              src='./assets/img/icon/check.png' className="img-fluid "
                               alt='Transpro'
                             />
                             Single window solution under one banner.

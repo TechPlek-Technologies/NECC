@@ -12,16 +12,16 @@ const NetworkInner = () => {
                 <div className='about-inner-wrap'>
                   <div className='section-title mb-0'>
                   
-                <h2 className='title'>NETWORK</h2>
+                <h2 className='title'>NETWORKS</h2>
              
                   <p className='content'>
                   As a Full Truck Load service provider, we are best as compared to our competitors, as we have distributed and reliable network across India. Because of our strong networks, we are able to assess individual business needs in a most cost-effective way possible.
                     </p>
           
-          <h4 style={{marginTop:"20px",marginBottom:"20px"}}>CORPORATE OFFICE</h4>
+          <h4 className="reg-offices" style={{marginTop:"20px",marginBottom:"20px"}}>CORPORATE OFFICE</h4>
                 <div className='row'>
                       <div className='col-xl-6 col-lg-12 col-md-6'>
-                        <h6>NAME</h6>
+                        <h6 className='subtitle'>NAME</h6>
                         <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
                           <li>
                           Top Management.
@@ -44,26 +44,75 @@ const NetworkInner = () => {
                         </ul>
                       </div>
                       <div className='col-xl-6 col-lg-12 col-md-6'>
-                       <h6>EMAIL</h6>
+                       <h6 className='subtitle'>EMAIL</h6>
                         <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
                         <li> <Link to="mailto:top@neccgroup.com">
                         operation@neccgroup.com {" "}
                         </Link></li>
+                        <li> <Link to="mailto:mktg@neccgroup.com">
+                        mktg@neccgroup.com {" "}
+                        </Link></li>
+                        <li> <Link to="mailto:coadmin@neccgroup.com">
+                        coadmin@neccgroup.com {" "}
+                        </Link></li>
+                        <li> <Link to="mailto:customercare1@neccgroup.com ">
+                        customercare1@neccgroup.com {" "}
+                        </Link></li>
+                        <li> <Link to="mailto:managerhr@neccgroup.com">
+                        managerhr@neccgroup.com {" "}
+                        </Link></li>
+                        <li> <Link to="mailto:itdelhi@neccgroup.com">
+                        itdelhi@neccgroup.com{" "}
+                        </Link></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <h4 className="reg-offices" style={{marginTop:"20px",marginBottom:"20px"}}>BRANCH OFFICE</h4>
+                <div className='row'>
+                      <div className='col-xl-6 col-lg-12 col-md-6'>
+                        <h6 className='subtitle'>NAME</h6>
+                        <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
                           <li>
-                            Logistics services and solutions
+                          AHMEDABAD
                           </li>
                           <li>
-                            3PL, inbound, outbound logistics
+                          ANKLESHWAR
                           </li>
                           <li>
-                            Distribution and freight management
+                          BANGALORE
                           </li>
                           <li>
-                            Consolidation and deconsolidation
+                          BELTOLA
                           </li>
                           <li>
-                            IT and logistics technology for SCM
+                          BHIWANDI
                           </li>
+                          <li>
+                          BHAGALPUR
+                          </li>
+                        </ul>
+                      </div>
+                      <div className='col-xl-6 col-lg-12 col-md-6'>
+                       <h6 className='subtitle'>EMAIL</h6>
+                        <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
+                        <li> <Link to="mailto:top@neccgroup.com">
+                        ahmedabad@neccgroup.com  {" "}
+                        </Link></li>
+                        <li> <Link to="mailto:mktg@neccgroup.com">
+                        ankleshwar@neccgroup.com  {" "}
+                        </Link></li>
+                        <li> <Link to="mailto:bangalore@neccgroup.com">
+                        bangalore@neccgroup.com {" "}
+                        </Link></li>
+                        <li> <Link to="mailto:beltola@neccgroup.com ">
+                        beltola@neccgroup.com  {" "}
+                        </Link></li>
+                        <li> <Link to="mailto:bhiwandi@neccgroup.com">
+                        bhiwandi@neccgroup.com  {" "}
+                        </Link></li>
+                        <li> <Link to="mailto:bhagalpur@neccgroup.com">
+                        bhagalpur@neccgroup.com{" "}
+                        </Link></li>
                         </ul>
                       </div>
                     </div>

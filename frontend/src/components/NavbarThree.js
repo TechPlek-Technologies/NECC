@@ -45,7 +45,7 @@ const NavbarThree = () => {
             </div>
             <div className='logo'>
               <Link to='/'>
-                <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
+                <img src='/assets/img/home-2/necclogo.png' className="img-fluid " alt='Transpro' />
               </Link>
             </div>
             <div className='nav-left-part'></div>

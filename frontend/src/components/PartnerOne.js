@@ -62,52 +62,52 @@ const PartnerOne = () => {
             <Slider {...settings}>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='/assets/img/home-2/logo (1).webp' alt='Transpro' />
+                  <img src='/assets/img/home-2/logo (1).webp' className="img-fluid " alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/necclogo.png' className="img-fluid " alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='/assets/img/home-2/logo (1).webp' alt='Transpro' />
+                  <img src='/assets/img/home-2/logo (1).webp' className="img-fluid " alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/necclogo.png' className="img-fluid " alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='/assets/img/home-2/logo (1).webp' alt='Transpro' />
+                  <img src='/assets/img/home-2/logo (1).webp' className="img-fluid " alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/necclogo.png' className="img-fluid " alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='/assets/img/home-2/logo (1).webp' alt='Transpro' />
+                  <img src='/assets/img/home-2/logo (1).webp' className="img-fluid " alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/necclogo.png' className="img-fluid " alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='/assets/img/home-2/logo (1).webp' alt='Transpro' />
+                  <img src='/assets/img/home-2/logo (1).webp' className="img-fluid "  alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/necclogo.png' className="img-fluid " alt='Transpro' />
                 </div>
               </div>
             </Slider>

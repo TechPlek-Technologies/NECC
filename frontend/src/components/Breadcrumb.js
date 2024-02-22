@@ -7,7 +7,7 @@ const Breadcrumb = ({ title,imgSrc }) => {
     <>
       {/* breadcrumb start */}
       <div
-        className='breadcrumb-area bg-overlay-2'
+        className='breadcrumb-area bg-overlay-2 img-fluid'
         style={{ backgroundImage: `url("${imgSrc}")`}}
       >
         <div className='container'>

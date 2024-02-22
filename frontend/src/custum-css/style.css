@@ -276,4 +276,11 @@ color: black;
     text-align: center;
   }
 
-  
+  .reg-offices {
+    color: #FFFFFF;
+    background-color: #00AEEF;
+    vertical-align: middle;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
