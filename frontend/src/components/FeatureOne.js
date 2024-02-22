@@ -73,7 +73,7 @@ const FeatureOne = () => {
               <div className='item'>
                 <div className='feature-wrap bg-pink'>
                   <div className='icon'>
-                    <img src='assets/img/icon/feature-1.png' alt='Transpro' />
+                    <img src='assets/img/icon/feature-1.png' className="img-fluid " alt='Transpro' />
                   </div>
                   <h5>PART TRUCK LOAD (PTL)</h5>
                   <p>
@@ -84,7 +84,7 @@ const FeatureOne = () => {
               <div className='item'>
                 <div className='feature-wrap bg-ash'>
                   <div className='icon'>
-                    <img src='assets/img/icon/feature-2.png' alt='Transpro' />
+                    <img src='assets/img/icon/feature-2.png' className="img-fluid " alt='Transpro' />
                   </div>
                   <h5>FULL TRUCK LOAD (FTL)</h5>
                   <p>
@@ -95,7 +95,7 @@ const FeatureOne = () => {
               <div className='item'>
                 <div className='feature-wrap bg-sky'>
                   <div className='icon'>
-                    <img src='assets/img/icon/feature-3.png' alt='Transpro' />
+                    <img src='assets/img/icon/feature-3.png' className="img-fluid " alt='Transpro' />
                   </div>
                   <h5>BULK MOVEMENTS</h5>
                   <p>
@@ -106,7 +106,7 @@ const FeatureOne = () => {
               <div className='item'>
                 <div className='feature-wrap bg-pink'>
                   <div className='icon'>
-                    <img src='assets/img/icon/feature-1.png' alt='Transpro' />
+                    <img src='assets/img/icon/feature-1.png' className="img-fluid " alt='Transpro' />
                   </div>
                   <h5>ODC MOVEMENTS</h5>
                   <p>
@@ -117,7 +117,7 @@ const FeatureOne = () => {
               <div className='item'>
                 <div className='feature-wrap bg-ash'>
                   <div className='icon'>
-                    <img src='assets/img/icon/feature-2.png' alt='Transpro' />
+                    <img src='assets/img/icon/feature-2.png' className="img-fluid " alt='Transpro' />
                   </div>
                   <h5>WAREHOUSING & 3PL</h5>
                   <p>

@@ -8,7 +8,7 @@ const InvestorsInner= () => {
   return (
     <>
       {/* Investors area start */} 
-      <div className='service-area pd-top-120 pd-bottom-120'>
+      <div className='service-area pd-top-120 pd-bottom-45'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-8'></div>

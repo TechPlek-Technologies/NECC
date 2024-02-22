@@ -3,8 +3,8 @@
 ---------------------------------------------------*/
 .footer-area {
   position: relative;
-  background-color: #080c24;
-  padding-bottom: 50px;
+  background-color: #edf0f9;
+  // padding-bottom: 50px;
   &.style-2 {
     .footer-top {
       padding: 0;
@@ -15,7 +15,7 @@
     background-position: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding: 37px 0 0px;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
     .single-footer-top {
       display: flex;
       position: relative;
@@ -56,14 +56,14 @@
           font-weight: 700;
           font-size: 20px;
           line-height: 28px;
-          color: #fff;
+          color: black;
           margin-bottom: 4px;
         }
         p {
           font-weight: 400;
           font-size: 16px;
           line-height: 28px;
-          color: #d6d6d6;
+          color: #4d5765;
           margin-bottom: 0;
         }
       }
@@ -81,7 +81,7 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
-    color: #f8f8f8;
+    color: black;
     &:after {
       content: "";
       position: absolute;
@@ -107,7 +107,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 26px;
-        color: #fff;
+        color: #4d5765;
         margin-bottom: 30px;
       }
     }
