@@ -20,7 +20,7 @@ const CodeOfConduct = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"CODE OF CONDUCT"} />
+          <Breadcrumb title={"CODE OF CONDUCT"} imgSrc={"/assets/img/banner/1.png"}/>
 
           {/* {Service Inner} */}
           <CodeOfConductInner/>

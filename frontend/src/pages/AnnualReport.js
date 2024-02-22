@@ -20,7 +20,7 @@ const AnnualReport = () => {
             <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"ANNUAL REPORT & NOTICE OF AGM"} />
+            <Breadcrumb title={"ANNUAL REPORT & NOTICE OF AGM"} imgSrc={"/assets/img/banner/1.png"}/>
 
             {/*Investors Inner */}
             <AnnualReportInner/>

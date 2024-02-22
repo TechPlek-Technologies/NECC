@@ -20,7 +20,7 @@ const NewspaperPublication = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"NEWSPAPER PUBLICATION"} />
+          <Breadcrumb title={"NEWSPAPER PUBLICATION"} imgSrc={"/assets/img/banner/1.png"} />
 
           {/* {Service Inner} */}
           <NewspaperPublicationInner/>

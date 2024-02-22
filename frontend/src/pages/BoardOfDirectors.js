@@ -3,7 +3,7 @@ import Preloader from "../elements/Preloader";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
-import PartnerOne from "../components/PartnerOne";
+// import PartnerOne from "../components/PartnerOne";
 import SupportBarOne from "../components/SupportBarOne";
 import NavbarThree from "../components/NavbarThree";
 import BoardOfDirectorsInner from "../components/BoardOfDirectorsInner";
@@ -21,13 +21,13 @@ const BoardOfDirectors = () => {
             <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"BOARD OF DIRECTORS"} />
+            <Breadcrumb title={"BOARD OF DIRECTORS"} imgSrc={"/assets/img/banner/1.png"}/>
 
             {/*Investors Inner */}
             <BoardOfDirectorsInner/>
 
             {/* Partner One */}
-            <PartnerOne />
+            {/* <PartnerOne /> */}
   
             {/* Footer One */}
             <FooterOne />

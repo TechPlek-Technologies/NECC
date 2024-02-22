@@ -20,7 +20,7 @@ const NewsEvents = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"NEWS & EVENTS"} />
+          <Breadcrumb title={"NEWS & EVENTS"} imgSrc={"/assets/img/banner/1.png"} />
 
           {/* {Service Inner} */}
           <NewsEventsInner/>

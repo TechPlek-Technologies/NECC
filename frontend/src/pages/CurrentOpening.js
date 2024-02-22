@@ -20,7 +20,7 @@ const CurrentOpening = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"CURRENT OPENINGS"} />
+          <Breadcrumb title={"CURRENT OPENINGS"} imgSrc={"/assets/img/banner/1.png"}/>
 
           {/* {Service Inner} */}
           <CurrentOpeningInner/>

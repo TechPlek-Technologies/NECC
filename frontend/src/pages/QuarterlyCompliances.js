@@ -20,7 +20,7 @@ const QuarterlyCompliances = () => {
             <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"QUARTERLY COMPLIANCES"} />
+            <Breadcrumb title={"QUARTERLY COMPLIANCES"} imgSrc={"/assets/img/banner/1.png"}/>
 
             {/*Investors Inner */}
             <QuarterlyCompliancesInner/>

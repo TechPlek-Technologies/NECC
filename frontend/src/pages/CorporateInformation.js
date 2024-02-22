@@ -20,7 +20,7 @@ const CorporateInformation = () => {
           <NavbarThree/>
             
             {/* Breadcrumb */}
-            <Breadcrumb title={"CORPORATE INFORMATION"} />
+            <Breadcrumb title={"CORPORATE INFORMATION"} imgSrc={"/assets/img/banner/1.png"}/>
 
             {/*Investors Inner */}
             <CorporateInformationInner/>

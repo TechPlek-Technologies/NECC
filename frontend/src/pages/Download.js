@@ -20,7 +20,7 @@ const Download = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"DOWNLOAD"} />
+          <Breadcrumb title={"DOWNLOAD"} imgSrc={"/assets/img/banner/1.png"}/>
 
           {/* {Service Inner} */}
           <DownloadInner/>
