@@ -98,7 +98,7 @@ const CorporateOverviewInner= () => {
         <div className='container'>
           <div
             className='fact-counter-area CorporateOverview'
-            style={{ background: "url(assets/img/fact/bg.png)" }}
+            style={{ backgroundColor: "#29176d" }}
           >
             <div className='row justify-content-center'>
               <div className='col-lg-3 col-md-6'>
