@@ -19,8 +19,9 @@ const SupportBarOne = () => {
         <div className='container'>
           <div className='row reorder-xs clearfix'>
             <div className='col-lg-6 align-self-center'>
-              <div className='support-left'>
-                {/* support left start */}
+               {/* support left start */}
+              {/* <div className='support-left'>
+               
                 <ul>
                   <li>
                     <FaGlobe />
@@ -46,7 +47,7 @@ const SupportBarOne = () => {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
               {/* support left end */}
             </div>
             <div className='col-lg-6'>
@@ -54,7 +55,7 @@ const SupportBarOne = () => {
                 {" "}
                 {/* support right start */}
                 <ul>
-                  <li className='fare-rate-responsive'>
+                  {/* <li className='fare-rate-responsive'>
                     <a href='#'>
                       <FaBuffer />
                       Get a Fare Rate
@@ -87,6 +88,20 @@ const SupportBarOne = () => {
                         </a>
                       </li>
                     </ul>
+                  </li> */}
+                   <li>
+                    <a href='mailTo:example@example.com'>
+                      <FaRegEnvelope />
+                      co@neccgroup.com
+                    </a>
+                  </li>
+                  <li>
+                    {" "}
+                    <a href='tel:+8801-728-123-456'>
+                      {" "}
+                      <FaPhoneAlt />
+                      +011-23517516, 17, 18, 19
+                    </a>
                   </li>
                   <li className='sign-nav ps-3'>
                     <a className='sen-signin' href='/admin'>

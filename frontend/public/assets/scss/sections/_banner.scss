@@ -24,12 +24,12 @@
         align-items: center;
         svg {
           font-size: 100px;
-          color: #29176d;
+          color: #ffff;
         }
         span {
           font-size: 20px;
           font-weight: 0;
-          color: #29176d;
+          color: #ffff;
         }
       }
     }
@@ -86,7 +86,7 @@
   overflow: hidden;
   // max-height: 700px;
   .banner-inner {
-    padding: 150px 0 277px;
+    padding: 350px 0 277px;
     position: relative;
     &:after {
       position: absolute;
@@ -139,7 +139,7 @@
     }
     .slick-prev {
       left: 10px;
-      top: 52%;
+      top: 50%;
       z-index: 9;
       width: 60px;
       height: 60px;
@@ -155,7 +155,7 @@
     }
     .slick-next {
       left: 10px;
-      top: 60%;
+      top: 59%;
       z-index: 9;
       width: 60px;
       height: 60px;

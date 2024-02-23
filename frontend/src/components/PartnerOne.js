@@ -45,10 +45,10 @@ const PartnerOne = () => {
   return (
     <>
       {/*partner-area start*/}
-      <div className='partner-area pd-top-115'>
+      <div className='partner-area pd-top-115 pd-bottom-100'>
         <div className='container'>
           <div className='row justify-content-center'>
-            <div className='col-lg-7'>
+            <div className='col-lg-9'>
               <div className='section-title text-center'>
                 {/* <h4 className='subtitle'>HAPPY CLIENTS</h4> */}
                 <h2 className='title'>THE TRUSTED CHOICE FOR OUR CLIENTS</h2>

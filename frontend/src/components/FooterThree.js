@@ -48,10 +48,11 @@ const FooterThree = () => {
               <div className='col-lg-2 tab-margin-bottom-30'>
                 <div className='footer-widget widget widget_nav_menu'>
                   <h5 className='widget-title text-white'>Address </h5>
-                  <p>813 West Livingston Drive</p>
-                  <p>King Of Prussia, PA 19406</p>
-                  <p>Phone: +8801-234-567-890</p>
-                  <p> Email: hemal.jms@gmail.com</p>
+                  <p>DELHI
+                    "NECC HOUSE" 9062/47,</p>
+                  <p> Ram Bagh Road ,Azad Market<br/> Delhi-110006</p>
+                  <p>Phone: +011-23517516, 17, 18, 19</p>
+                  <p> Email: co@neccgroup.com</p>
                 </div>
               </div>
               <div className='col-lg-3 offset-lg-1'>
@@ -74,7 +75,7 @@ const FooterThree = () => {
               <div className='col-lg-6'>
                 <div className='copyright-text'>
                   <span>
-                    © 2022{" "}
+                    © 2024{" "}
                     <a href='#' className='active'>
                       Transpro
                     </a>{" "}
