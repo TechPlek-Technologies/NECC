@@ -118,12 +118,6 @@ const FooterOne = () => {
                       <FaArrowRight /> SiteMap
                     </Link>
                   </li>
-                  {/* <li>
-                    <Link to='/blog'>
-                      <FaArrowRight />
-                      Blog
-                    </Link>
-                  </li> */}
                   <li>
                     <Link to='/contact'>
                       <FaArrowRight /> Contact Us
@@ -179,6 +173,7 @@ const FooterOne = () => {
                   </a>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

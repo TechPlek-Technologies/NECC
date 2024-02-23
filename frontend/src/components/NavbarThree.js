@@ -22,7 +22,7 @@ const NavbarThree = () => {
       <header className='navbar-are navbar-fixed'>
         <nav
           className={
-            "navbar navbar-area-1  navbar-area-3 navbar-area navbar-expand-lg "
+            "navbar navbar-area-1  navbar-area-3 navbar-area navbar-expand-lg"
           }
         > 
        

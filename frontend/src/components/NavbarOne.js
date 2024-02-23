@@ -83,7 +83,7 @@ const NavbarOne = () => {
                   </li>
                 </ul>
               </div>
-              <div className='col-lg-2 col-md-3'>
+              {/* <div className='col-lg-2 col-md-3'>
                 <ul className='topbar-right social-area text-md-end text-center'>
                   <li>
                     <Link to='#'>
@@ -106,7 +106,7 @@ const NavbarOne = () => {
                     </Link>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -136,11 +136,11 @@ const NavbarOne = () => {
             </div>
             <div className='logo'>
               <Link to='/'>
-                <img src='assets/img/logo-2.png' alt='Transpro' />
+                <img src='/assets/img/home-2/necclogo.png' className="img-fluid " alt='Transpro' />
               </Link>
             </div>
             <div className='nav-left-part'></div>
-            <div className='nav-right-part nav-right-part-mobile'>
+            {/* <div className='nav-right-part nav-right-part-mobile'>
               <span
                 className='search-bar-btn cursor-pointer ps-5'
                 onClick={actionSearch}
@@ -161,7 +161,7 @@ const NavbarOne = () => {
               <Link className='btn btn-base' to='/contact'>
                 <span></span> Get A Quote
               </Link>
-            </div>
+            </div> */}
             <div
               className={
                 open
@@ -171,28 +171,34 @@ const NavbarOne = () => {
               id='transpro_main_menu'
             >
               <ul className='navbar-nav menu-open'>
-                <li className='menu-item-has-children current-menu-item'>
+              {/* <li className='menu-item-has-children current-menu-item'>
                   <Link to='/'>Home</Link>
                   <ul className='sub-menu'>
                     <li>
                       <Link to='/'>Home</Link>
                     </li>
                   </ul>
+                </li> */}
+                <li>
+                  <Link to='/'>Home</Link>
                 </li>
                 <li className='menu-item-has-children current-menu-item'>
-                  <Link to='/about'>About Us</Link>
+                  <Link to='#'>About Us</Link>
                   <ul className='sub-menu'>
-                    <li>
-                      <Link to='/ChairmanDesk'>CHAIRMAN DESK</Link>
+                  <li>
+                      <Link to='/about'>About Us</Link>
                     </li>
                     <li>
-                      <Link to='/CorporateOverview'>CORPORATE OVERVIEW</Link>
+                      <Link to='/ChairmanDesk'>Chairman Desk</Link>
                     </li>
                     <li>
-                      <Link to='/'>HISTORY</Link>
+                      <Link to='/CorporateOverview'>Corporate Overview</Link>
                     </li>
+                    {/* <li>
+                      <Link to='/'>History</Link>
+                    </li> */}
                     <li>
-                      <Link to='/VisionAndQualityPolicy'>VISION & QUALITY POLICY</Link>
+                      <Link to='/VisionAndQualityPolicy'>Vision & Quality Policy</Link>
                     </li>
                   </ul>
                 </li>
@@ -200,82 +206,68 @@ const NavbarOne = () => {
                   <Link to='#'>Services</Link>
                   <ul className='sub-menu'>
                     <li>
-                      <Link to='/service'>Service</Link>
+                      <Link to='/service'>All Service</Link>
                     </li>
                     <li>
-                      <Link to='/service-details'>Service Details Page</Link>
+                      <Link to='/ServiceDetail1'>Part Truck Load</Link>
+                    </li>
+                    <li>
+                      <Link to='/ServiceDetail2'>Full Truck Load</Link>
+                    </li>
+                    <li>
+                      <Link to='/ServiceDetail3'>Bulk Movements</Link>
+                    </li>
+                    <li>
+                      <Link to='/ServiceDetail4'>ODC Movements</Link>
+                    </li>
+                    <li>
+                      <Link to='/ServiceDetail5'>Warehousing & 3PL</Link>
                     </li>
                   </ul>
                 </li>
-                <li className='menu-item-has-children'>
+                {/* <li className='menu-item-has-children'>
                   <Link to='#'>Investors</Link>
                   <ul className='sub-menu'>
                     <li>
                       <Link to='/Investors'>Disclosures under Regulation 46 of SEBI (LODR)<br/>Regulations,2015</Link>
                     </li>
                   </ul>
+                </li> */}
+                 {/* <li className='menu-item-has-children'>
+                  <Link to='#'>SiteMap</Link>
+                  <ul className='sub-menu'>
+                    <li>
+                    <Link to='/SiteMap'>SiteMap</Link>
+                    </li>
+                  </ul>
+                </li> */}
+                <li>
+                  <Link to='/SiteMap'>SiteMap</Link>
                 </li>
-                {/* <li className='menu-item-has-children'>
-                  <Link to='#'>Pages</Link>
-                  <ul className='sub-menu'>
-                    <li>
-                      <Link to='/about'>About Us</Link>
-                    </li>
-                    <li>
-                      <Link to='/service'>Service Page</Link>
-                    </li>
-                    <li>
-                      <Link to='/service-details'>Service Details Page</Link>
-                    </li>
-                    <li>
-                      <Link to='/blog'>Blog Page</Link>
-                    </li>
-                    <li>
-                      <Link to='/blog-details'>Blog Details</Link>
-                    </li>
-                    <li>
-                      <Link to='/pricing'>Pricing</Link>
-                    </li>
-                    <li>
-                      <Link to='/faq'>FAQ</Link>
-                    </li>
-                    <li>
-                      <Link to='/contact'>Contact</Link>
-                    </li>
-                  </ul>
-                </li> */}
-                {/* <li className='menu-item-has-children'>
-                  <Link to='#'>Blog</Link>
-                  <ul className='sub-menu'>
-                    <li>
-                      <Link to='/blog'>Blog</Link>
-                    </li>
-                    <li>
-                      <Link to='/blog-details'>Blog Details</Link>
-                    </li>
-                  </ul>
-                </li> */}
                 <li className='menu-item-has-children current-menu-item'>
-                  <Link to='/contact'>Contact Us</Link>
+                  <Link to='#'>Contact Us</Link>
                   <ul className='sub-menu'>
-                      <li>
-                        <Link to='/Career'>CAREERS</Link>
+                  <li>
+                        <Link to='/contact'>Contact Us</Link>
                       </li>
-                      <li>
-                        <Link to='/'>CUSTOMER CARE</Link>
-                      </li>
+                      {/* <li>
+                        <Link to='/Career'>Careers</Link>
+                      </li> */}
+                      {/* <li>
+                        <Link to='#'>Customer Care</Link>
+                      </li> */}
                       <li>
                       <Link to='/faq'>FAQ</Link>
                       </li>
                       <li>
-                        <Link to='/Feedback'>FEEDBACK</Link>
+                        <Link to='/Feedback'>Feedback</Link>
                       </li>
                       </ul>
                 </li>
               </ul>
             </div>
             <div className='nav-right-part nav-right-part-desktop'>
-              <span
+              {/* <span
                 className='search-bar-btn cursor-pointer ps-5'
                 onClick={actionSearch}
               >
@@ -291,7 +283,7 @@ const NavbarOne = () => {
                     fill='#080C24'
                   />
                 </svg>
-              </span>
+              </span> */}
               <Link className='btn btn-base' to='/contact'>
                 <span></span> Get A Quote
               </Link>

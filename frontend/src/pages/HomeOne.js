@@ -2,7 +2,7 @@ import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
-import GetDetailsInner from "../components/GetDetailsInner";
+// import GetDetailsInner from "../components/GetDetailsInner";
 const BannerOne = React.lazy(() => import("../components/BannerOne"));
 const AboutOne = React.lazy(() => import("../components/AboutOne"));
 // const BlogOne = React.lazy(() => import("../components/BlogOne"));
@@ -74,7 +74,7 @@ const HomeOne = () => {
           {/* Partner One */}
           <PartnerOne />
 
-          <GetDetailsInner/>
+          {/* <GetDetailsInner/> */}
 
           {/* Testimonial One */}
           {/* <TestimonialOne /> */}
@@ -82,6 +82,7 @@ const HomeOne = () => {
 
           {/* Footer One */}
           <FooterOne />
+          
 
           {/* Footer Bottom One */}
           <FooterBottomOne />
