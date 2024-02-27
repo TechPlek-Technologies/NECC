@@ -318,3 +318,57 @@ color: black;
     color: #473856;
     margin-right: 10px;
 }
+
+.boxed-btn1{
+    padding: 4px 20px;
+    background: #29176d;
+    color: #fff;
+    border-radius: 20px 
+}
+
+.single-input-inner1{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 8px;
+}
+
+.scroll-to-top1 {
+    width: 20%;
+    background-color: white;
+    right: 0px;
+    bottom: 130px;
+    position: fixed;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 7px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28);
+    border: none;
+}
+
+.scroll-to-top1 h6{
+    text-align: center;
+    padding-top: 6px ;
+}
+
+.branch-list{
+    padding: 10px;
+}
+
+.branch-list1{
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.branch-btn{
+    padding: 0px 10px;
+    margin-left: 10px;
+    background-color:#fff;
+}
+
+.blp_from{
+    background-color: #29176d;
+    padding: 5px;
+}

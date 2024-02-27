@@ -14,7 +14,7 @@ const FooterOne = () => {
     <>
       {/* footer area start */}
       <footer className='footer-area'>
-        <div
+        {/* <div
           className='footer-top'
           style={{ backgroundImage: 'url("./assets/img/footer/bg.png")' }}
         >
@@ -60,8 +60,8 @@ const FooterOne = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className='container'>
+        </div> */}
+        <div className='container footer-top'>
           <div className='row'>
             <div className='col-xl-4 col-md-6'>
               <div className='widget widget_about'>
@@ -69,11 +69,11 @@ const FooterOne = () => {
                   <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
                 </div>
                 <div className='details'>
-                  <p>
+                  {/* <p>
                     Quickly supply alternative strategic theme areas vis-a-vis
                     B2C mindshare. Objectively repurpose stand-alone synergy via
                     user-centric architectures.
-                  </p>
+                  </p> */}
                   <ul className='social-media style-border'>
                     <li>
                       <a href='#'>
@@ -99,7 +99,7 @@ const FooterOne = () => {
                 </div>
               </div>
             </div>
-            <div className='col-xl-2 col-md-6'>
+            {/* <div className='col-xl-2 col-md-6'>
               <div className='widget widget_nav_menu'>
                 <h4 className='widget-title'>USEFULL LINKS</h4>
                 <ul>
@@ -157,8 +157,8 @@ const FooterOne = () => {
                   </li>
                 </ul>
               </div>
-            </div>
-            <div className='col-xl-4 col-md-6'>
+            </div> */}
+            {/* <div className='col-xl-6 col-md-6'>
               <div className='widget widget_subscribe'>
                 <h4 className='widget-title'>SUBSCRIBE NOW</h4>
                 <p>
@@ -174,7 +174,49 @@ const FooterOne = () => {
                 </div>
               </div>
 
-            </div>
+            </div> */}
+            <div className='col-xl-4 col-md-3'>
+              <div className='widget widget_subscribe'>
+              <div className='single-footer-top'>
+                  <div className='icon'>
+                    <img src='assets/img/icon/map-marker.png' alt='Transpro' />
+                  </div>
+                  <div className='details'>
+                    <h6>OFFICE ADDRESS:</h6>
+                    <p>DELHI
+                    "NECC HOUSE" 9062/47,</p>
+                    <p> Ram Bagh Road ,Azad Market<br/> Delhi-110006</p>
+                    
+                  </div>
+                </div>
+                {/* <div className='single-footer-top'>
+                <div className='icon'>
+                    <img src='assets/img/icon/phone.png' alt='Transpro' />
+                  </div>
+                  <div className='details'>
+                    <h6>CONTACT US:</h6>
+                    <p>co@neccgroup.com</p>
+                    <p>011-23517516, 17, 18, 19</p>
+                  </div>
+                </div> */}
+              </div>
+
+            </div> 
+            <div className='col-xl-4 col-md-3'>
+              <div className='widget widget_subscribe'>
+              <div className='single-footer-top'>
+                <div className='icon'>
+                    <img src='assets/img/icon/phone.png' alt='Transpro' />
+                  </div>
+                  <div className='details'>
+                    <h6>CONTACT US:</h6>
+                    <p>co@neccgroup.com</p>
+                    <p>011-23517516, 17, 18, 19</p>
+                  </div>
+                </div>
+              </div>
+
+            </div> 
           </div>
         </div>
       </footer>

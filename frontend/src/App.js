@@ -60,6 +60,7 @@ import GetDetails from "./pages/GetDetails";
 import Magazines from "./pages/Magazines";
 import CorporateSocialResponsibility from "./pages/CorporateSocialResponsibility";
 import Network from "./pages/Network";
+import Demo from "./elements/demo";
 
 function App() {
   useEffect(() => {
@@ -73,7 +74,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <RouteScrollToTop />
+      {/* <RouteScrollToTop /> */}
+      <Demo/>
       <Fragment>
         <Routes>
           <Route exact path="/" element={<HomeOne />} />

@@ -2,17 +2,17 @@
     # Nav bar
 ----------------------------------------------*/
 .navbar-top {
-  background: #29176d;
+  // background: #29176d;
   position: relative;
   margin-bottom: 68px;
-  padding: 16.5px 0;
+  padding: 5.5px 0;
   &:after {
     content: "";
     position: absolute;
     right: 0;
     top: 0;
     width: 66.8%;
-    background: url("~/public/assets/img/shape/topbar-bg.png");
+    // background: url("~/public/assets/img/shape/topbar-bg.png");
     background-position: 0 0px;
     background-size: 165% 100%;
     height: 100%;
@@ -79,6 +79,10 @@
           color: #29176d;
         }
       }
+    }
+    li h4{
+      color: #fff;
+      font-family: auto;
     }
   }
 }
@@ -262,7 +266,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    background-image: url("~/public/assets/img/shape/nav-bar.png");
+    // background-image: url("~/public/assets/img/shape/nav-bar.png");
     height: 100%;
     width: 74.5%;
     z-index: -1;

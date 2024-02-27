@@ -4,7 +4,7 @@ const TransportServiceAreaTwo = () => {
   return (
     <>
       {/* Transport service area start */}
-      <div className='transport-service-area style-03'>
+      <div className='transport-service-area style-03 pd-top-45 pd-bottom-45'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-4'>

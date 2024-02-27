@@ -6,28 +6,32 @@ const AboutOne = () => {
   return (
     <>
       {/* about area start */}
-      <div className='about-area pd-top-45 pd-bottom-240'>
+      <div className='about-area pd-top-105 pd-bottom-45'>
         <div className='container'>
           <div className='about-area-inner'>
             <div className='row'>
               <div className='col-lg-6'>
                 <div className='about-thumb-wrap'>
-                  <img
+                <img
+                    className=' img-fluid'
+                    src='/assets/img/about/Demo.webp'
+                    alt='Transpro'/>
+                  {/* <img
                     className='img-1 img-fluid'
                     src='./assets/img/about/shape.png'
                     alt='Transpro'
-                  />
-                  <img
+                  /> */}
+                  {/* <img
                     className='img-2 img-fluid'
                     src='/assets/img/about/welcome.webp'
                     alt='Transpro'
-                  />
+                  /> */}
                   {/* <img
                     className='img-3'
                     src='./assets/img/about/2.png'
                     alt='Transpro'
                   /> */}
-                  <div className='exprience-wrap'>
+                  {/* <div className='exprience-wrap'>
                     <img src='./assets/img/about/shape-3.png' className="img-fluid " alt='Transpro' />
                     <div className='details'>
                       <TrackVisibility once>
@@ -41,7 +45,7 @@ const AboutOne = () => {
                       </TrackVisibility>
                       <p>YEARS EXPERIENCE</p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className='col-lg-6 align-self-center'>

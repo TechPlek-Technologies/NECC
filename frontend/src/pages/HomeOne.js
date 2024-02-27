@@ -1,9 +1,13 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-import NavbarThree from "../components/NavbarThree";
-import SupportBarOne from "../components/SupportBarOne";
+// import NavbarThree from "../components/NavbarThree";
+// import SupportBarOne from "../components/SupportBarOne";
+import BannerFour from "../components/BannerFour";
+import NavbarOne from "../components/NavbarOne";
+import CounterThree from "../components/CounterThree";
+// import TransportServiceAreaTwo from "../components/TransportServiceAreaTwo";
 // import GetDetailsInner from "../components/GetDetailsInner";
-const BannerOne = React.lazy(() => import("../components/BannerOne"));
+// const BannerOne = React.lazy(() => import("../components/BannerOne"));
 const AboutOne = React.lazy(() => import("../components/AboutOne"));
 // const BlogOne = React.lazy(() => import("../components/BlogOne"));
 // const ContactOne = React.lazy(() => import("../components/ContactOne"));
@@ -29,16 +33,22 @@ const HomeOne = () => {
           {/* Search Popup */}
           {/* <SearchPopup /> */}
           {/* SupportBarOne */}
-          <SupportBarOne/>
+          {/* <SupportBarOne/> */}
 
           {/* Navbar One */}
-          <NavbarThree/>
+          {/* <NavbarThree/> */}
+
+          <NavbarOne/>
 
           {/* Banner One */}
-          <BannerOne />
+          {/* <BannerOne /> */}
+
+          <BannerFour />
 
           {/* Feature One */}
           <FeatureOne />
+
+          {/* <TransportServiceAreaTwo /> */}
 
           {/* About One */}
           <AboutOne />
@@ -51,7 +61,8 @@ const HomeOne = () => {
 
           {/* Counter One */}
 
-          <CounterOne />
+          {/* <CounterOne /> */}
+          <CounterThree/>
 
           {/* Team One */}
           {/* <TeamOne /> */}
@@ -86,6 +97,7 @@ const HomeOne = () => {
 
           {/* Footer Bottom One */}
           <FooterBottomOne />
+         
         </Suspense>
       </Fragment>
     </>
