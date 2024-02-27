@@ -530,15 +530,16 @@
         .header-inner {
           margin-left: 0;
           margin-top: 0;
-          background-color: rgba(#000000, 0.5);
+          background-color: rgb(216 39 31);
           padding: 40px;
           margin-right: 15%;
           position: relative;
+          border-radius: 28px;
           &::before {
             content: "";
             height: 100%;
             width: 10px;
-            background-color: #29176d;
+            // background-color: #29176d;
             position: absolute;
             left: 0px;
             top: 0;
@@ -564,6 +565,7 @@
               padding: 15px 20px;
               background: #29176d;;
               color: #fff;
+              border-radius: 4px;
             }
           }
         }

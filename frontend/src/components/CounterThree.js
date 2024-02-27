@@ -14,9 +14,13 @@ const CounterThree = () => {
                 <div className='container'>
                   <div className='row'>
                     <div className='col-lg-6 col-md-6 col-sm-6'>
-                      <div className='countr wow fadeInLeft' style={{backgroundColor : "rgba(250, 67, 24, 0.1)"}}>
+                      <div className='countr wow fadeInLeft' style={{backgroundColor : "rgb(216 37 30)",marginBottom:"20px"}}>
                         <div className='couter-icon'>
-                          <FaBoxOpen />
+                          {/* <FaBoxOpen /> */}
+                          <img
+                          className=' img-fluid'
+                          src='/assets/img/icon/expertise1.png'
+                          />
                         </div>
                         <TrackVisibility once>
                           {({ isVisible }) =>
@@ -27,14 +31,18 @@ const CounterThree = () => {
                             )
                           }
                         </TrackVisibility>
-                        <h3 className='title'>EXPERTISE</h3>
-                        <p className="para">Extensive knowledge, and reliable logistics solutions.</p>
+                        <h3 className='title1'>EXPERTISE</h3>
+                        <p className="para1">Extensive knowledge, and reliable logistics solutions.</p>
                       </div>
                     </div>
                     <div className='col-lg-6 col-md-6 col-sm-6'>
-                      <div className='countr wow fadeInUp' style={{backgroundColor : "rgba(0, 133, 239, 0.1)"}}>
+                      <div className='countr wow fadeInUp' style={{backgroundColor : "rgb(41 23 109)"}}>
                         <div className='couter-icon'>
-                          <FaLayerGroup />
+                          {/* <FaLayerGroup /> */}
+                          <img
+                          className=' img-fluid'
+                          src='/assets/img/icon/reliability1.png'
+                          />
                         </div>
                         <TrackVisibility once>
                           {({ isVisible }) =>
@@ -45,8 +53,8 @@ const CounterThree = () => {
                             )
                           }
                         </TrackVisibility>
-                        <h3 className='title'>RELIABILITY</h3>
-                        <p className="para">Consistent, on-time deliveries, impeccable service.</p>
+                        <h3 className='title1'>RELIABILITY</h3>
+                        <p className="para1">Consistent, on-time deliveries, impeccable service.</p>
                       </div>
                     </div>
                   </div>
@@ -54,9 +62,13 @@ const CounterThree = () => {
                 <div className='container'>
                   <div className='row'>
                     <div className='col-lg-6 col-md-6 col-sm-6'>
-                      <div className='countr wow fadeInRight' style={{backgroundColor : "rgba(0, 133, 239, 0.1)"}}>
+                      <div className='countr wow fadeInRight' style={{backgroundColor : "rgb(41 23 109)"}}>
                         <div className='couter-icon'>
-                          <FaRssSquare />
+                          {/* <FaRssSquare /> */}
+                          <img
+                          className=' img-fluid'
+                          src='/assets/img/icon/trust1.png'
+                          />
                         </div>
                         <TrackVisibility once>
                           {({ isVisible }) =>
@@ -67,14 +79,18 @@ const CounterThree = () => {
                             )
                           }
                         </TrackVisibility>
-                        <h3 className='title'>TRUST</h3>
-                        <p className="para">Client-centric approach, transparent communication channels.</p>
+                        <h3 className='title1'>TRUST</h3>
+                        <p className="para1">Client-centric approach, transparent communication channels.</p>
                       </div>
                     </div>
                     <div className='col-lg-6 col-md-6 col-sm-6'>
-                      <div className='countr wow fadeInRight' style={{backgroundColor : "rgba(250, 67, 24, 0.1)"}}>
+                      <div className='countr wow fadeInRight' style={{backgroundColor : "rgb(216 37 30)"}}>
                         <div className='couter-icon'>
-                          <FaRssSquare />
+                          {/* <FaRssSquare /> */}
+                          <img
+                          className=' img-fluid'
+                          src='/assets/img/icon/EXCELLENCE1.png'
+                          />
                         </div>
                         <TrackVisibility once>
                           {({ isVisible }) =>
@@ -85,8 +101,8 @@ const CounterThree = () => {
                             )
                           }
                         </TrackVisibility>
-                        <h3 className='title'>EXCELLENCE</h3>
-                        <p className="para">Exceptional quality, unmatched customer satisfaction.</p>
+                        <h3 className='title1'>EXCELLENCE</h3>
+                        <p className="para1">Exceptional quality, unmatched customer satisfaction.</p>
                       </div>
                     </div>
                   </div>

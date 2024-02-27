@@ -78,7 +78,7 @@ function App() {
       <Demo/>
       <Fragment>
         <Routes>
-          <Route exact path="/" element={<HomeOne />} />
+          <Route exact path="/" element={<HomeOne />}/>
           <Route exact path="/about" element={<About />} />
           <Route exact path="/service" element={<Service />} />
           <Route exact path="/faq" element={<Faq />} />

@@ -10,7 +10,7 @@ const Demo = () => {
             <form action="" method="POST" id="blp_from" class="blp_from" name="blp_from">
            
             
-                <div style={{marginTop:"20px"}}>
+                <div>
                 <select id="sel_state" autocomplete="off" className="branch-list">
                 <option value="">Select State</option>
                 </select>

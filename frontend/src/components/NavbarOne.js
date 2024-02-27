@@ -50,7 +50,7 @@ const NavbarOne = () => {
       {/* navbar start */}
       <header className='navbar-area'>
         <div className='navbar-top'>
-          <Link className='main-logo' to='/home'>
+          <Link className='main-logo' to='/'>
             <div className='logo d-none d-xl-block'>
               <img src='/assets/img/logo1.png' alt='Transpro' />
             </div>
@@ -65,7 +65,7 @@ const NavbarOne = () => {
                 <ul className='topbar-right social-area text-md-end text-center'>
                   <li>
                   {/* <h4>North Eastern Carrying Corporation Ltd.</h4> */}
-                  <img src='/assets/img/banner/necc-logo-1-1.jpeg' alt='Transpro' />
+                  <img src='/assets/img/banner/necc-logo-1-1.jpeg' className="img1" alt='Transpro' />
                   </li>
                 </ul>
               </div>
@@ -249,6 +249,9 @@ const NavbarOne = () => {
                         <Link to='/Feedback'>Feedback</Link>
                       </li>
                       </ul>
+                </li>
+                <li>
+                  <Link to='/admin'>Login</Link>
                 </li>
               </ul>
             </div>
