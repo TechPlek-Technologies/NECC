@@ -1,10 +1,11 @@
-import React, { Fragment, Suspense } from "react";
+import React, { Fragment, Suspense, useState } from "react";
 import Preloader from "../elements/Preloader";
 // import NavbarThree from "../components/NavbarThree";
 // import SupportBarOne from "../components/SupportBarOne";
 import BannerFour from "../components/BannerFour";
 import NavbarOne from "../components/NavbarOne";
 import CounterThree from "../components/CounterThree";
+import AboutThree from "../components/AboutThree";
 // import TransportServiceAreaTwo from "../components/TransportServiceAreaTwo";
 // import GetDetailsInner from "../components/GetDetailsInner";
 // const BannerOne = React.lazy(() => import("../components/BannerOne"));
@@ -26,9 +27,10 @@ const PartnerOne = React.lazy(() => import("../components/PartnerOne"));
 // const WhyChooseUsOne = React.lazy(() => import("../components/WhyChooseUsOne"));
 // const SearchPopup = React.lazy(() => import("../elements/SearchPopup"));
 const HomeOne = () => {
+
   return (
     <>
-      <Fragment>
+      <Fragment> 
         <Suspense fallback={<Preloader />}>
           {/* Search Popup */}
           {/* <SearchPopup /> */}
@@ -51,7 +53,9 @@ const HomeOne = () => {
           {/* <TransportServiceAreaTwo /> */}
 
           {/* About One */}
-          <AboutOne />
+          {/* <AboutOne /> */}
+
+          <AboutThree/>
 
           {/* Service One */}
           {/* <ServiceOne /> */}

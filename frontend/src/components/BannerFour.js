@@ -64,12 +64,12 @@ const BannerFour = () => {
               <div
                 className='header-bg'
                 style={{
-                  backgroundImage: "url('/assets/img/banner/1 (11).jpg')",height:"800px"
+                  backgroundImage: "url('/assets/img/banner/home-2.jpg')",height:"800px"
                 }}
               >
                 <div className='container'>
                   <div className='row header-height justify-content-start'>
-                    <div className='col-lg-6'>
+                    <div className='col-lg-5'>
                       <div className='header-inner-wrap'>
                         <div className='header-inner'>
                           {/* header inner */}
@@ -106,12 +106,12 @@ const BannerFour = () => {
               <div
                 className='header-bg'
                 style={{
-                  backgroundImage: "url(assets/img/slide-v2/bg-02.png)",height:"800px"
+                  backgroundImage: "url('/assets/img/banner/1 (12).jpg')",height:"800px"
                 }}
               >
                 <div className='container'>
                   <div className='row header-height justify-content-start'>
-                    <div className='col-lg-6'>
+                    <div className='col-lg-5'>
                       <div className='header-inner-wrap'>
                         <div className='header-inner'>
                           {/* header inner */}
@@ -148,12 +148,12 @@ const BannerFour = () => {
               <div
                 className='header-bg'
                 style={{
-                  backgroundImage: "url(assets/img/slide-v2/bg-03.png)",height:"800px"
+                  backgroundImage: "url('/assets/img/banner/india-map2 (1).jpg')",height:"800px"
                 }}
               >
                 <div className='container'>
                   <div className='row header-height justify-content-start'>
-                    <div className='col-lg-6'>
+                    <div className='col-lg-5'>
                       <div className='header-inner-wrap'>
                         <div className='header-inner'>
                           {/* header inner */}

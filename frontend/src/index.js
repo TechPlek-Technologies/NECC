@@ -11,7 +11,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
     <AuthProvider>
-        <App />
+        <App style={{backgroundImage: "linear-gradient(#c1b6eb52, #f7e7e6)"}}/>
       </AuthProvider>
     </Provider>
   </React.StrictMode>

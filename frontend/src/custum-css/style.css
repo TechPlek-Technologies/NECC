@@ -336,10 +336,10 @@ color: black;
 .scroll-to-top1 {
     width: 20%;
     background-color: white;
-    right: 0px;
-    bottom: 130px;
+    right: 78px;
+    bottom: 122px;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     cursor: pointer;
     border-radius: 7px;
     width: 40px;
@@ -371,4 +371,25 @@ color: black;
 .blp_from{
     background-color: #29176d;
     padding: 5px;
+}
+
+.img1{
+    max-width: 100%;
+    border-radius: 6px 6px;
+}
+
+.home-bg{
+    background-image: linear-gradient(#c1b6eb52, #f7e7e6);
+}
+
+.para1{
+    text-align: center;
+    color:#fff;
+}
+
+.title1{
+    text-transform: capitalize;
+    font-size: 20px;
+    color:#fff;
+    margin-bottom: -2px;
 }
