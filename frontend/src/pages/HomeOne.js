@@ -9,10 +9,10 @@ import AboutThree from "../components/AboutThree";
 // import TransportServiceAreaTwo from "../components/TransportServiceAreaTwo";
 // import GetDetailsInner from "../components/GetDetailsInner";
 // const BannerOne = React.lazy(() => import("../components/BannerOne"));
-const AboutOne = React.lazy(() => import("../components/AboutOne"));
+// const AboutOne = React.lazy(() => import("../components/AboutOne"));
 // const BlogOne = React.lazy(() => import("../components/BlogOne"));
 // const ContactOne = React.lazy(() => import("../components/ContactOne"));
-const CounterOne = React.lazy(() => import("../components/CounterOne"));
+// const CounterOne = React.lazy(() => import("../components/CounterOne"));
 const FeatureOne = React.lazy(() => import("../components/FeatureOne"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
@@ -29,7 +29,7 @@ const PartnerOne = React.lazy(() => import("../components/PartnerOne"));
 const HomeOne = () => {
 
   return (
-    <>
+    <div className="home-bg">
       <Fragment> 
         <Suspense fallback={<Preloader />}>
           {/* Search Popup */}
@@ -104,7 +104,7 @@ const HomeOne = () => {
          
         </Suspense>
       </Fragment>
-    </>
+    </div>
   );
 };
 
