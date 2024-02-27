@@ -10,8 +10,8 @@ const FooterBottomOne = () => {
             <div className='col-lg-6 text-lg-start text-center'>
               <div className='copyright-area'>
                 <p>
-                  © Copyright 2024 By <a href='#'>NECC</a>, All right
-                  reserved. Developed by TechPlek Technologies.
+                  © Copyright 2024 By <a href='/'>NECC</a>, All right
+                  reserved. Developed by <a href='https://www.techplek.com/'>TechPlek Technologies</a>.
                 </p>
               </div>
             </div>

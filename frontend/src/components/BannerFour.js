@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
+import Demo from "../elements/demo";
 
 const BannerFour = () => {
   const [state, setState] = useState({
@@ -26,6 +27,27 @@ const BannerFour = () => {
     slidesToScroll: 1,
     initialSlide: 0,
   };
+
+
+  const [trackingVisible, setTrackingVisible] = useState(false);
+  const [trackingNumber, setTrackingNumber] = useState('');
+
+  const handleTrackClick = () => {
+    setTrackingVisible(true);
+  };
+
+  const handleInputChange = (event) => {
+    setTrackingNumber(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    // Implement your submission logic here
+    event.preventDefault();
+    console.log('Tracking number submitted:', trackingNumber);
+    // You can add your logic to submit the tracking number here
+  };
+
+
   return (
     <>
       {/* header start */}
@@ -35,12 +57,14 @@ const BannerFour = () => {
             {...settings}
             asNavFor={state.nav2}
             ref={(slider) => (slider1 = slider)}
+            autoplay={true}
+            autoplaySpeed={3000}
           >
             <div>
               <div
                 className='header-bg'
                 style={{
-                  backgroundImage: "url('/assets/img/slide-v1/bg-01.png')",
+                  backgroundImage: "url('/assets/img/banner/1 (11).jpg')",height:"800px"
                 }}
               >
                 <div className='container'>
@@ -53,9 +77,21 @@ const BannerFour = () => {
                             World's Biggest Transporter{" "}
                           </h1>
                           <div className='btn-wrapper style-02 animated fadeInUpBig'>
-                            <a href='#' className='boxed-btn'>
-                              <span>Contact for transport </span>
+                            <a href='#' className='boxed-btn' onClick={handleTrackClick}>
+                              <span>Track Shipment</span>
                             </a>
+                            {trackingVisible && (
+                              <form onSubmit={handleSubmit}>
+                                <input
+                                className="single-input-inner1"
+                                  type='text'
+                                  placeholder='Enter tracking number'
+                                  value={trackingNumber}
+                                  onChange={handleInputChange}
+                                /><br/>
+                                <button type='submit' className="boxed-btn1">Submit</button>
+                              </form>
+                            )}
                           </div>
                         </div>
                         {/* //.header inner */}
@@ -70,7 +106,7 @@ const BannerFour = () => {
               <div
                 className='header-bg'
                 style={{
-                  backgroundImage: "url(assets/img/slide-v2/bg-02.png)",
+                  backgroundImage: "url(assets/img/slide-v2/bg-02.png)",height:"800px"
                 }}
               >
                 <div className='container'>
@@ -83,9 +119,21 @@ const BannerFour = () => {
                             World's Biggest Transporter{" "}
                           </h1>
                           <div className='btn-wrapper style-02 aanimated fadeInUpBig'>
-                            <a href='#' className='boxed-btn'>
-                              <span>Contact for transport </span>
+                            <a href='#' className='boxed-btn' onClick={handleTrackClick}>
+                              <span>Track Shipment</span>
                             </a>
+                            {trackingVisible && (
+                              <form onSubmit={handleSubmit}>
+                                <input
+                                className="single-input-inner1"
+                                  type='text'
+                                  placeholder='Enter tracking number'
+                                  value={trackingNumber}
+                                  onChange={handleInputChange}
+                                /><br/>
+                                <button type='submit' className="boxed-btn1">Submit</button>
+                              </form>
+                            )}
                           </div>
                         </div>
                         {/* //.header inner */}
@@ -100,7 +148,7 @@ const BannerFour = () => {
               <div
                 className='header-bg'
                 style={{
-                  backgroundImage: "url(assets/img/slide-v2/bg-03.png)",
+                  backgroundImage: "url(assets/img/slide-v2/bg-03.png)",height:"800px"
                 }}
               >
                 <div className='container'>
@@ -113,9 +161,21 @@ const BannerFour = () => {
                             World's Biggest Transporter{" "}
                           </h1>
                           <div className='btn-wrapper style-02 aanimated fadeInUpBig'>
-                            <a href='#' className='boxed-btn'>
-                              <span>Contact for transport </span>
+                            <a href='#' className='boxed-btn' onClick={handleTrackClick}>
+                              <span>Track Shipment </span>
                             </a>
+                            {trackingVisible && (
+                              <form onSubmit={handleSubmit}>
+                                <input
+                                className="single-input-inner1"
+                                  type='text'
+                                  placeholder='Enter tracking number'
+                                  value={trackingNumber}
+                                  onChange={handleInputChange}
+                                /><br/>
+                                <button type='submit' className="boxed-btn1">Submit</button>
+                              </form>
+                            )}
                           </div>
                         </div>
                         {/* //.header inner */}
@@ -126,68 +186,9 @@ const BannerFour = () => {
               </div>
             </div>
 
-            <div>
-              <div
-                className='header-bg'
-                style={{
-                  backgroundImage: "url(assets/img/slide-v2/bg-02.png)",
-                }}
-              >
-                <div className='container'>
-                  <div className='row header-height justify-content-start'>
-                    <div className='col-lg-6'>
-                      <div className='header-inner-wrap'>
-                        <div className='header-inner'>
-                          {/* header inner */}
-                          <h1 className='title animated slideInRight'>
-                            World's Biggest Transporter{" "}
-                          </h1>
-                          <div className='btn-wrapper style-02 aanimated fadeInUpBig'>
-                            <a href='#' className='boxed-btn'>
-                              <span>Contact for transport </span>
-                            </a>
-                          </div>
-                        </div>
-                        {/* //.header inner */}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div
-                className='header-bg'
-                style={{
-                  backgroundImage: "url(assets/img/slide-v2/bg-03.png)",
-                }}
-              >
-                <div className='container'>
-                  <div className='row header-height justify-content-start'>
-                    <div className='col-lg-6'>
-                      <div className='header-inner-wrap'>
-                        <div className='header-inner'>
-                          {/* header inner */}
-                          <h1 className='title animated slideInRight'>
-                            World's Biggest Transporter{" "}
-                          </h1>
-                          <div className='btn-wrapper style-02 aanimated fadeInUpBig'>
-                            <a href='#' className='boxed-btn'>
-                              <span>Contact for transport </span>
-                            </a>
-                          </div>
-                        </div>
-                        {/* //.header inner */}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </Slider>
         </div>
-        <div className='header-bottom'>
+        {/* <div className='header-bottom'>
           <div className='container-fluid'>
             <div className='row'>
               <div className='col-lg-6'>
@@ -262,7 +263,7 @@ const BannerFour = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* header end */}
     </>
