@@ -78,7 +78,7 @@ const AboutThree = () => {
               <div
                 className='service-image'
                 style={{
-                  backgroundImage: 'url("/assets/img/about/about (2).jpg")',
+                  backgroundImage: 'url("/assets/img/about/ab.jpg")',
                 }}
               />
             </div>
