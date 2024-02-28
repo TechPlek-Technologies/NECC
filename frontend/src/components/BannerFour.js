@@ -69,7 +69,7 @@ const BannerFour = () => {
               >
                 <div className='container'>
                   <div className='row header-height justify-content-start'>
-                    <div className='col-lg-5'>
+                    <div className='col-lg-4'>
                       <div className='header-inner-wrap'>
                         <div className='header-inner'>
                           {/* header inner */}
@@ -111,7 +111,7 @@ const BannerFour = () => {
               >
                 <div className='container'>
                   <div className='row header-height justify-content-start'>
-                    <div className='col-lg-5'>
+                    <div className='col-lg-4'>
                       <div className='header-inner-wrap'>
                         <div className='header-inner'>
                           {/* header inner */}
@@ -153,7 +153,7 @@ const BannerFour = () => {
               >
                 <div className='container'>
                   <div className='row header-height justify-content-start'>
-                    <div className='col-lg-5'>
+                    <div className='col-lg-4'>
                       <div className='header-inner-wrap'>
                         <div className='header-inner'>
                           {/* header inner */}
@@ -195,7 +195,7 @@ const BannerFour = () => {
               >
                 <div className='container'>
                   <div className='row header-height justify-content-start'>
-                    <div className='col-lg-5'>
+                    <div className='col-lg-4'>
                       <div className='header-inner-wrap'>
                         <div className='header-inner'>
                           {/* header inner */}
