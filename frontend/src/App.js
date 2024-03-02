@@ -60,7 +60,8 @@ import GetDetails from "./pages/GetDetails";
 import Magazines from "./pages/Magazines";
 import CorporateSocialResponsibility from "./pages/CorporateSocialResponsibility";
 import Network from "./pages/Network";
-import Demo from "./elements/demo";
+import BranchLocater from "./elements/demo";
+import Award from "./pages/Award";
 
 function App() {
   useEffect(() => {
@@ -75,7 +76,7 @@ function App() {
   return (
     <BrowserRouter>
       {/* <RouteScrollToTop /> */}
-      <Demo/>
+      {/* <BranchLocater/> */}
       <Fragment>
         <Routes>
           <Route exact path="/" element={<HomeOne />}/>
@@ -128,6 +129,7 @@ function App() {
           <Route exact path="/Magazines" element={<Magazines/>} />
           <Route exact path="/CorporateSocialResponsibility" element={<CorporateSocialResponsibility/>} />
           <Route exact path="/Network" element={<Network/>} />
+          <Route exact path="/Awards&Recognition" element={<Award/>} />
           <Route
             exact
             path="/CorporateInformation"

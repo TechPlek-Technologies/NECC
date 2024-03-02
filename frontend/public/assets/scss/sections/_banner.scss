@@ -582,6 +582,17 @@
         // background: rgba(0, 0, 0, 0.3);
       }
     }
+
+     /*for mobile*/
+ @media (max-width: 425px) {
+  .header-slider .header-bg {
+    &::before {
+      height: 500px;
+    }
+  }
+ }
+
+
     .animated {
       transition: all 0.5s ease;
     }

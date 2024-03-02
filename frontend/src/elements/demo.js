@@ -1,6 +1,6 @@
 import { FaArrowRight} from "react-icons/fa";
 
-const Demo = () => {
+const BranchLocater = () => {
 
   return (
     <>
@@ -30,4 +30,4 @@ const Demo = () => {
   )
 };
 
-export default Demo;
+export default BranchLocater;

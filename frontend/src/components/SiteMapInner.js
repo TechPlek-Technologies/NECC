@@ -100,11 +100,6 @@ const SiteMapInner= () => {
                         RIGHT ISSUES{" "}
                         </Link></li>
 
-                        <li> <Link to='/Networks'>
-                        
-                        NETWORKS{" "}
-                        </Link></li>
-
                         <li> <Link to='/NeccPackers&Movers'>
                         
                         NECC PACKERS & MOVERS{" "}
@@ -128,6 +123,11 @@ const SiteMapInner= () => {
                         <li> <Link to='/Network'>
                         
                         NETWORK{" "}
+                        </Link></li>
+
+                        <li> <Link to='/Awards&Recognition'>
+                        
+                        AWARDS & RECOGNITION{" "}
                         </Link></li> */}
 
 
