@@ -22,7 +22,7 @@ const Career = () => {
             <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"CAREERS"} />
+            <Breadcrumb title={"CAREERS"} imgSrc={"/assets/img/banner/1.png"} />
   
             {/* Service Details Inner */}
             <CareerInner/>

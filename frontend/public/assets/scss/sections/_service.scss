@@ -379,6 +379,8 @@
         color: #fff;
       }
     }
+
+
     .service-item {
       margin-top: 30px;
       .service-single-item {
@@ -415,3 +417,24 @@
     color: var(--paragraph-color);
   }
 }
+
+ /*for mobile*/
+ @media (max-width: 767px) {
+  .service_area-3 {
+    background-color:#29176d;
+    display: inline-block;
+    .service-content {
+      padding: 40px 0 10px 10px;
+      .section-title {
+        .subtitles {
+          font-size: 16px;
+        }
+        .title {
+          color: #fff;
+          font-size: 30px;
+          line-height: 40px;
+        }
+      }
+    }
+ }
+ }

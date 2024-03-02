@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Slider from "react-slick";
-import Demo from "../elements/demo";
+import Slider from "react-slick"
 
 const BannerFour = () => {
   const [state, setState] = useState({
@@ -64,7 +63,7 @@ const BannerFour = () => {
               <div
                 className='header-bg'
                 style={{
-                  backgroundImage: "url('/assets/img/banner/home-2.jpg')",height:"800px"
+                  backgroundImage: "url('/assets/img/banner/1.webp')",height:"800px"
                 }}
               >
                 <div className='container'>
@@ -106,7 +105,7 @@ const BannerFour = () => {
               <div
                 className='header-bg'
                 style={{
-                  backgroundImage: "url('/assets/img/banner/1 (12).jpg')",height:"800px"
+                  backgroundImage: "url('/assets/img/banner/2 (1).webp')",height:"800px"
                 }}
               >
                 <div className='container'>
@@ -148,7 +147,7 @@ const BannerFour = () => {
               <div
                 className='header-bg'
                 style={{
-                  backgroundImage: "url('/assets/img/banner/india-map2 (1).jpg')",height:"800px"
+                  backgroundImage: "url('/assets/img/banner/3.webp')",height:"800px"
                 }}
               >
                 <div className='container'>
@@ -190,7 +189,49 @@ const BannerFour = () => {
               <div
                 className='header-bg'
                 style={{
-                  backgroundImage: "url('/assets/img/banner/4 (4).jpg')",height:"800px"
+                  backgroundImage: "url('/assets/img/banner/4 (1).webp')",height:"800px"
+                }}
+              >
+                <div className='container'>
+                  <div className='row header-height justify-content-start'>
+                    <div className='col-lg-4'>
+                      <div className='header-inner-wrap'>
+                        <div className='header-inner'>
+                          {/* header inner */}
+                          <h1 className='title animated slideInRight'>
+                            World's Biggest Transporter{" "}
+                          </h1>
+                          <div className='btn-wrapper style-02 aanimated fadeInUpBig'>
+                            <a href='#' className='boxed-btn' onClick={handleTrackClick}>
+                              <span>Track Shipment </span>
+                            </a>
+                            {trackingVisible && (
+                              <form onSubmit={handleSubmit}>
+                                <input
+                                className="single-input-inner1"
+                                  type='text'
+                                  placeholder='Enter tracking number'
+                                  value={trackingNumber}
+                                  onChange={handleInputChange}
+                                /><br/>
+                                <button type='submit' className="boxed-btn1">Submit</button>
+                              </form>
+                            )}
+                          </div>
+                        </div>
+                        {/* //.header inner */}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div
+                className='header-bg'
+                style={{
+                  backgroundImage: "url('/assets/img/banner/home-2.webp')",height:"800px"
                 }}
               >
                 <div className='container'>

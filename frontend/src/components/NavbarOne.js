@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from "react";
 import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
   FaPhoneAlt,
-  FaRegClock,
-  FaTwitter,
 } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { SetSearchPopUp } from "../redux/stateSlice/clickActionSlice";
 import store from "../redux/store/store";
-import Demo from "../elements/demo";
 
 const NavbarOne = () => {
   const [open, setOpen] = useState(false);
@@ -57,7 +51,7 @@ const NavbarOne = () => {
           </Link>
           <div className='nav-phone-wrap'>
             <FaPhoneAlt />
-            +011-23517516
+            +91-9711797516
           </div>
           <div className='container p-lg-0'>
             <div className='row'>
@@ -65,7 +59,7 @@ const NavbarOne = () => {
                 <ul className='topbar-right social-area text-md-end text-center'>
                   <li>
                   {/* <h4>North Eastern Carrying Corporation Ltd.</h4> */}
-                  <img src='/assets/img/banner/necc-logo-1-1.jpeg' className="img1" alt='Transpro' />
+                  <img src='/assets/img/banner/necc-logo.png' className="img1" alt='Transpro' />
                   </li>
                 </ul>
               </div>

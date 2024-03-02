@@ -9,6 +9,22 @@
   top:20px;
   z-index: 2;
 }
+
+ /*for mobile*/
+ @media (max-width: 767px) {
+  .feature-area {
+    padding: 20px;
+    margin-top: 140px;
+  }
+ }
+
+ /* Larger Desktop */
+@media (min-width: 1920px) {
+  .feature-area {
+    margin-top: -180px;
+  }
+}
+
 .feature-wrap {
   padding: 30px 40px 35px;
   border-radius: 10px;
@@ -1142,7 +1158,7 @@
     img {
       width: auto;
       margin: auto;
-      filter: grayscale(1);
+      // filter: grayscale(1);
       transition: $transition;
     }
   }
@@ -1999,6 +2015,22 @@
     }
   }
 }
+
+ /*for mobile*/
+ @media (max-width: 767px) {
+  .logistics_area {
+    
+    &.style-02 {
+      padding: 130px 0 50px;
+      margin-top: 0px;
+    }
+      }
+      .counterup {
+        .countr {
+          margin-bottom: 20px;
+        }
+      }
+    }
 
 /*------------------------------
     Shipment Area

@@ -1,7 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
 import TrackVisibility from "react-on-screen";
-import { FaBoxOpen, FaLayerGroup, FaRssSquare } from "react-icons/fa";
 
 const CounterThree = () => {
   return (
@@ -16,13 +15,13 @@ const CounterThree = () => {
                     <div className='col-lg-6 col-md-6 col-sm-6'>
                       <div className='countr wow fadeInLeft' style={{backgroundColor : "rgb(216 37 30)",marginBottom:"20px"}}>
                         <div className='couter-icon'>
-                          {/* <FaBoxOpen /> */}
+                        
                           <img
                           className=' img-fluid'
-                          src='/assets/img/icon/expertise1.png'
+                          src='/assets/img/icon/trust1.png'
                           />
                         </div>
-                        <TrackVisibility once>
+                        {/* <TrackVisibility once>
                           {({ isVisible }) =>
                             isVisible && (
                               <span className='counter'>
@@ -30,21 +29,31 @@ const CounterThree = () => {
                               </span>
                             )
                           }
+                        </TrackVisibility> */}
+                         <TrackVisibility once>
+                          {({ isVisible }) =>
+                            isVisible && (
+                              <span className='counter'>
+                                5,000+
+                              </span>
+                            )
+                          }
                         </TrackVisibility>
-                        <h3 className='title1'>EXPERTISE</h3>
-                        <p className="para1">Extensive knowledge, and reliable logistics solutions.</p>
+
+                        <h3 className='title1'>Attached Vehicles Pan India</h3>
+                        {/* <p className="para1">Extensive knowledge, and reliable logistics solutions.</p> */}
                       </div>
                     </div>
                     <div className='col-lg-6 col-md-6 col-sm-6'>
                       <div className='countr wow fadeInUp' style={{backgroundColor : "rgb(41 23 109)"}}>
                         <div className='couter-icon'>
-                          {/* <FaLayerGroup /> */}
+                         
                           <img
                           className=' img-fluid'
                           src='/assets/img/icon/reliability1.png'
                           />
                         </div>
-                        <TrackVisibility once>
+                        {/* <TrackVisibility once>
                           {({ isVisible }) =>
                             isVisible && (
                               <span className='counter'>
@@ -52,9 +61,18 @@ const CounterThree = () => {
                               </span>
                             )
                           }
+                        </TrackVisibility> */}
+                        <TrackVisibility once>
+                          {({ isVisible }) =>
+                            isVisible && (
+                              <span className='counter'>
+                               3,00,000+
+                              </span>
+                            )
+                          }
                         </TrackVisibility>
-                        <h3 className='title1'>RELIABILITY</h3>
-                        <p className="para1">Consistent, on-time deliveries, impeccable service.</p>
+                        <h3 className='title1'>Satisfied Customers</h3>
+                        {/* <p className="para1">Consistent, on-time deliveries, impeccable service.</p> */}
                       </div>
                     </div>
                   </div>
@@ -64,13 +82,13 @@ const CounterThree = () => {
                     <div className='col-lg-6 col-md-6 col-sm-6'>
                       <div className='countr wow fadeInRight' style={{backgroundColor : "rgb(41 23 109)"}}>
                         <div className='couter-icon'>
-                          {/* <FaRssSquare /> */}
+                          
                           <img
                           className=' img-fluid'
-                          src='/assets/img/icon/trust1.png'
+                          src='/assets/img/icon/expertise1.png'
                           />
                         </div>
-                        <TrackVisibility once>
+                        {/* <TrackVisibility once>
                           {({ isVisible }) =>
                             isVisible && (
                               <span className='counter'>
@@ -78,21 +96,30 @@ const CounterThree = () => {
                               </span>
                             )
                           }
+                        </TrackVisibility> */}
+                        <TrackVisibility once>
+                          {({ isVisible }) =>
+                            isVisible && (
+                              <span className='counter'>
+                               1,000+
+                              </span>
+                            )
+                          }
                         </TrackVisibility>
-                        <h3 className='title1'>TRUST</h3>
-                        <p className="para1">Client-centric approach, transparent communication channels.</p>
+                        <h3 className='title1'>Profesional Team Members</h3>
+                        {/* <p className="para1">Client-centric approach, transparent communication channels.</p> */}
                       </div>
                     </div>
                     <div className='col-lg-6 col-md-6 col-sm-6'>
                       <div className='countr wow fadeInRight' style={{backgroundColor : "rgb(216 37 30)"}}>
                         <div className='couter-icon'>
-                          {/* <FaRssSquare /> */}
+                        
                           <img
                           className=' img-fluid'
                           src='/assets/img/icon/EXCELLENCE1.png'
                           />
                         </div>
-                        <TrackVisibility once>
+                        {/* <TrackVisibility once>
                           {({ isVisible }) =>
                             isVisible && (
                               <span className='counter'>
@@ -100,9 +127,18 @@ const CounterThree = () => {
                               </span>
                             )
                           }
+                        </TrackVisibility> */}
+                        <TrackVisibility once>
+                          {({ isVisible }) =>
+                            isVisible && (
+                              <span className='counter'>
+                                2.5+
+                              </span>
+                            )
+                          }
                         </TrackVisibility>
-                        <h3 className='title1'>EXCELLENCE</h3>
-                        <p className="para1">Exceptional quality, unmatched customer satisfaction.</p>
+                        <h3 className='title1'>Million Sq.ft Warehouse Space Pan India</h3>
+                        {/* <p className="para1">Exceptional quality, unmatched customer satisfaction.</p> */}
                       </div>
                     </div>
                   </div>

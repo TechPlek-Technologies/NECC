@@ -1,7 +1,37 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useEffect , useState } from "react";
+import axios from "axios";
+import { divideArrayByType } from "../pages/Dashboard/utils/contact-divide";
 
 const NetworkInner = () => {
+
+  const domain = process.env.REACT_APP_API_DOMAIN;
+  const [key, setKey] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [data,setData]=useState([]);
+  const [corporateOfficeArray, otherTypesArray] = divideArrayByType(data);
+
+
+  useEffect(() => {
+    // Function to fetch data
+    setLoading(true)
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${domain}/contact`);
+        setData(response.data); // Set the fetched data into state
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setLoading(true);
+      }
+    };
+
+    // Call the fetch data function
+    fetchData();
+  }, [key]); // Empty dependency array to ensure this effect runs only once
+
+
+
   return (
     <>
       {/* Start Services area  */}
@@ -19,103 +49,61 @@ const NetworkInner = () => {
                     </p>
           
           <h4 className="reg-offices" style={{marginTop:"20px",marginBottom:"20px"}}>CORPORATE OFFICE</h4>
-                <div className='row'>
-                      <div className='col-xl-6 col-lg-12 col-md-6'>
-                        <h6 className='subtitle'>NAME</h6>
-                        <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
-                          <li>
-                          Top Management.
-                          </li>
-                          <li>
-                          Marketing Deptt.
-                          </li>
-                          <li>
-                          Administration Deptt.
-                          </li>
-                          <li>
-                          Customer Care Deptt.
-                          </li>
-                          <li>
-                          H.R. Deptt.
-                          </li>
-                          <li>
-                          I.T. Deptt.
-                          </li>
-                        </ul>
-                      </div>
-                      <div className='col-xl-6 col-lg-12 col-md-6'>
-                       <h6 className='subtitle'>EMAIL</h6>
-                        <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
-                        <li> <Link to="mailto:top@neccgroup.com">
-                        operation@neccgroup.com {" "}
-                        </Link></li>
-                        <li> <Link to="mailto:mktg@neccgroup.com">
-                        mktg@neccgroup.com {" "}
-                        </Link></li>
-                        <li> <Link to="mailto:coadmin@neccgroup.com">
-                        coadmin@neccgroup.com {" "}
-                        </Link></li>
-                        <li> <Link to="mailto:customercare1@neccgroup.com ">
-                        customercare1@neccgroup.com {" "}
-                        </Link></li>
-                        <li> <Link to="mailto:managerhr@neccgroup.com">
-                        managerhr@neccgroup.com {" "}
-                        </Link></li>
-                        <li> <Link to="mailto:itdelhi@neccgroup.com">
-                        itdelhi@neccgroup.com{" "}
-                        </Link></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <h4 className="reg-offices" style={{marginTop:"20px",marginBottom:"20px"}}>BRANCH OFFICE</h4>
-                <div className='row'>
-                      <div className='col-xl-6 col-lg-12 col-md-6'>
-                        <h6 className='subtitle'>NAME</h6>
-                        <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
-                          <li>
-                          AHMEDABAD
-                          </li>
-                          <li>
-                          ANKLESHWAR
-                          </li>
-                          <li>
-                          BANGALORE
-                          </li>
-                          <li>
-                          BELTOLA
-                          </li>
-                          <li>
-                          BHIWANDI
-                          </li>
-                          <li>
-                          BHAGALPUR
-                          </li>
-                        </ul>
-                      </div>
-                      <div className='col-xl-6 col-lg-12 col-md-6'>
-                       <h6 className='subtitle'>EMAIL</h6>
-                        <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
-                        <li> <Link to="mailto:top@neccgroup.com">
-                        ahmedabad@neccgroup.com  {" "}
-                        </Link></li>
-                        <li> <Link to="mailto:mktg@neccgroup.com">
-                        ankleshwar@neccgroup.com  {" "}
-                        </Link></li>
-                        <li> <Link to="mailto:bangalore@neccgroup.com">
-                        bangalore@neccgroup.com {" "}
-                        </Link></li>
-                        <li> <Link to="mailto:beltola@neccgroup.com ">
-                        beltola@neccgroup.com  {" "}
-                        </Link></li>
-                        <li> <Link to="mailto:bhiwandi@neccgroup.com">
-                        bhiwandi@neccgroup.com  {" "}
-                        </Link></li>
-                        <li> <Link to="mailto:bhagalpur@neccgroup.com">
-                        bhagalpur@neccgroup.com{" "}
-                        </Link></li>
-                        </ul>
-                      </div>
-                    </div>
+          <div className="row">
+           
+              <div className='col-xl-6 col-lg-12 col-md-6'>
+                <h6>NAME</h6>
+                {corporateOfficeArray.map((company) => (
+                <div key={company.id}>
+                <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
+                  <li>{company.name}</li>
+                </ul>
+                </div>
+                 ))}
+              </div>
+            
+              <div className='col-xl-6 col-lg-12 col-md-6'>
+                <h6>Email</h6>
+                {corporateOfficeArray.map((company) => (
+                <div key={company.id}>
+                <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
+                  <li>
+                    <a href={`mailto:${company.email}`}>{company.email}</a>
+                  </li>
+                </ul>
+                </div>
+                  ))}
+              </div>
+
+            </div>
+
+
+            <h4 className="reg-offices" style={{marginTop:"20px",marginBottom:"20px"}}>BRANCH OFFICE</h4>
+            <div className="row">
+            <div className='col-xl-6 col-lg-12 col-md-6'>
+                <h6>NAME</h6>
+                {otherTypesArray.map((company) => (
+                <div key={company.id}>
+                <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
+                  <li>{company.name}</li>
+                </ul>
+                </div>
+                 ))}
+              </div>
+            
+              <div className='col-xl-6 col-lg-12 col-md-6'>
+                <h6>Email</h6>
+                {otherTypesArray.map((company) => (
+                <div key={company.id}>
+                <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
+                  <li>
+                    <a href={`mailto:${company.email}`}>{company.email}</a>
+                  </li>
+                </ul>
+                </div>
+                  ))}
+              </div>
+            </div>
                  </div>
                 </div>
               </div>

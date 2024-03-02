@@ -358,6 +358,18 @@
     }
   }
 }
+
+/*for mobile*/
+@media (max-width: 767px) {
+  .navbar-area-1.navbar-area-3 {
+    
+    .nav-container {
+      padding: 0px 10px !important;
+    }
+   
+  }
+}
+
 .navbar-area-1.navbar-area-4 {
   top: 0;
   padding: 0;

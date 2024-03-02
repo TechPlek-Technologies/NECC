@@ -17,7 +17,7 @@ const GetDetailsInner = () => {
 
   return (
     <>
-    <div className='request-quote-area pd-top-115'>
+    <div className='request-quote-area pd-top-60 pd-bottom-60'>
         <div className='container'>
           <div className='request-quote-inner'>
             <ul className='nav nav-pills' id='pills-tab' role='tablist'>

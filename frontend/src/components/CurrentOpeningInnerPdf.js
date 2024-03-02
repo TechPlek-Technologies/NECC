@@ -2,6 +2,8 @@ import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ReadMoreReact from 'read-more-react';
 const CurrentOpeningInnerPdf = ({id}) => {
+
+
     const data2 = [
       {
         id: 1,
@@ -41,6 +43,8 @@ const CurrentOpeningInnerPdf = ({id}) => {
         eventID: 1,
       },
     ];
+    
+    
     return (
         data2.map((item) => (
             <div className='col-lg-4' key={item.id}>

@@ -139,6 +139,19 @@
     }
   }
 }
+
+ /*for mobile*/
+ @media (max-width: 767px) {
+  .footer-area {
+    .footer-top {
+      background-position: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 37px 0 0px;
+      margin-left: 10px;
+    } 
+  }
+}
+
 .footer-bottom-area {
   background: #29176d;
   padding: 21.5px 0;
