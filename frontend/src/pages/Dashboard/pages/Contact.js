@@ -38,8 +38,6 @@ const useCarriers = (data, page, rowsPerPage) => {
 };
 
 
-const token = window.localStorage.getItem("Token");
-const domain = process.env.REACT_APP_API_DOMAIN;
 
 
 const OfficeContact = () => {
@@ -57,6 +55,10 @@ const OfficeContact = () => {
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
   const [key, setKey] = useState(0);
+
+  const token = window.localStorage.getItem("Token");
+  const domain = process.env.REACT_APP_API_DOMAIN;
+  
 
   const handleKeyChange = () => {
     setKey((prevKey) => prevKey + 1);
@@ -359,7 +361,7 @@ const OfficeContact = () => {
               variant="filled"
               sx={{ width: "100%" }}
             >
-              File Upload Failed
+              Name, Email & category required
             </Alert>
           </Snackbar>
         </Layout>

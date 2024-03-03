@@ -9,8 +9,7 @@ import axios from "axios";
 import { divideArrayByType } from "../utils/contact-divide";
 
 
-const token = window.localStorage.getItem("Token");
-const domain = process.env.REACT_APP_API_DOMAIN;
+
 
 
 const useOfficeDivide = (data) => {
@@ -22,7 +21,8 @@ const useOfficeDivide = (data) => {
 
 function Office() {
   const theme = createTheme();
-
+  const token = window.localStorage.getItem("Token");
+  const domain = process.env.REACT_APP_API_DOMAIN;
 
   const [isEditOpen, setEditOpen] = useState(false);
   const [editedOffice, setEditedOffice] = useState({});
@@ -79,13 +79,12 @@ function Office() {
 
       if (response.status !== 200) {
         setFailure(true);
-        throw new Error("Failed to upload PDF file");
+        throw new Error("Failed to add file");
       }
 
       // Handle successful upload
       setSuccess(true);
       setKey((prevKey) => prevKey + 1);
-      console.log("PDF file uploaded successfully");
       setEditOpen(false);
     } catch (error) {
       setFailure(true);
@@ -327,7 +326,7 @@ function Office() {
               variant="filled"
               sx={{ width: "100%" }}
             >
-              File Upload Failed
+              Name, city, email & category required
             </Alert>
           </Snackbar>
         </Layout>

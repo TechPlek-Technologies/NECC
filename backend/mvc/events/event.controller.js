@@ -46,7 +46,7 @@ async function createEvent(req, res, next) {
     // Create the event with the associated categoryId
     await eventService.createEvent({
       name: req.body.name, 
-      categoryID: categoryID, // Associate the event with the specified category
+      categoryID: req.body.categoryID, // Associate the event with the specified category
     });
 
     res.json({ message: "Section created successfully" });

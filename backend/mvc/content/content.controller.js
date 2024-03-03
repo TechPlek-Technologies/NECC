@@ -41,8 +41,7 @@ function createContentSchema(req, res, next) {
     serial: Joi.number(),
     designation: Joi.string().required(),
     summary: Joi.string().required(),
-    description: Joi.string(),
-    pageID: Joi.number().required(),
+    description: Joi.string()
     // Add more validation for other attributes if needed
   });
   validateRequest(req, next, schema);

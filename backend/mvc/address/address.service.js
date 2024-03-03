@@ -16,8 +16,7 @@ async function addAddress(addressData) {
     const existingAddress = await db.Address.findOne({
         where: {
             city,
-            name,
-            pincode
+            name
         }
     });
 
@@ -28,7 +27,7 @@ async function addAddress(addressData) {
 
     // Create the address
     const newAddress = await db.Address.create({
-        city,
+        city ,
         name,
         addressLine1,
         addressLine2,

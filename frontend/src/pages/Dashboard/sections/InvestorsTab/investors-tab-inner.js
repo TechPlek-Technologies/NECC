@@ -14,12 +14,12 @@ export const InvestorsInnerTab = (props) => {
   const { name, sx } = props;
   const getIcon = (name) => {
     switch (name) {
-      case 'Financials':
+      
       case 'Quarterly Compliances':
         return <CurrencyRupeeIcon />;
-      case 'Corporate Governance':
+      case 'CORPORATE Governance':
           return <BuildingOfficeIcon />;
-      case 'Corporate Information':
+      case 'CORPORATE INFORMATION':
             return <InformationCircleIcon/>;
       case 'Newspaper Publication':
         return <NewspaperIcon />;

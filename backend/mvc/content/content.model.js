@@ -19,10 +19,7 @@ function model(sequelize) {
 
     const Content = sequelize.define('Content', attributes, options);
 
-    Content.belongsTo(sequelize.models.Page, {
-        foreignKey: 'pageID', // Name of the foreign key in the Event model
-        allowNull: false, 
-    });
+    
 
     return Content;
 }

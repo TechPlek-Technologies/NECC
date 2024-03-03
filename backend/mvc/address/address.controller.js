@@ -7,7 +7,7 @@ const addressService = require('./address.service');
 
 // Routes
 router.get('/', getAllAddresses);
-router.post('/', authorize(), createAddressSchema, createAddress);
+router.post('/', authorize(), createAddress);
 router.put('/:id', authorize(), updateAddressSchema, updateAddress);
 router.delete('/:id', authorize(), deleteAddress);
 
@@ -23,12 +23,12 @@ function getAllAddresses(req, res, next) {
 function createAddressSchema(req, res, next) {
     const schema = Joi.object({
         name: Joi.string().required(),
-        city: Joi.string().required(),
-        addressLine1: Joi.string().required(),
+        city: Joi.string(),
+        addressLine1: Joi.string(),
         addressLine2: Joi.string(),
         addressLine3: Joi.string(),
-        pincode: Joi.string().required(),
-        phone: Joi.string().required(),
+        pincode: Joi.string(),
+        phone: Joi.string(),
         tollfreeNo: Joi.string(),
         email: Joi.string().required(),
         type: Joi.string().valid('Corporate office', 'Regional office').required()
@@ -45,8 +45,8 @@ function createAddress(req, res, next) {
 
 function updateAddressSchema(req, res, next) {
     const schema = Joi.object({
-        city: Joi.string(),
         name: Joi.string(),
+        city: Joi.string(),
         addressLine1: Joi.string(),
         addressLine2: Joi.string(),
         addressLine3: Joi.string(),

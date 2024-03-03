@@ -27,17 +27,18 @@ import { Link, useParams } from "react-router-dom";
 
 
 function AdminQuaterlyCompliance() {
+  let { pagename,id } = useParams();
+
   const [data, setData] = useState([]);
   const [isEditOpen, setEditOpen] = useState(false);
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
   const [section, setSection] = useState("");
   const [message, setMessage] = useState("");
-  const [category, setCategory] = useState("Investors");
+  const [category, setCategory] = useState(pagename);
   const domain = process.env.REACT_APP_API_DOMAIN;
   const token = window.localStorage.getItem("Token");
 
-  let { pagename,id } = useParams();
   const theme = createTheme();
   const handleEditClose = () => {
     setEditOpen(false);
@@ -46,9 +47,10 @@ function AdminQuaterlyCompliance() {
     try {
       const formData = {
         name: section, // Assuming section is defined somewhere in your code
-        categoryID: id,
+        categoryID: Number(id),
       };
 
+      
       const response = await axios.post(`${domain}/events`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -137,7 +139,7 @@ function AdminQuaterlyCompliance() {
                 </div>
                 <div>
                   <Grid container spacing={1}>
-                    {data.length === 0 ? (
+                    {!data? (
                          <Box
                          sx={{
                            display: 'flex',
