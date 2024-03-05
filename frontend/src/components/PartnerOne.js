@@ -21,6 +21,7 @@ const PartnerOne = () => {
     initialSlide: 1,
     autoplay: true,
     autoplaySpeed: 1000,
+    pauseOnHover:false,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
