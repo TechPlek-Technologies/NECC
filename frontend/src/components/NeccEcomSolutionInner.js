@@ -184,7 +184,7 @@ const NeccEcomSolutionInner = () => {
               <div className='section-title text-center'>
                 {/* <h4 className='subtitle'>HAPPY CLIENTS</h4> */}
                 <h2 className='title'>OUR NETWORK/REACH</h2>
-                <p className='content'>
+                <p className='content para'>
                 NECC Ecom Solutions offers last mile delivery services for the E-com companies. Presently, we offer delivery services in Delhi NCR, and plan to expand delivery services in a phased manner in Northern States, Eastern region, and the North-Eastern belt of India.
                 </p>
               </div>

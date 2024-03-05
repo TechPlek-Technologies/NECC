@@ -18,6 +18,13 @@
   }
  }
 
+  /*Desktop */
+@media (min-width: 1280px) {
+  .feature-area {
+    // margin-top: 0px;
+  }
+}
+
  /* Larger Desktop */
 @media (min-width: 1920px) {
   .feature-area {
@@ -28,6 +35,7 @@
 .feature-wrap {
   padding: 30px 40px 35px;
   border-radius: 10px;
+  height: 430px;
   &.bg-pink {
     background: rgba(250, 67, 24, 0.1);
   }
@@ -67,6 +75,28 @@
     margin-bottom: 0;
   }
 }
+
+ /*for mobile*/
+ @media (max-width: 425px) {
+  
+.feature-wrap {
+  height: 390px;
+}
+ }
+
+/* Desktop */
+@media (min-width: 1300px) {
+  .feature-wrap {
+    height: 390px;
+    p {
+      margin-top: 0px;
+    }
+    h5{
+      font-size: 22px;
+    }
+  }
+}
+
 .feature-slider {
   .item {
     padding: 0 12px;

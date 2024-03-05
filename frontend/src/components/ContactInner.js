@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const useOfficeDivide = (data) => {
   return useMemo(() => {
@@ -153,7 +154,7 @@ useEffect(() => {
                   <div className='col-12'>
                     <button className='btn btn-base1' type='submit'>
                       {" "}
-                      SEND MESSAGE
+                      <Link to='/Pickup&Delivery' className="contact-btn">SEND MESSAGE</Link>
                     </button>
                   </div>
                 </div>

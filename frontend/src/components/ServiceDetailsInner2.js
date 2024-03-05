@@ -34,15 +34,11 @@ const ServiceDetailsInner2 = () => {
                 </div>
                 <h2>FULL TRUCK LOAD (FTL)</h2>
                 <p>
-                We provide this service to all major corporate where we can place the truck from anywhere to anywhere depending on the client’s needs.
+                One of the core offerings of NECC is Full Truck Load (FTL) services, including end-to-end multimodal transportation with loading services catered through owned and hired fleet for goods movement on a pan-India basis.
                 </p>
-                {/* <p>
-                  Authoritatively scale business meta-services before
-                  client-based technologies. Collaboratively strategize
-                  synergistic scenarios rather than flexible action items.
-                  Continually deliver market positioning convergence and
-                  mission-critical infrastructures.
-                </p> */}
+                <p>
+                NECC provides FTL Services to a wide range of industries throughout India and neighboring countries like Bhutan, Nepal and Bangladesh. Our clients includes leading brands from telecommunication, automobile, pharmaceuticals, Steel, FMCG, Yarn, Cement, and many others. 
+                </p>
                 <div className='row'>
                   <div className='col-lg-6 align-self-center'>
                     <div className='thumb mb-lg-0 mb-4'>
@@ -50,14 +46,11 @@ const ServiceDetailsInner2 = () => {
                     </div>
                   </div>
                   <div className='col-lg-6 align-self-center'>
-                    <h4 className='subtitle'>Global Transaction Advisory</h4>
+                    <h4 className='subtitle'>Full Truck Load Services</h4>
                     <ul className='list-inner-wrap'>
-                      <li> Customer engagement matters</li>
-                      <li> The Love Boat promis someg for Plan</li>
-                      <li> Research beyond the business plan</li>
-                      <li> Logistics ground in Asia Pacific</li>
-                      <li> Logistics ground in South America</li>
-                      <li> Transportation across Europe</li>
+                      <li> Supported by own and hired fleet as per customer needs.</li>
+                      <li> Provides local, regional and nationwide  shipments as well as SAARC country.</li>
+                      <li> Provides services in LCV and HCV in numerous weight and size combos to match up the expectations of our clients.</li>
                     </ul>
                   </div>
                 </div>
