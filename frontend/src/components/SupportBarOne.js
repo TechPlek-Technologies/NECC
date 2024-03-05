@@ -100,7 +100,7 @@ const SupportBarOne = () => {
                     <a href='tel:+8801-728-123-456'>
                       {" "}
                       <FaPhoneAlt />
-                      +011-23517516, 17, 18, 19
+                      +91-9711797516
                     </a>
                   </li>
                   <li className='sign-nav ps-3'>

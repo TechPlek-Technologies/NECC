@@ -33,7 +33,7 @@ const AboutTwo = () => {
                   <div className='exprience-wrap'>
                     <img src='assets/img/about/shape-3.png' alt='Transpro' />
                     <div className='details'>
-                      <TrackVisibility once>
+                    <TrackVisibility once>
                         {({ isVisible }) =>
                           isVisible && (
                             <h1>

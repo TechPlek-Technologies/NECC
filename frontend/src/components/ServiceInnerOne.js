@@ -13,7 +13,7 @@ const ServiceInnerOne = () => {
               <div className='section-title text-center'>
                 <h4 className='subtitle'>NORTH EASTERN CARRYING CORPORATION</h4>
                 <h2 className='title'>GLIMPSE AT OUR SERVICES</h2>
-                <p>
+                <p className="para">
                 Currently NECC offer’s services like part truck load(PTL), full truck load(FTL), bulk movements, ODC movements, warehousing & 3pl.
                 </p>
               </div>
