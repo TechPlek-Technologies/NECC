@@ -20,7 +20,7 @@ const BannerFour = () => {
     dots: false,
     arrows: false,
     infinite: true,
-    fade: false,
+    fade: true,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -58,7 +58,8 @@ const BannerFour = () => {
             asNavFor={state.nav2}
             ref={(slider) => (slider1 = slider)}
             autoplay={true}
-            autoplaySpeed={3000}
+            autoplaySpeed={2000}
+            pauseOnHover={false}
           >
             <div>
               <div
