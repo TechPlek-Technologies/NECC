@@ -13,11 +13,7 @@ const CareerInner= () => {
               <div className='service-details-wrap'>
                 <h2>CAREERS</h2>
                 <p>
-                We at NECC value employee relationships and focus on career growth and are committed to invest on talent. NECC grooms young minds and is the preferred place for career in the Indian logistic industry.
-                </p>
-
-                <p>
-                We believes in fostering excellent employee culture, with focus on individual development.
+                We at NECC value employee relationships and focus on career growth and are committed to invest on talent. NECC grooms young minds and is the preferred place for career in the Indian logistic industry.We believes in fostering excellent employee culture, with focus on individual development.
                 </p>
               </div>
             </div>

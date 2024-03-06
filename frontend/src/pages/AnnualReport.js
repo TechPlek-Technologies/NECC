@@ -1,6 +1,6 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-import Breadcrumb from "../components/Breadcrumb";
+// import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
 import SupportBarOne from "../components/SupportBarOne";
@@ -20,7 +20,7 @@ const AnnualReport = () => {
             <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"ANNUAL REPORT & NOTICE OF AGM"} imgSrc={"/assets/img/banner/1.png"}/>
+            {/* <Breadcrumb title={"ANNUAL REPORT & NOTICE OF AGM"} imgSrc={"/assets/img/banner/1.png"}/> */}
 
             {/*Investors Inner */}
             <AnnualReportInner/>

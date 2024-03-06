@@ -17,7 +17,7 @@ const DownloadInner = () => {
   return (
     <>
       {/* service area start */}
-      <div className='service-area pd-top-120 pd-bottom-120'>
+      <div className='service-area pd-top-130 pd-bottom-120'>
         <div className='container'>
           <div className='row justify-content-center'>
             <h2 className='title'>DOWNLOAD</h2>

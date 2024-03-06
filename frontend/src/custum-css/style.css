@@ -38,9 +38,9 @@
     justify-content: space-between;
 }
 
-.list-Investors{
+/* .list-Investors{
     margin-left:10px;
-}
+} */
 
 .list-Investors1{
     margin-left:1px;
@@ -423,4 +423,3 @@ color: black;
     margin-bottom: 20px;
     color: var(--secondary-color);
 }
-  

@@ -35,7 +35,7 @@ const NetworkInner = () => {
   return (
     <>
       {/* Start Services area  */}
-      <div className='service-area pd-top-45 pd-bottom-45 '>
+      <div className='service-area pd-top-120 pd-bottom-45 '>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-11 align-self-center'>

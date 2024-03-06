@@ -3,7 +3,7 @@ import Preloader from "../elements/Preloader";
 import SupportBarOne from "../components/SupportBarOne";
 import NavbarThree from "../components/NavbarThree";
 import AnnualReportFinancialInner from "../components/AnnualReportFinancialInner";
-const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
+// const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
 );
@@ -20,7 +20,7 @@ const AnnualReportFinancial = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"ANNUAL REPORT & FINANCIALS"} imgSrc={"/assets/img/banner/1.png"}/>
+          {/* <Breadcrumb title={"ANNUAL REPORT & FINANCIALS"} imgSrc={"/assets/img/banner/1.png"}/> */}
 
           {/* {Service Inner} */}
           <AnnualReportFinancialInner/>

@@ -85,7 +85,7 @@ const AboutTwo = () => {
                         </div>
                       </div>
                     </div>
-                    <div className='btn-wrap'>
+                    {/* <div className='btn-wrap'>
                       <Link className='btn btn-base' to='/about'>
                         DISCOVER MORE
                       </Link>
@@ -99,7 +99,7 @@ const AboutTwo = () => {
                         </span>
                         <span>Watch The Video</span>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

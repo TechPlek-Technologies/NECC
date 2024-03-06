@@ -1,6 +1,6 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-import Breadcrumb from "../components/Breadcrumb";
+// import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
 import NavbarThree from "../components/NavbarThree";
@@ -19,7 +19,7 @@ const GetDetails = () => {
             <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"GET DETAILS"} imgSrc={"/assets/img/banner/1.png"}/>
+            {/* <Breadcrumb title={"GET DETAILS"} imgSrc={"/assets/img/banner/1.png"}/> */}
 
             {/* Feedback Inner */}
             <GetDetailsInner/>

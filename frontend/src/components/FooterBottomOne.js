@@ -17,12 +17,15 @@ const FooterBottomOne = () => {
             </div>
             <div className='col-lg-6 text-lg-end text-center'>
               <ul>
-                <li>
+                {/* <li>
                   <a href='#' style={{color:"#9583d9"}}>Terms &amp; Condition</a>
-                </li>
+                </li> */}
                 <li>
-                  <a href='#' style={{color:"#9583d9"}}>Privacy &amp; Policy</a>
+                  <a href='/SiteMap' style={{color:"#9583d9"}}>SiteMap</a>
                 </li>
+                {/* <li>
+                  <a href='#' style={{color:"#9583d9"}}>Privacy &amp; Policy</a>
+                </li> */}
               </ul>
             </div>
           </div>

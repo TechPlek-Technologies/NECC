@@ -82,9 +82,9 @@ const NavbarThree = () => {
                     <li>
                       <Link to='/CorporateOverview'>Corporate Overview</Link>
                     </li>
-                    {/* <li>
-                      <Link to='/'>History</Link>
-                    </li> */}
+                    <li>
+                      <Link to='/History'>History</Link>
+                    </li>
                     <li>
                       <Link to='/VisionAndQualityPolicy'>Vision & Quality Policy</Link>
                     </li>
@@ -119,14 +119,14 @@ const NavbarThree = () => {
                     </li>
                   </ul>
                 </li>
-                {/* <li className='menu-item-has-children'>
+                <li className='menu-item-has-children'>
                   <Link to='#'>Investors</Link>
                   <ul className='sub-menu'>
                     <li>
                       <Link to='/Investors'>Disclosures under Regulation 46 of SEBI (LODR)<br/>Regulations,2015</Link>
                     </li>
                   </ul>
-                </li> */}
+                </li>
                  {/* <li className='menu-item-has-children'>
                   <Link to='#'>SiteMap</Link>
                   <ul className='sub-menu'>
@@ -135,9 +135,9 @@ const NavbarThree = () => {
                     </li>
                   </ul>
                 </li> */}
-                <li>
+                {/* <li>
                   <Link to='/SiteMap'>SiteMap</Link>
-                </li>
+                </li> */}
                 <li className='menu-item-has-children current-menu-item'>
                   <Link to='#'>Contact Us</Link>
                   <ul className='sub-menu'>

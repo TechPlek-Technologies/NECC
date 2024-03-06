@@ -20,7 +20,7 @@ const Investors = () => {
            <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"INVESTORS"} imgSrc={"assets/img/banner/breadcrumb.png"} />
+            <Breadcrumb title={"INVESTORS"} imgSrc={"/assets/img/banner/Investor.webp"} />
 
             {/*Investors Inner */}
             <InvestorsInner/>
