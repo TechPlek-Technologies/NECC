@@ -20,6 +20,7 @@ const InvestorsInner= () => {
       try {
         const response = await axios.get(`${domain}/categories`);
         setTabs(response.data); // Set the fetched data into state
+        console.log(response.data)
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -42,7 +43,7 @@ const InvestorsInner= () => {
                 <div className='row'>
                   <div className='col-lg-12 align-self-center list-Investors'>
                     <h6 className='subtitle' style={{marginTop:"0px"}}>Disclosures under Regulation 46 of SEBI (LODR) Regulations,2015</h6>
-                    <InvestorsInnerPdf/>
+                    <InvestorsInnerPdf pages={tabs}/>
                   </div>
                 </div>
               </div>
