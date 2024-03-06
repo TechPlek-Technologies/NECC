@@ -37,13 +37,6 @@ const ServiceDetailsInner1 = () => {
                 <p>
                 Movement of goods/small parcels (less than 50kg’s) from all over India to the eastern and north eastern part of the country. This is the flagship business of the company and we are proud to be the top player in the entire region in terms of network density and serviceability. We have more than 4 lakh customers in this division along with 250 offices spread across India/Nepal/Bhutan.
                 </p>
-                {/* <p>
-                  Authoritatively scale business meta-services before
-                  client-based technologies. Collaboratively strategize
-                  synergistic scenarios rather than flexible action items.
-                  Continually deliver market positioning convergence and
-                  mission-critical infrastructures.
-                </p> */}
                 <div className='row'>
                   <div className='col-lg-6 align-self-center'>
                     <div className='thumb mb-lg-0 mb-4'>
@@ -51,18 +44,15 @@ const ServiceDetailsInner1 = () => {
                     </div>
                   </div>
                   <div className='col-lg-6 align-self-center'>
-                    <h4 className='subtitle'>Global Transaction Advisory</h4>
+                    <h4 className='subtitle'>Part Truck Load Services</h4>
                     <ul className='list-inner-wrap'>
-                      <li> Customer engagement matters</li>
-                      <li> The Love Boat promis someg for Plan</li>
-                      <li> Research beyond the business plan</li>
-                      <li> Logistics ground in Asia Pacific</li>
-                      <li> Logistics ground in South America</li>
-                      <li> Transportation across Europe</li>
+                      <li> Flexible fleet, matching customer needs for efficient PTL solutions.</li>
+                      <li> Seamless local, regional, nationwide, and SAARC country shipments.</li>
+                      <li> Diverse LCV and HCV options tailored to client cargo demands.</li>
                     </ul>
                   </div>
                 </div>
-                <h4 className='subtitle mt-3'>How It Works</h4>
+                {/* <h4 className='subtitle mt-3'>How It Works</h4>
                 <p>
                   Holisticly conceptualize go forward customer service rather
                   than transparent infomediaries. Continually envisioneer 2.0
@@ -84,69 +74,11 @@ const ServiceDetailsInner1 = () => {
                   Dramatically morph extensive users before market-driven
                   partnerships. Conveniently initiate best-of-breed resources
                   and enabled architectures.
-                </p>
+                </p> */}
               </div>
             </div>
             <div className='col-lg-4'>
               <div className='sidebar-area'>
-                {/* <div className='widget widget_search'>
-                  <form className='search-form'>
-                    <div className='form-group'>
-                      <input type='text' placeholder='Search here...' />
-                    </div>
-                    <button className='submit-btn' type='submit'>
-                      <FaSearch />
-                    </button>
-                  </form>
-                </div> */}
-                {/* <div className='widget widget_catagory'>
-                  <h4 className='widget-title'>
-                    SERVICE LIST
-                    <span className='dot' />
-                  </h4>
-                  <ul className='catagory-items'>
-                    <li>
-                      <Link to='/ServiceDetail1'>
-                      PART TRUCK LOAD (PTL){" "}
-                        <span>
-                          <FaArrowRight />
-                        </span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/ServiceDetail2'>
-                      FULL TRUCK LOAD (FTL){" "}
-                        <span>
-                          <FaArrowRight />
-                        </span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/ServiceDetail3'>
-                      BULK MOVEMENTS{" "}
-                        <span>
-                          <FaArrowRight />
-                        </span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/ServiceDetail4'>
-                      ODC MOVEMENTS{" "}
-                        <span>
-                          <FaArrowRight />
-                        </span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/ServiceDetail5'>
-                      WAREHOUSING & 3PL{" "}
-                        <span>
-                          <FaArrowRight />
-                        </span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div> */}
 
                 <div className='widget widget_catagory'>
                       <h4 className='widget-title'>
@@ -202,7 +134,7 @@ const ServiceDetailsInner1 = () => {
                     </li>
                   </ul>
                 </div>
-                <div
+                {/* <div
                   className='widget widget_support text-center mb-0'
                   style={{
                     background: "url(assets/img/widget/support-bg.png)",
@@ -223,7 +155,7 @@ const ServiceDetailsInner1 = () => {
                     <FaPhoneAlt />
                     +011-23517516, 17, 18, 19
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

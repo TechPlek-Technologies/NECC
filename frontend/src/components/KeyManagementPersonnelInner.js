@@ -35,7 +35,7 @@ const KeyManagementPersonnelInner = () => {
       <div className="service-area pd-top-120 pd-bottom-120">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="service-details-wrap">
+            <div className="service-details-wrap1">
               <h2>KEY MANAGEMENT PERSONNEL</h2>
               <div className="row">
                 <div className="col-lg-12 align-self-center">

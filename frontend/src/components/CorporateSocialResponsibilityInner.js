@@ -1,62 +1,9 @@
 import React from "react";
-import {
-    FaArrowLeft,
-    FaArrowRight,
-    FaFacebookF,
-    FaLinkedinIn,
-    FaPlus,
-    FaTwitter,
-    FaWhatsapp,
-  } from "react-icons/fa";
-  import Slider from "react-slick";
 import CorporateSocialResponsibilityPdf from "./CorporateSocialResponsibilityPdf";
+import CompositionInner from "./CompositionInner";
 
 const CorporateSocialResponsibilityInner = () => {
-    function SampleNextArrow(props) {
-        const { className, onClick } = props;
-        return <FaArrowLeft className={className} onClick={onClick} />;
-      }
-      function SamplePrevArrow(props) {
-        const { className, onClick } = props;
-        return <FaArrowRight className={className} onClick={onClick} />;
-      }
-      const settings = {
-        dots: false,
-        arrows: true,
-        infinite: true,
-        speed: 1000,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 1,
-        // autoplay: true,
-        autoplaySpeed: 5000,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              infinite: true,
-            },
-          },
-          {
-            breakpoint: 991,
-            settings: {
-              slidesToShow: 2,
-              arrows: false,
-            },
-          },
-          {
-            breakpoint: 576,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows: false,
-            },
-          },
-        ],
-      };
+    
   return (
     <>
       {/* Start Solution area  */}
@@ -116,24 +63,20 @@ const CorporateSocialResponsibilityInner = () => {
                 <p>
                 The Company supports Sewa Bharati, a NGO working towards the upliftment & empowerment of the neglected and under-privileged sections of the society. Sewa Bharati has numerous hostels for the economically underprivileged children across the country, especially the tribal and the rural poor. The organization supports primary education centers in rural areas and in slums. It also helps students from the remote tribal areas to enroll in schools in different parts of the country and sponsors all their educational and other needs.
                 </p>
-                {/* <div className='btn-wrapper animated fadeInUpBig text-left'>
-                  <a href='#' className='btn-bounce'>
-                    Contact us
-                  </a>
-                </div> */}
+              
               </div>
             </div>
           </div>
         </div>
       </div>
       {/*Csr initiative area  */}
-      <div className='team-area pd-top-45'>
+      {/* <div className='team-area pd-top-45 pd-bottom-45'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-12'>
               <div className='section-title text-center'>
                 <h4 className='subtitle'>COMPOSITION OF CSR COMMITTEE</h4>
-                {/* <h2 className='title'>COMPOSITION OF CSR COMMITTEE</h2> */}
+                
                 <p>
                 The Company has constituted CSR Committee in accordance with the provisions of Section 135 of the Companies Act, 2013 comprising of the following Members
                 </p>
@@ -293,7 +236,27 @@ const CorporateSocialResponsibilityInner = () => {
             </div>
           </div>
         </div>
+      </div> */}
+      <div className='service-area pd-top-45 pd-bottom-45'>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-8'></div>
+      <div className='service-details-wrap'>
+                <h2 className="list-Investors">COMPOSITION OF CSR COMMITTEE</h2>
+                <p>
+                The Company has constituted CSR Committee in accordance with the provisions of Section 135 of the Companies Act, 2013 comprising of the following Members
+                </p>
+
+                <CompositionInner/>
+
+              </div>
+     
+       </div>
       </div>
+    </div>
+
+
+
       {/*pdf download area  */}
       <div className='blog-details-area pd-top-120 pd-bottom-120'>
         <div className='container'>

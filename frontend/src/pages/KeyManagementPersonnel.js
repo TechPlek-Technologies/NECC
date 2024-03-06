@@ -1,6 +1,6 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-import Breadcrumb from "../components/Breadcrumb";
+// import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
 // import PartnerOne from "../components/PartnerOne";
@@ -21,7 +21,7 @@ const KeyManagementPersonnel = () => {
             <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"KEY MANAGEMENT PERSONNEL"} imgSrc={"/assets/img/banner/1.png"}/>
+            {/* <Breadcrumb title={"KEY MANAGEMENT PERSONNEL"} imgSrc={"/assets/img/banner/1.png"}/> */}
 
             {/*Investors Inner */}
             <KeyManagementPersonnelInner/>

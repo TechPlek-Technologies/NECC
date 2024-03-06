@@ -50,7 +50,7 @@ const CurrentOpeningInner = () => {
   return (
     <>
       {/* service area start */}
-      <div className='service-area style-2 pd-top-60 pd-bottom-90'>
+      <div className='service-area style-2 pd-top-45 pd-bottom-90'>
         <div className='container'>
           <div class="heading text-center mb-50">
               <h2 class="heading__title">CURRENT OPENINGS</h2>

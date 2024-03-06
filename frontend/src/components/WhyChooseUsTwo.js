@@ -29,8 +29,7 @@ const WhyChooseUsTwo = () => {
                 <div className='details1'>
                   <h6>WE LISTEN</h6>
                   <p>
-                    Enhance interactive metrics for reliable services.
-                    Proactively unleash fully researched.
+                  Understand client's needs, tailoring freight solutions for efficiency.
                   </p>
                 </div>
               </div>
@@ -41,8 +40,7 @@ const WhyChooseUsTwo = () => {
                 <div className='details1'>
                   <h6>WE WALK WITH CLIENTS</h6>
                   <p>
-                    Enhance interactive metrics for reliable services.
-                    Proactively unleash fully researched.
+                  Collaborate closely, navigating logistics challenges for seamless operations.
                   </p>
                 </div>
               </div>
@@ -60,8 +58,7 @@ const WhyChooseUsTwo = () => {
                 <div className='details1'>
                   <h6>WE CREATE SOLUTIONS</h6>
                   <p>
-                    Enhance interactive metrics for reliable services.
-                    Proactively unleash fully researched.
+                  Innovate customized logistics strategies integrating automated ERP software solutions.
                   </p>
                 </div>
               </div>
@@ -72,8 +69,7 @@ const WhyChooseUsTwo = () => {
                 <div className='details1'>
                   <h6>WE LOOK INTO THE FUTURE</h6>
                   <p>
-                    Enhance interactive metrics for reliable services.
-                    Proactively unleash fully researched.
+                  Anticipate trends, leveraging technology for agile supply chain management.
                   </p>
                 </div>
               </div>
