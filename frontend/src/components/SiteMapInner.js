@@ -40,7 +40,7 @@ const SiteMapInner= () => {
                        
                       NECC ECOM SOLUTIONS{" "}
                       </Link></li>
-                      {/* <li> <Link to='/KeyManagementPersonnel'>
+                      <li> <Link to='/KeyManagementPersonnel'>
                         
                       KEY MANAGEMENT PERSONNEL{" "}
                       </Link></li>
@@ -128,7 +128,7 @@ const SiteMapInner= () => {
                         <li> <Link to='/Awards&Recognition'>
                         
                         AWARDS & RECOGNITION{" "}
-                        </Link></li> */}
+                        </Link></li>
 
 
                     </ul>
