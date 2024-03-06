@@ -5,15 +5,20 @@ const { DataTypes } = require('sequelize');
 module.exports = model;
 
 function model(sequelize) {
+
     const attributes = {
+        serial: { type: DataTypes.INTEGER, allowNull: true },
         name: { type: DataTypes.STRING, allowNull: false },
-        // You can add more attributes as needed
-    };
+        description: { type: DataTypes.TEXT, allowNull: true }
+    }; 
 
     const options = {
-        // Any specific options for this model
+
     };
 
-    // Change 'Category' to 'Page' in the return statement
-    return sequelize.define('Pages', attributes, options);
+    const PageContent = sequelize.define('PageContent', attributes, options);
+
+    
+
+    return PageContent;
 }

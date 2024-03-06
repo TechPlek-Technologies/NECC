@@ -62,6 +62,8 @@ import CorporateSocialResponsibility from "./pages/CorporateSocialResponsibility
 import Network from "./pages/Network";
 import BranchLocater from "./elements/demo";
 import Award from "./pages/Award";
+import PageSection from "./pages/Dashboard/pages/pageSection";
+import AdminContent from "./pages/Dashboard/pages/AdminContent";
 
 function App() {
   useEffect(() => {
@@ -143,7 +145,7 @@ function App() {
             <Route exact path="/admin/dashboard" element={<Home />} />
             <Route exact path="/admin/career" element={<Carrier />}></Route>
             <Route exact path="/admin/content" element={<Content />}></Route>
-            <Route exact path="/admin/content/:pagename/:id" element={<AdminQuaterlyCompliance />}></Route>
+            <Route exact path="/admin/content/:pagename/:id" element={<PageSection />}></Route>
             <Route exact path="/admin/office" element={<Office />}></Route>
             <Route exact path="/admin/contact" element={<OfficeContact />}></Route>
             <Route exact path="/admin/investor" element={<InvestorsTab />}></Route>
@@ -151,6 +153,7 @@ function App() {
             <Route exact path="/admin/magazines" element={<AdminMagazines />}></Route>
             <Route exact path="/admin/downloads" element={<AdminDownloads />}></Route>
             <Route path="/admin/pdfReports/:reportName/:id" element={<AdminPdfReports />} />
+            <Route path="/admin/content/edit/:reportName/:id" element={<AdminContent />} />
           </Route>
 
           {/* Add more protected routes as needed */}

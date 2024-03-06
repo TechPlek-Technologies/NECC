@@ -15,7 +15,6 @@ function model(sequelize) {
 
     const Event = sequelize.define('Event', attributes, options);
 
-    console.log(sequelize.models);
     // Define association with Category model
     Event.belongsTo(sequelize.models.Category, {
         foreignKey: 'categoryID', // Name of the foreign key in the Event model

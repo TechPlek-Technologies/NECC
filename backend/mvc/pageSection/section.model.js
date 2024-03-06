@@ -7,13 +7,19 @@ module.exports = model;
 function model(sequelize) {
     const attributes = {
         name: { type: DataTypes.STRING, allowNull: false },
-        // You can add more attributes as needed
     };
 
     const options = {
         // Any specific options for this model
     };
 
-    // Change 'Category' to 'Page' in the return statement
-    return sequelize.define('Pages', attributes, options);
+    const Section = sequelize.define('Section', attributes, options);
+
+    // Define association with Category model
+    Section.belongsTo(sequelize.models.Pages, {
+        foreignKey: 'pagesID', // Name of the foreign key in the Event model
+        allowNull: false, 
+    });
+
+    return Section;
 }
