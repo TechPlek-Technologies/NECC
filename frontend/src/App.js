@@ -118,7 +118,7 @@ function App() {
           <Route exact path="/BoardOfDirectors" element={<BoardOfDirectors/>} />
           <Route exact path="/SiteMap" element={<SiteMap/>} />
           <Route exact path="/CorporateGovernance" element={<CorporateGovernance/>} />
-          <Route exact path="/AnnualReport" element={<AnnualReport/>} />
+          <Route exact path="/AnnualReportAndNoticeOfAGM" element={<AnnualReport/>} />
           <Route exact path="/QuarterlyCompliances" element={<QuarterlyCompliances/>} />
           <Route exact path="/Download" element={<Download/>} />
           <Route exact path="/Polices" element={<Polices/>} />

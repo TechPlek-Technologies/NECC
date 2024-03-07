@@ -45,7 +45,7 @@ const SiteMapInner= () => {
                       KEY MANAGEMENT PERSONNEL{" "}
                       </Link></li>
 
-                      <li> <Link to='/AnnualReport'>
+                      <li> <Link to='/AnnualReportAndNoticeOfAGM'>
                         
                         ANNUAL REPORT & NOTICE OF AGM{" "}
                         </Link></li>

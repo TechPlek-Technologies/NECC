@@ -1,38 +1,15 @@
 
   import { Link } from "react-router-dom";
 const InvestorsInnerPdf = ({pages}) => {
-    const data2 = [
-      {
-        id: 1,
-        name: "CORPORATE INFORMATION",
-        pdfFileName: "e-del-Request-format.pdf",
-        pdfFilePath: "./uploads/e-del-Request-format.pdf",
-        eventID: 1,
-      },
-      {
-        id: 2,
-        name: "CORPORATE INFORMATION",
-        pdfFileName: "e-del-Request-format.pdf",
-        pdfFilePath: "./uploads/e-del-Request-format.pdf",
-        eventID: 1,
-      },
-      {
-        id: 3,
-        name: "CORPORATE INFORMATION",
-        pdfFileName: "e-del-Request-format.pdf",
-        pdfFilePath: "./uploads/e-del-Request-format.pdf",
-        eventID: 1,
-      },
-      {
-        id: 4,
-        name: "CORPORATE INFORMATION",
-        pdfFileName: "e-del-Request-format.pdf",
-        pdfFilePath: "./uploads/e-del-Request-format.pdf",
-        eventID: 1,
-      },
-    ];
+   
     return (
      <ul className=' list-inner-wrap list-Investors1' >
+      <li><Link to="/AnnualReportAndNoticeOfAGM">ANNUAL REPORT & NOTICE OF AGM</Link></li>
+      <li><Link to="/CorporateInformation">CORPORATE INFORMATION</Link></li>
+      <li><Link to="/CorporateGovernance">CORPORATE GOVERNANCE</Link></li>
+      <li><Link to="/NewspaperPublication">NEWSPAPER PUBLICATION</Link></li>
+      <li><Link to="/QuarterlyCompliances">QUARTERLY COMPLIANCES</Link></li>
+      <li><Link to="/RightIssues">RIGHT ISSUES</Link></li>
         {pages.map((item) => (
      <li> <Link key={item.id}
      to={item.pdfFilePath}>
