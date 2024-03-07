@@ -1,8 +1,6 @@
-import {
-    FaRegFilePdf,
-  } from "react-icons/fa";
+
   import { Link } from "react-router-dom";
-const InvestorsInnerPdf = ({id}) => {
+const InvestorsInnerPdf = ({pages}) => {
     const data2 = [
       {
         id: 1,
@@ -35,10 +33,10 @@ const InvestorsInnerPdf = ({id}) => {
     ];
     return (
      <ul className=' list-inner-wrap list-Investors1' >
-        {data2.map((item) => (
+        {pages.map((item) => (
      <li> <Link key={item.id}
      to={item.pdfFilePath}>
-     <FaRegFilePdf className='list-Investors2' />{item.name}{" "}
+    {item.name}{" "}
      </Link></li> ))}
    </ul>
     );
