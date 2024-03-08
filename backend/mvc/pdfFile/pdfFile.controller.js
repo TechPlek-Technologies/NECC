@@ -41,7 +41,6 @@ async function createPdfFile(req, res, next) {
 
     try {
         const params = req.body;
-        console.log(params)
         const file = req.file; // Assuming multer or similar middleware handles file upload
         await pdfFileService.createPdfFile(params, file);
         res.json({ message: 'PDF file created successfully' });

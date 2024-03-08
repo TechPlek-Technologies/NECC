@@ -4,6 +4,7 @@ const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const errorHandler = require("_middleware/error-handler");
+const fs = require('fs');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -19,6 +20,22 @@ app.use("/office", require("./mvc/address/address.controller"));
 app.use("/content", require("./mvc/carrier/content.controller"));
 app.use("/page", require("./mvc/page/page.controller"));
 app.use("/section", require("./mvc/pageSection/section.controller"));
+app.use("/pageContent", require("./mvc/pageContent/content.controller"));
+
+app.get('/pdf/:filename', (req, res) => {
+  const { filename } = req.params;
+  const filePath = `./uploads/${filename}`;
+
+  fs.readFile(filePath, (err, data) => {
+      if (err) {
+          res.status(404).send('File not found');
+          return;
+      }
+
+      res.contentType('application/pdf');
+      res.send(data);
+  });
+});
 
 // global error handler
 app.use(errorHandler);

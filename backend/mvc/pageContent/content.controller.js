@@ -7,7 +7,7 @@ const contentService = require("./content.service");
 
 // routes
 router.get("/", getAllContents);
-router.get("/:id", authorize(), getContentById);
+router.get("/:id",  getContentById);
 router.get("/serial/:serial",  getContentBySerial);
 router.post("/", authorize(), createContentSchema, createContent);
 router.put("/:id", authorize(), updateContentSchema, updateContent);
@@ -16,7 +16,7 @@ router.delete("/:id", authorize(), deleteContent);
 module.exports = router;
 
 function getAllContents(req, res, next) {
-  contentService
+  PageContent
     .getAllContents()
     .then((contents) => res.json(contents))
     .catch(next);
