@@ -26,16 +26,14 @@ const InvestorsDynamicInnverPdf = ({ id }) => {
     }, []);
 
     return (
-        <div>
+        <div className="tagcloud">
             {data && data?.map((item) => (
-                <div key={item.id} className="service-details-wrap">
-                   
-                    {<Link key={item.id}
+                
+                    <Link key={item.id}
                         to={`${domain}/pdf/${item.pdfFileName}`}
-                        target="blank">
+                        target="_blank" rel="noopener noreferrer">
                         <FaRegFilePdf className='list-Investors2' />{item.name}{" "}
-                    </Link>}
-                </div>
+                    </Link>
             ))}
         </div>
     );

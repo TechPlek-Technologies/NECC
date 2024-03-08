@@ -49,7 +49,7 @@ const CurrentOpeningInnerPdf = () => {
             </p>
 
             <div className='btn-wrap'>
-              <Link className='read-more-text' to={`mailto:resume@neccgroup.com?subject=${encodeURIComponent(item.emailSubject)}`}>
+              <Link className='read-more-text' to={`mailto:resume@neccgroup.com`}>
                 Submit Resume{" "}
                 <span>
                   <FaArrowRight />
