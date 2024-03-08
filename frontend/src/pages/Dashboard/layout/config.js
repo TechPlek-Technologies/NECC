@@ -28,15 +28,15 @@ export const items = [
       </SvgIcon>
     )
   },
-  {
-    title: 'Content',
-    path: '/admin/content',
-    icon: (
-      <SvgIcon fontSize="small">
-         <BriefcaseIcon />
-      </SvgIcon>
-    )
-  },
+  // {
+  //   title: 'Content',
+  //   path: '/admin/content',
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //        <BriefcaseIcon />
+  //     </SvgIcon>
+  //   )
+  // },
   {
     title: 'Offices',
     path: '/admin/office',
@@ -64,24 +64,24 @@ export const items = [
       </SvgIcon>
     )
   },
-  {
-    title: 'Magazines',
-    path: '/admin/magazines',
-    icon: (
-      <SvgIcon fontSize="small">
-        <EyeIcon />
-      </SvgIcon>
-    )
-  },
-  {
-    title: 'Downloads',
-    path: '/admin/downloads',
-    icon: (
-      <SvgIcon fontSize="small">
-        <DocumentArrowDownIcon />
-      </SvgIcon>
-    )
-  },
+  // {
+  //   title: 'Magazines',
+  //   path: '/admin/magazines',
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //       <EyeIcon />
+  //     </SvgIcon>
+  //   )
+  // },
+  // {
+  //   title: 'Downloads',
+  //   path: '/admin/downloads',
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //       <DocumentArrowDownIcon />
+  //     </SvgIcon>
+  //   )
+  // },
  
   {
     title: 'Error',
