@@ -27,6 +27,7 @@ import { useParams } from "react-router-dom";
 import { capitalizeFirstLetterOfEachWord } from "../utils/capitalise-word";
 import axios from "axios";
 import ReactQuill from "react-quill";
+import { ContentTable } from "../sections/ContentText/ContentTable";
 
 const domain = process.env.REACT_APP_API_DOMAIN;
 
@@ -117,9 +118,6 @@ const AdminContent = () => {
     []
   );
 
-  const handleFileChange = (event) => {
-    setFile(event.target.files[0]);
-  };
 
   const handlePageChange = useCallback((event, value) => {
     setPage(value);
@@ -194,8 +192,9 @@ const AdminContent = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `${domain}/uploads/pdfFiles/sections/${id}`
+          `${domain}/pageContent/${id}`
         );
+        console.log(response.data)
         setData(response.data);
         setLoading(false);
       } catch (error) {
@@ -261,7 +260,7 @@ const AdminContent = () => {
                     <CircularProgress />
                   </Box>
                 ) : (
-                  <PdfTable
+                  <ContentTable
                     count={data.length}
                     items={carriers}
                     onPageChange={handlePageChange}
@@ -271,7 +270,7 @@ const AdminContent = () => {
                     section={section}
                     handleKeyChange={handleKeyChange}
                     key={key}
-                  />
+                  /> 
                 )}
               </Stack>
             </Container>

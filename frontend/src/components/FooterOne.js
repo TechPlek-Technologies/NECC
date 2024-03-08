@@ -179,7 +179,7 @@ const FooterOne = () => {
               <div className='widget widget_subscribe'>
               <div className='single-footer-top'>
                   <div className='icon'>
-                    <img src='assets/img/icon/map-marker.png' alt='Transpro' />
+                    <img src='/assets/img/icon/map-marker.png' alt='Transpro' />
                   </div>
                   <div className='details'>
                     <h6>OFFICE ADDRESS:</h6>
@@ -206,7 +206,7 @@ const FooterOne = () => {
               <div className='widget widget_subscribe'>
               <div className='single-footer-top'>
                 <div className='icon'>
-                    <img src='assets/img/icon/phone.png' alt='Transpro' />
+                    <img src='/assets/img/icon/phone.png' alt='Transpro' />
                   </div>
                   <div className='details'>
                     <h6>CONTACT US:</h6>

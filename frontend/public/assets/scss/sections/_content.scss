@@ -293,13 +293,14 @@
   }
 }
 .list-inner-wrap {
-  margin: 0;
+  margin: 2px 0px;
   padding: 0;
   li {
     list-style: none;
     display: flex;
     align-items: center;
     color: var(--heading-color);
+    padding: 2px;
     //  font-weight: 0;
     + li {
       margin-top: 14px;

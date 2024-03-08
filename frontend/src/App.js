@@ -65,6 +65,7 @@ import Award from "./pages/Award";
 import PickupAndDelivery from "./pages/PickupAndDelivery";
 import PageSection from "./pages/Dashboard/pages/pageSection";
 import AdminContent from "./pages/Dashboard/pages/AdminContent";
+import InvestorsDynamic from "./pages/InvestorsDynamic";
 
 function App() {
   useEffect(() => {
@@ -135,6 +136,7 @@ function App() {
           <Route exact path="/Network" element={<Network/>} />
           <Route exact path="/Awards&Recognition" element={<Award/>} />
           <Route exact path="/Pickup&Delivery" element={<PickupAndDelivery/>} />
+          <Route exact path="/:pagename/:id" element={<InvestorsDynamic />}></Route>
           <Route
             exact
             path="/CorporateInformation"
