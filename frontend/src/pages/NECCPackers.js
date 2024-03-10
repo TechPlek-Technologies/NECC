@@ -19,7 +19,7 @@ const NECCPackers = () => {
             <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"NECC PACKERS & MOVERS"} imgSrc={"/assets/img/banner/1.png"}/>
+            <Breadcrumb title={"NECC PACKERS & MOVERS"} imgSrc={"/assets/img/banner/Necc-Packer-&-Movers.webp"}/>
 
             {/* Feedback Inner */}
             <NECCPackersInner/>

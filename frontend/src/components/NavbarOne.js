@@ -236,9 +236,9 @@ const NavbarOne = () => {
                   <li>
                         <Link to='/contact'>Contact Us</Link>
                       </li>
-                      {/* <li>
+                      <li>
                         <Link to='/Career'>Careers</Link>
-                      </li> */}
+                      </li>
                       {/* <li>
                         <Link to='#'>Customer Care</Link>
                       </li> */}

@@ -30,7 +30,7 @@ const CorporateSocialResponsibilityInner = () => {
       <div
         className='features-area-2'
         style={{
-          backgroundImage: 'url("assets/img/bg/feature-bg.png")',
+          backgroundImage: 'url("/assets/img/bg/project-undertaken.webp")',
         }}
       >
         <div className='container'>
@@ -41,7 +41,7 @@ const CorporateSocialResponsibilityInner = () => {
                     <div className='thumb'>
                         <img
                         className='w-100'
-                        src='assets/img/about/5.png'
+                        src='/assets/img/about/child-education.webp'
                         alt='Transpro'
                         />
                     </div>
@@ -50,7 +50,7 @@ const CorporateSocialResponsibilityInner = () => {
                     <div className='thumb csrimg'>
                         <img
                         className='w-100'
-                        src='assets/img/about/6.png'
+                        src='/assets/img/about/poor-child.webp'
                         alt='Transpro'
                         />
                     </div>

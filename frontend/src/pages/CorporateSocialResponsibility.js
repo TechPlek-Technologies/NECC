@@ -21,7 +21,7 @@ const CorporateSocialResponsibility = () => {
           <NavbarThree/>
             
             {/* Breadcrumb */}
-            <Breadcrumb title={"CORPORATE SOCIAL RESPONSIBILITY"} imgSrc={"/assets/img/banner/1.png"}/>
+            <Breadcrumb title={"CORPORATE SOCIAL RESPONSIBILITY"} imgSrc={"/assets/img/banner/CSR (2).webp"}/>
 
             {/*Investors Inner */}
             <CorporateSocialResponsibilityInner/>

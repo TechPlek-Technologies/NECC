@@ -13,7 +13,7 @@ function capitalizeEachWord(inputString) {
     // Iterate through each word in the array
     for (let i = 0; i < words.length; i++) {
         // Capitalize the first letter of each word
-        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toUpperCase();
     }
 
     // Join the words back into a single string
@@ -76,32 +76,31 @@ const InvestorsDynamicInner = () => {
   return (
     <>
       {/* Investors area start */}
-      <div className="service-area pd-top-120 pd-bottom-120">
+      <div className="blog-details-area pd-top-130 pd-bottom-45">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="service-details-wrap">
-              <h2>{capitalizeEachWord(pagename.replace("-"," "))}</h2>
-              <div className="row">
+              <h2 className="title">{capitalizeEachWord(pagename.replace("-"," "))}</h2>
+              
                 
-                <div className="col-lg-12 align-self-center">
+                <div className="col-lg-12">
+                  <div className="sidebar-area">
 
                   {section.map((item) => (
-                  <div className="service-details-wrap" key={item.id}>
-                    <div className="thumb"></div>
-                    <div className="row">
-                      <div className="col-lg-12 align-self-center">
-                        <h4 className="subtitle CorporateInformation1">
+                  <div className="widget widget_tags" key={item.id}>
+                    
+                        <h4 className="widget-title">
                          {capitalizeEachWord(item.name)}
+                         <span className="dot" />
                         </h4>
                         <InvestorsDynamicInnverPdf id={item.id}/>
                        
                       </div>
-                    </div>
-                  </div>))}
+                   ))}
+                </div>
                 </div>
                 
-              </div>
-            </div>
+              
+           
           </div>
         </div>
       </div>
