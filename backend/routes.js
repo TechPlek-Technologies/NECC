@@ -5,6 +5,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const errorHandler = require("_middleware/error-handler");
 const fs = require('fs');
+const authorize = require("./_middleware/authorize");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -40,6 +41,22 @@ app.get('/pdf/:filename', (req, res) => {
       res.send(data);
   });
 });
+app.delete('/pdf/:filename',authorize(), (req, res) => {
+  const { filename } = req.params;
+  console.log(filename)
+  const filePath = `./uploads/${filename}`;
+
+  // Delete the file
+  fs.unlink(filePath, (err) => {
+    if (err) {
+      console.error('Error deleting file:', err);
+      res.status(500).send('Failed to delete file');
+      return;
+    }
+
+    res.send('File deleted successfully');
+  });
+});
 app.get('/csrpdf/:filename', (req, res) => {
   const { filename } = req.params;
   const filePath = `./csrUploads/${filename}`;
@@ -54,9 +71,24 @@ app.get('/csrpdf/:filename', (req, res) => {
       res.send(data);
   });
 });
+app.delete('/csrpdf/:filename',authorize(), (req, res) => {
+  const { filename } = req.params;
+  const filePath = `./csrUploads/${filename}`;
+
+  // Delete the file
+  fs.unlink(filePath, (err) => {
+    if (err) {
+      console.error('Error deleting file:', err);
+      res.status(500).send('Failed to delete file');
+      return;
+    }
+
+    res.send('File deleted successfully');
+  });
+});
 app.get('/ci/:filename', (req, res) => {
   const { filename } = req.params;
-  const filePath = `./ciploads/${filename}`;
+  const filePath = `./ciuploads/${filename}`;
 
   fs.readFile(filePath, (err, data) => {
       if (err) {
@@ -66,6 +98,21 @@ app.get('/ci/:filename', (req, res) => {
 
       res.contentType('application/pdf');
       res.send(data);
+  });
+});
+app.delete('/ci/:filename',authorize(), (req, res) => {
+  const { filename } = req.params;
+  const filePath = `./ciuploads/${filename}`;
+
+  // Delete the file
+  fs.unlink(filePath, (err) => {
+    if (err) {
+      console.error('Error deleting file:', err);
+      res.status(500).send('Failed to delete file');
+      return;
+    }
+
+    res.send('File deleted successfully');
   });
 });
 
