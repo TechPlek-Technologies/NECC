@@ -1,30 +1,31 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 const CorporateSocialResponsibilityPdf = ({id}) => {
-    const data2 = [
-      {
-        id: 1,
-        name: "CSR-Policy",
-        pdfFileName: "e-del-Request-format.pdf",
-        pdfFilePath: "./uploads/e-del-Request-format.pdf",
-        createdAt: "2024-01-31T09:41:18.000Z",
-        updatedAt: "2024-01-31T09:41:18.000Z",
-        eventID: 1,
-      },
-      {
-        id: 2,
-        name: "Reports on CSR undertaken by the Company 2021-2022",
-        pdfFileName: "e-del-Request-format.pdf",
-        pdfFilePath: "./uploads/e-del-Request-format.pdf",
-        createdAt: "2024-01-31T10:13:27.000Z",
-        updatedAt: "2024-01-31T10:13:27.000Z",
-        eventID: 1,
-      },
-    ];
+
+    const [data,setData]=useState([]);
+    const domain = process.env.REACT_APP_API_DOMAIN;
+
+    useEffect(() => {
+      // Function to fetch data
+      const fetchData = async () => {
+        try {
+          const response = await axios.get(`${domain}/csrpdf`);
+          setData(response.data); // Set the fetched data into state
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
+  
+      // Call the fetch data function
+      fetchData();
+    }, []); 
     return (
       <div className="tagcloud">
-        {data2.map((item) => (
+        {data&&data.map((item) => (
           <a
             key={item.id}
-            href={item.pdfFilePath}
+            href={`${domain}/csrpdf/${item.pdfFileName}`}
             target="_blank"
             rel="noopener noreferrer"
           >

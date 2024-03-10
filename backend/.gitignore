@@ -7,15 +7,9 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
-<<<<<<< HEAD
 #configuration setting
 config.json
 
-=======
-config.json
-
-
->>>>>>> 1ab26c3a3687d90378336cded59f2fa13c69ee7d
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -59,6 +53,12 @@ web_modules/
 
 # Optional npm cache directory
 .npm
+
+
+# uploads
+uploads
+
+csrUploads
 
 # Optional eslint cache
 .eslintcache

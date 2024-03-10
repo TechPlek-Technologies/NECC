@@ -8,6 +8,7 @@ import XCircleIcon from '@heroicons/react/24/solid/XCircleIcon';
 import BriefcaseIcon from '@heroicons/react/24/solid/BriefcaseIcon';
 
 import { SvgIcon } from '@mui/material';
+import { FaBuilding, FaUsers } from 'react-icons/fa';
 
 export const items = [
   {
@@ -64,24 +65,33 @@ export const items = [
       </SvgIcon>
     )
   },
-  // {
-  //   title: 'Magazines',
-  //   path: '/admin/magazines',
-  //   icon: (
-  //     <SvgIcon fontSize="small">
-  //       <EyeIcon />
-  //     </SvgIcon>
-  //   )
-  // },
-  // {
-  //   title: 'Downloads',
-  //   path: '/admin/downloads',
-  //   icon: (
-  //     <SvgIcon fontSize="small">
-  //       <DocumentArrowDownIcon />
-  //     </SvgIcon>
-  //   )
-  // },
+  {
+    title: 'Corporate Information',
+    path: '/admin/corporateInformation',
+    icon: (
+      <SvgIcon fontSize="small">
+        <FaBuilding />
+      </SvgIcon>
+    )
+  },
+  {
+    title: 'Key Personnel Management',
+    path: '/admin/Keypersonnel',
+    icon: (
+      <SvgIcon fontSize="small">
+        <FaUsers />
+      </SvgIcon>
+    )
+  },
+  {
+    title: 'CSR',
+    path: '/admin/csr',
+    icon: (
+      <SvgIcon fontSize="small">
+        <DocumentArrowDownIcon />
+      </SvgIcon>
+    )
+  },
  
   {
     title: 'Error',

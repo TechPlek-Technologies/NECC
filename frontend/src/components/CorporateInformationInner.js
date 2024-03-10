@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ModalVideo from "react-modal-video";
 import CorporateInformationInnerPdf2 from "./CorporateInformationInnerPdf2";
 import CorporateInformationInnerPdf from "./CorporateInformationInnerPdf";
 import CorporateInformationInnerPdf1 from "./CorporateInformationInnerPdf1";
+import axios from "axios";
 
 
 const section = [
@@ -57,8 +58,29 @@ const section1 = [
 ];
 
 
+
+
 const CorporateInformationInner = () => {
   const [isOpen, setOpen] = useState(false);
+  const [data,setData]=useState([]);
+  const domain = process.env.REACT_APP_API_DOMAIN;
+
+  
+  useEffect(() => {
+    // Function to fetch data
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${domain}/corporateInformation`);
+        setData(response.data); // Set the fetched data into state
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+  
+    // Call the fetch data function
+    fetchData();
+  }, []); // Empty dependency array to ensure this effect runs only once
+
   
   return (
     <>
@@ -74,15 +96,15 @@ const CorporateInformationInner = () => {
                   <h6 className="subtitle CorporateInformation">
                     BOARD OF DIRECTORS
                   </h6>
-                  {section.map((item) => (
+                  {data&&data.map((item) => (
                   <div className="service-details-wrap" key={item.id}>
                     <div className="thumb"></div>
                     <div className="row">
                       <div className="col-lg-12 align-self-center">
                         <h4 className="subtitle CorporateInformation1">
-                         {item.designation}
+                         {item.position}
                         </h4>
-                        <CorporateInformationInnerPdf id={item.id}/>
+                        <CorporateInformationInnerPdf description={item.description}/>
                        
                       </div>
                     </div>
