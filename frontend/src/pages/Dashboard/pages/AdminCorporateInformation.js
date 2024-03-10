@@ -5,7 +5,7 @@ import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { SectionInnerTab } from "../sections/InvestorsTab/section-inner-tab";
 
-function AdminDownloads() {
+function AdminCorporateInformation() {
   const theme = createTheme();
   return (
     <>
@@ -23,7 +23,7 @@ function AdminDownloads() {
               <Container maxWidth="lg">
                 <Stack spacing={3}>
                   <div>
-                    <Typography variant="h4">CSR</Typography>
+                    <Typography variant="h4">Corporate Information</Typography>
                   </div>
                   <div>
                     <Grid container spacing={1}>
@@ -35,7 +35,7 @@ function AdminDownloads() {
                         style={{ margin: "4px 0" }}
                       >
                         <Link
-                          to={`/admin/csr/members/committee`}
+                          to={`/admin/corporateInformation/directors/Entry`}
                           style={{ textDecoration: "none", color: "inherit" }}
                         >
                           <SectionInnerTab
@@ -49,7 +49,7 @@ function AdminDownloads() {
                               },
                               margin: "4px", // Adjust the margin to control the gap between tabs
                             }}
-                            name={"Committee Members"}
+                            name={"Directors"}
                           />
                         </Link>
                       </Grid>
@@ -61,7 +61,7 @@ function AdminDownloads() {
                         style={{ margin: "4px 0" }}
                       >
                         <Link
-                          to={`/admin/csr/downloads/pdf`}
+                          to={`/admin/corporateInformation/committee/members`}
                           style={{ textDecoration: "none", color: "inherit" }}
                         >
                           <SectionInnerTab
@@ -75,7 +75,33 @@ function AdminDownloads() {
                               },
                               margin: "4px", // Adjust the margin to control the gap between tabs
                             }}
-                            name={"PDF's"}
+                            name={"Committee"}
+                          />
+                        </Link>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={12}
+                        sm={6}
+                        lg={3}
+                        style={{ margin: "4px 0" }}
+                      >
+                        <Link
+                          to={`/admin/corporateInformation/creditRating/pdf`}
+                          style={{ textDecoration: "none", color: "inherit" }}
+                        >
+                          <SectionInnerTab
+                            sx={{
+                              height: "100%",
+                              boxShadow: "0 7px 14px rgba(0, 0, 0, 0.3)",
+                              cursor: "pointer",
+                              transition: "box-shadow 0.3s",
+                              "&:hover": {
+                                boxShadow: "0 8px 16px rgba(0, 0, 0, 0.4)",
+                              },
+                              margin: "4px", // Adjust the margin to control the gap between tabs
+                            }}
+                            name={"Credit Rating information"}
                           />
                         </Link>
                       </Grid>
@@ -93,4 +119,4 @@ function AdminDownloads() {
   );
 }
 
-export default AdminDownloads;
+export default AdminCorporateInformation;

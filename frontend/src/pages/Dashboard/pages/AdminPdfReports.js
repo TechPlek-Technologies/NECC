@@ -9,6 +9,7 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
+  DialogContentText,
   DialogTitle,
   Grid,
   Snackbar,
@@ -26,6 +27,8 @@ import { PdfTable } from "../sections/InvestorsTab/pdf-table";
 import { useParams } from "react-router-dom";
 import { capitalizeFirstLetterOfEachWord } from "../utils/capitalise-word";
 import axios from "axios";
+import { FaEdit } from "react-icons/fa";
+import { RiDeleteBin2Line } from "react-icons/ri";
 
 const domain = process.env.REACT_APP_API_DOMAIN;
 
@@ -49,6 +52,13 @@ const AdminPdfReports = () => {
   const [section, setSection] = useState(reportName);
   const [file, setFile] = useState(null);
   const [key, setKey] = useState(0);
+  const [editCategory, setEditCategory] = useState(reportName);
+  const [openDelete, setOpenDelete] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const [isEditTitle, setEditTitle] = useState(false);
+  const token = window.localStorage.getItem("Token");
+
 
   const handleKeyChange = () => {
     setKey((prevKey) => prevKey + 1);
@@ -119,6 +129,68 @@ const AdminPdfReports = () => {
       console.error("Error uploading PDF file:", error.message);
     }
   };
+
+  const handleEditSubmit = async () => {
+    try {
+      const formData = {
+        name: editCategory,
+      };
+
+
+      const response = await axios.put(`${domain}/events/${id}`, formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.status !== 200) {
+        setMessage("Failed to Create Section");
+        setFailure(true);
+        throw new Error("Failed to Create Section");
+      }
+
+      // Handle successful upload
+      setMessage(response.data.message);
+      setSuccess(true);
+      console.log("Section created successfully");
+    } catch (error) {
+      setMessage("Failed to Create Section");
+      setFailure(true);
+      console.error("Error creating new section:", error.message);
+    }finally{
+      setEditCategory(false);
+      window.location.reload();
+    }
+   
+  };
+
+  const handleDelete = async () => {
+    try {
+      const response = await axios.delete(`${domain}/events/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
+  
+      if (response.status !== 200) {
+        throw new Error("Failed to delete category");
+      }
+  
+      // Handle successful deletion
+      setMessage(response.data.message);
+      setSuccess(true);
+      console.log("Category deleted successfully");
+    } catch (error) {
+      console.error("Error deleting category:", error.message);
+      setMessage("Failed to delete category");
+      setFailure(true);
+    } finally {
+      setOpenDelete(false);
+      window.location.reload(); 
+    }
+  };
   const theme = createTheme();
 
   useEffect(() => {
@@ -164,7 +236,36 @@ const AdminPdfReports = () => {
                     </Typography>
                   </Stack>
                   <div>
-                    <Button
+                      <Button
+                        style={{ "marginLeft": "10px" }}
+                        color="success"
+                        startIcon={
+                          <SvgIcon fontSize="small">
+                            <FaEdit />
+                          </SvgIcon>
+                        }
+                        variant="contained"
+                        onClick={() => setEditTitle(true)}
+                      >
+                        Edit
+                      </Button>
+                      <Button
+                        style={{ "marginLeft": "10px" }}
+
+                        color="error"
+                        startIcon={
+                          <SvgIcon fontSize="small">
+                            <RiDeleteBin2Line />
+                          </SvgIcon>
+                        }
+                        variant="contained"
+                        onClick={() => setOpenDelete(true)}
+                      >
+                        Delete
+                      </Button>
+                      <Button
+                        style={{ "marginLeft": "10px" }}
+
                       startIcon={
                         <SvgIcon fontSize="small">
                           <PlusIcon />
@@ -177,6 +278,8 @@ const AdminPdfReports = () => {
                     >
                       New
                     </Button>
+                    
+                    
                   </div>
                 </Stack>
 
@@ -274,6 +377,66 @@ const AdminPdfReports = () => {
               </Button>
             </DialogActions>
           </Dialog>
+
+          <Dialog open={isEditTitle} onClose={() => { setEditTitle(false) }}>
+              <DialogTitle>Edit Title</DialogTitle>
+              <DialogContent>
+                <Box component="form" noValidate sx={{ mt: 1 }}>
+                  <TextField
+                    margin="normal"
+                    fullWidth
+                    id="pagename"
+                    label="Edit Title"
+                    name="pagename"
+                    defaultValue={editCategory}
+                    onChange={(e) => { setEditCategory(e.target.value) }}
+                  />
+
+                </Box>
+              </DialogContent>
+
+              <DialogActions>
+                <Button
+                  onClick={() => {
+                    setEditTitle(false);
+                  }}
+                  color="primary"
+                >
+                  Cancel
+                </Button>
+                <Button
+                  onClick={() => {
+                    handleEditSubmit();
+                  }}
+                  color="primary"
+                >
+                  Save
+                </Button>
+              </DialogActions>
+            </Dialog>
+
+
+            <Dialog
+              open={openDelete}
+              onClose={()=>setOpenDelete(false)}
+              aria-labelledby="alert-dialog-title"
+              aria-describedby="alert-dialog-description"
+            >
+              <DialogTitle id="alert-dialog-title">
+                {`Confirm?`}
+              </DialogTitle>
+              <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            This is a permanent action and cannot be undone.
+          </DialogContentText>
+        </DialogContent>
+              <DialogActions>
+                <Button onClick={handleClose}>Cancel</Button>
+                <Button onClick={()=>{handleDelete()}} autoFocus>
+                  Confirm
+                </Button>
+              </DialogActions>
+            </Dialog>
           <Snackbar
             open={success}
             autoHideDuration={6000}

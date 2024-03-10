@@ -66,6 +66,13 @@ import PickupAndDelivery from "./pages/PickupAndDelivery";
 import PageSection from "./pages/Dashboard/pages/pageSection";
 import AdminContent from "./pages/Dashboard/pages/AdminContent";
 import InvestorsDynamic from "./pages/InvestorsDynamic";
+import CsrCoommitte from "./pages/Dashboard/pages/CsrCommittee";
+import CsrDownloads from "./pages/Dashboard/pages/CsrDownloads";
+import AdminCorporateInformation from "./pages/Dashboard/pages/AdminCorporateInformation";
+import CiDirectors from "./pages/Dashboard/pages/CiDirectors";
+import AdminKeyPersonnel from "./pages/Dashboard/pages/AdminKeyPersonnel";
+import CiCoommitte from "./pages/Dashboard/pages/CiCommittee";
+import CiPdf from "./pages/Dashboard/pages/CiPdf";
 
 function App() {
   useEffect(() => {
@@ -157,6 +164,14 @@ function App() {
             <Route exact path="/admin/:pagename/:id" element={<AdminQuaterlyCompliance />}></Route>
             <Route exact path="/admin/magazines" element={<AdminMagazines />}></Route>
             <Route exact path="/admin/downloads" element={<AdminDownloads />}></Route>
+            <Route exact path="/admin/csr" element={<AdminDownloads />}></Route>
+            <Route exact path="/admin/corporateInformation" element={<AdminCorporateInformation />}></Route>
+            <Route exact path="/admin/Keypersonnel" element={<AdminKeyPersonnel />}></Route>
+            <Route exact path="/admin/corporateInformation/directors/Entry" element={<CiDirectors />}></Route>
+            <Route exact path="/admin/corporateInformation/committee/members" element={<CiCoommitte />}></Route>
+            <Route exact path="/admin/corporateInformation/creditRating/pdf" element={<CiPdf />}></Route>
+            <Route exact path="/admin/csr/members/committee" element={<CsrCoommitte />}></Route>
+            <Route exact path="/admin/csr/downloads/pdf" element={<CsrDownloads />}></Route>
             <Route path="/admin/pdfReports/:reportName/:id" element={<AdminPdfReports />} />
             <Route path="/admin/content/edit/:reportName/:id" element={<AdminContent />} />
           </Route>

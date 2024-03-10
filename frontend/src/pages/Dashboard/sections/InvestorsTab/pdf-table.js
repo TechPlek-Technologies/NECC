@@ -129,6 +129,11 @@ export const PdfTable = (props) => {
           Authorization: `Bearer ${token}`,
         },
       });
+      // const response1 = await axios.delete(`${domain}/pdf/${officeId}`, {
+      //   headers: {
+      //     Authorization: `Bearer ${token}`,
+      //   },
+      // });
   
       if (response.status !== 200) {
         setFailure(true);
