@@ -89,7 +89,7 @@ const CorporateInformationInner = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="service-details-wrap">
-              <h2>Corporate Information</h2>
+              <h2>CORPORATE INFORMATION</h2>
               <div className="row">
                 
                 <div className="col-lg-12 align-self-center">
@@ -110,7 +110,7 @@ const CorporateInformationInner = () => {
                     </div>
                   </div>))}
                 </div>
-                <div className="col-lg-12 align-self-center">
+                {/* <div className="col-lg-12 align-self-center">
                   <h6 className="subtitle CorporateInformation">
                   COMMITTEES OF BOARD
                   </h6>
@@ -124,7 +124,7 @@ const CorporateInformationInner = () => {
                       </div>
                     </div>
                   </div> ))}
-                </div>
+                </div> */}
                 <div className="col-lg-12 align-self-center">
                   <h6 className="subtitle CorporateInformation3">
                   CREDIT RATING INFORMATION

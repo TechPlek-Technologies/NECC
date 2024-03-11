@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaUserAlt } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 const NavbarThree = () => {
@@ -98,6 +99,9 @@ const NavbarThree = () => {
                     </li>
                   </ul>
                 </li>
+                <li>
+                  <Link to='/Network'>Network</Link>
+                </li>
                 <li className='menu-item-has-children'>
                   <Link to='#'>Services</Link>
                   <ul className='sub-menu'>
@@ -136,9 +140,9 @@ const NavbarThree = () => {
                     </li>
                   </ul>
                 </li> */}
-                <li>
+                {/* <li>
                   <Link to='/SiteMap'>SiteMap</Link>
-                </li>
+                </li> */}
                 <li className='menu-item-has-children current-menu-item'>
                   <Link to='#'>Contact Us</Link>
                   <ul className='sub-menu'>
@@ -158,6 +162,15 @@ const NavbarThree = () => {
                         <Link to='/Feedback'>Feedback</Link>
                       </li>
                       </ul>
+                </li>
+                <li>
+                  <Link to='/CorporateSocialResponsibility'>CSR</Link>
+                </li>
+                <li>
+                  <Link to='/RIGHT-ISSUES/36'>Right Issues</Link>
+                </li>
+                <li>
+                  <Link to='/admin'>Login</Link>
                 </li>
               </ul>
             </div>
