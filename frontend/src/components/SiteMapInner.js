@@ -45,32 +45,32 @@ const SiteMapInner= () => {
                       KEY MANAGEMENT PERSONNEL{" "}
                       </Link></li>
 
-                      <li> <Link to='/AnnualReportAndNoticeOfAGM'>
+                      <li> <Link to='/ANNUAL-REPORT-&-NOTICE-OF-AGM/32'>
                         
                         ANNUAL REPORT & NOTICE OF AGM{" "}
                         </Link></li>
 
-                      <li> <Link to='/CorporateGovernance'>
+                      <li> <Link to='/CORPORATE-GOVERNANCE/34'>
                         
                       CORPORATE GOVERNANCE{" "}
                       </Link></li>
 
-                      <li> <Link to='/QuarterlyCompliances'>
+                      <li> <Link to='/QUARTERLY-COMPLIANCES/35'>
                         
                       QUARTERLY COMPLIANCES{" "}
                       </Link></li>
 
-                      <li> <Link to='/Download'>
+                      <li> <Link to='/DOWNLOAD/41'>
                         
                       DOWNLOAD{" "}
                         </Link></li>
 
-                        <li> <Link to='/AnnualReportFinancial'>
+                        <li> <Link to='/Annual-Report-&-Financials/33'>
                         
                         ANNUAL REPORT & FINANCIALS{" "}
                         </Link></li>
 
-                        <li> <Link to='/Polices'>
+                        <li> <Link to='/POLICES-&-CODE/37'>
                         
                         POLICES & CODE{" "}
                         </Link></li>
@@ -85,17 +85,17 @@ const SiteMapInner= () => {
                         CODE OF CONDUCT{" "}
                         </Link></li>
 
-                        <li> <Link to='/NewspaperPublication'>
+                        <li> <Link to='/NEWSPAPER-PUBLICATION/38'>
                         
                         NEWSPAPER PUBLICATION{" "}
                         </Link></li>
 
-                        <li> <Link to='/NewsEvents'>
+                        <li> <Link to='/NEWS-&-EVENTS/40'>
                         
                         NEWS & EVENTS{" "}
                         </Link></li>
 
-                        <li> <Link to='/RightIssues'>
+                        <li> <Link to='/RIGHT-ISSUES/36'>
                         
                         RIGHT ISSUES{" "}
                         </Link></li>
@@ -128,6 +128,11 @@ const SiteMapInner= () => {
                         <li> <Link to='/Awards&Recognition'>
                         
                         AWARDS & RECOGNITION{" "}
+                        </Link></li>
+
+                        <li> <Link to='/CorporateInformation'>
+                        
+                        CORPORATE INFORMATION{" "}
                         </Link></li>
 
 

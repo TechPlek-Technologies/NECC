@@ -103,12 +103,12 @@ const SupportBarOne = () => {
                       +91-9711797516
                     </a>
                   </li>
-                  <li className='sign-nav ps-3'>
+                  {/* <li className='sign-nav ps-3'>
                     <a className='sen-signin' href='/admin'>
                       <FaUserAlt />
                       Sign In
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               {/* support right end */}

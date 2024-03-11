@@ -190,6 +190,9 @@ const NavbarOne = () => {
                     </li>
                   </ul>
                 </li>
+                <li>
+                  <Link to='/Network'>Network</Link>
+                </li>
                 <li className='menu-item-has-children'>
                   <Link to='#'>Services</Link>
                   <ul className='sub-menu'>
@@ -249,6 +252,12 @@ const NavbarOne = () => {
                         <Link to='/Feedback'>Feedback</Link>
                       </li>
                       </ul>
+                </li>
+                <li>
+                  <Link to='/CorporateSocialResponsibility'>CSR</Link>
+                </li>
+                <li>
+                  <Link to='/RIGHT-ISSUES/36'>Right Issues</Link>
                 </li>
                 <li>
                   <Link to='/admin'>Login</Link>
