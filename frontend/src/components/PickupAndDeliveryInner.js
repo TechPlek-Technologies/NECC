@@ -16,7 +16,7 @@ const PickupAndDeliveryInner= () => {
                 <h2 className='title'>PICKUP & DELIVERY</h2>
              
                   <p className='content'>
-                  At NECC, we help you with everything from logistics to pickup! You can easily avail of our pickup services and we’ll be on our way to serve you. We commit to a seamless logistics experience. Your goods will be collected promptly and delivered precisely. Trust us with your pickups, and experience the ease of a well-organized supply chain. Your convenience is our priority!
+                  At NECC, we offer comprehensive support, handling everything from logistics to pickups! Accessing our pickup services is simple; just complete the form below with the required information, and we'll promptly attend to your needs. We guarantee a smooth logistics process, ensuring your goods are collected promptly and delivered accurately. Entrust us with your pickups, and enjoy the convenience of a streamlined supply chain. Your satisfaction and convenience are our top priorities!
                     </p>
 
                  </div>
