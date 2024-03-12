@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
-  FaPhoneAlt,
+  FaPhoneAlt, FaUserAlt,
 } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -260,7 +260,7 @@ const NavbarOne = () => {
                   <Link to='/RIGHT-ISSUES/36'>Right Issues</Link>
                 </li>
                 <li>
-                  <Link to='/admin'>Login</Link>
+                  <Link to='/admin'><FaUserAlt style={{marginRight:"4px",marginBottom:"2px"}}/>Login</Link>
                 </li>
               </ul>
             </div>

@@ -69,9 +69,6 @@ const BannerFour = () => {
   };
 
 
-
-
-
   const handleInputChange = (event) => {
     setTrackingNumber(event.target.value);
   };

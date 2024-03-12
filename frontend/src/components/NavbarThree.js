@@ -170,7 +170,7 @@ const NavbarThree = () => {
                   <Link to='/RIGHT-ISSUES/36'>Right Issues</Link>
                 </li>
                 <li>
-                  <Link to='/admin'>Login</Link>
+                  <Link to='/admin'><FaUserAlt style={{marginRight:"4px",marginBottom:"2px"}}/>Login</Link>
                 </li>
               </ul>
             </div>
