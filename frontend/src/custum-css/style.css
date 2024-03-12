@@ -404,6 +404,12 @@ color: black;
     }
  }
 
+ @media (min-width: 910px) and (max-width: 912px) {
+    .title1{
+        font-size: 16px;
+    }
+ }
+
 .contact-btn, .contact-btn:hover{
     color: #fff;
 }
@@ -418,6 +424,12 @@ color: black;
     border-radius: 28px;
     bottom: 700px;
 }
+
+@media (min-width: 910px) and (max-width: 912px) {
+    .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 {
+        bottom: 940px;
+    }
+ }
 
 .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 .title {
     font-size: 30px;

@@ -73,6 +73,7 @@ import CiDirectors from "./pages/Dashboard/pages/CiDirectors";
 import AdminKeyPersonnel from "./pages/Dashboard/pages/AdminKeyPersonnel";
 import CiCoommitte from "./pages/Dashboard/pages/CiCommittee";
 import CiPdf from "./pages/Dashboard/pages/CiPdf";
+import InvestorFeedback from "./pages/InvestorFeedback";
 
 function App() {
   useEffect(() => {
@@ -144,6 +145,7 @@ function App() {
           <Route exact path="/Awards&Recognition" element={<Award/>} />
           <Route exact path="/Pickup&Delivery" element={<PickupAndDelivery/>} />
           <Route exact path="/:pagename/:id" element={<InvestorsDynamic />}></Route>
+          <Route exact path="/InvestorFeedback" element={<InvestorFeedback />}></Route>
           <Route
             exact
             path="/CorporateInformation"

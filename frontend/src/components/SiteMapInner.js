@@ -100,6 +100,11 @@ const SiteMapInner= () => {
                         RIGHT ISSUES{" "}
                         </Link></li>
 
+                        <li> <Link to='/InvestorFeedback'>
+                        
+                        INVESTOR FEEDBACK{" "}
+                        </Link></li>
+
                         <li> <Link to='/NeccPackers&Movers'>
                         
                         NECC PACKERS & MOVERS{" "}

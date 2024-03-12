@@ -7,7 +7,7 @@ const FooterBottomOne = () => {
       <div className='footer-bottom-area'>
         <div className='container'>
           <div className='row'>
-            <div className='col-lg-6 text-lg-start text-center'>
+            <div className='col-lg-8 text-lg-start text-center'>
               <div className='copyright-area'>
                 <p>
                   © Copyright 2024 By <a href='/'>NECC</a>, All right
@@ -15,7 +15,7 @@ const FooterBottomOne = () => {
                 </p>
               </div>
             </div>
-            <div className='col-lg-6 text-lg-end text-center'>
+            <div className='col-lg-4 text-lg-end text-center'>
               <ul>
                 {/* <li>
                   <a href='#' style={{color:"#9583d9"}}>Terms &amp; Condition</a>

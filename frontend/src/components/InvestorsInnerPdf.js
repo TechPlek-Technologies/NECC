@@ -63,12 +63,11 @@ function replaceSpacesWithHyphens(inputString) {
    <li> <Link  to="/CorporateInformation"> CREDIT RATING{" "}</Link></li>
    <li> <Link  to="/CorporateInformation">THE EMAIL ADDRESS FOR GRIEVANCE REDRESSAL AND OTHER RELEVANT DETAILS{" "}</Link></li>
    <li> <Link  to="/CodeOfConduct">CODE OF CONDUCT OF BOARD OF DIRECTORS AND SENIOR MANAGEMENT PERSONNEL{" "}</Link></li>
-   <li> <Link  to="/CorporateSocialResponsibility">VIGIL MECHANISM POLICY{" "}</Link></li>
-   <li> <Link  to="/CorporateSocialResponsibility">POLICY ON DEALING WITH RELATED PARTY TRANSACTIONS{" "}</Link></li>
-   <li> <Link  to="/CorporateSocialResponsibility">POLICY FOR DETERMINING ‘MATERIAL’ SUBSIDIARIES{" "}</Link></li>
-   <li> <Link  to="/CorporateSocialResponsibility">DETAILS OF FAMILIARIZATION PROGRAMMES IMPARTED TO INDEPENDENT DIRECTORS{" "}</Link></li>
-   <li> <Link  to="/CorporateSocialResponsibility">POLICY FOR DETERMINATION OF MATERIALITY OF EVENTS/ INFORMATION{" "}</Link></li>
-   <li> <Link  to="/CorporateSocialResponsibility">  QUARTERLY COMPLIANCES  {" "}</Link></li>
+   <li> <Link  to="/POLICES-&-CODE/37">VIGIL MECHANISM POLICY{" "}</Link></li>
+   <li> <Link  to="/POLICES-&-CODE/37">POLICY ON DEALING WITH RELATED PARTY TRANSACTIONS{" "}</Link></li>
+   <li> <Link  to="/POLICES-&-CODE/37">POLICY FOR DETERMINING ‘MATERIAL’ SUBSIDIARIES{" "}</Link></li>
+   <li> <Link  to="/POLICES-&-CODE/37">DETAILS OF FAMILIARIZATION PROGRAMMES IMPARTED TO INDEPENDENT DIRECTORS{" "}</Link></li>
+   <li> <Link  to="/POLICES-&-CODE/37">POLICY FOR DETERMINATION OF MATERIALITY OF EVENTS/ INFORMATION{" "}</Link></li>
    <li> <Link  to="/Annual-Report-&-Financials/33">  FINANCIALS  {" "}</Link></li>
    <li> <Link  to="/QUARTERLY-COMPLIANCES/35"> NOTICE OF BOARD MEETING {" "}</Link></li>
    <li> <Link  to="/Annual-Report-&-Financials/33"> FINANCIAL RESULTS {" "}</Link></li>
@@ -77,9 +76,9 @@ function replaceSpacesWithHyphens(inputString) {
    <li> <Link  to="/ANNUAL-REPORT-&-NOTICE-OF-AGM/32"> ANNUAL RETURN {" "}</Link></li>
    <li> <Link  to="/ANNUAL-REPORT-&-NOTICE-OF-AGM/32"> SECRETARIAL COMPLIANCE REPORT {" "}</Link></li>
    <li> <Link  to="/Feedback">  INVESTOR FEEDBACK  {" "}</Link></li>
-   <li> <Link  to="/CorporateSocialResponsibility"> POLICY {" "}</Link></li>
-   <li> <Link  to="/CorporateSocialResponsibility">CONTACT DETAILS OF KEY MANAGERIAL PERSONNEL AUTHORIZED FOR DETERMINING MATERIALITY OF AN EVENT/ INFORMATION{" "}</Link></li>
-   <li> <Link  to="/CorporateSocialResponsibility">CRITERIA OF MAKING PAYMENTS TO NON-EXECUTIVE DIRECTORS , IF THE SAME HAS NOT BEEN DISCLOSED IN ANNUAL REPORT{" "}</Link></li>
+   <li> <Link  to="/POLICES-&-CODE/37"> POLICY {" "}</Link></li>
+   <li> <Link  to="/POLICES-&-CODE/37">CONTACT DETAILS OF KEY MANAGERIAL PERSONNEL AUTHORIZED FOR DETERMINING MATERIALITY OF AN EVENT/ INFORMATION{" "}</Link></li>
+   <li> <Link  to="/POLICES-&-CODE/37">CRITERIA OF MAKING PAYMENTS TO NON-EXECUTIVE DIRECTORS , IF THE SAME HAS NOT BEEN DISCLOSED IN ANNUAL REPORT{" "}</Link></li>
    <li> <Link  to="/CorporateInformation">CONTACT INFORMATION OF THE DESIGNATED OFFICIALS WHO ARE RESPONSIBLE FOR ASSISTING AND HANDLING INVESTOR GRIEVANCES {" "}</Link></li>
    <li>Details of agreements entered into with the media companies and/or their associates, etc. (Not Applicable)</li>
    <li>Schedule of analyst or institutional investor meet and presentations made by the listed entity to analysts or institutional investors. (No)</li>

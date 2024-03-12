@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { toast, Toaster } from "react-hot-toast";
 
-const FeedbackInner= () => {
+const InvestorFeedbackInner= () => {
   const form = useRef();
 
   const [recaptchaVerified, setRecaptchaVerified] = useState(false);
@@ -50,20 +50,20 @@ const FeedbackInner= () => {
     <>
       {/* Feedback area start */}
       <div className='container'>
-        <div className='contact-area mg-top-120 mb-120'>
+        <div className='contact-area mg-top-120 mb-60'>
           <div className='row g-0 justify-content-center'>
-            <div class="col-lg-5">
+            {/* <div class="col-lg-5">
               <div class="thumb text-center mb-4 mb-lg-0">
                 <img src="/assets/img/faq/feedback-form.webp" alt="img"/>
                   </div>
-            </div>
-            <div className='col-lg-7'>
+            </div> */}
+            <div className='col-lg-12'>
               <form
                 className='contact-form text-center'
                 ref={form}
                 onSubmit={sendEmail}
               >
-                <h3>FEEDBACK</h3>
+                <h3>INVESTOR FEEDBACK</h3>
                 <div className='row'>
                   <div className='col-md-6'>
                     <div className='single-input-inner'>
@@ -146,4 +146,4 @@ const FeedbackInner= () => {
   );
 };
 
-export default FeedbackInner;
+export default InvestorFeedbackInner;
