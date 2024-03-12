@@ -4,6 +4,14 @@ import axios from "axios";
 
 const GetDetailsInner = () => {
 
+  const [inputFields, setInputFields] = useState([]);
+  const [trackingNumber, setTrackingNumber] = useState('');
+  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
+  const [cnmtRequest, setCnmtRequest] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+
+  
   const GetConsignmentDetail = () => {
     setLoading(true);
     axios.post('http://103.127.30.214:90/Tracking.ashx', {
@@ -34,13 +42,6 @@ const GetDetailsInner = () => {
 
   }
 
-  const [inputFields, setInputFields] = useState([]);
-  const [trackingNumber, setTrackingNumber] = useState('');
-  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
-  const [cnmtRequest, setCnmtRequest] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
-
   // Function to handle button click
   const handleButtonClick = () => {
     setInputFields([...inputFields, <div className='col-lg-11' key={inputFields.length}>
@@ -48,19 +49,6 @@ const GetDetailsInner = () => {
         <input type='text' placeholder='Query Details' />
       </div>
     </div>]);
-  };
-
-  const handleInputChange = (event) => {
-    setTrackingNumber(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    // Implement your submission logic here
-    event.preventDefault();
-    GetConsignmentDetail()
-    console.log('Tracking number submitted:', trackingNumber);
-    setIsEditDialogOpen(true)
-    // You can add your logic to submit the tracking number here
   };
 
 
@@ -131,9 +119,9 @@ const GetDetailsInner = () => {
                       GET STATUS
                     </a> */}
                      <div className='row'>
-                      <div className='col-lg-12'>
-                    <button onClick={() => GetConsignmentDetail()} className="btn btn-base">GET STATUS</button>
-                      </div>
+                      
+                    <button type='submit' onClick={() => GetConsignmentDetail()} className="btn btn-base">GET STATUS</button>
+                     
                     </div>
                   </div>
                 </div>
