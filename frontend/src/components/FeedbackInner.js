@@ -1,6 +1,6 @@
 import React, { useState,useRef } from "react";
 import emailjs from "@emailjs/browser";
-import  { ReCAPTCHA } from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 import {
   FaCalculator,
   FaFileAlt,
@@ -121,14 +121,9 @@ const FeedbackInner= () => {
                       />
                     </div>
                   </div>
-
-                  <div className="col-lg-12">
-                                <ReCAPTCHA
-                                sitekey=""
-                                onChange={handleRecaptchaVerify}
-                                />
-                          </div>
-
+                  <div>
+                  <ReCAPTCHA sitekey="6LfLCJcpAAAAAEDOLqUmzv93a5cjzGFyan_CVHB-" onChange={handleRecaptchaVerify} />
+                  </div>
                   <div className='col-12'>
                     <button className='btn btn-base' type='submit'>
                       {" "}

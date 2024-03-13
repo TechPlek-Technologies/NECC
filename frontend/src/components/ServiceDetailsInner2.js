@@ -114,7 +114,7 @@ const ServiceDetailsInner2 = () => {
                         </li>
                       </ul>
                     </div>
-                <div className='widget widget_download'>
+                {/* <div className='widget widget_download'>
                   <h4 className='widget-title'>
                     DOWNLOAD BROCHURE
                     <span className='dot' />
@@ -133,7 +133,7 @@ const ServiceDetailsInner2 = () => {
                       </a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 {/* <div
                   className='widget widget_support text-center mb-0'
                   style={{
