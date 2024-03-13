@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import {
   FaArrowRight,
-  FaPhoneAlt,
-  FaPlay,
-  FaRegEnvelope,
   FaRegFileAlt,
-  FaRegFilePdf,
-  FaSearch,
+  FaRegFilePdf
 } from "react-icons/fa";
-import ModalVideo from "react-modal-video";
+
 import { Link, useLocation } from 'react-router-dom';
 
 const ServiceDetailsInner1 = () => { 
@@ -114,7 +110,7 @@ const ServiceDetailsInner1 = () => {
                       </ul>
                     </div>
               
-                <div className='widget widget_download'>
+                {/* <div className='widget widget_download'>
                   <h4 className='widget-title'>
                     DOWNLOAD BROCHURE
                     <span className='dot' />
@@ -133,7 +129,7 @@ const ServiceDetailsInner1 = () => {
                       </a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 {/* <div
                   className='widget widget_support text-center mb-0'
                   style={{

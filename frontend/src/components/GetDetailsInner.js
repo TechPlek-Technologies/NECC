@@ -131,25 +131,25 @@ const GetDetailsInner = () => {
           </div>
         </div>
         <Dialog open={isEditDialogOpen} onClose={() => setIsEditDialogOpen(false)}>
-  <DialogContent style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-    {loading ? (
-      <CircularProgress />
-    ) : (
-      data.map((item, index) => (
-        <div key={index} style={{ marginBottom: '10px' }}>
-          <Typography variant="body1">CNNO: {item.CNNO}</Typography>
-          <Typography variant="body1">VDATE: {item.VDATE}</Typography>
-          <Typography variant="body1">FROMSTATION: {item.FROMSTATION}</Typography>
-          <Typography variant="body1">TOSTATION: {item.TOSTATION}</Typography>
-          <Typography variant="body1">STATUS: {item.STATUS}</Typography>
-          <Typography variant="body1">CNM_MKEY: {item.CNM_MKEY}</Typography>
-          <Typography variant="body1">PAYMODE: {item.PAYMODE}</Typography>
-        </div>
-      ))
-    )}
-    <Button onClick={() => { setIsEditDialogOpen(false) }}>Close</Button>
-  </DialogContent>
-</Dialog>
+            <DialogContent style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              {loading ? (
+                <CircularProgress />
+              ) : (
+                data.map((item, index) => (
+                  <div key={index} style={{ marginBottom: '10px' }}>
+                    <Typography variant="body1">CNNO: {item.CNNO}</Typography>
+                    <Typography variant="body1">VDATE: {item.VDATE}</Typography>
+                    <Typography variant="body1">FROMSTATION: {item.FROMSTATION}</Typography>
+                    <Typography variant="body1">TOSTATION: {item.TOSTATION}</Typography>
+                    <Typography variant="body1">STATUS: {item.STATUS}</Typography>
+                    <Typography variant="body1">CNM_MKEY: {item.CNM_MKEY}</Typography>
+                    <Typography variant="body1">PAYMODE: {item.PAYMODE}</Typography>
+                  </div>
+                ))
+              )}
+              <Button onClick={() => { setIsEditDialogOpen(false) }}>Close</Button>
+            </DialogContent>
+          </Dialog>
       </div>
     
     </>
