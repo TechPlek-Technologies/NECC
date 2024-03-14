@@ -75,7 +75,7 @@ function replaceSpacesWithHyphens(inputString) {
    <li> <Link  to="/QUARTERLY-COMPLIANCES/35"> DISCLOSURE FOR RELATED PARTY TRANSACTIONS {" "}</Link></li>
    <li> <Link  to="/ANNUAL-REPORT-&-NOTICE-OF-AGM/32"> ANNUAL RETURN {" "}</Link></li>
    <li> <Link  to="/ANNUAL-REPORT-&-NOTICE-OF-AGM/32"> SECRETARIAL COMPLIANCE REPORT {" "}</Link></li>
-   <li> <Link  to="/Feedback">  INVESTOR FEEDBACK  {" "}</Link></li>
+   <li> <Link  to="/InvestorFeedback">  INVESTOR FEEDBACK  {" "}</Link></li>
    <li> <Link  to="/POLICES-&-CODE/37"> POLICY {" "}</Link></li>
    <li> <Link  to="/POLICES-&-CODE/37">CONTACT DETAILS OF KEY MANAGERIAL PERSONNEL AUTHORIZED FOR DETERMINING MATERIALITY OF AN EVENT/ INFORMATION{" "}</Link></li>
    <li> <Link  to="/POLICES-&-CODE/37">CRITERIA OF MAKING PAYMENTS TO NON-EXECUTIVE DIRECTORS , IF THE SAME HAS NOT BEEN DISCLOSED IN ANNUAL REPORT{" "}</Link></li>
