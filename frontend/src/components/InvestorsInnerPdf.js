@@ -62,6 +62,7 @@ function replaceSpacesWithHyphens(inputString) {
    <li> <Link  to="/CorporateInformation">COMPOSITION OF VARIOUS COMMITTEES OF BOARD OF DIRECTORS {" "}</Link></li>
    <li> <Link  to="/CorporateInformation"> CREDIT RATING{" "}</Link></li>
    <li> <Link  to="/CorporateInformation">THE EMAIL ADDRESS FOR GRIEVANCE REDRESSAL AND OTHER RELEVANT DETAILS{" "}</Link></li>
+   <li> <Link  to="/ListingInformation"> LISTING INFORMATION{" "}</Link></li>
    <li> <Link  to="/CodeOfConduct">CODE OF CONDUCT OF BOARD OF DIRECTORS AND SENIOR MANAGEMENT PERSONNEL{" "}</Link></li>
    <li> <Link  to="/POLICES-&-CODE/37">VIGIL MECHANISM POLICY{" "}</Link></li>
    <li> <Link  to="/POLICES-&-CODE/37">POLICY ON DEALING WITH RELATED PARTY TRANSACTIONS{" "}</Link></li>
