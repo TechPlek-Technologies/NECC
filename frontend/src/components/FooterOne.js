@@ -66,7 +66,7 @@ const FooterOne = () => {
             <div className='col-xl-4 col-md-6'>
               <div className='widget widget_about'>
                 <div className='thumb'>
-                  <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/NeccFinalLogo.png' alt='Transpro' />
                 </div>
                 <div className='details'>
                   {/* <p>

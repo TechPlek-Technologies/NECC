@@ -74,6 +74,7 @@ import AdminKeyPersonnel from "./pages/Dashboard/pages/AdminKeyPersonnel";
 import CiCoommitte from "./pages/Dashboard/pages/CiCommittee";
 import CiPdf from "./pages/Dashboard/pages/CiPdf";
 import InvestorFeedback from "./pages/InvestorFeedback";
+import ListingInformation from "./pages/ListingInformation";
 
 function App() {
   useEffect(() => {
@@ -146,6 +147,7 @@ function App() {
           <Route exact path="/Pickup&Delivery" element={<PickupAndDelivery/>} />
           <Route exact path="/:pagename/:id" element={<InvestorsDynamic />}></Route>
           <Route exact path="/InvestorFeedback" element={<InvestorFeedback />}></Route>
+          <Route exact path="/ListingInformation" element={<ListingInformation />}></Route>
           <Route
             exact
             path="/CorporateInformation"
