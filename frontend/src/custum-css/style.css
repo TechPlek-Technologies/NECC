@@ -560,6 +560,7 @@ color: black;
         margin-left: 50px;
         bottom: 78px;
         padding: 12px;
+        background-color: rgb(216 37 30 / 75%);
     }
     .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 .title{
         font-size: 24px;
