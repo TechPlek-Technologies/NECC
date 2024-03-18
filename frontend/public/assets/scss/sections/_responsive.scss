@@ -692,7 +692,7 @@
   .support-bar {
     height: auto;
     text-align: center;
-    padding: 6px 5px;
+    // padding: 6px 5px;
   }
   .support-bar .support-right {
     display: none;
@@ -756,6 +756,7 @@
   }
   .about-area-2 .about-inner-wrap {
     margin-right: 0;
+    margin-top: 90px;
   }
   .skill-area .thumb.img-2 {
     margin-top: 30px;
@@ -857,7 +858,14 @@
     padding-left: 20px;
   }
   .section-title .title {
-    font-size: 32px;
+    font-size: 23px;
+    margin-left: 10px;
+  }
+  .section-title .subtitle{
+    font-size: 12px;
+  }
+  .section-title .para {
+    font-size: 14px;
   }
   .btn {
     font-size: 14px;
@@ -877,6 +885,17 @@
   .about-inner-wrap .btn-wrap .video-wrap {
     margin-left: 35px;
   }
+  .about-thumb-wrap {
+    .details {
+      padding: 40px 6px;
+    }
+    .exprience-wrap {
+      img {
+        margin-bottom: -32px;
+        width: 84%;
+      }
+  }
+}
   .request-quote-inner .tab-content .tab-pane {
     padding: 26px 20px 20px;
   }
@@ -964,8 +983,14 @@
     margin-top: 20px;
   }
   .section-title .title {
-    font-size: 29px;
+    font-size: 23px;
     margin-left: 10px;
+  }
+  .section-title .subtitle{
+    font-size: 12px;
+  }
+  .section-title .para {
+    font-size: 14px;
   }
   .about-thumb-wrap {
     text-align: center;
@@ -977,6 +1002,11 @@
   .about-thumb-wrap .exprience-wrap {
     right: -20px;
     top: 128px;
+  }
+  .about-thumb-wrap {
+    .details {
+      padding: 40px 6px;
+    }
   }
   .feature-area {
     padding: 20px;

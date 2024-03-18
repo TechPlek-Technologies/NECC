@@ -1,13 +1,10 @@
 import React from "react";
 import {
-  FaArrowRight,
   FaFacebookF,
   FaLinkedinIn,
-  FaPaperPlane,
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const FooterOne = () => {
   return (
@@ -76,22 +73,22 @@ const FooterOne = () => {
                   </p> */}
                   <ul className='social-media style-border'>
                     <li>
-                      <a href='#'>
+                      <a href='https://www.facebook.com/'>
                         <FaFacebookF />
                       </a>
                     </li>
                     <li>
-                      <a href='#'>
+                      <a href='https://twitter.com/?lang=en'>
                         <FaTwitter />
                       </a>
                     </li>
                     <li>
-                      <a href='#'>
+                      <a href='https://www.whatsapp.com/'>
                         <FaWhatsapp />
                       </a>
                     </li>
                     <li>
-                      <a href='#'>
+                      <a href='https://in.linkedin.com/'>
                         <FaLinkedinIn />
                       </a>
                     </li>

@@ -19,7 +19,7 @@ const ServiceDetailsInner1 = () => {
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
-              <div className='service-details-wrap'>
+              <div className='service-details-wrap2'>
                 <div className='thumb'>
                   <img src='/assets/img/service-1/ptl/ptl (1).webp' alt='Transpro' />
                   <div className='icon'>

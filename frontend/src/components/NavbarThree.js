@@ -17,6 +17,19 @@ const NavbarThree = () => {
       };
     }
   }
+
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDropdownOpen(false);
+  };
+
+
   return (
     <>
       {/* navbar start */}
@@ -124,7 +137,11 @@ const NavbarThree = () => {
                       <Link to='/ServiceDetail5'>Warehousing & 3PL</Link>
                     </li>
                     <li>
+<<<<<<< HEAD
+                      <Link to='/SARCcountry'>SARC Country</Link>
+=======
                       <Link to='#'>SARC Country</Link>
+>>>>>>> d8ba094c436f9597cae9b00194c4957525a0b9b2
                     </li>
                     <li>
                       <Link to='/Pickup&Delivery'>Pickup & Delivery</Link>
@@ -152,8 +169,19 @@ const NavbarThree = () => {
                       <li>
                         <Link to='/Career'>Careers</Link>
                       </li>
+<<<<<<< HEAD
+                      {/* <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+=======
                       {/* <li>
+>>>>>>> d8ba094c436f9597cae9b00194c4957525a0b9b2
                         <Link to='#'>Customer Care</Link>
+                        {isDropdownOpen && (
+                        <ul className="dropdown-content">
+                          <li>
+                          <Link to='/DOWNLOAD/41' style={{marginLeft:"-13px"}}>Download</Link>
+                            </li>
+                        </ul>
+                         )}
                       </li> */}
                       <li>
                       <Link to='/faq'>FAQ</Link>

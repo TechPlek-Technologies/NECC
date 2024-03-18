@@ -5,7 +5,10 @@ import Slider from "react-slick"
 
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> d8ba094c436f9597cae9b00194c4957525a0b9b2
 const BannerFour = () => {
   const [state, setState] = useState({
     nav1: null,
@@ -99,7 +102,7 @@ const BannerFour = () => {
           >
             <div>
               <div
-                className='header-bg'
+                className='header-bg test'
                 style={{
                   backgroundImage: "url('/assets/img/banner/1.webp')", height: "800px"
                 }}
