@@ -5,6 +5,10 @@ import Slider from "react-slick"
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d8ba094c436f9597cae9b00194c4957525a0b9b2
 const BannerFour = () => {
   const [state, setState] = useState({
     nav1: null,

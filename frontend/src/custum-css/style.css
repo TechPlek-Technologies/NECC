@@ -444,6 +444,7 @@ color: black;
     font-weight: 0;
     margin-bottom: 20px;
     color: var(--secondary-color);
+<<<<<<< HEAD
 }
 
 @media (min-width: 320px) and (max-width: 425px) {
@@ -451,3 +452,6 @@ color: black;
         font-size: 11px;
     }
   }
+=======
+}
+>>>>>>> d8ba094c436f9597cae9b00194c4957525a0b9b2
