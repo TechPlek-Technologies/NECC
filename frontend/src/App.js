@@ -62,6 +62,21 @@ import CorporateSocialResponsibility from "./pages/CorporateSocialResponsibility
 import Network from "./pages/Network";
 import BranchLocater from "./elements/demo";
 import Award from "./pages/Award";
+import PickupAndDelivery from "./pages/PickupAndDelivery";
+import PageSection from "./pages/Dashboard/pages/pageSection";
+import AdminContent from "./pages/Dashboard/pages/AdminContent";
+import InvestorsDynamic from "./pages/InvestorsDynamic";
+import CsrCoommitte from "./pages/Dashboard/pages/CsrCommittee";
+import CsrDownloads from "./pages/Dashboard/pages/CsrDownloads";
+import AdminCorporateInformation from "./pages/Dashboard/pages/AdminCorporateInformation";
+import CiDirectors from "./pages/Dashboard/pages/CiDirectors";
+import AdminKeyPersonnel from "./pages/Dashboard/pages/AdminKeyPersonnel";
+import CiCoommitte from "./pages/Dashboard/pages/CiCommittee";
+import CiPdf from "./pages/Dashboard/pages/CiPdf";
+import InvestorFeedback from "./pages/InvestorFeedback";
+import ListingInformation from "./pages/ListingInformation";
+import CustomerCare from "./pages/CustomerCare";
+import SARCcountry from "./pages/SARCcountry";
 
 function App() {
   useEffect(() => {
@@ -77,6 +92,7 @@ function App() {
     <BrowserRouter>
       {/* <RouteScrollToTop /> */}
       {/* <BranchLocater/> */}
+     
       <Fragment>
         <Routes>
           <Route exact path="/" element={<HomeOne />}/>
@@ -114,7 +130,7 @@ function App() {
           <Route exact path="/BoardOfDirectors" element={<BoardOfDirectors/>} />
           <Route exact path="/SiteMap" element={<SiteMap/>} />
           <Route exact path="/CorporateGovernance" element={<CorporateGovernance/>} />
-          <Route exact path="/AnnualReport" element={<AnnualReport/>} />
+          <Route exact path="/AnnualReportAndNoticeOfAGM" element={<AnnualReport/>} />
           <Route exact path="/QuarterlyCompliances" element={<QuarterlyCompliances/>} />
           <Route exact path="/Download" element={<Download/>} />
           <Route exact path="/Polices" element={<Polices/>} />
@@ -130,6 +146,12 @@ function App() {
           <Route exact path="/CorporateSocialResponsibility" element={<CorporateSocialResponsibility/>} />
           <Route exact path="/Network" element={<Network/>} />
           <Route exact path="/Awards&Recognition" element={<Award/>} />
+          <Route exact path="/Pickup&Delivery" element={<PickupAndDelivery/>} />
+          <Route exact path="/:pagename/:id" element={<InvestorsDynamic />}></Route>
+          <Route exact path="/InvestorFeedback" element={<InvestorFeedback />}></Route>
+          <Route exact path="/ListingInformation" element={<ListingInformation />}></Route>
+          <Route exact path="/CustomerCare" element={<CustomerCare />}></Route>
+          <Route exact path="/SARCcountry" element={<SARCcountry />}></Route>
           <Route
             exact
             path="/CorporateInformation"
@@ -143,14 +165,23 @@ function App() {
             <Route exact path="/admin/dashboard" element={<Home />} />
             <Route exact path="/admin/career" element={<Carrier />}></Route>
             <Route exact path="/admin/content" element={<Content />}></Route>
-            <Route exact path="/admin/content/:pagename/:id" element={<AdminQuaterlyCompliance />}></Route>
+            <Route exact path="/admin/content/:pagename/:id" element={<PageSection />}></Route>
             <Route exact path="/admin/office" element={<Office />}></Route>
             <Route exact path="/admin/contact" element={<OfficeContact />}></Route>
             <Route exact path="/admin/investor" element={<InvestorsTab />}></Route>
             <Route exact path="/admin/:pagename/:id" element={<AdminQuaterlyCompliance />}></Route>
             <Route exact path="/admin/magazines" element={<AdminMagazines />}></Route>
             <Route exact path="/admin/downloads" element={<AdminDownloads />}></Route>
+            <Route exact path="/admin/csr" element={<AdminDownloads />}></Route>
+            <Route exact path="/admin/corporateInformation" element={<AdminCorporateInformation />}></Route>
+            <Route exact path="/admin/Keypersonnel" element={<AdminKeyPersonnel />}></Route>
+            <Route exact path="/admin/corporateInformation/directors/Entry" element={<CiDirectors />}></Route>
+            <Route exact path="/admin/corporateInformation/committee/members" element={<CiCoommitte />}></Route>
+            <Route exact path="/admin/corporateInformation/creditRating/pdf" element={<CiPdf />}></Route>
+            <Route exact path="/admin/csr/members/committee" element={<CsrCoommitte />}></Route>
+            <Route exact path="/admin/csr/downloads/pdf" element={<CsrDownloads />}></Route>
             <Route path="/admin/pdfReports/:reportName/:id" element={<AdminPdfReports />} />
+            <Route path="/admin/content/edit/:reportName/:id" element={<AdminContent />} />
           </Route>
 
           {/* Add more protected routes as needed */}

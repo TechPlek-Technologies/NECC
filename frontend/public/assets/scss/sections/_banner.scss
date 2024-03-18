@@ -801,7 +801,7 @@
           .sub-title {
             font-size: 18px;
             line-height: 28px;
-            font-weight: 700;
+            // font-weight: 700;
             margin-bottom: 20px;
             color: var(--active-color);
             font-family: Raleway;
@@ -813,10 +813,27 @@
             margin-bottom: 20px;
             color: var(--secondary-color);
           }
+
+          @media (min-width: 320px) and (max-width: 425px) {
+            .title {
+              font-size: 36px;
+              line-height: 42px;
+            }
+          }
+
           .sub-title {
             font-size: 16px;
             color: var(--secondary-color);
           }
+
+          @media (min-width: 320px) and (max-width: 425px) {
+            .sub-title {
+              font-size: 14px;
+              line-height: 24px;
+            }
+          }
+
+
           .btn-wrapper {
             margin-top: 40px;
             a {

@@ -19,7 +19,7 @@ const FeatureOne = () => {
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
@@ -88,7 +88,7 @@ const FeatureOne = () => {
                   </div>
                   <h5>FULL TRUCK LOAD (FTL)</h5>
                   <p>
-                  We provide this service to all major corporate where we can place the truck from anywhere to anywhere depending on the client’s needs.
+                  One of the core offerings of NECC is Full Truck Load (FTL) services, including end-to-end multimodal transportation with loading services catered through owned and hired fleet for goods movement on a pan-India basis.
                   </p>
                 </div>
               </div>
@@ -121,7 +121,7 @@ const FeatureOne = () => {
                   </div>
                   <h5>WAREHOUSING & 3PL</h5>
                   <p>
-                  We have more than 1.5 million sq ft of warehousing space all over India and provide our clients with complete solutions.
+                  We have more than 2.5 million sq ft of warehousing space all over India and provide our clients with complete solutions.
                   </p>
                 </div>
               </div>

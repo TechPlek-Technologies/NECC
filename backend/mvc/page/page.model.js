@@ -15,5 +15,5 @@ function model(sequelize) {
     };
 
     // Change 'Category' to 'Page' in the return statement
-    return sequelize.define('Page', attributes, options);
+    return sequelize.define('Pages', attributes, options);
 }

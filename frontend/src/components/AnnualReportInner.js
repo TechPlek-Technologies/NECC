@@ -1,5 +1,6 @@
-import React from "react";
+import React, {  useEffect,useState } from "react";
 import AnnualReportInnerPdf from "./AnnualReportInnerPdf";
+import axios from "axios";
 
 const section = [
    {
@@ -27,11 +28,35 @@ const section = [
 
 const AnnualReportInner = () => {
 
+
+  const [tabs, setTabs] = useState([]);
+  const [isEditOpen, setEditOpen] = useState(false);
+  const [category, setCategory] = useState('');
+  const [key, setKey] = useState(0);
+  const domain = process.env.REACT_APP_API_DOMAIN;
+
+
+  useEffect(() => {
+    // Function to fetch data
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${domain}/categories`);
+        setTabs(response.data); // Set the fetched data into state
+        console.log(response.data)
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    // Call the fetch data function
+    fetchData();
+  }, [key]); // Empty dependency array to ensure this effect runs only once
+
    
   return (
     <>
       {/* blog-details area start */}
-      <div className="blog-details-area pd-top-120 pd-bottom-120">
+      <div className="blog-details-area pd-top-130 pd-bottom-120">
         <div className="container">
           <div className="row justify-content-center">
             <h2 className="title">ANNUAL REPORT & NOTICE OF AGM</h2>

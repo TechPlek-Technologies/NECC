@@ -20,7 +20,7 @@ const Award = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"AWARDS & RECOGNITION"} imgSrc={"/assets/img/banner/1.png"}/>
+          <Breadcrumb title={"AWARDS & RECOGNITION"} imgSrc={"/assets/img/banner/Awards (1).webp"}/>
 
          {/* Necc Group Inner*/}
          <AwardiInner/>

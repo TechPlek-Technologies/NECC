@@ -3,7 +3,7 @@ import Preloader from "../elements/Preloader";
 import SupportBarOne from "../components/SupportBarOne";
 import NavbarThree from "../components/NavbarThree";
 import RightIssuesInner from "../components/RightIssuesInner";
-const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
+// const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
 );
@@ -20,7 +20,7 @@ const RightIssues = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"RIGHT ISSUES"} imgSrc={"/assets/img/banner/1.png"} />
+          {/* <Breadcrumb title={"RIGHT ISSUES"} imgSrc={"/assets/img/banner/1.png"} /> */}
 
           {/* {Service Inner} */}
           <RightIssuesInner/>

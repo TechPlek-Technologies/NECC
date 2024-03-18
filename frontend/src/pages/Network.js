@@ -19,7 +19,7 @@ const Network = () => {
            <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"NETWORK"} imgSrc={"/assets/img/banner/1.png"} />
+            <Breadcrumb title={"NETWORK"} imgSrc={"/assets/img/banner/Network-in-logistic.webp"} />
 
             {/*Investors Inner */}
             <NetworkInner/>

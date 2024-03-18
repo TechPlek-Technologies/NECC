@@ -13,7 +13,7 @@ const ServiceInnerOne = () => {
               <div className='section-title text-center'>
                 <h4 className='subtitle'>NORTH EASTERN CARRYING CORPORATION</h4>
                 <h2 className='title'>GLIMPSE AT OUR SERVICES</h2>
-                <p>
+                <p className="para">
                 Currently NECC offer’s services like part truck load(PTL), full truck load(FTL), bulk movements, ODC movements, warehousing & 3pl.
                 </p>
               </div>
@@ -142,7 +142,7 @@ const ServiceInnerOne = () => {
                 <div className='details'>
                   <h5>WAREHOUSING & 3PL</h5>
                   <p>
-                  We have more than 1.5 million sq ft of warehousing space all over India.Providing our clients with complete solution.
+                  We have more than 2.5 million sq ft of warehousing space all over India.Providing our clients with complete solution.
                   </p>
                   <div className='btn-wrap'>
                     <Link className='read-more-text' to='/ServiceDetail5'>
@@ -155,34 +155,6 @@ const ServiceInnerOne = () => {
                 </div>
               </div>
             </div>
-            {/* <div className='col-lg-4'>
-              <div className='single-service-wrap'>
-                <div className='thumb'>
-                  <img src='assets/img/service/6.png' alt='Transpro' />
-                  <div className='icon'>
-                    <img
-                      src='assets/img/service/service-icon-6.png'
-                      alt='Transpro'
-                    />
-                  </div>
-                </div>
-                <div className='details'>
-                  <h5>LAND TRANSPORTATION</h5>
-                  <p>
-                    Intrinsicly exploit e-business imperative with emerging
-                    human capital.
-                  </p>
-                  <div className='btn-wrap'>
-                    <Link className='read-more-text' to='/service-details'>
-                      READ MORE{" "}
-                      <span>
-                        <FaArrowRight />
-                      </span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

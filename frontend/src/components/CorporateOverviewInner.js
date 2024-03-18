@@ -65,7 +65,7 @@ const CorporateOverviewInner= () => {
           </div>
         </div>
       </div> */}
-      <div className='service-area pd-top-45 pd-bottom-140 '>
+      <div className='service-area pd-top-45 pd-bottom-45 '>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-12 align-self-center'>
@@ -94,7 +94,7 @@ const CorporateOverviewInner= () => {
           </div>
         </div>
       </div>
-      <div className='fact-area pd-bottom-45' style={{ background: "#F9F9F9" }}>
+      {/* <div className='fact-area pd-bottom-45' style={{ background: "#F9F9F9" }}>
         <div className='container'>
           <div
             className='fact-counter-area CorporateOverview'
@@ -172,7 +172,7 @@ const CorporateOverviewInner= () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Corporate area end */}
       <ModalVideo
         channel='youtube'

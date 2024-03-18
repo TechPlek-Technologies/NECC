@@ -6,44 +6,18 @@ const HistoryInner= () => {
   return (
     <>
       {/* ChairmanDesk area start */}
-       <div className='about-area pd-bottom-120 pd-top-120'>
-        <div className='container'>
-          <div className='about-area-inner'>
-            <div className='row'>
-               <div className='widget_author text-center col-lg-3'>
-                  <div className='thumb'>
-                    <img src='assets/img/blog/blog-author.png' alt='Transpro' />
-                  </div>
-                  <h5>Late Sri Jaswant Rai Jain</h5>
-                  <p>
-                Founder Chairman<br/>
-                NECC GROUP<br/>
-                ( NOV 13,1936 – JAN 17, 2013)
-                  </p>
-                </div>
-              <div className='col-lg-9 align-self-center'>
-                <div className='about-inner-wrap'>
-                  <div className='section-title mb-0'>
-                    <h2 className='title'>
-                    HISTORY
-                    </h2>
-                    <p className='content left-line'>
-                Our Company was originally incorporated on December 05, 1984, as a private limited company, under the name and style ‘Prakarima Leasing Private Limited’ under the provisions of the Companies Act, 1956, with the Registrar of Companies, Delhi and Haryana. Our Company was thereafter converted into a public limited company vide shareholders resolution passed at an extra-ordinary general meeting of the Company held on December 17,1984 and the name of our Company was changed to ‘Prakarima Leasing Limited’, and a fresh Certificate of Incorporation was issued by the Registrar of Companies, Delhi and Haryana on  January 16, 1995.
-                </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className='service-area pd-bottom-20'>
+      <div className='service-area pd-top-120 pd-bottom-45'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-12 align-self-center'>
                 <div className='about-inner-wrap'>
                   <div className='section-title mb-0'>
+                  <h2 className='title'>
+                    HISTORY
+                    </h2>
+                  <p className='content'>
+                  Our Company was originally incorporated on December 05, 1984, as a private limited company, under the name and style ‘Prakarima Leasing Private Limited’ under the provisions of the Companies Act, 1956, with the Registrar of Companies, Delhi and Haryana. Our Company was thereafter converted into a public limited company vide shareholders resolution passed at an extra-ordinary general meeting of the Company held on December 17,1984 and the name of our Company was changed to ‘Prakarima Leasing Limited’, and a fresh Certificate of Incorporation was issued by the Registrar of Companies, Delhi and Haryana on  January 16, 1995.
+                </p>
                 <p className='content'>
                 In the subsequent year of 1995, the name of our Company was further changed to ‘N.E.C.C. Finlease Limited’ and a fresh certificate of incorporation consequent upon change of name was issued by the Registrar of Companies, Delhi and Haryana on January 03, 1995. Subsequently, the name of our Company was further changed to ‘North Eastern Carrying Corporation Limited’ and a fresh Certificate of Incorporation pursuant to change of name was issued by the Registrar of Companies, NCT of Delhi and Haryana on October 06, 1999.
                 </p>

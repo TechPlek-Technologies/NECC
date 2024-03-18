@@ -2,8 +2,8 @@ import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
 import SupportBarOne from "../components/SupportBarOne";
 import NavbarThree from "../components/NavbarThree";
-import CurrentOpeningInner from "../components/CurrentOpeningInner";
-const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
+import CurrentOpeningInner1 from "../components/CurrentOpeningInner1";
+// const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
 );
@@ -20,10 +20,10 @@ const CurrentOpening = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"CURRENT OPENINGS"} imgSrc={"/assets/img/banner/1.png"}/>
+          {/* <Breadcrumb title={"CURRENT OPENINGS"} imgSrc={"/assets/img/banner/1.png"}/> */}
 
           {/* {Service Inner} */}
-          <CurrentOpeningInner/>
+          <CurrentOpeningInner1/>
 
           {/* Footer One */}
           <FooterOne />

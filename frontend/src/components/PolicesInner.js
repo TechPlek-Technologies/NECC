@@ -28,7 +28,7 @@ const section = [
 const PolicesInner = () => {
   return (
     <>
-      <div className="blog-details-area pd-top-120 pd-bottom-120">
+      <div className="blog-details-area pd-top-130 pd-bottom-120">
         <div className="container">
           <div className="row justify-content-center">
             <h2 className="title">POLICES & CODE</h2>

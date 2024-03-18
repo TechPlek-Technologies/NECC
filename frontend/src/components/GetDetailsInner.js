@@ -1,9 +1,46 @@
 import React, { useState } from "react";
+import { Button, CircularProgress, Dialog, DialogContent, Typography } from "@mui/material";
+import axios from "axios";
 
 const GetDetailsInner = () => {
 
-
   const [inputFields, setInputFields] = useState([]);
+  const [trackingNumber, setTrackingNumber] = useState('');
+  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
+  const [cnmtRequest, setCnmtRequest] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+
+  
+  const GetConsignmentDetail = () => {
+    setLoading(true);
+    axios.post('http://103.127.30.214:90/Tracking.ashx', {
+      "interface": "RestAPI",
+      "method": "GetConsignmentDetail",
+      "parameters": {
+        "VNO": trackingNumber
+      },
+      "token": "NECC"
+    })
+      .then(response => {
+        console.log('Response:', response.data);
+        if (response.data) {
+          const value = JSON.parse(response.data.Value);
+          // Extract cnmtDetail from the response
+          const cnmtDetail = value.cnmtDetail;
+          console.log(cnmtDetail)
+          setData(cnmtDetail)
+          setLoading(false);
+
+        }
+        // Handle response data
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert("Unsuccessful request, Try again")
+      });
+
+  }
 
   // Function to handle button click
   const handleButtonClick = () => {
@@ -17,7 +54,7 @@ const GetDetailsInner = () => {
 
   return (
     <>
-    <div className='request-quote-area pd-top-60 pd-bottom-60'>
+    <div className='request-quote-area pd-top-130 pd-bottom-60'>
         <div className='container'>
           <div className='request-quote-inner'>
             <ul className='nav nav-pills' id='pills-tab' role='tablist'>
@@ -78,9 +115,14 @@ const GetDetailsInner = () => {
                     </div>
                     </div>
                    
-                    <a className='btn btn-base w-100' href='#'>
+                    {/* <a className='btn btn-base w-100' href='#'>
                       GET STATUS
-                    </a>
+                    </a> */}
+                     <div className='row'>
+                      
+                    <button type='submit' onClick={() => GetConsignmentDetail()} className="btn btn-base">GET STATUS</button>
+                     
+                    </div>
                   </div>
                 </div>
 
@@ -88,6 +130,26 @@ const GetDetailsInner = () => {
             </div>
           </div>
         </div>
+        <Dialog open={isEditDialogOpen} onClose={() => setIsEditDialogOpen(false)}>
+            <DialogContent style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              {loading ? (
+                <CircularProgress />
+              ) : (
+                data.map((item, index) => (
+                  <div key={index} style={{ marginBottom: '10px' }}>
+                    <Typography variant="body1">CNNO: {item.CNNO}</Typography>
+                    <Typography variant="body1">VDATE: {item.VDATE}</Typography>
+                    <Typography variant="body1">FROMSTATION: {item.FROMSTATION}</Typography>
+                    <Typography variant="body1">TOSTATION: {item.TOSTATION}</Typography>
+                    <Typography variant="body1">STATUS: {item.STATUS}</Typography>
+                    <Typography variant="body1">CNM_MKEY: {item.CNM_MKEY}</Typography>
+                    <Typography variant="body1">PAYMODE: {item.PAYMODE}</Typography>
+                  </div>
+                ))
+              )}
+              <Button onClick={() => { setIsEditDialogOpen(false) }}>Close</Button>
+            </DialogContent>
+          </Dialog>
       </div>
     
     </>

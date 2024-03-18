@@ -1,11 +1,10 @@
-import React, { useRef } from "react";
+import React, { useState,useRef } from "react";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 import {
   FaCalculator,
   FaFileAlt,
-  FaMapMarkerAlt,
   FaPencilAlt,
-  FaPhoneAlt,
   FaRegEnvelope,
   FaUserAlt,
 } from "react-icons/fa";
@@ -13,6 +12,12 @@ import { toast, Toaster } from "react-hot-toast";
 
 const FeedbackInner= () => {
   const form = useRef();
+
+  const [recaptchaVerified, setRecaptchaVerified] = useState(false);
+
+  const handleRecaptchaVerify = () => {
+    setRecaptchaVerified(true);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -115,6 +120,9 @@ const FeedbackInner= () => {
                         id='massage'
                       />
                     </div>
+                  </div>
+                  <div>
+                  <ReCAPTCHA sitekey="6LfLCJcpAAAAAEDOLqUmzv93a5cjzGFyan_CVHB-" onChange={handleRecaptchaVerify} />
                   </div>
                   <div className='col-12'>
                     <button className='btn btn-base' type='submit'>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaUserAlt } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 const NavbarThree = () => {
@@ -16,6 +17,19 @@ const NavbarThree = () => {
       };
     }
   }
+
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDropdownOpen(false);
+  };
+
+
   return (
     <>
       {/* navbar start */}
@@ -45,7 +59,7 @@ const NavbarThree = () => {
             </div>
             <div className='logo'>
               <Link to='/'>
-                <img src='/assets/img/home-2/necclogo.png' className="img-fluid " alt='Transpro' />
+                <img src='/assets/img/home-2/NeccFinalLogo.png' className="img-fluid " alt='Transpro' />
               </Link>
             </div>
             <div className='nav-left-part'></div>
@@ -82,13 +96,24 @@ const NavbarThree = () => {
                     <li>
                       <Link to='/CorporateOverview'>Corporate Overview</Link>
                     </li>
-                    {/* <li>
-                      <Link to='/'>History</Link>
-                    </li> */}
+                    <li>
+                      <Link to='/History'>History</Link>
+                    </li>
                     <li>
                       <Link to='/VisionAndQualityPolicy'>Vision & Quality Policy</Link>
                     </li>
                   </ul>
+                </li>
+                <li className='menu-item-has-children'>
+                  <Link to='#'>Investors</Link>
+                  <ul className='sub-menu'>
+                    <li>
+                      <Link to='/Investors'>Disclosures under Regulation 46 of SEBI (LODR)<br/>Regulations,2015</Link>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <Link to='/Network'>Network</Link>
                 </li>
                 <li className='menu-item-has-children'>
                   <Link to='#'>Services</Link>
@@ -111,16 +136,15 @@ const NavbarThree = () => {
                     <li>
                       <Link to='/ServiceDetail5'>Warehousing & 3PL</Link>
                     </li>
-                  </ul>
-                </li>
-                {/* <li className='menu-item-has-children'>
-                  <Link to='#'>Investors</Link>
-                  <ul className='sub-menu'>
                     <li>
-                      <Link to='/Investors'>Disclosures under Regulation 46 of SEBI (LODR)<br/>Regulations,2015</Link>
+                      <Link to='/SARCcountry'>SARC Country</Link>
+                    </li>
+                    <li>
+                      <Link to='/Pickup&Delivery'>Pickup & Delivery</Link>
                     </li>
                   </ul>
-                </li> */}
+                </li>
+              
                  {/* <li className='menu-item-has-children'>
                   <Link to='#'>SiteMap</Link>
                   <ul className='sub-menu'>
@@ -129,20 +153,27 @@ const NavbarThree = () => {
                     </li>
                   </ul>
                 </li> */}
-                <li>
+                {/* <li>
                   <Link to='/SiteMap'>SiteMap</Link>
-                </li>
+                </li> */}
                 <li className='menu-item-has-children current-menu-item'>
                   <Link to='#'>Contact Us</Link>
                   <ul className='sub-menu'>
                   <li>
                         <Link to='/contact'>Contact Us</Link>
                       </li>
-                      {/* <li>
+                      <li>
                         <Link to='/Career'>Careers</Link>
-                      </li> */}
-                      {/* <li>
+                      </li>
+                      {/* <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <Link to='#'>Customer Care</Link>
+                        {isDropdownOpen && (
+                        <ul className="dropdown-content">
+                          <li>
+                          <Link to='/DOWNLOAD/41' style={{marginLeft:"-13px"}}>Download</Link>
+                            </li>
+                        </ul>
+                         )}
                       </li> */}
                       <li>
                       <Link to='/faq'>FAQ</Link>
@@ -151,6 +182,15 @@ const NavbarThree = () => {
                         <Link to='/Feedback'>Feedback</Link>
                       </li>
                       </ul>
+                </li>
+                <li>
+                  <Link to='/CorporateSocialResponsibility'>CSR</Link>
+                </li>
+                <li>
+                  <Link to='/RIGHT-ISSUES/36'>Right Issues</Link>
+                </li>
+                <li>
+                  <Link to='/admin'><FaUserAlt style={{marginRight:"4px",marginBottom:"2px"}}/>Login</Link>
                 </li>
               </ul>
             </div>

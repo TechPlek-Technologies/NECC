@@ -3,7 +3,7 @@ import Preloader from "../elements/Preloader";
 import SupportBarOne from "../components/SupportBarOne";
 import NavbarThree from "../components/NavbarThree";
 import CodeOfConductInner from "../components/CodeOfConductInner";
-const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
+// const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
 );
@@ -20,7 +20,7 @@ const CodeOfConduct = () => {
           <NavbarThree />
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"CODE OF CONDUCT"} imgSrc={"/assets/img/banner/1.png"}/>
+          {/* <Breadcrumb title={"CODE OF CONDUCT"} imgSrc={"/assets/img/banner/1.png"}/> */}
 
           {/* {Service Inner} */}
           <CodeOfConductInner/>

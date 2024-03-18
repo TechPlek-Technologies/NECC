@@ -10,7 +10,7 @@ module.exports = {
 };
 
 async function getAllPages() {
-    return await db.Page.findAll();
+    return await db.Pages.findAll();
 }
 
 async function getPageById(id) {
@@ -20,7 +20,7 @@ async function getPageById(id) {
 async function getPageDataByName(pageName) {
     try {
         // Find the page by name and include associated events and PDF uploads
-        const page = await db.Page.findOne({
+        const page = await db.Pages.findOne({
             where: { name: pageName },
             include: [
                 { model: db.Event }, // Include associated events
@@ -42,12 +42,12 @@ async function getPageDataByName(pageName) {
 async function createPage(params) {
     // validate
 
-    if (await db.Page.findOne({ where: { name: params.name } })) {
+    if (await db.Pages.findOne({ where: { name: params.name } })) {
         throw 'Page with name "' + params.name + '" already exists';
     }
 
     // save page
-    await db.Page.create(params);
+    await db.Pages.create(params);
 }
 
 async function updatePage(id, params) {
@@ -55,7 +55,7 @@ async function updatePage(id, params) {
 
     // validate
     const nameChanged = params.name && page.name !== params.name;
-    if (nameChanged && await db.Page.findOne({ where: { name: params.name } })) {
+    if (nameChanged && await db.Pages.findOne({ where: { name: params.name } })) {
         throw 'Page with name "' + params.name + '" already exists';
     }
 
@@ -74,7 +74,7 @@ async function deletePage(id) {
 // helper functions
 
 async function getPage(id) {
-    const page = await db.Page.findByPk(id);
+    const page = await db.Pages.findByPk(id);
     if (!page) throw 'Page not found';
     return page;
 }

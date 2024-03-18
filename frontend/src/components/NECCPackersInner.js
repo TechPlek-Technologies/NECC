@@ -125,7 +125,7 @@ const NECCPackersInner= () => {
                           <div
                             className='header-bg'
                             style={{
-                              backgroundImage: "url('/assets/img/slide-v3/bg-01.png')",
+                              backgroundImage: "url('/assets/img/slide-v3/smart-packing.webp')",
                             }}
                           >
                             <div className='container'>

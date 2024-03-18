@@ -106,7 +106,7 @@ const CounterThree = () => {
                             )
                           }
                         </TrackVisibility>
-                        <h3 className='title1'>Profesional Team Members</h3>
+                        <h3 className='title1'>Professional Team Members</h3>
                         {/* <p className="para1">Client-centric approach, transparent communication channels.</p> */}
                       </div>
                     </div>

@@ -23,7 +23,13 @@ async function initialize() {
     db.Contact = require('../mvc/contact/contact.model')(sequelize);
     db.Address = require('../mvc/address/address.model')(sequelize);
     db.Pages = require('../mvc/page/page.model')(sequelize);
-    db.Content = require('../mvc/content/content.model')(sequelize);
+    db.Content = require('../mvc/carrier/content.model')(sequelize);
+    db.Section = require('../mvc/pageSection/section.model')(sequelize);
+    db.CsrCommittee = require('../mvc/csrCommittee/csrCommittee.model')(sequelize);
+    db.CsrPdf = require('../mvc/csrPdf/csrPdf.model')(sequelize);
+    db.CiPdf = require('../mvc/ciPdf/ciPdf.model')(sequelize);
+    db.CiDirectors = require('../mvc/corporateInformation/corporateInformation.model')(sequelize);
+    db.KeyPersonnel = require('../mvc/keyPersonnel/keyPersonnel.model')(sequelize);
 
     // sync all models with database
     await sequelize.sync();

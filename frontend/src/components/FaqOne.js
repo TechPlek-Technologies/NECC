@@ -38,7 +38,7 @@ const FaqOne = () => {
                     data-bs-parent='#accordionExample'
                   >
                     <div className='accordion-body'>
-                    N.E.C.C. is an ISO certified & IBA approved company. A trusted 45 years old name in the history of Indian Transport Industry, with a brand range of freight management and customized logistics solutions.
+                    N.E.C.C. is an ISO certified & IBA approved company. A trusted more than 55 years old name in the history of Indian Transport Industry, with a brand range of freight management and customized logistics solutions.
                     </div>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ const FaqOne = () => {
                     data-bs-parent='#accordionExample'
                   >
                     <div className='accordion-body'>
-                    N.E.C.C. have a network of more than 200 branches spread all over India , Nepal , Bhutan and Bangladesh . You can get the list of addresses of branch offices from our BRANCH LIST.
+                    N.E.C.C. have a network of more than 250 branches spread all over India , Nepal , Bhutan and Bangladesh . You can get the list of addresses of branch offices from our BRANCH LIST.
                     </div>
                   </div>
                 </div>

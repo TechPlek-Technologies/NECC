@@ -112,6 +112,15 @@
       }
     }
   }
+
+  @media (min-width: 320px) and (max-width: 425px) {
+    .widget_about {
+      .thumb {
+        margin-bottom: 13px;
+        margin-right: 20px;
+      }
+    }
+ }
   .widget_nav_menu {
     ul {
       margin: 0;

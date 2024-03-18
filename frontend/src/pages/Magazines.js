@@ -19,7 +19,7 @@ const Magazines = () => {
             <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"MAGAZINES"} imgSrc={"/assets/img/banner/1.png"}/>
+            <Breadcrumb title={"MAGAZINES"} imgSrc={"/assets/img/banner/magazine (1).webp"}/>
 
             {/* Feedback Inner */}
             <MagazinesInner/>

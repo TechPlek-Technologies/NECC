@@ -1,33 +1,30 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-import SearchPopup from "../elements/SearchPopup";
 import FooterBottomOne from "../components/FooterBottomOne";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
-import PartnerOne from "../components/PartnerOne";
+import NavbarThree from "../components/NavbarThree";
+import SupportBarOne from "../components/SupportBarOne";
 import HistoryInner from "../components/HistoryInner";
-const NavbarOne = React.lazy(() => import("../components/NavbarOne"));
 
 const History = () => {
     return (
       <>
         <Fragment>
           <Suspense fallback={<Preloader />}>
-            {/* Search Popup */}
-            <SearchPopup />
-  
-            {/* Navbar One */}
-            <NavbarOne />
+            {/* SupportBarOne */}
+          <SupportBarOne/>
+           {/* Navbar Three */}
+           <NavbarThree/>
   
             {/* Breadcrumb */}
-            <Breadcrumb title={"HISTORY"} />
+            <Breadcrumb title={"HISTORY"} imgSrc={"/assets/img/banner/History.webp"} className="img-fluid"/>
 
             {/* Service Details Inner */}
             <HistoryInner/>
 
-            {/* Partner One */}
-            <PartnerOne/>
-        
+  
+            {/* Footer One */}
             <FooterOne />
   
             {/* Footer Bottom One */}

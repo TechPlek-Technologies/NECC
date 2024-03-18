@@ -1,13 +1,10 @@
 import React from "react";
 import {
-  FaArrowRight,
   FaFacebookF,
   FaLinkedinIn,
-  FaPaperPlane,
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const FooterOne = () => {
   return (
@@ -66,7 +63,7 @@ const FooterOne = () => {
             <div className='col-xl-4 col-md-6'>
               <div className='widget widget_about'>
                 <div className='thumb'>
-                  <img src='/assets/img/home-2/necclogo.png' alt='Transpro' />
+                  <img src='/assets/img/home-2/NeccFinalLogo.png' alt='Transpro' />
                 </div>
                 <div className='details'>
                   {/* <p>
@@ -76,22 +73,22 @@ const FooterOne = () => {
                   </p> */}
                   <ul className='social-media style-border'>
                     <li>
-                      <a href='#'>
+                      <a href='https://www.facebook.com/'>
                         <FaFacebookF />
                       </a>
                     </li>
                     <li>
-                      <a href='#'>
+                      <a href='https://twitter.com/?lang=en'>
                         <FaTwitter />
                       </a>
                     </li>
                     <li>
-                      <a href='#'>
+                      <a href='https://www.whatsapp.com/'>
                         <FaWhatsapp />
                       </a>
                     </li>
                     <li>
-                      <a href='#'>
+                      <a href='https://in.linkedin.com/'>
                         <FaLinkedinIn />
                       </a>
                     </li>
@@ -179,7 +176,7 @@ const FooterOne = () => {
               <div className='widget widget_subscribe'>
               <div className='single-footer-top'>
                   <div className='icon'>
-                    <img src='assets/img/icon/map-marker.png' alt='Transpro' />
+                    <img src='/assets/img/icon/map-marker.png' alt='Transpro' />
                   </div>
                   <div className='details'>
                     <h6>OFFICE ADDRESS:</h6>
@@ -206,7 +203,7 @@ const FooterOne = () => {
               <div className='widget widget_subscribe'>
               <div className='single-footer-top'>
                 <div className='icon'>
-                    <img src='assets/img/icon/phone.png' alt='Transpro' />
+                    <img src='/assets/img/icon/phone.png' alt='Transpro' />
                   </div>
                   <div className='details'>
                     <h6>CONTACT US:</h6>

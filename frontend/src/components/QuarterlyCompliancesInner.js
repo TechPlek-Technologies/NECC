@@ -32,7 +32,7 @@ const QuarterlyCompliancesInner = () => {
   return (
     <>
       {/* blog-details area start */}
-      <div className="blog-details-area pd-top-120 pd-bottom-120">
+      <div className="blog-details-area pd-top-130 pd-bottom-120">
         <div className="container">
           <div className="row justify-content-center">
             <h2 className="title">QUARTERLY COMPLIANCES</h2>
