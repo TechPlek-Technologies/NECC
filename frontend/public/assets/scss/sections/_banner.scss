@@ -584,10 +584,10 @@
     }
 
      /*for mobile*/
- @media (max-width: 425px) {
+ @media (min-width: 767px) {
   .header-slider .header-bg {
     &::before {
-      height: 500px;
+      height:0px;
     }
   }
  }

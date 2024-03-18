@@ -68,6 +68,20 @@
         }
       }
     }
+    @media (min-width: 768px){
+      .single-footer-top {
+        display: grid;
+        margin-bottom: 0px;
+        .details {
+          p {
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 19px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
   }
   .widget {
     position: relative;
