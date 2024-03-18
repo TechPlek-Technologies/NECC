@@ -15,11 +15,7 @@
     "concurrently": "^8.2.2"
   },
   "dependencies": {
-<<<<<<< HEAD
     "react-google-recaptcha": "^3.1.0",
     "react-responsive": "^9.0.2"
-=======
-    "react-google-recaptcha": "^3.1.0"
->>>>>>> d8ba094c436f9597cae9b00194c4957525a0b9b2
   }
 }

@@ -75,11 +75,8 @@ import CiCoommitte from "./pages/Dashboard/pages/CiCommittee";
 import CiPdf from "./pages/Dashboard/pages/CiPdf";
 import InvestorFeedback from "./pages/InvestorFeedback";
 import ListingInformation from "./pages/ListingInformation";
-<<<<<<< HEAD
 import CustomerCare from "./pages/CustomerCare";
 import SARCcountry from "./pages/SARCcountry";
-=======
->>>>>>> d8ba094c436f9597cae9b00194c4957525a0b9b2
 
 function App() {
   useEffect(() => {
@@ -153,11 +150,8 @@ function App() {
           <Route exact path="/:pagename/:id" element={<InvestorsDynamic />}></Route>
           <Route exact path="/InvestorFeedback" element={<InvestorFeedback />}></Route>
           <Route exact path="/ListingInformation" element={<ListingInformation />}></Route>
-<<<<<<< HEAD
           <Route exact path="/CustomerCare" element={<CustomerCare />}></Route>
           <Route exact path="/SARCcountry" element={<SARCcountry />}></Route>
-=======
->>>>>>> d8ba094c436f9597cae9b00194c4957525a0b9b2
           <Route
             exact
             path="/CorporateInformation"

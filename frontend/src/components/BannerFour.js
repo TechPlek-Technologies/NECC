@@ -5,10 +5,6 @@ import Slider from "react-slick"
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> d8ba094c436f9597cae9b00194c4957525a0b9b2
 const BannerFour = () => {
   const [state, setState] = useState({
     nav1: null,
@@ -102,9 +98,9 @@ const BannerFour = () => {
           >
             <div>
               <div
-                className='header-bg test'
+                className='header-bg background'
                 style={{
-                  backgroundImage: "url('/assets/img/banner/1.webp')", height: "800px"
+                  backgroundImage: "url('/assets/img/banner/1.webp')"
                 }}
               >
               </div>
@@ -112,9 +108,9 @@ const BannerFour = () => {
 
             <div>
               <div
-                className='header-bg'
+                className='header-bg background1'
                 style={{
-                  backgroundImage: "url('/assets/img/banner/8.webp')", height: "800px"
+                  backgroundImage: "url('/assets/img/banner/8.webp')"
                 }}
               >
               </div>
@@ -122,9 +118,9 @@ const BannerFour = () => {
 
             <div>
               <div
-                className='header-bg'
+                className='header-bg background2'
                 style={{
-                  backgroundImage: "url('/assets/img/banner/2 (1).webp')", height: "800px"
+                  backgroundImage: "url('/assets/img/banner/2 (1).webp')"
                 }}
               >
               </div>
@@ -132,9 +128,9 @@ const BannerFour = () => {
 
             <div>
               <div
-                className='header-bg'
+                className='header-bg background3'
                 style={{
-                  backgroundImage: "url('/assets/img/banner/4 (1).webp')", height: "800px"
+                  backgroundImage: "url('/assets/img/banner/4 (1).webp')"
                 }}
               >
               </div>
@@ -142,9 +138,9 @@ const BannerFour = () => {
 
             <div>
               <div
-                className='header-bg'
+                className='header-bg background4'
                 style={{
-                  backgroundImage: "url('/assets/img/banner/3.webp')", height: "800px"
+                  backgroundImage: "url('/assets/img/banner/3.webp')"
                 }}
               >
               </div>
