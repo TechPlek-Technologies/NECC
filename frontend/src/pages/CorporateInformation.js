@@ -1,4 +1,4 @@
-import React, { Fragment, Suspense } from "react";
+import React, { Fragment, Suspense,useState,useEffect } from "react";
 import Preloader from "../elements/Preloader";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
@@ -9,6 +9,24 @@ import NavbarThree from "../components/NavbarThree";
 
 
 const CorporateInformation = () => {
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+  function getCurrentDimension() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
+
+  useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension());
+    };
+    window.addEventListener("resize", updateDimension);
+
+    return () => {
+      window.removeEventListener("resize", updateDimension);
+    };
+  }, [screenSize]);
     return (
       <>
         <Fragment>
@@ -20,7 +38,12 @@ const CorporateInformation = () => {
           <NavbarThree/>
             
             {/* Breadcrumb */}
-            <Breadcrumb title={"CORPORATE INFORMATION"} imgSrc={"/assets/img/banner/corporate-information.jpg"}/>
+            {screenSize.width > 767 && (
+            <Breadcrumb title={"CORPORATE INFORMATION"} imgSrc={"/assets/img/banner/corporate-information.jpg"}/>)}
+          {screenSize.width <= 767 && (
+                        <div id="bg30">
+                        </div>
+                        )}
 
             {/*Investors Inner */}
             <CorporateInformationInner/>

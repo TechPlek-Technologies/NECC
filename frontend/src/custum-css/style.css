@@ -107,6 +107,12 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+@media (max-width: 767px){
+    .divider-area.divider-default-area .content .title {
+        font-size: 13px;
+    }
+}
+
 .heading__title {
     font-size: 40px;
     /* color: #ff5e14; */
@@ -255,13 +261,6 @@ color: black;
     width: 100%;
     background-color: #fff; /* Add your desired background color */
     z-index: 1000; /* Adjust the z-index as needed */
-  }
-  
-  @media (max-width: 768px) {
-    .breadcrumb-area {
-        flex: 0 0 auto;
-    width: 100%;
-    }
   }
   
   /* Media query for medium devices */
@@ -565,5 +564,255 @@ color: black;
     .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 .title{
         font-size: 24px;
     line-height: 24px;
+    }
+}
+
+
+@media (max-width: 767px){
+    #bg1{
+        background-image: url("/public/assets/img/banner/About-us (1) (1).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+    }
+    #bg2{
+        background-image: url("/public/assets/img/banner/chairmen.webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    } 
+    #bg3{
+        background-image: url("/public/assets/img/banner/corporate-overview (1).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    } 
+    #bg4{
+        background-image: url("/public/assets/img/banner/History.webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+    } 
+    #bg5{
+        background-image: url("/public/assets/img/banner/vision (3).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    } 
+    #bg6{
+        background-image: url("/public/assets/img/banner/Investor.webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg7{
+        background-image: url("/public/assets/img/banner/Network-in-logistic.webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg8{
+        background-image: url("/public/assets/img/banner/all-service.webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg9{
+        background-image: url("/public/assets/img/banner/part-time-truck (1).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg10{
+        background-image: url("/public/assets/img/banner/full-truck-load (2).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg11{
+        background-image: url("/public/assets/img/service-1/bulk mov/bulk-movements (2).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg12{
+        background-image: url("/public/assets/img/banner/odc.webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg13{
+        background-image: url("/public/assets/img/banner/warehouse (2).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg14{
+        background-image: url("/public/assets/img/banner/SARC-country.jpg");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg15{
+        background-image: url("/public/assets/img/banner/pick-and-drop2.jpg");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg16{
+        background-image: url("/public/assets/img/banner/contact.webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg17{
+        background-image: url("/public/assets/img/banner/career-in-logistic.webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg18{
+        background-image: url("/public/assets/img/banner/FAQ (1).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg19{
+        background-image: url("/public/assets/img/banner/feedback (1).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg20{
+        background-image: url("/public/assets/img/banner/CSR (2).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg21{
+        background-image: url("/public/assets/img/banner/consignment-tracking.webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg22{
+        background-image: url("/public/assets/img/banner/necc-group (2).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg23{
+        background-image: url("/public/assets/img/banner/necc-logistic (2).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg24{
+        background-image: url("/public/assets/img/banner/necc-telecom (1) (1).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg25{
+        background-image: url("/public/assets/img/banner/North-Eastern-Carrying-Corporation.webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg26{
+        background-image: url("/public/assets/img/banner/ecom-solutions.webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg27{
+        background-image: url("/public/assets/img/banner/Necc-Packer-&-Movers.webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg28{
+        background-image: url("/public/assets/img/banner/magazine (1).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg29{
+        background-image: url("/public/assets/img/banner/Awards (1).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg30{
+        background-image: url("/public/assets/img/banner/corporate-information.jpg");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
+    }
+    #bg31{
+        background-image: url("/public/assets/img/banner/sitemap (1).webp");
+        width: 100%;
+        height: 300px; 
+        background-size: 100% 99%;
+        filter: blur(0px) !important;
+        margin-top: 40px;
     }
 }

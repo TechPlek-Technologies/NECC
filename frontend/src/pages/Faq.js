@@ -1,4 +1,4 @@
-import React, { Fragment, Suspense } from "react";
+import React, { Fragment, Suspense,useState,useEffect } from "react";
 import Preloader from "../elements/Preloader";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
@@ -12,6 +12,24 @@ const FooterOne = React.lazy(() => import("../components/FooterOne"));
 // const PartnerOne = React.lazy(() => import("../components/PartnerOne"));
 
 const Faq = () => {
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+  function getCurrentDimension() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
+
+  useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension());
+    };
+    window.addEventListener("resize", updateDimension);
+
+    return () => {
+      window.removeEventListener("resize", updateDimension);
+    };
+  }, [screenSize]);
   return (
     <>
       <Fragment>
@@ -23,7 +41,12 @@ const Faq = () => {
          <NavbarThree/>
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"FAQ"} imgSrc={"/assets/img/banner/FAQ (1).webp"} />
+          {screenSize.width > 767 && (
+          <Breadcrumb title={"FAQ"} imgSrc={"/assets/img/banner/FAQ (1).webp"} />)}
+          {screenSize.width <= 767 && (
+                        <div id="bg18">
+                        </div>
+                        )}
 
           {/* Faq One */}
           <div className='faq-area pd-top-120 pd-bottom-20'>

@@ -1,15 +1,32 @@
-import React, { Fragment, Suspense } from "react";
+import React, { Fragment, Suspense,useState,useEffect } from "react";
 import Preloader from "../elements/Preloader";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
-import CorporateInformationInner from "../components/CorporateInformationInner";
 import SupportBarOne from "../components/SupportBarOne";
 import NavbarThree from "../components/NavbarThree";
 import CorporateSocialResponsibilityInner from "../components/CorporateSocialResponsibilityInner";
 
 
 const CorporateSocialResponsibility = () => {
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+  function getCurrentDimension() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
+
+  useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension());
+    };
+    window.addEventListener("resize", updateDimension);
+
+    return () => {
+      window.removeEventListener("resize", updateDimension);
+    };
+  }, [screenSize]);
     return (
       <>
         <Fragment>
@@ -21,7 +38,12 @@ const CorporateSocialResponsibility = () => {
           <NavbarThree/>
             
             {/* Breadcrumb */}
-            <Breadcrumb title={"CORPORATE SOCIAL RESPONSIBILITY"} imgSrc={"/assets/img/banner/CSR (2).webp"}/>
+            {screenSize.width > 767 && (
+            <Breadcrumb title={"CORPORATE SOCIAL RESPONSIBILITY"} imgSrc={"/assets/img/banner/CSR (2).webp"}/>)}
+          {screenSize.width <= 767 && (
+                        <div id="bg20">
+                        </div>
+                        )}
 
             {/*Investors Inner */}
             <CorporateSocialResponsibilityInner/>

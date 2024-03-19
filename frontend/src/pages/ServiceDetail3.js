@@ -1,4 +1,4 @@
-import React, { Fragment, Suspense } from "react";
+import React, { Fragment, Suspense,useState,useEffect } from "react";
 import Preloader from "../elements/Preloader";
 import ServiceDetailsInner3 from "../components/ServiceDetailsInner3";
 import SupportBarOne from "../components/SupportBarOne";
@@ -10,6 +10,24 @@ const FooterBottomOne = React.lazy(() =>
 const FooterOne = React.lazy(() => import("../components/FooterOne"));
 
 const ServiceDetail3 = () => {
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+  function getCurrentDimension() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
+
+  useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension());
+    };
+    window.addEventListener("resize", updateDimension);
+
+    return () => {
+      window.removeEventListener("resize", updateDimension);
+    };
+  }, [screenSize]);
   return (
     <>
       <Fragment>
@@ -21,7 +39,13 @@ const ServiceDetail3 = () => {
           <NavbarThree/>
 
           {/* Breadcrumb */}
-          <Breadcrumb title={"BULK MOVEMENTS"} imgSrc={"/assets/img/service-1/bulk mov/bulk-movements (2).webp"}/>
+          {screenSize.width > 767 && (
+          <Breadcrumb title={"BULK MOVEMENTS"} imgSrc={"/assets/img/service-1/bulk mov/bulk-movements (2).webp"}/>)}
+          {screenSize.width <= 767 && (
+                        <div id="bg11">
+                        </div>
+                        )}
+
 
           {/* Service Details Inner */}
           <ServiceDetailsInner3 />
