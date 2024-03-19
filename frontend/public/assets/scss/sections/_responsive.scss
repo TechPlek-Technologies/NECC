@@ -485,7 +485,7 @@
     font-size: 12px;
   }
   .toggle-btn {
-    top: 25px;
+    // top: 25px;
     right: 0;
     padding: 0;
   }
@@ -859,6 +859,7 @@
   }
   .section-title .title {
     font-size: 23px;
+    margin-top: 20px;
     margin-left: 10px;
   }
   .section-title .subtitle{
@@ -906,7 +907,12 @@
     margin: 0 0 10px 0;
   }
   .breadcrumb-area .page-title {
-    font-size: 48px;
+    // font-size: 48px;
+    font-size: 30px;
+    line-height: 20px;
+  }
+  .breadcrumb-area .page-list li{
+    font-size: 14px;
   }
   .features-area-2 .features-item {
     display: none;
@@ -1107,6 +1113,14 @@
   .home-area.home-v3 .header-bg .right-wrapper h2 {
     font-size: 22px;
   }
+  .breadcrumb-area .page-title {
+    // font-size: 48px;
+    font-size: 30px;
+    line-height: 20px;
+  }
+  .breadcrumb-area .page-list li{
+    font-size: 14px;
+  }
 }
 @media all and (max-width: 320px) {
   .banner-area-2 .banner-inner .btn-wrap .btn-base,
@@ -1122,5 +1136,13 @@
   }
   .home-area.home-v3 .header-bg .right-wrapper h2 {
     font-size: 22px;
+  }
+  .breadcrumb-area .page-title {
+    // font-size: 48px;
+    font-size: 30px;
+    line-height: 20px;
+  }
+  .breadcrumb-area .page-list li{
+    font-size: 14px;
   }
 }
