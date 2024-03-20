@@ -43,7 +43,7 @@ const Investors = () => {
             <Breadcrumb title={"INVESTORS"} imgSrc={"/assets/img/banner/Investor.webp"} />)}
             {screenSize.width <= 767 && (
                         <div id="bg6">
-                          {/* <div className='breadcrumb-area bg-overlay-2'>
+                          <div className='breadcrumb-area bg-overlay-2'>
                           <div className='container'>
                             <div className='row'>
                               <div className='col-xl-12 col-lg-12 col-md-12'>
@@ -61,7 +61,7 @@ const Investors = () => {
                               </div>
                             </div>
                           </div>
-                        </div> */}
+                        </div>
                         </div>
                         )}
 

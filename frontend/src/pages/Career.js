@@ -7,6 +7,7 @@ import CareerInner from "../components/CareerInner";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
 import CurrentOpeningInner from "../components/CurrentOpeningInner";
+import { Link } from "react-router-dom";
 
 const Career = () => {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -42,6 +43,25 @@ const Career = () => {
             <Breadcrumb title={"CAREERS"} imgSrc={"/assets/img/banner/career-in-logistic.webp"} />)}
           {screenSize.width <= 767 && (
                         <div id="bg17">
+                          <div className='breadcrumb-area bg-overlay-2'>
+                          <div className='container'>
+                            <div className='row'>
+                              <div className='col-xl-12 col-lg-12 col-md-12'>
+                                <div className='breadcrumb-inner'>
+                                  <div className='section-title mb-0'>
+                                    <h2 className='page-title'>CAREERS</h2>
+                                    <ul className='page-list'>
+                                      <li>
+                                        <Link to='/'>HOME</Link>
+                                      </li>{" "}
+                                      /<li className='ps-0'>CAREERS</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         </div>
                         )}
   

@@ -14,6 +14,7 @@ const GetDetailsInner = () => {
   
   const GetConsignmentDetail = () => {
     setLoading(true);
+    setIsEditDialogOpen(true);
     axios.post('http://103.127.30.214:90/Tracking.ashx', {
       "interface": "RestAPI",
       "method": "GetConsignmentDetail",
@@ -31,7 +32,6 @@ const GetDetailsInner = () => {
           console.log(cnmtDetail)
           setData(cnmtDetail)
           setLoading(false);
-
         }
         // Handle response data
       })

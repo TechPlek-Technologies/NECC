@@ -3,6 +3,7 @@ import Preloader from "../elements/Preloader";
 import NavbarThree from "../components/NavbarThree";
 import NeccGroupInner from "../components/NeccGroupInner";
 import SupportBarOne from "../components/SupportBarOne";
+import { Link } from "react-router-dom";
 const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
@@ -42,6 +43,25 @@ const NeccGroup = () => {
           <Breadcrumb title={"NECC GROUP"} imgSrc={"/assets/img/banner/necc-group (2).webp"}/>)}
           {screenSize.width <= 767 && (
                         <div id="bg22">
+                            <div className='breadcrumb-area bg-overlay-2'>
+                          <div className='container'>
+                            <div className='row'>
+                              <div className='col-xl-12 col-lg-12 col-md-12'>
+                                <div className='breadcrumb-inner'>
+                                  <div className='section-title mb-0'>
+                                    <h2 className='page-title'>NECC GROUP</h2>
+                                    <ul className='page-list'>
+                                      <li>
+                                        <Link to='/'>HOME</Link>
+                                      </li>{" "}
+                                      /<li className='ps-0'>NECC GROUP</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         </div>
                         )}
 

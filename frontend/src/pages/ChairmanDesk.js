@@ -45,7 +45,7 @@ const ChairmanDesk = () => {
 
             {screenSize.width <= 767 && (
                         <div id="bg2">
-                          {/* <div className='breadcrumb-area bg-overlay-2'>
+                          <div className='breadcrumb-area bg-overlay-2'>
                           <div className='container'>
                             <div className='row'>
                               <div className='col-xl-12 col-lg-12 col-md-12'>
@@ -63,7 +63,7 @@ const ChairmanDesk = () => {
                               </div>
                             </div>
                           </div>
-                        </div> */}
+                        </div>
                         </div>
                         )}
 

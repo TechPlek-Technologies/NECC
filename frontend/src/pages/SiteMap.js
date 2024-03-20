@@ -6,6 +6,7 @@ import FooterBottomOne from "../components/FooterBottomOne";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
 import SiteMapInner from "../components/SiteMapInner";
+import { Link } from "react-router-dom";
 
 const SiteMap = () => {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -41,6 +42,25 @@ const SiteMap = () => {
             <Breadcrumb title={"SITEMAP"} imgSrc={"/assets/img/banner/sitemap (1).webp"} />)}
           {screenSize.width <= 767 && (
                         <div id="bg31">
+                          <div className='breadcrumb-area bg-overlay-2'>
+                          <div className='container'>
+                            <div className='row'>
+                              <div className='col-xl-12 col-lg-12 col-md-12'>
+                                <div className='breadcrumb-inner'>
+                                  <div className='section-title mb-0'>
+                                    <h2 className='page-title'>SITEMAP</h2>
+                                    <ul className='page-list'>
+                                      <li>
+                                        <Link to='/'>HOME</Link>
+                                      </li>{" "}
+                                      /<li className='ps-0'>SITEMAP</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         </div>
                         )}
 

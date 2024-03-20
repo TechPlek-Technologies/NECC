@@ -6,6 +6,7 @@ import FooterBottomOne from "../components/FooterBottomOne";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
 import NECCPackersInner from "../components/NECCPackersInner";
+import { Link } from "react-router-dom";
 
 const NECCPackers = () => {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -41,6 +42,25 @@ const NECCPackers = () => {
             <Breadcrumb title={"NECC PACKERS & MOVERS"} imgSrc={"/assets/img/banner/Necc-Packer-&-Movers.webp"}/>)}
           {screenSize.width <= 767 && (
                         <div id="bg27">
+                          <div className='breadcrumb-area bg-overlay-2'>
+                          <div className='container'>
+                            <div className='row'>
+                              <div className='col-xl-12 col-lg-12 col-md-12'>
+                                <div className='breadcrumb-inner'>
+                                  <div className='section-title mb-0'>
+                                    <h2 className='page-title'>NECC PACKERS & MOVERS</h2>
+                                    <ul className='page-list'>
+                                      <li>
+                                        <Link to='/'>HOME</Link>
+                                      </li>{" "}
+                                      /<li className='ps-0'>NECC PACKERS & MOVERS</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         </div>
                         )}
 

@@ -2,6 +2,7 @@ import React, { Fragment, Suspense,useState,useEffect } from "react";
 import Preloader from "../elements/Preloader";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
+import { Link } from "react-router-dom";
 const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
 // const ContactOne = React.lazy(() => import("../components/ContactOne"));
 const FaqOne = React.lazy(() => import("../components/FaqOne"));
@@ -45,6 +46,25 @@ const Faq = () => {
           <Breadcrumb title={"FAQ"} imgSrc={"/assets/img/banner/FAQ (1).webp"} />)}
           {screenSize.width <= 767 && (
                         <div id="bg18">
+                           <div className='breadcrumb-area bg-overlay-2'>
+                          <div className='container'>
+                            <div className='row'>
+                              <div className='col-xl-12 col-lg-12 col-md-12'>
+                                <div className='breadcrumb-inner'>
+                                  <div className='section-title mb-0'>
+                                    <h2 className='page-title'>FAQ</h2>
+                                    <ul className='page-list'>
+                                      <li>
+                                        <Link to='/'>HOME</Link>
+                                      </li>{" "}
+                                      /<li className='ps-0'>FAQ</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         </div>
                         )}
 

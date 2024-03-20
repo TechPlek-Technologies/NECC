@@ -3,10 +3,10 @@ import Preloader from "../elements/Preloader";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
-// import PartnerOne from "../components/PartnerOne";
 import FeedbackInner from "../components/FeedbackInner";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
+import { Link } from "react-router-dom";
 
 const Feedback = () => {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -42,6 +42,25 @@ const Feedback = () => {
             <Breadcrumb title={"FEEDBACK"} imgSrc={"/assets/img/banner/feedback (1).webp"}/>)}
           {screenSize.width <= 767 && (
                         <div id="bg19">
+                          <div className='breadcrumb-area bg-overlay-2'>
+                          <div className='container'>
+                            <div className='row'>
+                              <div className='col-xl-12 col-lg-12 col-md-12'>
+                                <div className='breadcrumb-inner'>
+                                  <div className='section-title mb-0'>
+                                    <h2 className='page-title'>FEEDBACK</h2>
+                                    <ul className='page-list'>
+                                      <li>
+                                        <Link to='/'>HOME</Link>
+                                      </li>{" "}
+                                      /<li className='ps-0'>FEEDBACK</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         </div>
                         )}
 
