@@ -6,6 +6,7 @@ import FooterBottomOne from "../components/FooterBottomOne";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
 import MagazinesInner from "../components/MagazinesInner";
+import { Link } from "react-router-dom";
 
 const Magazines = () => {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -41,6 +42,25 @@ const Magazines = () => {
             <Breadcrumb title={"MAGAZINES"} imgSrc={"/assets/img/banner/magazine (1).webp"}/>)}
           {screenSize.width <= 767 && (
                         <div id="bg28">
+                          <div className='breadcrumb-area bg-overlay-2'>
+                          <div className='container'>
+                            <div className='row'>
+                              <div className='col-xl-12 col-lg-12 col-md-12'>
+                                <div className='breadcrumb-inner'>
+                                  <div className='section-title mb-0'>
+                                    <h2 className='page-title'>MAGAZINES</h2>
+                                    <ul className='page-list'>
+                                      <li>
+                                        <Link to='/'>HOME</Link>
+                                      </li>{" "}
+                                      /<li className='ps-0'>MAGAZINES</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         </div>
                         )}
 

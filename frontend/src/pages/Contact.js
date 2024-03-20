@@ -2,6 +2,7 @@ import React, { Fragment, Suspense,useState,useEffect } from "react";
 import Preloader from "../elements/Preloader";
 import NavbarThree from "../components/NavbarThree";
 import SupportBarOne from "../components/SupportBarOne";
+import { Link } from "react-router-dom";
 const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
 const ContactInner = React.lazy(() => import("../components/ContactInner"));
 const FooterBottomOne = React.lazy(() =>
@@ -42,6 +43,25 @@ const Contact = () => {
           <Breadcrumb title={"CONTACT US"} imgSrc={"/assets/img/banner/contact.webp"}/>)}
           {screenSize.width <= 767 && (
                         <div id="bg16">
+                            <div className='breadcrumb-area bg-overlay-2'>
+                          <div className='container'>
+                            <div className='row'>
+                              <div className='col-xl-12 col-lg-12 col-md-12'>
+                                <div className='breadcrumb-inner'>
+                                  <div className='section-title mb-0'>
+                                    <h2 className='page-title'>CONTACT US</h2>
+                                    <ul className='page-list'>
+                                      <li>
+                                        <Link to='/'>HOME</Link>
+                                      </li>{" "}
+                                      /<li className='ps-0'>CONTACT US</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         </div>
                         )}
 

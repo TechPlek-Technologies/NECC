@@ -42,7 +42,7 @@ const VisionAndQualityPolicy = () => {
             <Breadcrumb title={"VISION & QUALITY POLICY"} imgSrc={"/assets/img/banner/vision (3).webp"}/>)}
             {screenSize.width <= 767 && (
                         <div id="bg5">
-                          {/* <div className='breadcrumb-area bg-overlay-2'>
+                          <div className='breadcrumb-area bg-overlay-2'>
                           <div className='container'>
                             <div className='row'>
                               <div className='col-xl-12 col-lg-12 col-md-12'>
@@ -60,7 +60,7 @@ const VisionAndQualityPolicy = () => {
                               </div>
                             </div>
                           </div>
-                        </div> */}
+                        </div>
                         </div>
                         )}
   
