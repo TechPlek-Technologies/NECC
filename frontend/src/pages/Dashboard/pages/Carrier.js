@@ -12,6 +12,8 @@ import {
   SvgIcon,
   TextField,
   Typography,
+  Alert,
+  Snackbar,
 } from "@mui/material";
 import { CarrierTable } from "../sections/Carrier/carrier-table";
 import { useSelection } from "../hooks/use-selection";
@@ -23,39 +25,41 @@ import ReactQuill from "react-quill";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-
-
-
-const useCarriers = (data,page, rowsPerPage) => {
+const useCarriers = (data, page, rowsPerPage) => {
   return useMemo(() => {
     return applyPagination(data, page, rowsPerPage);
-  }, [data,page, rowsPerPage]);
+  }, [data, page, rowsPerPage]);
 };
-
-
-
-
 
 const Carrier = () => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [key, setKey] = useState(0);
-  const [data,setData]=useState([]);
-  const carriers = useCarriers(data,page, rowsPerPage);
+  const [data, setData] = useState([]);
+  const carriers = useCarriers(data, page, rowsPerPage);
   const [loading, setLoading] = useState(false);
   const [editedOffice, setEditedOffice] = useState({});
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
+  const [successMsg, setSuccessMsg] = useState("");
   const token = window.localStorage.getItem("Token");
   const domain = process.env.REACT_APP_API_DOMAIN;
 
-  let { pagename,id } = useParams();
-  
+  let { pagename, id } = useParams();
+
   const handleKeyChange = () => {
     setKey((prevKey) => prevKey + 1);
   };
 
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setFailure(false);
+    setSuccess(false);
+  };
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -138,20 +142,17 @@ const Carrier = () => {
   );
 
   const handleUpload = async () => {
-   
     try {
       if (!editedOffice) {
         throw new Error("No office selected");
       }
 
-    
       const formData = {
         serial: editedOffice.serial, // Assuming section is defined somewhere in your code
         designation: editedOffice.designation,
         summary: editedOffice.summary,
-        description: editedOffice.description
+        description: editedOffice.description,
       };
-
 
       const response = await axios.post(`${domain}/content`, formData, {
         headers: {
@@ -167,18 +168,19 @@ const Carrier = () => {
 
       // Handle successful upload
       setSuccess(true);
+      setSuccessMsg(response.data.message);
       setKey((prevKey) => prevKey + 1);
-      console.log("PDF file uploaded successfully");
       setIsEditDialogOpen(false);
     } catch (error) {
       setFailure(true);
+      setSuccessMsg(error.response.data.message);
       console.error("Error uploading PDF file:", error.message);
     }
   };
 
   useEffect(() => {
     // Function to fetch data
-    setLoading(true)
+    setLoading(true);
     const fetchData = async () => {
       try {
         const response = await axios.get(`${domain}/content`);
@@ -224,7 +226,7 @@ const Carrier = () => {
                         </SvgIcon>
                       }
                       variant="contained"
-                      onClick={()=>setIsEditDialogOpen(true)}
+                      onClick={() => setIsEditDialogOpen(true)}
                     >
                       New
                     </Button>
@@ -248,55 +250,96 @@ const Carrier = () => {
               </Stack>
             </Container>
           </Box>
-          <Dialog open={isEditDialogOpen} onClose={()=>setIsEditDialogOpen(false)}>
-        <DialogContent>
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={2}>
-              <TextField
-                label="S. No"
-                name="serial"
-                onChange={handleInputChange}
-                type="number"
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12} md={10}>
-              <TextField
-                label="Designation"
-                name="designation"
-                onChange={handleInputChange}
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12} md={12}>
-              <TextField
-                label="Summary"
-                name="summary"
-                onChange={handleInputChange}
-                fullWidth
-              
-              />
-            </Grid>
-            <Grid item xs={12} md={12}>
-              <Typography variant="subtitle1" component="div">
-                Description
-              </Typography>
-              <ReactQuill
-                theme="snow"
-                name="description"
-                onChange={handleQuill}
-                modules={modules}
-              />
-            </Grid>
-          </Grid>
+          <Dialog
+            open={isEditDialogOpen}
+            onClose={() => setIsEditDialogOpen(false)}
+          >
+            <DialogContent>
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={2}>
+                  <TextField
+                    label="S. No"
+                    name="serial"
+                    onChange={handleInputChange}
+                    type="number"
+                    fullWidth
+                  />
+                </Grid>
+                <Grid item xs={12} md={10}>
+                  <TextField
+                    label="Designation"
+                    name="designation"
+                    onChange={handleInputChange}
+                    fullWidth
+                  />
+                </Grid>
+                <Grid item xs={12} md={12}>
+                  <TextField
+                    label="Summary"
+                    name="summary"
+                    onChange={handleInputChange}
+                    fullWidth
+                  />
+                </Grid>
+                <Grid item xs={12} md={12}>
+                  <Typography variant="subtitle1" component="div">
+                    Description
+                  </Typography>
+                  <ReactQuill
+                    theme="snow"
+                    name="description"
+                    onChange={handleQuill}
+                    modules={modules}
+                  />
+                </Grid>
+              </Grid>
 
-          <Button onClick={()=>{setIsEditDialogOpen(false)}}>Close</Button>
-          <Button onClick={()=>{
-            console.log(editedOffice)
-            handleUpload();
-          }}>Save Changes</Button>
-        </DialogContent>
-      </Dialog>
+              <Button
+                onClick={() => {
+                  setIsEditDialogOpen(false);
+                }}
+              >
+                Close
+              </Button>
+              <Button
+                onClick={() => {
+                  console.log(editedOffice);
+                  handleUpload();
+                }}
+              >
+                Save Changes
+              </Button>
+            </DialogContent>
+          </Dialog>
+
+          <Snackbar
+            open={success}
+            autoHideDuration={6000}
+            onClose={handleClose}
+          >
+            <Alert
+              onClose={handleClose}
+              severity="success"
+              variant="filled"
+              sx={{ width: "100%" }}
+            >
+              {successMsg}
+            </Alert>
+          </Snackbar>
+          <Snackbar
+            open={failure}
+            autoHideDuration={6000}
+            onClose={handleClose}
+          >
+            <Alert
+              onClose={handleClose}
+              severity="error"
+              variant="filled"
+              sx={{ width: "100%" }}
+            >
+              {successMsg}
+            </Alert>
+          </Snackbar>
         </Layout>
       </ThemeProvider>
     </>
