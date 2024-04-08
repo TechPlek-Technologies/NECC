@@ -13,6 +13,7 @@ import { toast, Toaster } from "react-hot-toast";
 import TrackVisibility from "react-on-screen";
 import CountUp from "react-countup";
 import ModalVideo from "react-modal-video";
+import { Link } from "react-router-dom";
 const NeccEcomSolutionInner = () => {
   const [isOpen, setOpen] = useState(false);
   const form = useRef();
@@ -291,9 +292,9 @@ const NeccEcomSolutionInner = () => {
                     </div>
                   </div>
                   <div className='col-12'>
-                    <button className='btn btn-base' type='submit'>
+                  <button className='btn btn-base1' type='submit'>
                       {" "}
-                      SEND MESSAGE
+                      <Link to='/Pickup&Delivery' className="contact-btn">SEND MESSAGE</Link>
                     </button>
                   </div>
                 </div>

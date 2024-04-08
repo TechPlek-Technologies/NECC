@@ -1,6 +1,5 @@
 import React, { Fragment, Suspense } from "react";
 import Preloader from "../elements/Preloader";
-import Breadcrumb from "../components/Breadcrumb";
 import FooterOne from "../components/FooterOne";
 import FooterBottomOne from "../components/FooterBottomOne";
 import NavbarThree from "../components/NavbarThree";
@@ -17,9 +16,6 @@ const InvestorFeedback = () => {
   
             {/* Navbar Three */}
             <NavbarThree/>
-  
-            {/* Breadcrumb */}
-            {/* <Breadcrumb title={"INVESTOR FEEDBACK"} imgSrc={"/assets/img/banner/feedback (1).webp"}/> */}
 
             {/* Feedback Inner */}
             <InvestorFeedbackInner/>

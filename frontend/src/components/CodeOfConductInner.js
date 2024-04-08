@@ -88,7 +88,7 @@ const CodeOfConductInner = () => {
                         <div className="service-details-wrap">
                           <b>Interpretation of the Code</b>
                           <p>Any question or interpretation under this Code of Conduct will be handled by the Executive Sub-Committee of the Board of Directors of the Company. The Executive Sub-Committee has the authority to waive compliance with this Code of Conduct for any Director or Executive of the Company. The person seeking waiver of this Code shall make full disclosure of the particular circumstances to the Executive Sub-Committee.</p>
-                          <p><a href="http://localhost:4000/pdf/Code-of-Conduct.pdf" style={{color:"#29176d",fontWeight:"bold"}}>Click Here</a> to download Code of Conduct</p>
+                          <p><a target="blank" download={true} href="/assets/pdf/Code-of-Conduct.pdf" style={{color:"#29176d",fontWeight:"bold"}}>Click Here</a> to download Code of Conduct</p>
                         </div>
                       </div>
                     </div>
