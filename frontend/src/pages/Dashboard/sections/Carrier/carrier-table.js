@@ -18,6 +18,8 @@ import {
   TextField,
   Tooltip,
   Typography,
+  Alert,
+  Snackbar,
 } from "@mui/material";
 import { RiDeleteBin2Line, RiExpandRightFill } from "react-icons/ri";
 import { Scrollbar } from "../../components/Scrollbar";
@@ -36,8 +38,8 @@ export const CarrierTable = (props) => {
     onRowsPerPageChange,
     page = 0,
     rowsPerPage = 0,
-    key=0,
-    handleKeyChange=()=>{}
+    key = 0,
+    handleKeyChange = () => {},
   } = props;
 
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
@@ -45,7 +47,16 @@ export const CarrierTable = (props) => {
   const [editedOffice, setEditedOffice] = useState({});
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
+  const [successMsg, setSuccessMsg] = useState("");
 
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setFailure(false);
+    setSuccess(false);
+  };
   const handleEditClick = (customer) => {
     setEditedOffice({
       id: customer.id,
@@ -133,7 +144,8 @@ export const CarrierTable = (props) => {
 
   const handleUpdate = async () => {
     try {
-      if (!editedOffice) {
+      if (!editedOffice.designation || !editedOffice.summary) {
+        setSuccessMsg("Designation and summary is required");
         throw new Error("No data available for upload");
       }
 
@@ -162,34 +174,45 @@ export const CarrierTable = (props) => {
 
       // Handle successful upload
       setSuccess(true);
-      handleKeyChange();
-      console.log("PDF file updated successfully");
+      setSuccessMsg("Edit Successfull");
+      //   wait 2 sec beforererender
+      setTimeout(() => {
+        handleKeyChange(); // Trigger re-render
+      }, 2000);
+
       setIsEditDialogOpen(false);
     } catch (error) {
       setFailure(true);
+      setSuccessMsg(error.response.data.message);
       console.error("Error uploading PDF file:", error.message);
     }
   };
 
-  const handleDelete = async(id) => {
+  const handleDelete = async (id) => {
     try {
       const response = await axios.delete(`${domain}/content/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
-  
+
       if (response.status !== 200) {
         setFailure(true);
         throw new Error("Failed to delete PDF file");
       }
-  
+
       // Handle successful delete
       setSuccess(true);
-      handleKeyChange(); // Trigger re-render
+
+      setSuccessMsg(response.data.message);
+      setTimeout(() => {
+        handleKeyChange(); // Trigger re-render
+      }, 2000);
+
       console.log("data deleted successfully");
     } catch (error) {
       setFailure(true);
+      setSuccessMsg(error.response.data.message);
       console.error("Error deleting PDF file:", error.message);
     }
   };
@@ -345,6 +368,26 @@ export const CarrierTable = (props) => {
           <Button onClick={handleUpdate}>Save Changes</Button>
         </DialogContent>
       </Dialog>
+      <Snackbar open={success} autoHideDuration={6000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity="success"
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          {successMsg}
+        </Alert>
+      </Snackbar>
+      <Snackbar open={failure} autoHideDuration={6000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity="error"
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          {successMsg}
+        </Alert>
+      </Snackbar>
     </Card>
   );
 };

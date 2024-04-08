@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect } from "react";
 
 export const AuthContext = createContext();
 
@@ -9,9 +9,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     // Simulate an asynchronous check for authentication
     const checkAuthStatus = () => {
-      const token = localStorage.getItem('Token');
-      const userData = localStorage.getItem('userData');
-      console.log("userData",userData);
+      const token = localStorage.getItem("Token");
       setIsAuthenticated(!!token); // Update the authentication status based on the presence of a token
     };
 
@@ -19,7 +17,9 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated, loading, setLoading }}>
+    <AuthContext.Provider
+      value={{ isAuthenticated, setIsAuthenticated, loading, setLoading }}
+    >
       {children}
     </AuthContext.Provider>
   );
