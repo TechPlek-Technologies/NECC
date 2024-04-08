@@ -11,7 +11,6 @@ const AboutThree = () => {
               <div className='service-content'>
                 <div className='section-title white  text-left'>
                   <span className='subtitles'>ABOUT US</span>
-                  <h2 className='title'>WELCOME WORLD WIDE BEST TRANSPORT COMPANY</h2>
                   <p>
                   Since our inception, we have provided clients with flexible, responsive, and affordable services that they deserve. We use our deep operating knowledge to offer extraordinary solutions as unique as our client’s needs. 
                   </p>
@@ -20,9 +19,6 @@ const AboutThree = () => {
                   <div className='row'>
                     <div className='col-lg-12  col-md-12 col-sm-12'>
                       <div className='service-single-item'>
-                        {/* <h3>
-                          <span>01</span>Ocean Cargo
-                        </h3> */}
                         <p>
                         <img
                               src='./assets/img/icon/check1.png' className="img-fluid "
@@ -42,19 +38,7 @@ const AboutThree = () => {
                               alt='Transpro'
                               style={{paddingRight:"10px"}}
                             />
-                        Establish distribution channels in the Eastern Region.
-                        </p>
-                      </div>
-                    </div>
-                    <div className='col-lg-12  col-md-12 col-sm-12'>
-                      <div className='service-single-item'>
-                        <p>
-                        <img
-                              src='./assets/img/icon/check1.png' className="img-fluid "
-                              alt='Transpro'
-                              style={{paddingRight:"10px"}}
-                            />
-                        Smooth flow of inventory and visibility of the product.
+                       Established distribution channels in the Eastern & North Eastern Region.
                         </p>
                       </div>
                     </div>

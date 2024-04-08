@@ -41,7 +41,7 @@ const ServiceDetail4 = () => {
 
           {/* Breadcrumb */}
           {screenSize.width > 767 && (
-          <Breadcrumb title={"ODC MOVEMENTS"} imgSrc={"/assets/img/banner/odc.webp"}/>)}
+          <Breadcrumb title={"ODC MOVEMENTS"} imgSrc={"/assets/img/banner/odc2.webp"}/>)}
           {screenSize.width <= 767 && (
                         <div id="bg12">
                           <div className='breadcrumb-area bg-overlay-2'>

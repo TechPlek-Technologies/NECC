@@ -51,7 +51,6 @@ const PartnerOne = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
               <div className='section-title text-center'>
-                {/* <h4 className='subtitle'>HAPPY CLIENTS</h4> */}
                 <h2 className='title'>THE TRUSTED CHOICE FOR OUR CLIENTS</h2>
                 <p className='content para'>
                 NECC is trusted by clients for reliable logistics solutions, exceptional service, on-time deliveries, and unparalleled expertise in the transportation industry.
@@ -68,7 +67,7 @@ const PartnerOne = () => {
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='/assets/img/partner/havells.png' className="img-fluid " alt='Transpro' />
+                  <img src='/assets/img/partner/mankind.png' className="img-fluid " alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
@@ -88,7 +87,7 @@ const PartnerOne = () => {
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='/assets/img/partner/itc.png' className="img-fluid " alt='Transpro' />
+                  <img src='/assets/img/partner/alkem.png' className="img-fluid " alt='Transpro' />
                 </div>
               </div>
               <div className='item'>
@@ -108,7 +107,17 @@ const PartnerOne = () => {
               </div>
               <div className='item'>
                 <div className='thumb'>
-                  <img src='/assets/img/partner/zuventus-healthcare-ltd.png' className="img-fluid " alt='Transpro' />
+                  <img src='/assets/img/partner/cavin-kare.png' className="img-fluid " alt='Transpro' />
+                </div>
+              </div>
+              <div className='item'>
+                <div className='thumb'>
+                  <img src='/assets/img/partner/piramal.png' className="img-fluid " alt='Transpro' />
+                </div>
+              </div>
+              <div className='item'>
+                <div className='thumb'>
+                  <img src='/assets/img/partner/zydus.png' className="img-fluid " alt='Transpro' />
                 </div>
               </div>
             </Slider>

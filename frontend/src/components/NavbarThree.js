@@ -73,14 +73,7 @@ const NavbarThree = () => {
               id='transpro_main_menu'
             >
               <ul className='navbar-nav menu-open'>
-              {/* <li className='menu-item-has-children current-menu-item'>
-                  <Link to='/'>Home</Link>
-                  <ul className='sub-menu'>
-                    <li>
-                      <Link to='/'>Home</Link>
-                    </li>
-                  </ul>
-                </li> */}
+            
                 <li>
                   <Link to='/'>Home</Link>
                 </li>
@@ -109,6 +102,9 @@ const NavbarThree = () => {
                   <ul className='sub-menu'>
                     <li>
                       <Link to='/Investors'>Disclosures under Regulation 46 of SEBI (LODR)<br/>Regulations,2015</Link>
+                    </li>
+                    <li>
+                       <Link to='/RIGHT-ISSUES/36'>Right Issues</Link>
                     </li>
                   </ul>
                 </li>
@@ -144,18 +140,6 @@ const NavbarThree = () => {
                     </li>
                   </ul>
                 </li>
-              
-                 {/* <li className='menu-item-has-children'>
-                  <Link to='#'>SiteMap</Link>
-                  <ul className='sub-menu'>
-                    <li>
-                    <Link to='/SiteMap'>SiteMap</Link>
-                    </li>
-                  </ul>
-                </li> */}
-                {/* <li>
-                  <Link to='/SiteMap'>SiteMap</Link>
-                </li> */}
                 <li className='menu-item-has-children current-menu-item'>
                   <Link to='#'>Contact Us</Link>
                   <ul className='sub-menu'>
@@ -164,6 +148,9 @@ const NavbarThree = () => {
                       </li>
                       <li>
                         <Link to='/Career'>Careers</Link>
+                      </li>
+                      <li>
+                        <Link to='/DOWNLOAD/41'>Download</Link>
                       </li>
                       {/* <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <Link to='#'>Customer Care</Link>
@@ -185,9 +172,6 @@ const NavbarThree = () => {
                 </li>
                 <li>
                   <Link to='/CorporateSocialResponsibility'>CSR</Link>
-                </li>
-                <li>
-                  <Link to='/RIGHT-ISSUES/36'>Right Issues</Link>
                 </li>
                 <li>
                   <Link to='/admin'><FaUserAlt style={{marginRight:"4px",marginBottom:"2px"}}/>Login</Link>

@@ -1,5 +1,4 @@
 import React from "react";
-import CountUp from "react-countup";
 import TrackVisibility from "react-on-screen";
 
 const CounterThree = () => {
@@ -21,15 +20,6 @@ const CounterThree = () => {
                           src='/assets/img/icon/trust1.png'
                           />
                         </div>
-                        {/* <TrackVisibility once>
-                          {({ isVisible }) =>
-                            isVisible && (
-                              <span className='counter'>
-                                <CountUp delay={0} start={0} end={45789} />
-                              </span>
-                            )
-                          }
-                        </TrackVisibility> */}
                          <TrackVisibility once>
                           {({ isVisible }) =>
                             isVisible && (
@@ -41,7 +31,6 @@ const CounterThree = () => {
                         </TrackVisibility>
 
                         <h3 className='title1'>Attached Vehicles Pan India</h3>
-                        {/* <p className="para1">Extensive knowledge, and reliable logistics solutions.</p> */}
                       </div>
                     </div>
                     <div className='col-lg-6 col-md-6 col-sm-6'>
@@ -53,15 +42,6 @@ const CounterThree = () => {
                           src='/assets/img/icon/reliability1.png'
                           />
                         </div>
-                        {/* <TrackVisibility once>
-                          {({ isVisible }) =>
-                            isVisible && (
-                              <span className='counter'>
-                                <CountUp delay={0} start={0} end={31216} />
-                              </span>
-                            )
-                          }
-                        </TrackVisibility> */}
                         <TrackVisibility once>
                           {({ isVisible }) =>
                             isVisible && (
@@ -72,7 +52,6 @@ const CounterThree = () => {
                           }
                         </TrackVisibility>
                         <h3 className='title1'>Satisfied Customers</h3>
-                        {/* <p className="para1">Consistent, on-time deliveries, impeccable service.</p> */}
                       </div>
                     </div>
                   </div>
@@ -88,15 +67,6 @@ const CounterThree = () => {
                           src='/assets/img/icon/expertise1.png'
                           />
                         </div>
-                        {/* <TrackVisibility once>
-                          {({ isVisible }) =>
-                            isVisible && (
-                              <span className='counter'>
-                                <CountUp delay={0} start={0} end={21454} />
-                              </span>
-                            )
-                          }
-                        </TrackVisibility> */}
                         <TrackVisibility once>
                           {({ isVisible }) =>
                             isVisible && (
@@ -107,7 +77,6 @@ const CounterThree = () => {
                           }
                         </TrackVisibility>
                         <h3 className='title1'>Professional Team Members</h3>
-                        {/* <p className="para1">Client-centric approach, transparent communication channels.</p> */}
                       </div>
                     </div>
                     <div className='col-lg-6 col-md-6 col-sm-6'>
@@ -119,26 +88,16 @@ const CounterThree = () => {
                           src='/assets/img/icon/EXCELLENCE1.png'
                           />
                         </div>
-                        {/* <TrackVisibility once>
-                          {({ isVisible }) =>
-                            isVisible && (
-                              <span className='counter'>
-                                <CountUp delay={0} start={0} end={31454} />
-                              </span>
-                            )
-                          }
-                        </TrackVisibility> */}
                         <TrackVisibility once>
                           {({ isVisible }) =>
                             isVisible && (
                               <span className='counter'>
-                                2.5+
+                                2.5 Million+
                               </span>
                             )
                           }
                         </TrackVisibility>
-                        <h3 className='title1'>Million Sq.ft Warehouse Space Pan India</h3>
-                        {/* <p className="para1">Exceptional quality, unmatched customer satisfaction.</p> */}
+                        <h3 className='title1'>Sq.Ft Warehouse Space Pan India</h3>
                       </div>
                     </div>
                   </div>

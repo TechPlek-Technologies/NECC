@@ -143,25 +143,62 @@ export const CompanyCard = ({office,key,handleKeyChange,id}) => {
           {office.city}
         </Typography>
         <Typography align="center" variant="body1">
-          {office?.name}
-          {","}
-          <br />
-          {office?.addressLine1}
-          {","}
-          <br />
-          {office?.addressLine2}
-          {","}
-          <br />
-          {office?.addressLine3}
-          {"-"}
-          {office?.pincode}
-          <br />
-          {"Toll Free No : "}
-          {office?.tollfreeNo} <br />
-          {"Phone : "}
-          {office?.phone} <br />
-          {"E-mail : "}
-          {office?.email}{" "}
+        {office?.name && (
+  <>
+    {office.name}
+    {","}
+    <br />
+  </>
+)}
+{office?.addressLine1 && (
+  <>
+    {office.addressLine1}
+    {","}
+    <br />
+  </>
+)}
+{office?.addressLine2 && (
+  <>
+    {office.addressLine2}
+    {","}
+    <br />
+  </>
+)}
+{office?.addressLine3 && (
+  <>
+    {office.addressLine3}
+    {","}
+    <br />
+  </>
+)}
+{office?.addressLine3 && office?.pincode && (
+  <>
+    {"-"}
+    {office.pincode}
+    <br />
+  </>
+)}
+{office?.tollfreeNo && (
+  <>
+    {"Toll Free No : "}
+    {office.tollfreeNo}
+    <br />
+  </>
+)}
+{office?.phone && (
+  <>
+    {"Phone : "}
+    {office.phone}
+    <br />
+  </>
+)}
+{office?.email && (
+  <>
+    {"E-mail : "}
+    {office.email}
+    {" "}
+  </>
+)}
         </Typography>
       </CardContent>
       <Box sx={{ flexGrow: 1 }} />

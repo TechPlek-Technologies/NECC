@@ -8,11 +8,6 @@ const FaqOne = () => {
       <div className='pd-bottom-20'>
         <div className='container p-sm-0'>
           <div className='row'>
-            {/* <div className='col-xl-6 col-lg-5 order-lg-2'>
-              <div className='thumb text-center mb-4 mb-lg-0'>
-                <img src='assets/img/faq/1.png' alt='Transpro' />
-              </div>
-            </div> */}
             <div className='col-xl-12 col-lg-7 order-lg-1'>
               <div className='section-title'>
                 <h2 className='title'>FREQUENTLY ASKED ANY QUESTION</h2>
@@ -28,7 +23,7 @@ const FaqOne = () => {
                       aria-expanded='true'
                       aria-controls='collapseOne'
                     >
-                      <span>1.</span> What do you know about N.E.C.C. ?
+                      <span>1.</span> What do you know about <span style={{marginLeft:"4px",fontStyle:"italic",fontWeight:"800"}}>NECC</span>?
                     </button>
                   </h2>
                   <div
@@ -38,7 +33,7 @@ const FaqOne = () => {
                     data-bs-parent='#accordionExample'
                   >
                     <div className='accordion-body'>
-                    N.E.C.C. is an ISO certified & IBA approved company. A trusted more than 55 years old name in the history of Indian Transport Industry, with a brand range of freight management and customized logistics solutions.
+                    NECC is an ISO certified & IBA approved company. A trusted more than 55 years old name in the history of Indian Transport Industry, with a brand range of freight management and customized logistics solutions.
                     </div>
                   </div>
                 </div>
@@ -52,7 +47,7 @@ const FaqOne = () => {
                       aria-expanded='false'
                       aria-controls='collapseTwo'
                     >
-                      <span>2.</span> What are the other companies under N.E.C.C. Group ?
+                      <span>2.</span> What are the other companies under <span style={{marginLeft:"4px",fontStyle:"italic",fontWeight:"800"}}>NECC</span> Group ?
                     </button>
                   </h2>
                   <div
@@ -62,7 +57,7 @@ const FaqOne = () => {
                     data-bs-parent='#accordionExample'
                   >
                     <div className='accordion-body'>
-                    North Eastern Carrying Corporation Ltd., NECC Logistics Ltd. (NX), NECC Packers & Movers, & NECC Telecom. are the Group Companies.
+                    North Eastern Carrying Corporation Ltd., NECC Logistics Ltd. are the Group Companies.
                     </div>
                   </div>
                 </div>
@@ -86,7 +81,7 @@ const FaqOne = () => {
                     data-bs-parent='#accordionExample'
                   >
                     <div className='accordion-body'>
-                    N.E.C.C. have a network of more than 250 branches spread all over India , Nepal , Bhutan and Bangladesh . You can get the list of addresses of branch offices from our BRANCH LIST.
+                    NECC have a network of more than 250 branches spread all over India , Nepal , Bhutan and Bangladesh . You can get the list of addresses of branch offices from our BRANCH LIST.
                     </div>
                   </div>
                 </div>
@@ -100,7 +95,7 @@ const FaqOne = () => {
                       aria-expanded='false'
                       aria-controls='collapseFour'
                     >
-                      <span>4.</span> How can we keep track of consignments booked through N.E.C.C. ? 
+                      <span>4.</span> How can we keep track of consignments booked through <span style={{marginLeft:"4px",fontStyle:"italic",fontWeight:"800"}}>NECC</span> ? 
                     </button>
                   </h2>
                   <div
@@ -124,7 +119,7 @@ const FaqOne = () => {
                       aria-expanded='false'
                       aria-controls='collapseFive'
                     >
-                      <span>5.</span> What kind of consignment, does N.E.C.C., in normal course, avoid booking. ?
+                      <span>5.</span> What kind of consignment, does <span style={{marginLeft:"4px",fontStyle:"italic",fontWeight:"800"}}>NECC</span>, in normal course, avoid booking. ?
                     </button>
                   </h2>
                   <div
@@ -196,7 +191,7 @@ const FaqOne = () => {
                       aria-expanded='false'
                       aria-controls='collapseEight'
                     >
-                      <span>8.</span> Do N.E.C.C. undertake booking of the household consignments ?
+                      <span>8.</span> What are the prohibited materials which we can not carry? 
                     </button>
                   </h2>
                   <div
@@ -206,7 +201,8 @@ const FaqOne = () => {
                     data-bs-parent='#accordionExample'
                   >
                     <div className='accordion-body'>
-                    Yes our NECC Packers & Movers division provides specialized services in household and industrial packing & movement.
+                    Please check the link below
+                    <p><a target="blank" download={true} href="/assets/pdf/Prohibited Goods List.pdf" style={{color:"#29176d",fontWeight:"bold"}}>Click here for prohibited article</a></p>
                     </div>
                   </div>
                 </div>
@@ -220,7 +216,7 @@ const FaqOne = () => {
                       aria-expanded='false'
                       aria-controls='collapseNine'
                     >
-                      <span>9.</span> What are the prohibited materials which we can not carry? 
+                      <span>9.</span> How can a person lodge complaint online ?
                     </button>
                   </h2>
                   <div
@@ -229,39 +225,14 @@ const FaqOne = () => {
                     aria-labelledby='headingNine'
                     data-bs-parent='#accordionExample'
                   >
-                    <div className='accordion-body'>
-                    Please check the link below
-                    </div>
-                  </div>
-                </div>     
-                <div className='accordion-item single-accordion-inner mb-0'>
-                  <h2 className='accordion-header' id='headingTen'>
-                    <button
-                      className='accordion-button collapsed'
-                      type='button'
-                      data-bs-toggle='collapse'
-                      data-bs-target='#collapseTen'
-                      aria-expanded='false'
-                      aria-controls='collapseTen'
-                    >
-                      <span>10.</span> How can a person lodge complaint online ?
-                    </button>
-                  </h2>
-                  <div
-                    id='collapseTen'
-                    className='accordion-collapse collapse'
-                    aria-labelledby='headingTen'
-                    data-bs-parent='#accordionExample'
-                  >
-                    <div className='accordion-body'>
+                     <div className='accordion-body'>
                     A complaint can be e-mailed at- <Link to='mailto:customercare@neccgroup.com'>
                     customercare@neccgroup.com{" "}
                     </Link> or <Link to='mailto:coadmin@neccgroup.com'>
                     coadmin@neccgroup.com{" "}</Link>
                     </div>
                   </div>
-                </div>
-                
+                </div> 
               </div>
 
             </div>
