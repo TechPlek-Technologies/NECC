@@ -11,6 +11,7 @@ import {
   DialogContent,
   DialogTitle,
   FormControl,
+  CircularProgress,
   Grid,
   InputLabel,
   MenuItem,
@@ -23,22 +24,25 @@ import {
 } from "@mui/material";
 import { CompanyCard } from "../sections/Office/company-card";
 import PlusIcon from "@heroicons/react/24/solid/PlusIcon";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { divideArrayByType } from "../utils/contact-divide";
 import { BranchCard } from "../sections/Branch/BranchCard";
+import { BranchTable } from "../sections/Branch/BranchTable";
+import { applyPagination } from "../utils/apply-pagination";
 
-const useOfficeDivide = (data) => {
+const useCarriers = (data, page, rowsPerPage) => {
   return useMemo(() => {
-    return divideArrayByType(data);
-  }, [data]);
+    return applyPagination(data, page, rowsPerPage);
+  }, [data,page, rowsPerPage]);
 };
 
 function AdminBranch() {
   const theme = createTheme();
   const token = window.localStorage.getItem("Token");
   const domain = process.env.REACT_APP_API_DOMAIN;
-
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
   const [isEditOpen, setEditOpen] = useState(false);
   const [editedOffice, setEditedOffice] = useState({});
   const [success, setSuccess] = useState(false);
@@ -47,6 +51,11 @@ function AdminBranch() {
   const [key, setKey] = useState(0);
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
+  const paginationData= useCarriers(data, page, rowsPerPage);
+
+  const handlePageChange = useCallback((event, value) => {
+    setPage(value);
+  }, []);
 
   const handleKeyChange = () => {
     setKey((prevKey) => prevKey + 1);
@@ -114,6 +123,10 @@ function AdminBranch() {
     setEditedOffice((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleRowsPerPageChange = useCallback((event) => {
+    setRowsPerPage(event.target.value);
+  }, []);
+
   useEffect(() => {
     // Function to fetch data
     setLoading(true);
@@ -173,18 +186,20 @@ function AdminBranch() {
                       </Button>
                     </div>
                   </Stack>
-                  <Grid container spacing={3}>
-                    {data.map((office) => (
-                      <Grid xs={12} md={6} lg={4} key={office.id}>
-                        <BranchCard
-                          id={office.id}
-                          office={office}
-                          key={key}
-                          handleKeyChange={handleKeyChange}
-                        />
-                      </Grid>
-                    ))}
-                  </Grid>
+                  {loading ? (
+                  <CircularProgress />
+                ) : (
+                  <BranchTable
+                    count={data.length}
+                    items={paginationData}
+                    onPageChange={handlePageChange}
+                    onRowsPerPageChange={handleRowsPerPageChange}
+                    page={page}
+                    rowsPerPage={rowsPerPage}
+                    handleKeyChange={handleKeyChange}
+                    key={key}
+                  />
+                )}
                 </Stack>
               </Container>
             </Box>
