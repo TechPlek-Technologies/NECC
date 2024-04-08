@@ -1,7 +1,9 @@
 import React from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
+
 const FeatureOne = () => {
+
   function SampleNextArrow(props) {
     const { className, onClick } = props;
     return <FaArrowLeft className={className} onClick={onClick} />;
@@ -10,9 +12,10 @@ const FeatureOne = () => {
     const { className, onClick } = props;
     return <FaArrowRight className={className} onClick={onClick} />;
   }
+
   const settings = {
     dots: false,
-    arrows: true,
+    arrows: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 3,
@@ -20,8 +23,8 @@ const FeatureOne = () => {
     initialSlide: 0,
     autoplay: true,
     autoplaySpeed: 3000,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow/>,
+    prevArrow: <SamplePrevArrow/>,
     responsive: [
       {
         breakpoint: 1024,
@@ -63,7 +66,7 @@ const FeatureOne = () => {
             <div className='col-lg-7 align-self-center'>
               <div className='section-title'>
                 <p className='content left-line'>
-                Our services include a wide array of freight management and customized logistics solutions backed by automated ERP-based software. We leverage our operational expertise, high-capacity transportation network, and unique technology and our team is dedicated to providing Nation Wide Transport services in Nepal, Bhutan, and India. We are among the top freight forwarding companies in India and one of the best Goods Transport Agencies in India.
+                Our services include a wide array of freight management and customized logistics solutions backed by automated ERP-based software. We leverage our operational expertise, high-capacity transportation network, and unique technology and our team is dedicated to providing Nation Wide Transport services in India, Nepal, Bhutan & Bangladesh. We are among the top Logistics / Goods Transport Company in India.
                 </p>
               </div>
             </div>
@@ -77,7 +80,7 @@ const FeatureOne = () => {
                   </div>
                   <h5>PART TRUCK LOAD (PTL)</h5>
                   <p>
-                  Movement of goods/small parcels (less than 50Kg) from all over India to the eastern and northeastern parts of the country. 
+                  NECC specializes in movement of PTL/Small parcels from all over India to the Eastern & North Eastern parts of the country and also to Nepal / Bhutan / Bangladesh. We also do PTL movements across the country.
                   </p>
                 </div>
               </div>
@@ -88,7 +91,7 @@ const FeatureOne = () => {
                   </div>
                   <h5>FULL TRUCK LOAD (FTL)</h5>
                   <p>
-                  One of the core offerings of NECC is Full Truck Load (FTL) services, including end-to-end multimodal transportation with loading services catered through owned and hired fleet for goods movement on a pan-India basis.
+                  NECC offers Full Truck Load (FTL) services, including end-to-end multimodal transportation with loading / unloading services catered through owned and hired fleet/ Containers for movement of Goods on a pan-India basis and also to Nepal / Bhutan / Bangladesh with custom clearance. We evaluate individual business needs to match that with a carrier that can accommodate the shipment deadline in the most cost-effective way. 
                   </p>
                 </div>
               </div>
@@ -99,7 +102,7 @@ const FeatureOne = () => {
                   </div>
                   <h5>BULK MOVEMENTS</h5>
                   <p>
-                  We offer services like mining logistics, chrome/iron/ manganese ore transportation from mines to processing hubs to plants and then to final customers. 
+                  NECC offers services for mining logistics of products like Iron Ore/Chrome Ore/Maganise etc. for  transportation from mines to processing hubs/plants/Siding and then to final destination. 
                   </p>
                 </div>
               </div>
@@ -121,7 +124,7 @@ const FeatureOne = () => {
                   </div>
                   <h5>WAREHOUSING & 3PL</h5>
                   <p>
-                  We have more than 2.5 million sq ft of warehousing space all over India and provide our clients with complete solutions.
+                  NECC has more than 2.5 million square feet of warehousing space all over India and provide complete solutions to our clients.
                   </p>
                 </div>
               </div>

@@ -18,7 +18,7 @@ const BranchLocater = () => {
                     <option value="">Select City</option></select>
                     <button class="boxed-btn branch-btn" type="submit">
                             <FaArrowRight/>
-                        </button>
+                    </button>
 
                 </div>
                 

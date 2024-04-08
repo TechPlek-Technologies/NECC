@@ -11,53 +11,6 @@ const FooterOne = () => {
     <>
       {/* footer area start */}
       <footer className='footer-area'>
-        {/* <div
-          className='footer-top'
-          style={{ backgroundImage: 'url("./assets/img/footer/bg.png")' }}
-        >
-          <div className='container'>
-            <div className='row justify-content-center'>
-              <div className='col-lg-4 col-md-6'>
-                <div className='single-footer-top'>
-                  <div className='icon'>
-                    <img src='assets/img/icon/map-marker.png' alt='Transpro' />
-                  </div>
-                  <div className='details'>
-                    <h6>OFFICE ADDRESS:</h6>
-                    <p>DELHI
-                    "NECC HOUSE" 9062/47,</p>
-                    <p> Ram Bagh Road ,Azad Market<br/> Delhi-110006</p>
-                    
-                  </div>
-                </div>
-              </div>
-              <div className='col-lg-4 col-md-6'>
-                <div className='single-footer-top'>
-                  <div className='icon'>
-                    <img src='assets/img/icon/phone.png' alt='Transpro' />
-                  </div>
-                  <div className='details'>
-                    <h6>CONTACT US:</h6>
-                    <p>co@neccgroup.com</p>
-                    <p>011-23517516, 17, 18, 19</p>
-                  </div>
-                </div>
-              </div>
-              <div className='col-lg-4 col-md-6'>
-                <div className='single-footer-top after-none'>
-                  <div className='icon'>
-                    <img src='assets/img/icon/clock.png' alt='Transpro' />
-                  </div>
-                  <div className='details'>
-                    <h6>WORKING HOURS:</h6>
-                    <p>Weekdays - Mon-Fri: 8am-21pm</p>
-                    <p>Weekend - Sat &amp; Sun: Closed</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
         <div className='container footer-top'>
           <div className='row'>
             <div className='col-xl-4 col-md-6'>
@@ -66,11 +19,6 @@ const FooterOne = () => {
                   <img src='/assets/img/home-2/NeccFinalLogo.png' alt='Transpro' />
                 </div>
                 <div className='details'>
-                  {/* <p>
-                    Quickly supply alternative strategic theme areas vis-a-vis
-                    B2C mindshare. Objectively repurpose stand-alone synergy via
-                    user-centric architectures.
-                  </p> */}
                   <ul className='social-media style-border'>
                     <li>
                       <a href='https://www.facebook.com/'>
@@ -96,82 +44,6 @@ const FooterOne = () => {
                 </div>
               </div>
             </div>
-            {/* <div className='col-xl-2 col-md-6'>
-              <div className='widget widget_nav_menu'>
-                <h4 className='widget-title'>USEFULL LINKS</h4>
-                <ul>
-                  <li>
-                    <Link to='/about'>
-                      <FaArrowRight /> About Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to='/service'>
-                      <FaArrowRight /> Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to='/SiteMap'>
-                      <FaArrowRight /> SiteMap
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to='/contact'>
-                      <FaArrowRight /> Contact Us
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className='col-xl-2 col-md-6'>
-              <div className='widget widget_nav_menu'>
-                <h4 className='widget-title'>OUR SERVICES</h4>
-                <ul>
-                  <li>
-                    <a href='/ServiceDetail1'>
-                      <FaArrowRight /> Part Truck Load
-                    </a>
-                  </li>
-                  <li>
-                    <a href='/ServiceDetail2'>
-                      <FaArrowRight /> Full Truck Load
-                    </a>
-                  </li>
-                  <li>
-                    <a href='/ServiceDetail3'>
-                      <FaArrowRight /> Bulk Movements
-                    </a>
-                  </li>
-                  <li>
-                    <a href='/ServiceDetail4'>
-                      <FaArrowRight /> ODC Movements
-                    </a>
-                  </li>
-                  <li>
-                    <a href='/ServiceDetail5'>
-                      <FaArrowRight /> Warehousing & 3PL
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div> */}
-            {/* <div className='col-xl-6 col-md-6'>
-              <div className='widget widget_subscribe'>
-                <h4 className='widget-title'>SUBSCRIBE NOW</h4>
-                <p>
-                  Continually evolve worldwide vortals rather than process
-                  centric human capital. Subscribe for our latest news &amp;
-                  articles. and send message.
-                </p>
-                <div className='single-subscribe-inner'>
-                  <input type='text' placeholder='Email Address' />
-                  <a className='btn btn-base1' href='mailto:customercare1@neccgroup.com'>
-                    <FaPaperPlane />
-                  </a>
-                </div>
-              </div>
-
-            </div> */}
             <div className='col-xl-4 col-md-3'>
               <div className='widget widget_subscribe'>
               <div className='single-footer-top'>
@@ -180,22 +52,12 @@ const FooterOne = () => {
                   </div>
                   <div className='details'>
                     <h6>OFFICE ADDRESS:</h6>
-                    <p>DELHI
-                    "NECC HOUSE" 9062/47,</p>
+                    <p><strong>CORPORATE OFFICE</strong></p>
+                    <p>"NECC HOUSE" 9062/47,</p>
                     <p> Ram Bagh Road ,Azad Market<br/> Delhi-110006</p>
                     
                   </div>
                 </div>
-                {/* <div className='single-footer-top'>
-                <div className='icon'>
-                    <img src='assets/img/icon/phone.png' alt='Transpro' />
-                  </div>
-                  <div className='details'>
-                    <h6>CONTACT US:</h6>
-                    <p>co@neccgroup.com</p>
-                    <p>011-23517516, 17, 18, 19</p>
-                  </div>
-                </div> */}
               </div>
 
             </div> 
@@ -208,7 +70,7 @@ const FooterOne = () => {
                   <div className='details'>
                     <h6>CONTACT US:</h6>
                     <p>co@neccgroup.com</p>
-                    <p>011-23517516, 17, 18, 19</p>
+                    <p>011-23517516,17,18,19</p>
                   </div>
                 </div>
               </div>

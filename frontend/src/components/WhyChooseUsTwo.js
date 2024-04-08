@@ -12,10 +12,9 @@ const WhyChooseUsTwo = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-6'>
               <div className='section-title style-white text-center'>
-                {/* <h4 className='subtitle style-2'>WHY CHOOSE US</h4> */}
-                <h2 className='title1'>WHY CHOOSE FOR US</h2>
+                <h2 className='title1'>WHY CHOOSE US</h2>
                 <p className='content para'>
-                North Eastern Carrying Corporation is among the leading freight forwarding companies in India. If you are looking to transport goods from one destination to another, we are offering cost-effective solutions for you.
+                North Eastern Carrying Corporation Limited is among the leading Logistics Company with Pan India Presence and offering various services under one roof to meet the client’s needs in the most cost-effective solutions.
                 </p>
               </div>
             </div>
@@ -29,7 +28,7 @@ const WhyChooseUsTwo = () => {
                 <div className='details1'>
                   <h6>WE LISTEN</h6>
                   <p>
-                  Understand client's needs, tailoring freight solutions for efficiency.
+                  Understand client's needs, tailoring logistics solutions for efficiency.
                   </p>
                 </div>
               </div>

@@ -145,10 +145,12 @@ const BannerFour = () => {
               >
               </div>
             </div>
-
+            
           </Slider>
 
-          <div className='header-bg'>
+        </div>
+
+        <div className='header-bg'>
             <div className='container'>
               <div className='row header-height justify-content-start'>
                 <div className='col-lg-4'>
@@ -179,7 +181,6 @@ const BannerFour = () => {
               </div>
             </div>
           </div>
-        </div>
 
         <Dialog open={isEditDialogOpen} onClose={() => setIsEditDialogOpen(false)}>
   <DialogContent style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>

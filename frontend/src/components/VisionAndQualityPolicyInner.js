@@ -13,8 +13,10 @@ const VisionAndQualityPolicyInner= () => {
               <div className='section-title white  text-left m-auto'>
                 <h2 className='title active'>VISION STATEMENT</h2>
                 <p className='des'>
-                To Provide Seamless Transit of Materials Across National and International Borders
-                Using Multi-Model Solutions for Speedier Movement at Lowest Cost.
+                NECC vision is to provide seamless transit of
+                materials across national and international
+                border using multi-model solutions for
+                speedier movement at lowest cost.
                 </p>
                 <div className='btn-wrapper animated fadeInUpBig text-left'>
                   <a href='/contact' className='boxed-btn btn-bounce mt-3'>
@@ -39,7 +41,7 @@ const VisionAndQualityPolicyInner= () => {
                 <div className='row'>
                   <div className='col-lg-6 align-self-center pd-top-60 order-lg-2'>
                     <div className='thumb  mb-4'>
-                      <img src='/assets/img/service/quality (2).webp' alt='Transpro' />
+                      <img src='/assets/img/service/quality2.webp' alt='Transpro' />
                     </div>
                   </div>
                   <div className='col-lg-6 align-self-center order-lg-1'>

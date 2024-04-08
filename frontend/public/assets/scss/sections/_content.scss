@@ -80,16 +80,20 @@
  @media (max-width: 425px) {
   
 .feature-wrap {
-  height: 390px;
+  height: 470px;
+  p {
+    line-height: 22px;
+  }
 }
  }
 
 /* Desktop */
 @media (min-width: 1300px) {
   .feature-wrap {
-    height: 390px;
+    height: 470px;
     p {
       margin-top: 0px;
+      line-height: 24px;
     }
     h5{
       font-size: 22px;

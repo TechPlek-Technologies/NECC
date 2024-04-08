@@ -32,7 +32,7 @@ const FeedbackInner= () => {
       .then(
         (result) => {
           if (result.text === "OK") {
-            toast.success("Massage Sent Successfully!");
+            toast.success("Message Sent Successfully!");
             form.current[0].value = "";
             form.current[1].value = "";
             form.current[2].value = "";
@@ -41,7 +41,7 @@ const FeedbackInner= () => {
         },
         (error) => {
           if (error.text !== "OK") {
-            toast.success("Massage Not Sent!");
+            toast.success("Message Not Sent!");
           }
         }
       );

@@ -73,9 +73,6 @@ const Faq = () => {
             <FaqOne />
           </div>
 
-          {/* Partner One */}
-          {/* <PartnerOne /> */}
-
           {/* Footer One */}
           <FooterOne />
 

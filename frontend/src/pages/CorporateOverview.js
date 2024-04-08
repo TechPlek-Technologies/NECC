@@ -38,7 +38,7 @@ const CorporateOverview = () => {
   
             {/* Breadcrumb */}
             {screenSize.width > 767 && (
-            <Breadcrumb title={"CORPORATE OVERVIEW"} imgSrc={"/assets/img/banner/corporate-overview (1).webp"} className="img-fluid"/>)}
+            <Breadcrumb title={"CORPORATE OVERVIEW"} imgSrc={"/assets/img/banner/corporate-overview2 (1).webp"} className="img-fluid"/>)}
 
             {screenSize.width <= 767 && (
                         <div id="bg3">

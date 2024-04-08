@@ -52,11 +52,6 @@ const InvestorFeedbackInner= () => {
       <div className='container'>
         <div className='contact-area mg-top-120 mb-60'>
           <div className='row g-0 justify-content-center'>
-            {/* <div class="col-lg-5">
-              <div class="thumb text-center mb-4 mb-lg-0">
-                <img src="/assets/img/faq/feedback-form.webp" alt="img"/>
-                  </div>
-            </div> */}
             <div className='col-lg-12'>
               <form
                 className='contact-form text-center'
