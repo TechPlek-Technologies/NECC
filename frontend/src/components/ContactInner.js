@@ -15,7 +15,7 @@ import {
 import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
-import ContactInnerMap from "./ContactInnerMap";
+import ContactInnerBranch from "./ContactInnerBranch";
 
 const useOfficeDivide = (data) => {
   return useMemo(() => {
@@ -267,7 +267,7 @@ const ContactInner = () => {
         </div>
       </div>
 
-      <ContactInnerMap />
+      <ContactInnerBranch />
       {/* contact area end */}
     </>
   );

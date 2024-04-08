@@ -7,8 +7,8 @@ const branchService = require("./branch.service");
 
 // Routes
 router.get("/", getAllBranches);
-router.post("/", authorize(), createBranchSchema, createBranch);
-router.put("/:id", authorize(), updateBranchSchema, updateBranch);
+router.post("/", authorize(),  createBranch);
+router.put("/:id", authorize(), updateBranch);
 router.delete("/:id", authorize(), deleteBranch);
 
 module.exports = router;

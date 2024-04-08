@@ -9,7 +9,7 @@
     "start:frontend": "cd frontend && npm run start",
     "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
     "build": "CI= npm run build --prefix frontend",
-    "install": "npm install --prefix frontend && npm install"
+    "install": "npm install && npm install --prefix frontend"
 
   },
   "author": "",
