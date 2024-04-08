@@ -1,6 +1,6 @@
 import React, { useState,useRef } from "react";
 import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import {
   FaCalculator,
   FaFileAlt,
@@ -119,7 +119,7 @@ const InvestorFeedbackInner= () => {
 
                  
                   <div>
-                  <ReCAPTCHA sitekey="6LfLCJcpAAAAAEDOLqUmzv93a5cjzGFyan_CVHB-" onChange={handleRecaptchaVerify} />
+                  {/* <ReCAPTCHA sitekey="6LfLCJcpAAAAAEDOLqUmzv93a5cjzGFyan_CVHB-" onChange={handleRecaptchaVerify} /> */}
                   </div>
                         
 
