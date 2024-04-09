@@ -371,7 +371,7 @@
 
 @media (min-width: 320px) and (max-width: 425px) {
   .navbar-area-1.navbar-area-3 {
-    top: 0px;
+    // top: 0px;
     padding: 0;
   }
 }
@@ -921,6 +921,7 @@
   }
   .navbar-area {
     padding-bottom: 0px;
+    margin-top: -20px;
   }
   .bar1,
   .bar2,

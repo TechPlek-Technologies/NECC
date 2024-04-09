@@ -2,13 +2,17 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
-export default function ContactInnerMapSection1data({data,setMap}) {
+import './ContactInnerMapSection1data.css';
+
+import { useState } from 'react';
+
+export default function ContactInnerMapSection1data({data,setMap,setTargetid,targetid}) {
 
 
   return (
     <div>
     {data?.map(branch => (
-      <Card key={branch.id}  sx={{ 
+      <Card key={branch.id}  className={`card ${targetid===branch.id ? 'selected' : ''}`} sx={{ 
         display: 'flex', 
         marginTop: '10px', 
         transition: 'background-color 0.3s ease',
@@ -19,7 +23,7 @@ export default function ContactInnerMapSection1data({data,setMap}) {
           backgroundColor: '#e0e0e0', // Change color on active state
         }
       }}>
-        <CardContent onClick={() => setMap(branch.gtag)} sx={{ flex: '1 0 auto', width: "300px" }}>
+        <CardContent onClick={()=>{setMap(branch.gtag); setTargetid(branch.id)}} sx={{ flex: '1 0 auto', width: "300px" }} className='card-rp'>
   <Typography component="div" variant="h6">
     {branch.branch}
   </Typography>
