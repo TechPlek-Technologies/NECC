@@ -59,7 +59,7 @@ const NavbarOne = () => {
         <div className='navbar-top'>
           <Link className='main-logo' to='/'>
             <div className='logo d-none d-xl-block'>
-              <img src='/assets/img/Necclogo.webp' alt='Transpro' />
+              <img src='/assets/img/NeccLogo.webp' alt='Transpro' />
             </div>
           </Link>
           <div className='nav-phone-wrap'>
