@@ -3,7 +3,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import ReadMoreReact from 'read-more-react';
 const CurrentOpeningInnerPdf = () => {
 
   const [data, setData] = useState([]);
@@ -13,7 +12,12 @@ const CurrentOpeningInnerPdf = () => {
   const domain = process.env.REACT_APP_API_DOMAIN;
 
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
+  const [selectedItemId, setSelectedItemId] = useState(null);
 
+  const openDialog = (itemId) => {
+    setSelectedItemId(itemId);
+    setIsEditDialogOpen(true);
+  };
 
 
   useEffect(() => {
@@ -36,41 +40,49 @@ const CurrentOpeningInnerPdf = () => {
   }, []); // Empty dependency array to ensure this effect runs only once
 
 
-  return (
-    data && data.map((item) => (
-      <div className='col-lg-4' key={item.id}>
-        <div className='single-service-wrap'>
-          <div className='details'>
-            <h5>{item.designation}</h5>
-            <p>
-              {item.summary}
-              <br />
-              <span style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={() => { setIsEditDialogOpen(true) }}>Read more</span>
-            </p>
-
-            <div className='btn-wrap'>
-              <Link className='read-more-text' to={`mailto:resume@neccgroup.com`}>
-                Submit Resume{" "}
-                <span>
-                  <FaArrowRight />
+   return (
+    <div className='row'>
+      {data && data.map((item) => (
+        <div className='col-lg-4' key={item.id}>
+          <div className='single-service-wrap'>
+            <div className='details'>
+              <h5>{item.designation}</h5>
+              <p>
+                {item.summary}
+                <br />
+                <span
+                  style={{ textDecoration: 'underline', cursor: 'pointer' }}
+                  onClick={() => openDialog(item.id)} // Pass item id to openDialog
+                >
+                  Read more
                 </span>
-              </Link>
+              </p>
+
+              <div className='btn-wrap'>
+                <Link className='read-more-text' to={`mailto:resume@neccgroup.com`}>
+                  Submit Resume{" "}
+                  <span>
+                    <FaArrowRight />
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-
-        <Dialog open={isEditDialogOpen} onClose={() => setIsEditDialogOpen(false)}>
-          <DialogContent>
-            <>
-              <div dangerouslySetInnerHTML={{ __html: item.description }} />
-              <Button onClick={() => { setIsEditDialogOpen(false) }}>Close</Button>
-            </>
-          </DialogContent>
-
-        </Dialog>
-      </div>
-
-    ))
+      ))}
+      
+      {/* Dialog for displaying full description */}
+      <Dialog open={isEditDialogOpen} onClose={() => setIsEditDialogOpen(false)}>
+        <DialogContent>
+          <>
+            {selectedItemId && (
+              <div dangerouslySetInnerHTML={{ __html: data.find(item => item.id === selectedItemId)?.description }} />
+            )}
+            <Button onClick={() => setIsEditDialogOpen(false)}>Close</Button>
+          </>
+        </DialogContent>
+      </Dialog>
+    </div>
   );
 };
 

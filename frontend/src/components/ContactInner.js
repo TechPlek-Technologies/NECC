@@ -286,7 +286,7 @@ const ContactInner = () => {
             {companies.map((company) => (
               <div className="col-lg-4" key={company.id}>
                 <div className="single-service-wrap">
-                  <div className="details" style={{minHeight:"220px"}}>
+                  <div className="details hoverText" style={{minHeight:"220px"}}>
                     {company?.name && (
                       <>
                        <h5> {company.name}</h5>

@@ -845,3 +845,7 @@ color: black;
 .scroll-box{
     overflow: auto;
   }
+
+  .hoverText:hover{
+    color: #FFF;
+  }

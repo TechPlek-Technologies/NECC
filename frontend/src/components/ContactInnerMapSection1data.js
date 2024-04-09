@@ -4,10 +4,10 @@ import Typography from '@mui/material/Typography';
 
 export default function ContactInnerMapSection1data({data,setMap}) {
 
-
+  const sortedData = data.slice().sort((a, b) => a.branch.localeCompare(b.branch));
   return (
     <div>
-    {data?.map(branch => (
+    {sortedData?.map(branch => (
       <Card key={branch.id}  sx={{ 
         display: 'flex', 
         marginTop: '10px', 
