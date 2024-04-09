@@ -1,18 +1,14 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import './ContactInnerMapSection1data.css';
 
-import { useState } from 'react';
-
-export default function ContactInnerMapSection1data({data,setMap,setTargetid,targetid}) {
-
+export default function ContactInnerMapSection1data({data,setMap}) {
 
 
   return (
     <div>
     {data?.map(branch => (
-      <Card key={branch.id}  className={`card ${targetid===branch.id ? 'selected' : ''}`} sx={{ 
+      <Card key={branch.id}  sx={{ 
         display: 'flex', 
         marginTop: '10px', 
         transition: 'background-color 0.3s ease',
@@ -21,29 +17,44 @@ export default function ContactInnerMapSection1data({data,setMap,setTargetid,tar
         },
         '&:active': {
           backgroundColor: '#e0e0e0', // Change color on active state
-        },
+        }
       }}>
-        <CardContent onClick={()=>setMap(branch.gtag)} sx={{ flex: '1 0 auto', width: "100%" }}>
-          <Typography component="div" variant="h6">
-            {branch.branch}
-          </Typography>
-          
-          <Typography variant="body2" color="text.secondary" component="div">
-            {`Contact Person: ${branch.personName}`}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" component="div">
-            {`Phone: ${branch.phone}`}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" component="div">
-            {`Mobile: ${branch.mobile}`}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" component="div">
-            {`Email: ${branch.email}`}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" component="div">
-            {`Address: ${branch.address1}, ${branch.address2},${branch.city}, ${branch.state}, ${branch.country}`}
-          </Typography>
-        </CardContent>
+        <CardContent onClick={() => setMap(branch.gtag)} sx={{ flex: '1 0 auto', width: "300px" }}>
+  <Typography component="div" variant="h6">
+    {branch.branch}
+  </Typography>
+
+  {branch.personName && ( // Check if personName has a value
+    <Typography variant="body2" color="text.secondary" component="div">
+      <b>Contact Person: </b>{`${branch.personName}`}
+    </Typography>
+  )}
+
+  {branch.phone && (
+    <Typography variant="body2" color="text.secondary" component="div">
+      <b>Phone: </b>{`${branch.phone}`}
+    </Typography>
+  )}
+
+  {branch.mobile && (
+    <Typography variant="body2" color="text.secondary" component="div">
+      <b>Mobile: </b>{`${branch.mobile}`}
+    </Typography>
+  )}
+
+  {branch.email && (
+    <Typography variant="body2" color="text.secondary" component="div">
+      <b>Email: </b>{`${branch.email}`}
+    </Typography>
+  )}
+
+  {(branch.address1 || branch.address2) && ( // Check if either address1 or address2 has a value
+    <Typography variant="body2" color="text.secondary" component="div">
+      <b>Address: </b>{`${branch.address1}, ${branch.address2}`}
+    </Typography>
+  )}
+</CardContent>
+
       </Card>
     ))}
   </div>
