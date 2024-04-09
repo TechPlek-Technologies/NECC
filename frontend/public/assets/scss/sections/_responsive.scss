@@ -229,7 +229,7 @@
   }
   .navbar-area-1 {
     background: #fff;
-    top:60px;
+    // top:60px;
   }
 
   .navbar-top .nav-phone-wrap {
@@ -691,7 +691,8 @@
     margin: 65px 0px 0px;
   }
   .support-bar {
-    height: auto;
+    // height: auto;
+    position: fixed;
     text-align: center;
     // padding: 6px 5px;
   }
@@ -741,7 +742,7 @@
     display: none;
   }
   .navbar-area-1 {
-    top: 0;
+    // top: 0;
   }
   .toggle-btn {
     top: 8px;

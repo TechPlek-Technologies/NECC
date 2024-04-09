@@ -127,17 +127,14 @@ const ContactInner = () => {
                     </div>
                   </div>
                   <div className="col-md-6">
-                    <div className="single-select-inner">
+                    <div className="single-input-inner">
                       <label>
-                        <FaFileAlt />
+                      <FaFileAlt />
                       </label>
-                      <select className="single-select">
-                        <option>Subject</option>
-                        <option value={1}>Some option</option>
-                        <option value={2}>Another option</option>
-                      </select>
+                      <input type="text" placeholder=" Subject" />
                     </div>
                   </div>
+                
                   <div className="col-12">
                     <div className="single-input-inner">
                       <label>
@@ -206,33 +203,16 @@ const ContactInner = () => {
             {corporateOffice.map((company) => (
               <div className="col-lg-4" key={company.id}>
                 <div className="single-service-wrap">
-                  <div className="details" style={{minHeight:"200px"}}>
-                   
-
+                  <div className="details" style={{ minHeight: "200px" }}>
                     {company?.name && (
                       <>
-                       <h5> {company.name}</h5>
+                        <h5> {company.name}</h5>
                       </>
                     )}
-                    {company?.addressLine1 && (
-                      <>
-                        {company.addressLine1}
-                        {" "}
-                      </>
-                    )}
-                    {company?.addressLine2 && (
-                      <>
-                        {company.addressLine2}
-                        {" "}
-                      </>
-                    )}
-                    {company?.addressLine3 && (
-                      <>
-                        {company.addressLine3}
-                        {" "}
-                      </>
-                    )}
-                    { company?.pincode && (
+                    {company?.addressLine1 && <>{company.addressLine1} </>}
+                    {company?.addressLine2 && <>{company.addressLine2} </>}
+                    {company?.addressLine3 && <>{company.addressLine3} </>}
+                    {company?.pincode && (
                       <>
                         {"Pincode-"}
                         {company.pincode}
@@ -286,31 +266,19 @@ const ContactInner = () => {
             {companies.map((company) => (
               <div className="col-lg-4" key={company.id}>
                 <div className="single-service-wrap">
-                  <div className="details hoverText" style={{minHeight:"220px"}}>
+                  <div
+                    className="details hoverText"
+                    style={{ minHeight: "220px" }}
+                  >
                     {company?.name && (
                       <>
-                       <h5> {company.name}</h5>
+                        <h5> {company.name}</h5>
                       </>
                     )}
-                    {company?.addressLine1 && (
-                      <>
-                        {company.addressLine1}
-                        {" "}
-                      </>
-                    )}
-                    {company?.addressLine2 && (
-                      <>
-                        {company.addressLine2}
-                        {" "}
-                      </>
-                    )}
-                    {company?.addressLine3 && (
-                      <>
-                        {company.addressLine3}
-                        {" "}
-                      </>
-                    )}
-                    { company?.pincode && (
+                    {company?.addressLine1 && <>{company.addressLine1} </>}
+                    {company?.addressLine2 && <>{company.addressLine2} </>}
+                    {company?.addressLine3 && <>{company.addressLine3} </>}
+                    {company?.pincode && (
                       <>
                         {/* {"Pincode-"} */}
                         {company.pincode}

@@ -93,17 +93,14 @@ const InvestorFeedbackInner= () => {
                     </div>
                   </div>
                   <div className='col-md-6'>
-                    <div className='single-select-inner'>
+                    <div className='single-input-inner'>
                       <label>
-                        <FaFileAlt />
+                      <FaFileAlt />
                       </label>
-                      <select className='single-select'>
-                        <option>Subject</option>
-                        <option value={1}>Some option</option>
-                        <option value={2}>Another option</option>
-                      </select>
+                      <input type='text' placeholder=' Subject' />
                     </div>
                   </div>
+               
                   <div className='col-12'>
                     <div className='single-input-inner'>
                       <label>
