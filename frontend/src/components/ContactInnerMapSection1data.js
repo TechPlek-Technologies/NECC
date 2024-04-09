@@ -19,7 +19,7 @@ export default function ContactInnerMapSection1data({data,setMap}) {
           backgroundColor: '#e0e0e0', // Change color on active state
         }
       }}>
-        <CardContent onClick={()=>setMap(branch.gtag)} sx={{ flex: '1 0 auto', width: "100%" }}>
+        <CardContent  onClick={()=>setMap(branch.gtag)} sx={{ flex: '1 0 auto', width: "300px" }}>
           <Typography component="div" variant="h6">
             {branch.branch}
           </Typography>
@@ -37,7 +37,7 @@ export default function ContactInnerMapSection1data({data,setMap}) {
             {`Email: ${branch.email}`}
           </Typography>
           <Typography variant="body2" color="text.secondary" component="div">
-            {`Address: ${branch.address1}, ${branch.address2},${branch.city}, ${branch.state}, ${branch.country}`}
+            {`Address: ${branch.address1}, \n ${branch.address2}`}
           </Typography>
         </CardContent>
       </Card>
