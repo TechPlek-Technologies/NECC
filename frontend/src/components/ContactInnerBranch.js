@@ -21,6 +21,7 @@ const ContactInnerBranch = () => {
   };
 
   const [map,setMap]=useState("")
+  const [targetid,setTargetid]=useState(0)
   const domain = process.env.REACT_APP_API_DOMAIN;
   const [data, setData] = useState([]);
   
@@ -58,10 +59,10 @@ const ContactInnerBranch = () => {
           </div>
         </div>
         <div className="row">
-           <ContactInnerBranchSearch location={location} updateLocation={updateLocation} data={data} setFilteredData={setFilteredData} setMap={setMap}/>
+           <ContactInnerBranchSearch location={location} updateLocation={updateLocation} data={data} setFilteredData={setFilteredData} setMap={setMap} setTargetid={setTargetid} />
         </div>
         <div className="row">
-        <ContactInnerMapSelection data={filteredData} map={map} filteredData={filteredData} setMap={setMap}/>
+        <ContactInnerMapSelection data={filteredData} map={map} filteredData={filteredData} setMap={setMap} setTargetid={setTargetid} targetid={targetid}/>
         </div>
       </div>
     </div>

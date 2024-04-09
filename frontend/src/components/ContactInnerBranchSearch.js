@@ -10,6 +10,7 @@ export default function ContactInnerBranchSearch({
   data,
   setFilteredData,
   setMap,
+  setTargetid,
 }) {
   const [filteredStates, setFilteredStates] = useState([]);
   const [filteredCities, setFilteredCities] = useState([]);
@@ -95,7 +96,11 @@ export default function ContactInnerBranchSearch({
         item.city === location.city &&
         item.branch === selectedBranch
     );
+
+    console.log("filteredData",filteredData)
     setMap(filteredData[0]?.gtag);
+    setTargetid(filteredData[0]?.id)
+
     setFilteredData(filteredData);
   };
 
@@ -103,7 +108,7 @@ export default function ContactInnerBranchSearch({
     <div
       style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
     >
-      <FormControl sx={{ m: 1, minWidth: 300 }}>
+      <FormControl sx={{ m: 1, minWidth: 300 }} style={{backgroundColor:"white"}}>
         <InputLabel id="country-label">Country</InputLabel>
         <Select
           labelId="country-label"
@@ -120,7 +125,7 @@ export default function ContactInnerBranchSearch({
         </Select>
       </FormControl>
 
-      <FormControl sx={{ m: 1, minWidth: 300 }}>
+      <FormControl sx={{ m: 1, minWidth: 300 }} style={{backgroundColor:"white"}}>
         <InputLabel id="state-label">State</InputLabel>
         <Select
           labelId="state-label"
@@ -138,7 +143,7 @@ export default function ContactInnerBranchSearch({
         </Select>
       </FormControl>
 
-      <FormControl sx={{ m: 1, minWidth: 300 }}>
+      <FormControl sx={{ m: 1, minWidth: 300 }} style={{backgroundColor:"white"}}>
         <InputLabel id="city-label">City</InputLabel>
         <Select
           labelId="city-label"
@@ -156,7 +161,7 @@ export default function ContactInnerBranchSearch({
         </Select>
       </FormControl>
 
-      <FormControl sx={{ m: 1, minWidth: 300 }}>
+      <FormControl sx={{ m: 1, minWidth: 300 }} style={{backgroundColor:"white"}}>
         <InputLabel id="city-label">Branch</InputLabel>
         <Select
           labelId="branch-label"
