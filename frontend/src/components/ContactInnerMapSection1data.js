@@ -23,7 +23,7 @@ export default function ContactInnerMapSection1data({data,setMap,setTargetid,tar
           backgroundColor: '#e0e0e0', // Change color on active state
         },
       }}>
-        <CardContent onClick={()=>{setMap(branch.gtag); setTargetid(branch.id)}} sx={{ flex: '1 0 auto', width: "100%" }}>
+        <CardContent onClick={()=>setMap(branch.gtag)} sx={{ flex: '1 0 auto', width: "100%" }}>
           <Typography component="div" variant="h6">
             {branch.branch}
           </Typography>

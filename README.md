@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-<h4 align="center">NECC Website: Simplifying Logistics Solutions</h4>
+<h4 align="center">NECC Website: Simplifying Logistic Solutions</h4>
 
 
 <p align="center">

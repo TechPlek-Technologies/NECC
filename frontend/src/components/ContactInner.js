@@ -206,19 +206,59 @@ const ContactInner = () => {
             {corporateOffice.map((company) => (
               <div className="col-lg-4" key={company.id}>
                 <div className="single-service-wrap">
-                  <div className="details">
-                    <h5>{company.city}</h5>
-                    <p>
-                      {company.name}
-                      <br />
-                      {company.addressLine1},<br />
-                      {company.addressLine2},<br />
-                      {company.addressLine3}-{company.pincode}
-                      <br />
-                      Phone: {company.phone}
-                      <br />
-                      E-mail: {company.email}
-                    </p>
+                  <div className="details" style={{minHeight:"200px"}}>
+                   
+
+                    {company?.name && (
+                      <>
+                       <h5> {company.name}</h5>
+                      </>
+                    )}
+                    {company?.addressLine1 && (
+                      <>
+                        {company.addressLine1}
+                        {" "}
+                      </>
+                    )}
+                    {company?.addressLine2 && (
+                      <>
+                        {company.addressLine2}
+                        {" "}
+                      </>
+                    )}
+                    {company?.addressLine3 && (
+                      <>
+                        {company.addressLine3}
+                        {" "}
+                      </>
+                    )}
+                    { company?.pincode && (
+                      <>
+                        {"Pincode-"}
+                        {company.pincode}
+                        <br />
+                      </>
+                    )}
+                    {company?.tollfreeNo && (
+                      <>
+                        {"Toll Free No : "}
+                        {company.tollfreeNo}
+                        <br />
+                      </>
+                    )}
+                    {company?.phone && (
+                      <>
+                        {"Phone : "}
+                        {company.phone}
+                        <br />
+                      </>
+                    )}
+                    {company?.email && (
+                      <>
+                        {"E-mail : "}
+                        {company.email}{" "}
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -237,7 +277,7 @@ const ContactInner = () => {
               <div className="section-title text-center">
                 {/* <h4 className='subtitle'>SERVICES</h4> */}
                 <h2 className="title" style={{ color: "black" }}>
-                  REGIONAL OFFICES
+                  REGIONAL OFFICE
                 </h2>
               </div>
             </div>
@@ -246,19 +286,57 @@ const ContactInner = () => {
             {companies.map((company) => (
               <div className="col-lg-4" key={company.id}>
                 <div className="single-service-wrap">
-                  <div className="details">
-                    <h5>{company.city}</h5>
-                    <p>
-                      {company.name}
-                      <br />
-                      {company.addressLine1},<br />
-                      {company.addressLine2},<br />
-                      {company.addressLine3}-{company.pincode}
-                      <br />
-                      Phone: {company.phone}
-                      <br />
-                      E-mail: {company.email}
-                    </p>
+                  <div className="details" style={{minHeight:"220px"}}>
+                    {company?.name && (
+                      <>
+                       <h5> {company.name}</h5>
+                      </>
+                    )}
+                    {company?.addressLine1 && (
+                      <>
+                        {company.addressLine1}
+                        {" "}
+                      </>
+                    )}
+                    {company?.addressLine2 && (
+                      <>
+                        {company.addressLine2}
+                        {" "}
+                      </>
+                    )}
+                    {company?.addressLine3 && (
+                      <>
+                        {company.addressLine3}
+                        {" "}
+                      </>
+                    )}
+                    { company?.pincode && (
+                      <>
+                        {/* {"Pincode-"} */}
+                        {company.pincode}
+                        <br />
+                      </>
+                    )}
+                    {company?.tollfreeNo && (
+                      <>
+                        {"Toll Free No : "}
+                        {company.tollfreeNo}
+                        <br />
+                      </>
+                    )}
+                    {company?.phone && (
+                      <>
+                        {"Phone : "}
+                        {company.phone}
+                        <br />
+                      </>
+                    )}
+                    {company?.email && (
+                      <>
+                        {"E-mail : "}
+                        {company.email}{" "}
+                      </>
+                    )}
                   </div>
                 </div>
               </div>

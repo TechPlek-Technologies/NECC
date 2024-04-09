@@ -116,8 +116,8 @@ export default function ContactInnerBranchSearch({
           label="Country"
           onChange={handleChangeCountry}
         >
-          <MenuItem value="none">None</MenuItem>
-          {[...new Set(data.map((item) => item.country))].map((country) => (
+          <MenuItem value="none" onClick={()=>{setMap("")}}>Headquarter</MenuItem>
+          {[...new Set(data?.map((item) => item.country))].sort().map((country) => (
             <MenuItem key={country} value={country}>
               {country}
             </MenuItem>
@@ -135,8 +135,7 @@ export default function ContactInnerBranchSearch({
           onChange={handleChangeState}
           disabled={!location.country}
         >
-          <MenuItem value="">None</MenuItem>
-          {filteredStates.map((state) => (
+          {filteredStates.sort().map((state) => (
             <MenuItem key={state} value={state}>
               {state}
             </MenuItem>
@@ -154,8 +153,7 @@ export default function ContactInnerBranchSearch({
           onChange={handleChangeCity}
           disabled={!location.state}
         >
-          <MenuItem value="">None</MenuItem>
-          {filteredCities.map((city) => (
+          {filteredCities.sort().map((city) => (
             <MenuItem key={city} value={city}>
               {city}
             </MenuItem>
@@ -173,8 +171,7 @@ export default function ContactInnerBranchSearch({
           onChange={handleChangeBranch}
           disabled={!location.city}
         >
-          <MenuItem value="">None</MenuItem>
-          {filteredBrnaches.map((branch) => (
+          {filteredBrnaches.sort().map((branch) => (
             <MenuItem key={branch} value={branch}>
               {branch}
             </MenuItem>
