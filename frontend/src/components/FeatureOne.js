@@ -21,7 +21,7 @@ const FeatureOne = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     nextArrow: <SampleNextArrow/>,
     prevArrow: <SamplePrevArrow/>,
