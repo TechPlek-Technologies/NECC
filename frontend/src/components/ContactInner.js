@@ -203,7 +203,7 @@ const ContactInner = () => {
             {corporateOffice.map((company) => (
               <div className="col-lg-4" key={company.id}>
                 <div className="single-service-wrap">
-                  <div className="details" style={{ minHeight: "200px" }}>
+                  <div className="details hoverText" style={{ minHeight: "200px" }}>
                     {company?.name && (
                       <>
                         <h5> {company.name}</h5>
@@ -268,7 +268,7 @@ const ContactInner = () => {
                 <div className="single-service-wrap">
                   <div
                     className="details hoverText"
-                    style={{ minHeight: "220px" }}
+                    style={{ minHeight: "230px" }}
                   >
                     {company?.name && (
                       <>
