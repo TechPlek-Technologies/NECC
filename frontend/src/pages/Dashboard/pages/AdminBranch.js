@@ -50,7 +50,7 @@ function AdminBranch() {
   const [failure, setFailure] = useState(false);
   const [key, setKey] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([]); 
   const paginationData= useCarriers(data, page, rowsPerPage);
 
   const handlePageChange = useCallback((event, value) => {
@@ -133,8 +133,12 @@ function AdminBranch() {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${domain}/branch`);
+        const sortedData = response.data
+        .slice()
+        .sort((a, b) => a.branch.localeCompare(b.branch));
 
-        setData(response.data); // Set the fetched data into state
+
+        setData(sortedData); // Set the fetched data into state
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
