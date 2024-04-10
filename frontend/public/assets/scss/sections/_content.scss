@@ -82,10 +82,31 @@
 .feature-wrap {
   height: 470px;
   p {
-    line-height: 22px;
+    line-height: 16px;
+    font-size: 12px;
   }
 }
  }
+
+ @media (min-width: 425px) and (max-width:576px) {
+  
+  .feature-wrap {
+    p {
+      line-height: 20px;
+      font-size: 14px;
+    }
+  }
+}
+
+   @media (min-width: 576px) and (max-width:1400px) {
+  
+    .feature-wrap {
+      p {
+        line-height: 14px;
+        font-size: 11px;
+      }
+    }
+}
 
 /* Desktop */
 @media (min-width: 1300px) {
