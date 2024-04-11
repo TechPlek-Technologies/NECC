@@ -15,13 +15,13 @@ const FeatureOne = () => {
 
   const settings = {
     dots: false,
-    arrows: false,
+    arrows: true,
     infinite: true,
     speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     nextArrow: <SampleNextArrow/>,
     prevArrow: <SamplePrevArrow/>,
