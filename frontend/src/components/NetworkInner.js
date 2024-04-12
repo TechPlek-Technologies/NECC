@@ -43,8 +43,9 @@ const NetworkInner = () => {
 
 
   const sortedData = data1
-  .slice()
-  .sort((a, b) => a.branch.localeCompare(b.branch));
+  .slice() // Create a copy of the original array to avoid mutating it
+  .sort((a, b) => a.branch.localeCompare(b.branch)) // Sort by branch
+  .filter(obj => !obj.email.includes('gmail')); // Filter by email containing "gmail"
   return (
     <>
       {/* Start Services area  */}
