@@ -8,6 +8,7 @@ const NetworkInner = () => {
   const [key, setKey] = useState(0);
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
+  const [data1, setData1] = useState([]);
   const [corporateOfficeArray, otherTypesArray] = divideArrayByType(data);
 
   useEffect(() => {
@@ -23,11 +24,27 @@ const NetworkInner = () => {
         setLoading(true);
       }
     };
+    const fetchData1 = async () => {
+      try {
+        const response = await axios.get(`${domain}/branch`);
+        setData1(response.data); // Set the fetched data into state
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setLoading(true);
+      }
+    };
 
     // Call the fetch data function
     fetchData();
+    fetchData1();
+
   }, [key]); // Empty dependency array to ensure this effect runs only once
 
+
+  const sortedData = data1
+  .slice()
+  .sort((a, b) => a.branch.localeCompare(b.branch));
   return (
     <>
       {/* Start Services area  */}
@@ -100,10 +117,10 @@ const NetworkInner = () => {
                   <div className="row">
                     <div className="col-xl-6 col-lg-12 col-md-6">
                       <h6>NAME</h6>
-                      {otherTypesArray.map((company) => (
+                      {sortedData?.map((company) => (
                         <div key={company.id}>
                           <ul className="list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0">
-                            <li>{company.name}</li>
+                            <li>{company.branch}</li>
                           </ul>
                         </div>
                       ))}
@@ -111,7 +128,7 @@ const NetworkInner = () => {
 
                     <div className="col-xl-6 col-lg-12 col-md-6">
                       <h6>Email</h6>
-                      {otherTypesArray.map((company) => (
+                      {sortedData.map((company) => (
                         <div key={company.id}>
                           <ul className="list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0">
                             <li>
