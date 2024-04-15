@@ -31,7 +31,7 @@ const ServiceDetailsInner1 = () => {
                 </div>
                 <h2>PART TRUCK LOAD (PTL)</h2>
                 <p>
-                Movement of goods/small parcels (less than 50kg’s) from all over India to the eastern and north eastern part of the country. This is the flagship business of the company and we are proud to be the top player in the entire region in terms of network density and serviceability. We have more than 4 lakh customers in this division along with 250 offices spread across India/Nepal/Bhutan.
+                NECC specializes in movement of PTL/Small parcels from all over India to the Eastern & North Eastern parts of the country and also to Nepal / Bhutan / Bangladesh. We also do PTL movements across the country.
                 </p>
                 <div className='row'>
                   <div className='col-lg-6 align-self-center'>

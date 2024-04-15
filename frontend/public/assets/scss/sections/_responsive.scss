@@ -236,8 +236,10 @@
     display: none;
   }
   .navbar-area-1 .nav-container {
-    padding: 7px 0;
+    // padding: 7px 0;
   }
+
+
   .banner-inner .title {
     font-size: 60px;
     line-height: initial;
@@ -740,6 +742,10 @@
 @media all and (max-width: 767px) {
   .navbar-top {
     display: none;
+  }
+
+  .slick-track{
+    height: auto !important;
   }
   .navbar-area-1 {
     // top: 0;
