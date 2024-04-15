@@ -165,27 +165,6 @@ function Office() {
                   </Grid>
                 
                 </Stack>
-                <Stack spacing={3}>
-                  <Stack
-                    direction="row"
-                    justifyContent="space-between"
-                    spacing={4}
-                  >
-                    <Stack spacing={1}>
-                      <Typography variant="h4">Regional Office</Typography>
-                      
-                    </Stack>
-                 
-                  </Stack>
-                  <Grid container spacing={3}>
-                    {companies.map((office) => (
-                      <Grid xs={12} md={6} lg={4} key={office.id}>
-                        <CompanyCard  id={office.id} office={office} key={key} handleKeyChange={handleKeyChange}/>
-                      </Grid>
-                    ))}
-                  </Grid>
-                
-                </Stack>
               </Container>
             </Box>
           </>
@@ -280,9 +259,6 @@ function Office() {
                     >
                       <MenuItem value={"Corporate office"}>
                         Corporate office
-                      </MenuItem>
-                      <MenuItem value={"Regional office"}>
-                        Regional office
                       </MenuItem>
                     </Select>
                   </FormControl>
