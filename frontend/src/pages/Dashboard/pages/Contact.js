@@ -213,46 +213,6 @@ const OfficeContact = () => {
                 )}
               </Stack>
             </Container>
-            <Container maxWidth="xl">
-              <Stack spacing={3}>
-                <Stack
-                  direction="row"
-                  justifyContent="space-between"
-                  spacing={4}
-                >
-                  <Stack spacing={1}>
-                    <Typography variant="h4">Regional Office Emails</Typography>
-                  </Stack>
-                  <div>
-                    <Button
-                      startIcon={
-                        <SvgIcon fontSize="small">
-                          <PlusIcon />
-                        </SvgIcon>
-                      }
-                      variant="contained"
-                    >
-                      New
-                    </Button>
-                  </div>
-                </Stack>
-
-                {loading ? (
-                  <CircularProgress />
-                ) : (
-                  <ContactTable
-                    count={otherTypesArray.length}
-                    items={carriers}
-                    onPageChange={handlePageChange}
-                    onRowsPerPageChange={handleRowsPerPageChange}
-                    page={page}
-                    rowsPerPage={rowsPerPage}
-                    handleKeyChange={handleKeyChange}
-                    key={key}
-                  />
-                )}
-              </Stack>
-            </Container>
           </Box>
 
           <Dialog open={isEditOpen} onClose={handleEditClose}>
@@ -306,9 +266,6 @@ const OfficeContact = () => {
                     >
                       <MenuItem value={"Corporate office"}>
                         Corporate office
-                      </MenuItem>
-                      <MenuItem value={"Regional office"}>
-                        Regional office
                       </MenuItem>
                     </Select>
                   </FormControl>
