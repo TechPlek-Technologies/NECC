@@ -13,15 +13,15 @@ const FeatureOne = () => {
     return <FaArrowRight className={className} onClick={onClick} />;
   }
 
-  const settings = {
+  const settings = { 
     dots: false,
-    arrows: false,
+    arrows: true,
     infinite: true,
     speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     nextArrow: <SampleNextArrow/>,
     prevArrow: <SamplePrevArrow/>,
