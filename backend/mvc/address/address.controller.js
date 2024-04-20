@@ -13,12 +13,7 @@ router.delete('/:id', authorize(), deleteAddress);
 
 module.exports = router;
 
-// Controller functions
-function getAllAddresses(req, res, next) {
-    addressService.getAllAddresses()
-        .then(addresses => res.json(addresses))
-        .catch(next);
-}
+
 
 function createAddressSchema(req, res, next) {
     const schema = Joi.object({

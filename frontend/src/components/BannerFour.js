@@ -43,7 +43,7 @@ const BannerFour = () => {
   const GetConsignmentDetail = () => {
     setLoading(true);
     axios
-      .post("http://103.127.30.214:90/Tracking.ashx", {
+      .post("https://103.127.30.214:90/Tracking.ashx", {
         interface: "RestAPI",
         method: "GetConsignmentDetail",
         parameters: {
