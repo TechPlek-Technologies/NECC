@@ -21,22 +21,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 
 const BannerFour = () => {
-
-
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 550);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 550);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup function to remove event listener
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-
   const [state, setState] = useState({
     nav1: null,
     nav2: null,
@@ -166,37 +150,13 @@ const BannerFour = () => {
           </Slider>
         </div>
 
-         {isMobile ? <div className="header-inner1">
-
-          <h1 className="title animated slideInRight">
-            Experience Excellence in Logistics{" "}
-          </h1>
-          <div className="btn-wrapper style-02 animated fadeInUpBig">
-            <form onSubmit={handleSubmit}>
-              <input
-                className="single-input-inner1"
-                type="text"
-                placeholder="Enter tracking number"
-                value={trackingNumber}
-                onChange={handleInputChange}
-              />
-              <br />
-              <button
-                type="submit"
-                onClick={() => GetConsignmentDetail()}
-                className="boxed-btn1"
-              >
-                Track Shipment
-              </button>
-            </form>
-          </div>
-        </div> : <div className="header-bg">
+        <div className="header-bg">
           <div className="container">
             <div className="row header-height justify-content-start">
               <div className="col-lg-4">
                 <div className="header-inner-wrap">
                   <div className="header-inner1">
-
+                    {/* header inner */}
                     <h1 className="title animated slideInRight">
                       Experience Excellence in Logistics{" "}
                     </h1>
@@ -220,13 +180,13 @@ const BannerFour = () => {
                       </form>
                     </div>
                   </div>
+                  {/* //.header inner */}
                 </div>
               </div>
             </div>
           </div>
-        </div>}
+        </div>
 
-        
         <Dialog
           maxWidth="lg"
           open={isEditDialogOpen}

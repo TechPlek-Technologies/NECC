@@ -4,6 +4,7 @@ import BannerFour from "../components/BannerFour";
 import NavbarOne from "../components/NavbarOne";
 import CounterThree from "../components/CounterThree";
 import AboutThree from "../components/AboutThree";
+import BannerFour1 from "../components/BannerFour1";
 const FeatureOne = React.lazy(() => import("../components/FeatureOne"));
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
@@ -21,6 +22,7 @@ const HomeOne = () => {
           <NavbarOne/>
 
           <BannerFour />
+          {/* <BannerFour1 /> */}
         
           {/* Feature One */}
           <FeatureOne />

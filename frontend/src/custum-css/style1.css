@@ -433,8 +433,7 @@ color: black;
 }
 
 .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 {
-    margin-left: 0;
-    margin-top: 0;
+   top: 20;
     background-color: rgba(216, 39, 31, 0.5);
     padding: 40px;
     margin-right: 15%;
@@ -560,7 +559,7 @@ color: black;
   }
 
 
-  @media (max-width: 767px){
+  /* @media (max-width: 767px){
     .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1{
         margin-left: 50px;
         bottom: 78px;
@@ -571,7 +570,7 @@ color: black;
         font-size: 24px;
     line-height: 24px;
     }
-}
+} */
 
 
 @media (max-width: 767px){
