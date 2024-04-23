@@ -1,37 +1,38 @@
-.customstyle-Carrier{
+.customstyle-Carrier {
     height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.feedbackheader{
+.feedbackheader {
     font-weight: 700;
     font-size: 20px;
     line-height: 20px;
     color: var(--heading-color);
 }
 
-.simplebar-placeholder{
+.simplebar-placeholder {
     height: 10px !important;
 }
 
 .fixed-width-column {
-    width: 300px; /* Adjust the width as needed */
+    width: 300px;
+    /* Adjust the width as needed */
     max-height: 25px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-  }
-  
-.feedbackbox{
+}
+
+.feedbackbox {
     border: 0;
     margin-bottom: 15px;
     background: #ffffff;
     box-shadow: 0px 10px 20px rgba(8, 12, 36, 0.08);
 }
 
-.customstyle-Service{
+.customstyle-Service {
     height: 450px;
     display: flex;
     flex-direction: column;
@@ -42,50 +43,51 @@
     margin-left:10px;
 } */
 
-.list-Investors1{
-    margin-left:1px;
+.list-Investors1 {
+    margin-left: 1px;
     list-style-type: none;
     font-size: 15px;
     line-height: 20px;
 }
 
-.list-Investors2{
-    margin-right:5px;
+.list-Investors2 {
+    margin-right: 5px;
 }
 
-.CorporateInformation{
+.CorporateInformation {
     font-size: 22px;
 }
 
-.CorporateInformation1{
+.CorporateInformation1 {
     font-size: 18px;
 }
 
-.CorporateInformation2{
+.CorporateInformation2 {
     margin-top: 10px;
     border-bottom: 1px solid rgb(195, 191, 191);
-    padding:4px;
+    padding: 4px;
 }
-.CorporateInformation3{
+
+.CorporateInformation3 {
     font-size: 22px;
     margin-top: 20px;
 }
 
-.list-Corporate1{
-    margin-top:0px;
+.list-Corporate1 {
+    margin-top: 0px;
     list-style-type: none;
     font-size: 15px;
     color: rgb(53, 52, 52);
     padding-left: 0%;
 }
 
-.list-Corporate2{
-    margin-right:12px;
+.list-Corporate2 {
+    margin-right: 12px;
 }
 
-.visionStat{
+.visionStat {
     margin-top: -10px;
-    color:#ffffff;
+    color: #ffffff;
     margin-left: 60px;
 }
 
@@ -104,10 +106,10 @@
     margin-bottom: 0;
     font-style: italic;
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .divider-area.divider-default-area .content .title {
         font-size: 13px;
     }
@@ -117,7 +119,7 @@
     font-size: 40px;
     /* color: #ff5e14; */
     color: #fff;
-    background-color:#29176d;
+    background-color: #29176d;
     margin-bottom: 30px;
     border-radius: 10px 10px;
 }
@@ -127,12 +129,12 @@
         font-size: 24px;
         margin-bottom: 0px;
     }
-  }
+}
 
 .widget_tags .tagcloud p {
     background: #080c24;
     border-radius: 0;
-    box-shadow: 0 2px 14px rgba(4,6,66,.05);
+    box-shadow: 0 2px 14px rgba(4, 6, 66, .05);
     color: #fff;
     display: inline-block;
     font-size: 14px;
@@ -143,35 +145,35 @@
     padding: 0 20px;
 }
 
-.list-Policy{
-    margin-top:30px;
+.list-Policy {
+    margin-top: 30px;
     list-style-type: none;
     font-size: 15px;
     color: rgb(53, 52, 52);
     padding-left: 0%;
 }
 
-.RightIssue{
+.RightIssue {
     margin-top: 20px;
 }
 
-.list-corporateInfo{
-    margin-left:1px;
+.list-corporateInfo {
+    margin-left: 1px;
     list-style-type: none;
     font-size: 16px;
     line-height: 30px;
 }
 
-.csrimg{
+.csrimg {
     margin-top: 90px;
 }
 
-.csr_area{
+.csr_area {
     padding: 40px 0 30px;
 }
 
-.csr_img{
-   margin-bottom: 10px;
+.csr_img {
+    margin-bottom: 10px;
 }
 
 
@@ -213,7 +215,7 @@ section {
     left: 50%;
     width: 20px;
     height: 1px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: #fff;
 }
 
@@ -242,50 +244,54 @@ section {
     border-radius: 3px;
 }
 
-.img-chairman{
+.img-chairman {
     /* margin-top: 10px; */
     /* margin-left: 0px; */
-    padding: 10px 0px;}
+    padding: 10px 0px;
+}
 
-.button-color{
+.button-color {
     background: #d8251e;
 }
 
-.para-color{
-color: black;
+.para-color {
+    color: black;
 }
-  .navbar-fixed {
+
+.navbar-fixed {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff; /* Add your desired background color */
-    z-index: 1000; /* Adjust the z-index as needed */
-  }
-  
-  /* Media query for medium devices */
-  @media (min-width: 768px) and (max-width: 992px) {
-    .breadcrumb-area {
-      /* Adjust styles for medium devices */
-      flex: 0 0 auto;
-    width: 100%;
-    }
-  }
-  
-  /* Media query for larger devices */
-  @media (min-width: 992px) {
-    .breadcrumb-area {
-      /* Adjust styles for larger devices */
-      flex: 0 0 auto;
-    width: 100%;
-    }
-  }
+    background-color: #fff;
+    /* Add your desired background color */
+    z-index: 1000;
+    /* Adjust the z-index as needed */
+}
 
-  .para{
+/* Media query for medium devices */
+@media (min-width: 551px) and (max-width: 992px) {
+    .breadcrumb-area {
+        /* Adjust styles for medium devices */
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+/* Media query for larger devices */
+@media (min-width: 992px) {
+    .breadcrumb-area {
+        /* Adjust styles for larger devices */
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+.para {
     text-align: center;
-  }
+}
 
-  .reg-offices {
+.reg-offices {
     color: #FFFFFF;
     background-color: #00AEEF;
     vertical-align: middle;
@@ -328,14 +334,14 @@ color: black;
     margin-right: 10px;
 }
 
-.boxed-btn1{
+.boxed-btn1 {
     padding: 4px 20px;
     background: #29176d;
     color: #fff;
-    border-radius: 20px 
+    border-radius: 20px
 }
 
-.single-input-inner1{
+.single-input-inner1 {
     /* margin-top: 30px; */
     margin-bottom: 20px;
     position: relative;
@@ -357,78 +363,79 @@ color: black;
     border: none;
 }
 
-.scroll-to-top1 h6{
+.scroll-to-top1 h6 {
     text-align: center;
-    padding-top: 6px ;
+    padding-top: 6px;
 }
 
-.branch-list{
+.branch-list {
     padding: 10px;
 }
 
-.branch-list1{
+.branch-list1 {
     padding: 10px;
     margin-left: 10px;
 }
 
-.branch-btn{
+.branch-btn {
     padding: 0px 10px;
     margin-left: 10px;
-    background-color:#fff;
+    background-color: #fff;
 }
 
-.blp_from{
+.blp_from {
     background-color: #29176d;
     padding: 5px;
 }
 
-.img1{
+.img1 {
     max-width: 100%;
     border-radius: 6px 6px;
 }
 
-.home-bg{
+.home-bg {
     background-image: linear-gradient(#c1b6eb52, #f7e7e6);
 }
 
-.para1{
+.para1 {
     text-align: center;
-    color:#fff;
+    color: #fff;
 }
 
-.title1{
+.title1 {
     text-transform: capitalize;
     font-size: 28px;
-    color:#fff;
+    color: #fff;
     margin-bottom: -2px;
 }
 
 /*for mobile*/
 @media (max-width: 425px) {
-    .title1{
+    .title1 {
         font-size: 20px;
     }
- }
+}
 
- @media (min-width: 767px){
-    .title1{
+@media (min-width: 551px) {
+    .title1 {
         font-size: 28px;
     }
-  }
+}
 
-  @media (width: 768px){
-    .title1{
+@media (width: 768px) {
+    .title1 {
         font-size: 18px;
     }
-  }
+}
 
- @media (min-width: 910px) and (max-width: 912px) {
-    .title1{
+@media (min-width: 910px) and (max-width: 912px) {
+    .title1 {
         font-size: 16px;
     }
- }
+}
 
-.contact-btn, .contact-btn:hover{
+.contact-btn,
+.contact-btn:hover {
     color: #fff;
 }
 
@@ -443,17 +450,17 @@ color: black;
     bottom: 700px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 551px) {
     .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 {
         bottom: 690px;
     }
-  }
+}
 
 @media (min-width: 910px) and (max-width: 912px) {
     .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 {
         bottom: 940px;
     }
- }
+}
 
 .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 .title {
     font-size: 30px;
@@ -464,373 +471,420 @@ color: black;
 }
 
 @media (min-width: 320px) and (max-width: 425px) {
-    .request-quote-inner .nav-pills .nav-item .nav-link{
+    .request-quote-inner .nav-pills .nav-item .nav-link {
         font-size: 11px;
     }
-  }
+}
 
-  @media (max-width: 767px){
-    .home-area.home-v2 .header-slider .background{
+@media (max-width: 767px) {
+    .home-area.home-v2 .header-slider .background {
         background-image: url('/public/assets/img/banner/1.webp');
         width: 100%;
         height: 300px;
     }
-    .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1{
+
+    /* .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 {
         margin-left: 50px;
         bottom: 78px;
-    }
+    } */
 
 }
-    @media (max-width: 767px){
-    .home-area.home-v2 .header-slider .background1{
+
+@media (max-width: 767px) {
+    .home-area.home-v2 .header-slider .background1 {
         background-image: url('/public/assets/img/banner/8.webp');
         width: 100%;
         height: 300px;
     }
-    .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1{
+
+    /* .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 {
         margin-left: 50px;
         bottom: 78px;
-    }
+    } */
 }
-    @media (max-width: 767px){
-    .home-area.home-v2 .header-slider .background2{
+
+@media (max-width: 767px) {
+    .home-area.home-v2 .header-slider .background2 {
         background-image: url('/public/assets/img/banner/2 (1).webp');
         width: 100%;
         height: 300px;
     }
-    .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1{
+
+    /* .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 {
         margin-left: 50px;
         bottom: 78px;
-    }
+    } */
 }
-    @media (max-width: 767px){
-    .home-area.home-v2 .header-slider .background3{
+
+@media (max-width: 767px) {
+    .home-area.home-v2 .header-slider .background3 {
         background-image: url('/public/assets/img/banner/4 (1).webp');
         width: 100%;
         height: 300px;
     }
-    .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1{
+
+    /* .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 {
         margin-left: 50px;
         bottom: 78px;
-    }
+    } */
 }
-    @media (max-width: 767px){
-    .home-area.home-v2 .header-slider .background4{
+
+@media (max-width: 767px) {
+    .home-area.home-v2 .header-slider .background4 {
         background-image: url('/public/assets/img/banner/3.webp');
         width: 100%;
         height: 300px;
     }
-    .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1{
+/* 
+    .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 {
         margin-left: 50px;
         bottom: 78px;
-    }
-  }
+    } */
+}
 
-  @media (min-width: 767px){
-    .home-area.home-v2 .header-slider .background{
+@media (min-width: 551px) {
+    .home-area.home-v2 .header-slider .background {
         background-image: url('/public/assets/img/banner/1.webp');
         width: 100%;
         height: 800px;
     }
 }
-    @media (min-width: 767px){
-    .home-area.home-v2 .header-slider .background1{
+
+@media (min-width: 551px) {
+    .home-area.home-v2 .header-slider .background1 {
         background-image: url('/public/assets/img/banner/8.webp');
         width: 100%;
         height: 800px;
-    }}
-    @media (min-width: 767px){
-    .home-area.home-v2 .header-slider .background2{
+    }
+}
+
+@media (min-width: 551px) {
+    .home-area.home-v2 .header-slider .background2 {
         background-image: url('/public/assets/img/banner/2 (1).webp');
         width: 100%;
         height: 800px;
-    }}
-    @media (min-width: 767px){
-    .home-area.home-v2 .header-slider .background3{
+    }
+}
+
+@media (min-width: 551px) {
+    .home-area.home-v2 .header-slider .background3 {
         background-image: url('/public/assets/img/banner/4 (1).webp');
         width: 100%;
         height: 800px;
-    }}
-    @media (min-width: 767px){
-    .home-area.home-v2 .header-slider .background4{
+    }
+}
+
+@media (min-width: 551px) {
+    .home-area.home-v2 .header-slider .background4 {
         background-image: url('/public/assets/img/banner/3.webp');
         width: 100%;
         height: 800px;
     }
-  }
+}
 
 
-  @media (max-width: 767px){
-    .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1{
-        margin-left: 50px;
+@media (max-width: 767px) {
+    .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 {
+        /* margin-left: 50px;
         bottom: 78px;
         padding: 12px;
-        background-color: rgb(216 37 30 / 75%);
+        background-color: rgb(216 37 30 / 75%); */
     }
-    .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 .title{
+
+    /* .home-area.home-v2 .header-bg .header-inner-wrap .header-inner1 .title {
         font-size: 24px;
-    line-height: 24px;
-    }
+        line-height: 24px;
+    } */
 }
 
 
-@media (max-width: 767px){
-    #bg1{
+@media (max-width: 767px) {
+    #bg1 {
         background-image: url("/public/assets/img/banner/About-us (1) (1).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg2{
+
+    #bg2 {
         background-image: url("/public/assets/img/banner/chairmen.webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
-    } 
-    #bg3{
+    }
+
+    #bg3 {
         background-image: url("/public/assets/img/banner/corporate-overview2 (1).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
-    } 
-    #bg4{
+    }
+
+    #bg4 {
         background-image: url("/public/assets/img/banner/History.webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
-    } 
-    #bg5{
+    }
+
+    #bg5 {
         background-image: url("/public/assets/img/banner/vision (3).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
-    } 
-    #bg6{
+    }
+
+    #bg6 {
         background-image: url("/public/assets/img/banner/Investor.webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg7{
+
+    #bg7 {
         background-image: url("/public/assets/img/banner/Network-in-logistic.webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg8{
+
+    #bg8 {
         background-image: url("/public/assets/img/banner/all-service.webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg9{
+
+    #bg9 {
         background-image: url("/public/assets/img/banner/part-time-truck (1).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg10{
+
+    #bg10 {
         background-image: url("/public/assets/img/banner/full-truck-load (2).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg11{
+
+    #bg11 {
         background-image: url("/public/assets/img/service-1/bulk mov/bulk-movements (2).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg12{
+
+    #bg12 {
         background-image: url("/public/assets/img/banner/odc.webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg13{
+
+    #bg13 {
         background-image: url("/public/assets/img/banner/warehouse (2).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg14{
+
+    #bg14 {
         background-image: url("/public/assets/img/banner/SARC-country.jpg");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg15{
+
+    #bg15 {
         background-image: url("/public/assets/img/banner/pick-and-drop2.jpg");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg16{
+
+    #bg16 {
         background-image: url("/public/assets/img/banner/contact.webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg17{
+
+    #bg17 {
         background-image: url("/public/assets/img/banner/career-in-logistic.webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg18{
+
+    #bg18 {
         background-image: url("/public/assets/img/banner/FAQ (1).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg19{
+
+    #bg19 {
         background-image: url("/public/assets/img/banner/feedback (1).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg20{
+
+    #bg20 {
         background-image: url("/public/assets/img/banner/CSR (2).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg21{
+
+    #bg21 {
         background-image: url("/public/assets/img/banner/consignment-tracking.webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg22{
+
+    #bg22 {
         background-image: url("/public/assets/img/banner/necc-group (2).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg23{
+
+    #bg23 {
         background-image: url("/public/assets/img/banner/necc-logistic (2).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg24{
+
+    #bg24 {
         background-image: url("/public/assets/img/banner/necc-telecom (1) (1).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg25{
+
+    #bg25 {
         background-image: url("/public/assets/img/banner/North-Eastern-Carrying-Corporation.webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg26{
+
+    #bg26 {
         background-image: url("/public/assets/img/banner/ecom-solutions.webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg27{
+
+    #bg27 {
         background-image: url("/public/assets/img/banner/Necc-Packer-&-Movers.webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg28{
+
+    #bg28 {
         background-image: url("/public/assets/img/banner/magazine (1).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg29{
+
+    #bg29 {
         background-image: url("/public/assets/img/banner/Awards (1).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg30{
+
+    #bg30 {
         background-image: url("/public/assets/img/banner/corporate-information.jpg");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
-    #bg31{
+
+    #bg31 {
         background-image: url("/public/assets/img/banner/sitemap (1).webp");
         width: 100%;
-        height: 300px; 
+        height: 300px;
         background-size: 100% 99%;
         filter: blur(0px) !important;
         margin-top: 40px;
     }
 }
 
-@media (width: 768px){
-    .navbar-area-1{
-       margin-top: 20px;
+@media (width: 768px) {
+    .navbar-area-1 {
+        margin-top: 20px;
     }
-  }
+}
 
-.single-select{
+.single-select {
     background: transparent;
     border: 1px solid #d6d6d6 !important;
     height: 55px;
@@ -838,14 +892,118 @@ color: black;
     padding: 0 20px;
 }
 
-.card-mg{
+.card-mg {
     margin: 10px 0px 0px;
 }
 
-.scroll-box{
+.scroll-box {
     overflow: auto;
-  }
+}
 
-  .hoverText:hover{
+.hoverText:hover {
     color: #FFF;
-  }
+}
+
+
+@media (max-width: 550px) {
+
+    .home-area {
+        height: calc(100vh - 396px);
+    }
+
+
+    .home-area.home-v2 {
+        margin-bottom: 125px;
+    }
+
+    .header-slider.header-slider2 {
+        margin-bottom: 4px;
+    }
+
+    .header-inner1 {
+        background-color: #d8251ebf;
+        padding: 11px 24px 12px 24px;
+        font-size: 12px;
+    }
+
+    .header-inner1 h1 {
+        color: white;
+        font-size: 23px;
+        line-height: 45px !important;
+
+    }
+
+    .feature-area {
+        margin-top: -188px !important;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .home-area.home-v2 {
+        margin-bottom: 137px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .header-inner1 h1 {
+
+        line-height: 30px !important;
+
+    }
+
+    .header-slider.header-slider2 {
+        margin-bottom: 3px;
+    }
+
+    .home-area.home-v2 {
+        margin-bottom: 121px;
+    }
+
+
+    @media (max-width: 369px) {
+
+        .home-area.home-v2 {
+            margin-bottom: 130px;
+        }
+
+        .header-inner1 h1 {
+            font-size: 21px;
+            line-height: 45px !important;
+
+        }
+
+        .header-inner1 {
+            font-size: 11px;
+        }
+
+    }
+
+
+
+    @media (max-width: 360px) {
+
+        .home-area.home-v2 {
+            margin-bottom: -78px;
+        }
+
+        .header-inner1 {
+            padding: 6px 9px 9px 19px;
+        }
+
+    }
+
+    
+    @media (max-width: 320px) {
+
+        .header-inner1 h1 {
+            line-height: 24px !important;
+        }
+
+
+        .home-area.home-v2 {
+            margin-bottom: 0;
+        }
+    }
+}
