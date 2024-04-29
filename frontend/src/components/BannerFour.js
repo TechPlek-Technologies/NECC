@@ -207,7 +207,7 @@ const BannerFour = () => {
               <TableHead>
                 <TableRow>
                   <TableCell>Consignment Number</TableCell>
-                  <TableCell>Consignment Booking Date</TableCell>
+                  <TableCell>Booking Date</TableCell>
                   <TableCell>From Station</TableCell>
                   <TableCell>To Station</TableCell>
                   <TableCell>Status</TableCell>
