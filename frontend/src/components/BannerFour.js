@@ -207,10 +207,9 @@ const BannerFour = () => {
               <TableHead>
                 <TableRow>
                   <TableCell>Consignment Number</TableCell>
-                  <TableCell>Delivery Date</TableCell>
+                  <TableCell>Consignment Booking Date</TableCell>
                   <TableCell>From Station</TableCell>
                   <TableCell>To Station</TableCell>
-                  <TableCell>Consignment key</TableCell>
                   <TableCell>Status</TableCell>
                   <TableCell>Payment Mode</TableCell>
                 </TableRow>
@@ -224,7 +223,6 @@ const BannerFour = () => {
                       <TableCell>{item.VDATE}</TableCell>
                       <TableCell>{item.FROMSTATION}</TableCell>
                       <TableCell>{item.TOSTATION}</TableCell>
-                      <TableCell>{item.CNM_MKEY}</TableCell>
                       <TableCell>{item.STATUS}</TableCell>
                       <TableCell>{item.PAYMODE}</TableCell>
                      
