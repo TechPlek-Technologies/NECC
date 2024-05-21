@@ -5,6 +5,7 @@ import {
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
+import {FaXTwitter} from 'react-icons/fa6';
 
 const FooterOne = () => {
   return (
@@ -21,13 +22,13 @@ const FooterOne = () => {
                 <div className='details'>
                   <ul className='social-media style-border'>
                     <li>
-                      <a href='https://www.facebook.com/'>
+                      <a href='https://www.facebook.com/NeccLtdOfficial/'>
                         <FaFacebookF />
                       </a>
                     </li>
                     <li>
-                      <a href='https://twitter.com/?lang=en'>
-                        <FaTwitter />
+                      <a href='https://x.com/Neccgroup01'>
+                        <FaXTwitter />
                       </a>
                     </li>
                     <li>
@@ -36,7 +37,7 @@ const FooterOne = () => {
                       </a>
                     </li>
                     <li>
-                      <a href='https://in.linkedin.com/'>
+                      <a href='https://www.linkedin.com/company/north-eastern-carrying-corporation/'>
                         <FaLinkedinIn />
                       </a>
                     </li>
