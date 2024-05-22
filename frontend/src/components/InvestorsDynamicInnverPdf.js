@@ -25,14 +25,17 @@ const InvestorsDynamicInnverPdf = ({ id }) => {
         fetchData();
     }, []);
 
+    const sortedData = data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+console.log(data)
     return (
         <div className="tagcloud">
-            {data && data?.map((item) => (
+            {sortedData && sortedData?.map((item) => (
                 
                     <Link key={item.id}
                         to={`${domain}/pdf/${item.pdfFileName}`}
                         target="_blank" rel="noopener noreferrer">
                         <FaRegFilePdf className='list-Investors2' />{item.name}{" "}
+
                     </Link>
             ))}
         </div>

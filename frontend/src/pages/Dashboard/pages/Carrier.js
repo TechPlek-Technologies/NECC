@@ -142,6 +142,7 @@ const Carrier = () => {
   );
 
   const handleUpload = async () => {
+    setLoading(true);
     try {
       if (!editedOffice) {
         throw new Error("No office selected");
@@ -175,6 +176,7 @@ const Carrier = () => {
       setFailure(true);
       setSuccessMsg(error.response.data.message);
       console.error("Error uploading PDF file:", error.message);
+      setLoading(false);
     }
   };
 
@@ -234,7 +236,17 @@ const Carrier = () => {
                 </Stack>
 
                 {loading ? (
+                  <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    height: "60vh",
+                    width: "80vw", // Set to 100% of the viewport height
+                  }}
+                >
                   <CircularProgress />
+                </Box>
                 ) : (
                   <CarrierTable
                     count={data.length}

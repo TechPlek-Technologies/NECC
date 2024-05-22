@@ -38,7 +38,7 @@ const CsrDownloads = () => {
   const [key, setKey] = useState(0);
   const [data,setData]=useState([]);
   const carriers = useCarriers(data,page, rowsPerPage);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
@@ -68,6 +68,7 @@ const CsrDownloads = () => {
 
 
   const handleUpload = async () => {
+    setLoading(true);
     try {
         if (!file) {
             throw new Error("No file selected");
@@ -109,6 +110,7 @@ const CsrDownloads = () => {
     } catch (error) {
         setFailure(true);
         console.error("Error uploading PDF file:", error.message);
+        setLoading(false);
     }
 };
 
@@ -169,7 +171,17 @@ const CsrDownloads = () => {
                 </Stack>
 
                 {loading ? (
+                  <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    height: "60vh",
+                    width: "80vw", // Set to 100% of the viewport height
+                  }}
+                >
                   <CircularProgress />
+                </Box>
                 ) : (
                   <CsrDownloadTable
                     count={data.length}

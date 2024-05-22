@@ -68,9 +68,11 @@ function AdminBranch() {
 
     setFailure(false);
     setSuccess(false);
+    setLoading(false);
   };
 
   const handleUpload = async () => {
+    setLoading(true);
     try {
       if (!editedOffice) {
         throw new Error("No file selected");
@@ -115,6 +117,7 @@ function AdminBranch() {
       setFailure(true);
       setSuccessMsg(error.response.data.message);
       console.error("Error uploading data:", error.message);
+      setLoading(false);
     }
   };
 
@@ -191,7 +194,17 @@ function AdminBranch() {
                     </div>
                   </Stack>
                   {loading ? (
-                  <CircularProgress />
+                 <Box
+                 sx={{
+                   display: "flex",
+                   alignItems: "center",
+                   justifyContent: "center",
+                   height: "60vh",
+                   width: "80vw", // Set to 100% of the viewport height
+                 }}
+               >
+                 <CircularProgress />
+               </Box>
                 ) : (
                   <BranchTable
                     count={data.length}

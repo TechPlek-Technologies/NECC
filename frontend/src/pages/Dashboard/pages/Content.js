@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "../../../theme";
 import Layout from "../layout/Layout";
-import { Box, Button, Container, Dialog, DialogActions, DialogContent, DialogTitle, Grid, Stack, SvgIcon, TextField, Typography } from "@mui/material";
+import { Box, Button, CircularProgress, Container, Dialog, DialogActions, DialogContent, DialogTitle, Grid, Stack, SvgIcon, TextField, Typography } from "@mui/material";
 import { InvestorsInnerTab } from "../sections/InvestorsTab/investors-tab-inner";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -18,10 +18,11 @@ const token = window.localStorage.getItem("Token");
   const [isEditOpen, setEditOpen] = useState(false);
   const [category, setCategory] = useState('');
   const [key, setKey] = useState(0);
+  const [loading, setLoading] = useState(false);
 
 
   const handleUpload = async () => {
-   
+    setLoading(true);
     try {
       if (category.length===0) {
         throw new Error("No name selected");
@@ -51,6 +52,7 @@ const token = window.localStorage.getItem("Token");
       setEditOpen(false);
     } catch (error) {
       console.error("Error uploading PDF file:", error.message);
+      setLoading(false);
     }
   };
 
@@ -58,11 +60,13 @@ const token = window.localStorage.getItem("Token");
   useEffect(() => {
     // Function to fetch data
     const fetchData = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(`${domain}/page`);
         setTabs(response.data); // Set the fetched data into state
       } catch (error) {
         console.error("Error fetching data:", error);
+        setLoading(true);
       }
     };
 
@@ -145,6 +149,8 @@ const token = window.localStorage.getItem("Token");
               </Container>
             </Box>
           </>
+
+        
           <Dialog open={isEditOpen} onClose={()=>{setEditOpen(false)}}>
             <DialogTitle>Add New Page</DialogTitle>
             <DialogContent>
