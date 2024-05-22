@@ -86,9 +86,11 @@ const AdminPdfReports = () => {
 
     setFailure(false);
     setSuccess(false);
+    setLoading(false);
   };
 
   const handleUpload = async () => {
+    setLoading(true);
     const token = window.localStorage.getItem("Token");
     const domain = process.env.REACT_APP_API_DOMAIN;
     try {
@@ -127,10 +129,12 @@ const AdminPdfReports = () => {
     } catch (error) {
       setFailure(true);
       console.error("Error uploading PDF file:", error.message);
+      setLoading(false);
     }
   };
 
   const handleEditSubmit = async () => {
+    setLoading(true);
     try {
       const formData = {
         name: editCategory,
@@ -158,6 +162,7 @@ const AdminPdfReports = () => {
       setMessage("Failed to Create Section");
       setFailure(true);
       console.error("Error creating new section:", error.message);
+      setLoading(false);
     }finally{
       setEditCategory(false);
       window.location.reload();
@@ -166,6 +171,7 @@ const AdminPdfReports = () => {
   };
 
   const handleDelete = async () => {
+    setLoading(true);
     try {
       const response = await axios.delete(`${domain}/events/${id}`, {
         headers: {
@@ -186,6 +192,7 @@ const AdminPdfReports = () => {
       console.error("Error deleting category:", error.message);
       setMessage("Failed to delete category");
       setFailure(true);
+      setLoading(false);
     } finally {
       setOpenDelete(false);
       window.location.reload(); 
@@ -204,7 +211,7 @@ const AdminPdfReports = () => {
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
-        setLoading(false);
+        setLoading(true);
       }
     };
 

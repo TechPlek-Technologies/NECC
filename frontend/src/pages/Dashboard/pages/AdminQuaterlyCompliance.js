@@ -44,12 +44,14 @@ function AdminQuaterlyCompliance() {
   const token = window.localStorage.getItem("Token");
   const [editCategory, setEditCategory] = useState(pagename);
   const [openDelete, setOpenDelete] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const theme = createTheme();
   const handleEditClose = () => {
     setEditOpen(false);
   };
   const handleSubmit = async () => {
+    setLoading(true)
     try {
       const formData = {
         name: section, // Assuming section is defined somewhere in your code
@@ -78,10 +80,12 @@ function AdminQuaterlyCompliance() {
       setMessage("Failed to Create Section");
       setFailure(true);
       console.error("Error creating new section:", error.message);
+      setLoading(false)
     }
     setEditOpen(false);
   };
   const handleEditSubmit = async () => {
+    setLoading(true)
     try {
       const formData = {
         name: editCategory,
@@ -109,6 +113,7 @@ function AdminQuaterlyCompliance() {
       setMessage("Failed to Create Section");
       setFailure(true);
       console.error("Error creating new section:", error.message);
+      setLoading(false)
     }finally{
       setEditCategory(false);
       window.location.reload();
@@ -117,6 +122,7 @@ function AdminQuaterlyCompliance() {
   };
 
   const handleDelete = async () => {
+    setLoading(true);
     try {
       const response = await axios.delete(`${domain}/categories/${id}`, {
         headers: {
@@ -137,6 +143,7 @@ function AdminQuaterlyCompliance() {
       console.error("Error deleting category:", error.message);
       setMessage("Failed to delete category");
       setFailure(true);
+      setLoading(false);
     } finally {
       setOpenDelete(false);
       window.location.reload(); 
@@ -152,16 +159,19 @@ function AdminQuaterlyCompliance() {
 
     setFailure(false);
     setSuccess(false);
+    setLoading(false);
   };
 
   useEffect(() => {
     // Function to fetch data
     const fetchData = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(`${domain}/events/page/${id}`);
         setData(response.data); // Set the fetched data into state
       } catch (error) {
         console.error("Error fetching data:", error);
+        setLoading(true);
       }
     };
 

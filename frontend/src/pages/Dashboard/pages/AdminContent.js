@@ -137,9 +137,11 @@ const AdminContent = () => {
 
     setFailure(false);
     setSuccess(false);
+    setLoading(false);
   };
 
   const handleUpload = async () => {
+    setLoading(true);
     const token = window.localStorage.getItem("Token");
     const domain = process.env.REACT_APP_API_DOMAIN;
     try {
@@ -178,6 +180,7 @@ const AdminContent = () => {
     } catch (error) {
       setFailure(true);
       console.error("Error uploading PDF file:", error.message);
+      setLoading(false);
     }
   };
   const theme = createTheme();
@@ -199,7 +202,7 @@ const AdminContent = () => {
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
-        setLoading(false);
+        setLoading(true);
       }
     };
 

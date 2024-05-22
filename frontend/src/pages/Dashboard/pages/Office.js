@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "../../../theme";
 import Layout from "../layout/Layout";
-import { Alert, Box, Button, Container, Dialog, DialogActions, DialogContent, DialogTitle, FormControl, Grid, InputLabel, MenuItem, Select, Snackbar, Stack, SvgIcon, TextField, Typography } from "@mui/material";
+import { Alert, Box, Button, CircularProgress, Container, Dialog, DialogActions, DialogContent, DialogTitle, FormControl, Grid, InputLabel, MenuItem, Select, Snackbar, Stack, SvgIcon, TextField, Typography } from "@mui/material";
 import { CompanyCard } from "../sections/Office/company-card";
 import PlusIcon from "@heroicons/react/24/solid/PlusIcon";
 import { useEffect, useMemo, useState } from "react";
@@ -49,7 +49,7 @@ function Office() {
   };
 
   const handleUpload = async () => {
-   
+    setLoading(true);
     try {
       if (!editedOffice) {
         throw new Error("No file selected");
@@ -89,6 +89,7 @@ function Office() {
     } catch (error) {
       setFailure(true);
       console.error("Error uploading PDF file:", error.message);
+      setLoading(false);
     }
   };
 
@@ -189,6 +190,20 @@ function Office() {
               </Container>
             </Box>
           </>
+
+          {loading ? (
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      height: "60vh",
+                      width: "80vw", // Set to 100% of the viewport height
+                    }}
+                  >
+                    <CircularProgress />
+                  </Box>
+                ) : (
           <Dialog open={isEditOpen} onClose={()=>{setEditOpen(false)}}>
             <DialogTitle>Add Office Address</DialogTitle>
             <DialogContent>
@@ -300,7 +315,7 @@ function Office() {
                 Save
               </Button>
             </DialogActions>
-          </Dialog>
+          </Dialog>)}
           <Snackbar
             open={success}
             autoHideDuration={6000}
