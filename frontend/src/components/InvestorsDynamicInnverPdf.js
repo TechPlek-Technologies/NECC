@@ -16,10 +16,15 @@ const InvestorsDynamicInnverPdf = ({ id }) => {
                 );
                 setData(response.data);
                 console.log(response.data);
+                const fileUrl = `${domain}/pdf/${data[0].pdfFileName}`;
+                const response1 = await axios.head(fileUrl);
+                console.log(response1);
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
         };
+
+ 
 
         // Call the fetch data function
         fetchData();

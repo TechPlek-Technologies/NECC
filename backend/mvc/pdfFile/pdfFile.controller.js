@@ -63,8 +63,7 @@ async function updatePdfFile(req, res, next) {
 async function deletePdfFile(req, res, next) {
     try {
         const pdfFileId = req.params.id;
-        await pdfFileService.deletePdfFile(pdfFileId);
-        res.json({ message: 'PDF file deleted successfully' });
+        await pdfFileService.deletePdfFile(pdfFileId,res);
     } catch (error) {
         next(error);
     }

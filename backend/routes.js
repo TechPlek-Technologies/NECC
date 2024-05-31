@@ -6,11 +6,15 @@ const bodyParser = require("body-parser");
 const errorHandler = require("_middleware/error-handler");
 const fs = require("fs");
 const authorize = require("./_middleware/authorize");
+const https = require('https');
+const mime = require('mime-types');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+const key = fs.readFileSync(__dirname + '/ssl/mykey1.pem');
+const cert = fs.readFileSync(__dirname + '/ssl/mykey.pem');
 // api routes
 app.use("/users", require("./mvc/users/user.controller"));
 app.use("/categories", require("./mvc/categories/category.controller"));
@@ -41,7 +45,8 @@ app.get("/pdf/:filename", (req, res) => {
       return;
     }
 
-    res.contentType("application/pdf");
+    const contentType = mime.lookup(filePath) || 'application/octet-stream';
+    res.contentType(contentType);
     res.send(data);
   });
 });
@@ -123,8 +128,14 @@ app.delete("/ci/:filename", authorize(), (req, res) => {
 // global error handler
 app.use(errorHandler);
 
+const options = {
+    key: key,
+    cert: cert
+  };
+  
 // start server
-const port =
-  process.env.NODE_ENV === "production" ? process.env.PORT || 80 : 4000;
+const server = https.createServer(options, app);
 
-app.listen(port, () => console.log("Server listening on port " + port));
+server.listen(5000, () => {
+    console.log("server starting on port : " + 5000)
+  });

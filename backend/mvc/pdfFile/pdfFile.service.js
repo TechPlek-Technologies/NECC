@@ -1,5 +1,5 @@
 const db = require('_helpers/db');
-
+const fs = require('fs').promises;
 module.exports = {
     getAllPdfFiles,
     getPdfFileById,
@@ -46,10 +46,14 @@ async function createPdfFile(params, file) {
     await db.PdfFile.create({ ...params, pdfFileName, pdfFilePath });
 }
 
-async function updatePdfFile(id, params) {
+async function updatePdfFile(id, params,res) {
     const pdfFile = await getPdfFile(id);
 
-   
+    const filepath=pdfFile.dataValues?.pdfFilePath;
+
+    await fs.unlink(filepath);
+        console.log("Deleted file:", filepath);
+
     // copy params to PDF file and save
     Object.assign(pdfFile, params);
     await pdfFile.save();
@@ -57,9 +61,36 @@ async function updatePdfFile(id, params) {
     return pdfFile.get();
 }
 
-async function deletePdfFile(id) {
-    const pdfFile = await getPdfFile(id);
-    await pdfFile.destroy();
+async function deletePdfFile(id, res) {
+    try {
+        // Retrieve the PDF file record from the database
+        const pdfFile = await getPdfFile(id);
+        if (!pdfFile) {
+            res.status(404).send("File not found");
+            return;
+        }
+
+        // Get the file path from the database record
+        const filepath=pdfFile.dataValues?.pdfFilePath;
+        if (!filepath) {
+            console.log("filepath",filepath)
+            res.status(400).send("File path not found in record");
+            return;
+        }
+
+        // Delete the file from the file system
+        await fs.unlink(filepath);
+        console.log("Deleted file:", filepath);
+
+        // Delete the record from the database
+        await pdfFile.destroy();
+
+        // Send a success response
+        res.status(200).send("File deleted successfully");
+    } catch (err) {
+        console.error("Error deleting file:", err);
+        res.status(500).send("Failed to delete file");
+    }
 }
 
 async function getPdfFilesBySection(eventId) {

@@ -43,7 +43,6 @@ function updateCsrPdf(req, res, next) {
 
 function deleteCsrPdf(req, res, next) {
     csrPdfService
-        .deleteCsrPdf(req.params.id)
-        .then(() => res.json({ message: "CsrPdf deleted successfully" }))
+        .deleteCsrPdf(req.params.id,res)
         .catch(next);
 }

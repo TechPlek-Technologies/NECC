@@ -1,5 +1,5 @@
 const db = require('_helpers/db');
-
+const fs = require('fs').promises;
 module.exports = {
     createCsrPdf,
     updateCsrPdf,
@@ -26,9 +26,40 @@ async function updateCsrPdf(csrPdfId, csrPdfData) {
     return csrPdf;
 }
 
-async function deleteCsrPdf(csrPdfId) {
-    const csrPdf = await getCsrPdfById(csrPdfId);
-    await csrPdf.destroy();
+async function deleteCsrPdf(csrPdfId,res) {
+    
+    try {
+        // Retrieve the PDF file record from the database
+        const pdfFile = await getCsrPdfById(csrPdfId);
+        
+        if (!pdfFile) {
+            res.status(404).send("File not found");
+            return;
+        }
+        
+        // Get the file path from the database record
+        const filename=pdfFile.dataValues?.pdfFileName;
+        const filepath="./csrUploads/"+filename;
+        console.log("filepath",filepath)
+
+        if (!filepath) {
+            res.status(400).send("File path not found in record");
+            return;
+        }
+
+        // Delete the file from the file system
+        await fs.unlink(filepath);
+        console.log("Deleted file:", filepath);
+
+        // Delete the record from the database
+        await pdfFile.destroy();
+
+        // Send a success response
+        res.status(200).send("File deleted successfully");
+    } catch (err) {
+        console.error("Error deleting file:", err);
+        res.status(500).send("Failed to delete file");
+    }
 }
 
 async function getCsrPdfById(csrPdfId) {

@@ -101,7 +101,7 @@ async function updateBranch(branchId, branchData) {
   branch.address1 = address1;
   branch.address2 = address2;
   branch.phone = phone;
-  branch.mobile = mobile || "";
+  branch.mobile = mobile;
   branch.branchCode = branchCode;
   branch.gtag = gtag;
   branch.country = country;
