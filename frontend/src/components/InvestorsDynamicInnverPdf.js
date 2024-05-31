@@ -30,7 +30,7 @@ const InvestorsDynamicInnverPdf = ({ id }) => {
     const sortedData = data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     return (
         <div className="tagcloud">
-            {sortedData && sortedData?.map((item) => (
+            {data && data?.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).map((item) => (
                 
                     <Link key={item.id}
                         to={`${domain}/pdf/${item.pdfFileName}`}
