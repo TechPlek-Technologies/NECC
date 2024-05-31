@@ -120,7 +120,6 @@ const AdminKeyPersonnel = () => {
       try {
         const response = await axios.get(`${domain}/keyPersonnel`);
         setData(response.data); // Set the fetched data into state
-        console.log("new",response.data); // Set the fetched data into state
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);

@@ -27,7 +27,6 @@ const CurrentOpeningInnerPdf = () => {
       try {
         const response = await axios.get(`${domain}/content`);
         setData(response.data); // Set the fetched data into state
-        console.log(response.data); // Set the fetched data into state
 
       } catch (error) {
         console.error("Error fetching data:", error);

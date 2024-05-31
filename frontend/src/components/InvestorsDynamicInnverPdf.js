@@ -15,10 +15,7 @@ const InvestorsDynamicInnverPdf = ({ id }) => {
                     `${domain}/uploads/pdfFiles/sections/${id}`
                 );
                 setData(response.data);
-                console.log(response.data);
-                const fileUrl = `${domain}/pdf/${data[0].pdfFileName}`;
-                const response1 = await axios.head(fileUrl);
-                console.log(response1);
+             
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
@@ -31,7 +28,6 @@ const InvestorsDynamicInnverPdf = ({ id }) => {
     }, []);
 
     const sortedData = data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-console.log(data)
     return (
         <div className="tagcloud">
             {sortedData && sortedData?.map((item) => (

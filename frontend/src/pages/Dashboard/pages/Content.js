@@ -48,7 +48,7 @@ const token = window.localStorage.getItem("Token");
       // Handle successful upload
       
       setKey((prevKey) => prevKey + 1);
-      console.log("created successfully successfully");
+      console.log("created  successfully");
       setEditOpen(false);
     } catch (error) {
       console.error("Error uploading PDF file:", error.message);

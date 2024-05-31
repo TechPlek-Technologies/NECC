@@ -51,7 +51,6 @@ export default function SignIn() {
       });
 
       // Handle successful authentication
-      console.log("Authentication successful:", response.data);
       window.localStorage.setItem("userData", JSON.stringify(response.data));
       window.localStorage.setItem("Token", response.data.token);
       setIsAuthenticated(true);

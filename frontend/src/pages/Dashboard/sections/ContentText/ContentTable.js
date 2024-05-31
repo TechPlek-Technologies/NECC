@@ -54,7 +54,6 @@ export const ContentTable = (props) => {
       summary: customer.summary,
       description: customer.description,
     });
-    console.log(customer);
 
     setIsEditDialogOpen(true);
   };

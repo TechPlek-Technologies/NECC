@@ -84,7 +84,6 @@ export const ContactTable = (props) => {
           phone: editedOffice.phone,
           type: editedOffice.type,
         };
-        console.log(formData)
   
       const response = await axios.put(`${domain}/contact/${editedOffice.id}`, formData, {
         headers: {

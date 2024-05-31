@@ -51,7 +51,6 @@ export const CsrDownloadTable = (props) => {
       name: customer.name,
       pdfFileName: customer.pdfFileName,
     });
-    console.log(customer);
 
     setIsEditDialogOpen(true);
   };

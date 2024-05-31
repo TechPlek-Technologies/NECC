@@ -42,7 +42,6 @@ const AnnualReportInner = () => {
       try {
         const response = await axios.get(`${domain}/categories`);
         setTabs(response.data); // Set the fetched data into state
-        console.log(response.data)
       } catch (error) {
         console.error("Error fetching data:", error);
       }

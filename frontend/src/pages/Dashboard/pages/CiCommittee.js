@@ -213,7 +213,6 @@ const CiCoommitte = () => {
 
           <Button onClick={()=>{setIsEditDialogOpen(false)}}>Close</Button>
           <Button onClick={()=>{
-            console.log(editedOffice)
             handleUpload();
           }}>Save Changes</Button>
         </DialogContent>

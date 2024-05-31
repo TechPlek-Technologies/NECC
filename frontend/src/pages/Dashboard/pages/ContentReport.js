@@ -182,7 +182,6 @@ const Carrier = () => {
       try {
         const response = await axios.get(`${domain}/content`);
         setData(response.data); // Set the fetched data into state
-        console.log(response.data); // Set the fetched data into state
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -301,7 +300,6 @@ const Carrier = () => {
 
           <Button onClick={()=>{setIsEditDialogOpen(false)}}>Close</Button>
           <Button onClick={()=>{
-            console.log(editedOffice)
             handleUpload();
           }}>Save Changes</Button>
         </DialogContent>

@@ -52,7 +52,6 @@ export const CiTable = (props) => {
       position: customer.position,
       description: customer.description,
     });
-    console.log(customer);
 
     setIsEditDialogOpen(true);
   };

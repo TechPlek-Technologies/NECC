@@ -295,7 +295,6 @@ const OfficeContact = () => {
               </Button>
               <Button
                 onClick={() => {
-                  console.log(editedOffice);
                   handleUpload();
                 }}
                 color="primary"

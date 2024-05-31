@@ -52,7 +52,6 @@ const BannerFour = () => {
         token: "NECC",
       })
       .then((response) => {
-        console.log("Response:", response.data);
         if (response.data) {
           const value = JSON.parse(response.data.Value);
           // Extract cnmtDetail from the response

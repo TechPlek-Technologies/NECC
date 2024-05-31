@@ -69,7 +69,6 @@ function Office() {
         city: editedOffice.city,
       };
 
-      console.log(formData)
       const response = await axios.post(`${domain}/office`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,

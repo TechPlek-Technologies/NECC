@@ -18,7 +18,6 @@ async function getEventById(id) {
 }
 
 async function createEvent(params) {
-    console.log("hello",params)
    
     const categoryName = params.name;
     const pagesID = params.pagesID;

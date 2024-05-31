@@ -97,7 +97,6 @@ export const AccountProfileDetails = () => {
       // Check if passwords match before saving details
       if (passwordMatch) {
         // Add logic for saving details
-        console.log("Details saved:", values);
         updateUserData(values);
       } else {
         console.error("Passwords do not match");

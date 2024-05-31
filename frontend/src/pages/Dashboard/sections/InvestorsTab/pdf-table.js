@@ -42,7 +42,6 @@ export const PdfTable = (props) => {
     key=0,
     handleKeyChange=()=>{}
   } = props;
-  console.log(items);
 
   const [isEditOpen, setEditOpen] = useState(false);
   const [editedOffice, setEditedOffice] = useState({});
@@ -292,7 +291,6 @@ export const PdfTable = (props) => {
           <Button
             // disabled={!file || !name}
             onClick={() => {
-              console.log(editedOffice);
               handleUpload();
             }}
             color="primary"

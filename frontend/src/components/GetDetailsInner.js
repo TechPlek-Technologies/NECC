@@ -24,12 +24,10 @@ const GetDetailsInner = () => {
       "token": "NECC"
     })
       .then(response => {
-        console.log('Response:', response.data);
         if (response.data) {
           const value = JSON.parse(response.data.Value);
           // Extract cnmtDetail from the response
           const cnmtDetail = value.cnmtDetail;
-          console.log(cnmtDetail)
           setData(cnmtDetail)
           setLoading(false);
         }

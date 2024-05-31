@@ -197,7 +197,6 @@ const AdminContent = () => {
         const response = await axios.get(
           `${domain}/pageContent/${id}`
         );
-        console.log(response.data)
         setData(response.data);
         setLoading(false);
       } catch (error) {

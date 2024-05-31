@@ -73,19 +73,11 @@ const CsrDownloads = () => {
         if (!file) {
             throw new Error("No file selected");
         }
-
-        console.log("File:", file);
-        console.log("Name:", name);
-
         const formData = new FormData();
         formData.append("name", name);
         formData.append("file", file); // Append the file itself to the FormData
 
-        for (var pair of formData.entries()) {
-            console.log(pair[0]+ ', ' + pair[1]); 
-        }
-        
-
+     
         const response = await axios.post(
             `${domain}/csrpdf`,
             formData,

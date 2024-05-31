@@ -41,7 +41,6 @@ function createEventSchema(req, res, next) {
 async function createEvent(req, res, next) {
   try {
     // Extract categoryId from request body or any other source
-    console.log(req.body)
 
     // Create the event with the associated categoryId
     await eventService.createEvent({

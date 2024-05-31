@@ -7,6 +7,7 @@ function replaceSpacesWithHyphens(inputString) {
   return replacedString;
 }
 
+console.log(pages)
   return (
    <ul className=' list-inner-wrap list-Investors1' >
    {pages?.map((item) => (

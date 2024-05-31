@@ -315,7 +315,6 @@ const Carrier = () => {
               </Button>
               <Button
                 onClick={() => {
-                  console.log(editedOffice);
                   handleUpload();
                 }}
               >

@@ -93,7 +93,6 @@ function AdminBranch() {
         branch: editedOffice.branch,
       };
 
-      console.log(formData);
       const response = await axios.post(`${domain}/branch`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,

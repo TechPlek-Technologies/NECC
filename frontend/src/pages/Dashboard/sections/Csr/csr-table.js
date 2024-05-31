@@ -51,7 +51,6 @@ export const CsrTable = (props) => {
       name: customer.name,
       serial: customer.serial,
     });
-    console.log(customer);
 
     setIsEditDialogOpen(true);
   };

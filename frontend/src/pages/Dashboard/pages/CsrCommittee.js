@@ -113,7 +113,6 @@ const CsrCoommitte = () => {
       try {
         const response = await axios.get(`${domain}/csr`);
         setData(response.data); // Set the fetched data into state
-        console.log("new",response.data); // Set the fetched data into state
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
