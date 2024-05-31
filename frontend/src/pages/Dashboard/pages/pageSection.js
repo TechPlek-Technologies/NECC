@@ -36,6 +36,7 @@ function PageSection() {
   const [section, setSection] = useState("");
   const [message, setMessage] = useState("");
   const [category, setCategory] = useState(pagename);
+  const [loading, setLoading] = useState(true);
   const domain = process.env.REACT_APP_API_DOMAIN;
   const token = window.localStorage.getItem("Token");
 
@@ -44,6 +45,7 @@ function PageSection() {
     setEditOpen(false);
   };
   const handleSubmit = async () => {
+    setLoading(true);
     try {
       const formData = {
         name: section, // Assuming section is defined somewhere in your code
@@ -72,6 +74,7 @@ function PageSection() {
       setMessage("Failed to Create Section");
       setFailure(true);
       console.error("Error creating new section:", error.message);
+      setLoading(false);
     }
     setEditOpen(false);
   };
@@ -88,11 +91,13 @@ function PageSection() {
   useEffect(() => {
     // Function to fetch data
     const fetchData = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(`${domain}/section/page/${id}`);
         setData(response.data); // Set the fetched data into state
       } catch (error) {
         console.error("Error fetching data:", error);
+        setLoading(true);
       }
     };
 

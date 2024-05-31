@@ -69,6 +69,7 @@ const CiPdf = () => {
 
 
   const handleUpload = async () => {
+    setLoading(true);
     try {
         if (!file) {
             throw new Error("No file selected");
@@ -105,6 +106,7 @@ const CiPdf = () => {
     } catch (error) {
         setFailure(true);
         console.error("Error uploading PDF file:", error.message);
+        setLoading(false);
     }
 };
 
@@ -165,7 +167,17 @@ const CiPdf = () => {
                 </Stack>
 
                 {loading ? (
+                  <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    height: "60vh",
+                    width: "80vw", // Set to 100% of the viewport height
+                  }}
+                >
                   <CircularProgress />
+                </Box>
                 ) : (
                   <CiPdftable
                     count={data.length}
