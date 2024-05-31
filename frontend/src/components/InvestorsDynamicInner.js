@@ -64,6 +64,7 @@ const InvestorsDynamicInner = () => {
       try {
         const response = await axios.get(`${domain}/events/page/${id}`);
         setSection(response.data); // Set the fetched data into state
+        console.log(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
