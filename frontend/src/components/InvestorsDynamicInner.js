@@ -85,7 +85,8 @@ const InvestorsDynamicInner = () => {
                 <div className="col-lg-12">
                   <div className="sidebar-area">
 
-                  {section.map((item) => (
+                  {section.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+  .map((item) => (
                   <div className="widget widget_tags" key={item.id}>
                     
                         <h4 className="widget-title">
