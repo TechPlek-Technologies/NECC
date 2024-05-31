@@ -12,7 +12,7 @@ const DirectorComponent = ({ id }) => {
       ];
     return (
       <div>
-        {boardDirector.map((director) => (
+        {boardDirector.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).map((director) => (
           <div key={director.id} className="service-details-wrap">
             <h4 className="subtitle CorporateInformation1">{director.name}</h4>
             <div dangerouslySetInnerHTML={{ __html: director.description }} />
