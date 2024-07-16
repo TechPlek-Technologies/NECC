@@ -78,6 +78,7 @@ import ListingInformation from "./pages/ListingInformation";
 import CustomerCare from "./pages/CustomerCare";
 import SARCcountry from "./pages/SARCcountry";
 import AdminBranch from "./pages/Dashboard/pages/AdminBranch";
+import Terms from "./pages/Terms";
 
 function App() {
   useEffect(() => {
@@ -214,6 +215,7 @@ function App() {
             path="/CorporateInformation"
             element={<CorporateInformation />}
           />
+          <Route exact path="/Terms-and-condition" element={<Terms />}></Route>
 
           {/* Admin Section */}
           <Route exact path="/admin" element={<SignIn />} />
