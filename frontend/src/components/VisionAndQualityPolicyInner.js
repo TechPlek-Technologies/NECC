@@ -27,7 +27,7 @@ const VisionAndQualityPolicyInner= () => {
             </div>
             <div className='col-lg-5 align-self-center pd-top-120 order-lg-1'>
                     <div className='thumb mb-lg-0 mb-4'>
-                      <img src='/assets/img/service-1/vision and quality/vision-2 (1).webp' alt='Transpro' />
+                      <img src='/assets/img/service-1/vision and quality/vision-2.webp' alt='Transpro' />
                     </div>
                   </div>
           </div>

@@ -6,7 +6,7 @@ const TermsInner = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-12">
-            <div className="service-details-wrap">
+            <div className="service-details-wrap" style={{textAlign:"justify"}}>
               <h2>TERMS & CONDITIONS OF CARRIAGE</h2>
               <h6 className="subtitle CorporateInformation">
                 Carrier’s Risk or Owner’s Risk
