@@ -107,7 +107,7 @@ const NavbarThree = () => {
                        <Link to='/RIGHT-ISSUES/36'>Right Issues</Link>
                     </li>
                     <li>
-                       <Link to='NEWS-&-EVENTS/40'>News & Events</Link>
+                       <Link to='/NEWS-&-EVENTS/40'>News & Events</Link>
                     </li>
                   </ul>
                 </li>
