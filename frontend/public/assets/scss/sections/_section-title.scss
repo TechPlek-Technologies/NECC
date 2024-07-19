@@ -4,6 +4,7 @@
 .section-title {
   margin-bottom: 20px;
   position: relative;
+  text-align: justify;
   .subtitle {
     font-weight: 0;
     font-size: 16px;
@@ -61,6 +62,7 @@
     &.left-line {
       border-left: 5px solid #29176d;
       padding-left: 10px;
+      text-align: justify;
     }
   }
   .small-title {
