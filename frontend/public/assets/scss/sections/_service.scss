@@ -171,6 +171,7 @@
     font-size: 16px;
     line-height: 26px;
     margin-bottom: 18px;
+    text-align: justify;
     &.last-para {
       margin-bottom: -8px;
     }
@@ -623,6 +624,7 @@
       }
       p {
         color: #fff;
+        text-align: justify;
       }
     }
 

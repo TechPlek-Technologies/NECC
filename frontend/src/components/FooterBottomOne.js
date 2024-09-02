@@ -17,11 +17,11 @@ const FooterBottomOne = () => {
             </div>
             <div className='col-lg-4 text-lg-end text-center'>
               <ul>
-                {/* <li>
-                  <a href='#' style={{color:"#9583d9"}}>Terms &amp; Condition</a>
-                </li> */}
                 <li>
-                  <a href='/SiteMap' style={{color:"#9583d9"}}>SiteMap</a>
+                  <a href='/Terms-and-condition' style={{color:"#9583d9"}}>Terms &amp; Condition</a>
+                </li>
+                <li>
+                  <a href='/SiteMap' style={{color:"#9583d9"}}>Sitemap</a>
                 </li>
                 {/* <li>
                   <a href='#' style={{color:"#9583d9"}}>Privacy &amp; Policy</a>
