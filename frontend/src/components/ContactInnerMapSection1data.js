@@ -43,7 +43,7 @@ export default function ContactInnerMapSection1data({
               {branch.branch}
             </Typography>
 
-            {branch.personName && ( // Check if personName has a value
+            {/* {branch.personName && ( // Check if personName has a value
               <Typography
                 variant="body2"
                 color="text.secondary"
@@ -52,7 +52,7 @@ export default function ContactInnerMapSection1data({
                 <b>Contact Person: </b>
                 {`${branch.personName}`}
               </Typography>
-            )}
+            )} */}
 
             {branch.phone && (
               <Typography
