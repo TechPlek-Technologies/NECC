@@ -270,9 +270,9 @@ const ContactInner = () => {
                     className="details hoverText"
                     style={{ minHeight: "230px" }}
                   >
-                    {company?.name && (
+                    {company?.city && (
                       <>
-                        <h5> {company.name}</h5>
+                        <h5> {company.city}</h5>
                       </>
                     )}
                     {company?.addressLine1 && <>{company.addressLine1} </>}
