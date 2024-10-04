@@ -10,7 +10,12 @@ export const AuthProvider = ({ children }) => {
     // Simulate an asynchronous check for authentication
     const checkAuthStatus = () => {
       const token = localStorage.getItem("Token");
-      setIsAuthenticated(!!token); // Update the authentication status based on the presence of a token
+      if (token) {
+        setIsAuthenticated(true);
+      } else {
+        setIsAuthenticated(false);
+      }
+      // Update the authentication status based on the presence of a token
     };
 
     checkAuthStatus();

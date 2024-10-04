@@ -79,6 +79,8 @@ const ContactInner = () => {
     fetchData();
   }, [key]);
 
+  console.log("corporateOffice", corporateOffice);
+
   return (
     <>
       <Toaster position="bottom-center" reverseOrder={false} />
@@ -129,12 +131,12 @@ const ContactInner = () => {
                   <div className="col-md-6">
                     <div className="single-input-inner">
                       <label>
-                      <FaFileAlt />
+                        <FaFileAlt />
                       </label>
                       <input type="text" placeholder=" Subject" />
                     </div>
                   </div>
-                
+
                   <div className="col-12">
                     <div className="single-input-inner">
                       <label>
@@ -168,13 +170,51 @@ const ContactInner = () => {
                       <FaMapMarkerAlt />
                     </div>
                     <div className="media-body">
-                      <p>"NECC HOUSE" 9062/47,</p>
-                      <p>Ram Bagh Road</p>
-                      <p>Azad Market</p>
-                      <p>Delhi-110006</p>
-                      <p>Ph : 011-23517516, 17, 18, 19</p>
-                      <p>Tolfree: 1800 11 7080 & 9711797516</p>
-                      <p>E-mail : co@neccgroup.com</p>
+                      {corporateOffice.map((company) => (
+                        <>
+                          {company?.name && (
+                            <>
+                              <h5> {company.name}</h5>
+                            </>
+                          )}
+                          {company?.addressLine1 && (
+                            <>{company.addressLine1} </>
+                          )}
+                          {company?.addressLine2 && (
+                            <>{company.addressLine2} </>
+                          )}
+                          {company?.addressLine3 && (
+                            <>{company.addressLine3} </>
+                          )}
+                          {company?.pincode && (
+                            <>
+                              {"Pincode-"}
+                              {company.pincode}
+                              <br />
+                            </>
+                          )}
+                          {company?.tollfreeNo && (
+                            <>
+                              {"Toll Free No : "}
+                              {company.tollfreeNo}
+                              <br />
+                            </>
+                          )}
+                          {company?.phone && (
+                            <>
+                              {"Phone : "}
+                              {company.phone}
+                              <br />
+                            </>
+                          )}
+                          {company?.email && (
+                            <>
+                              {"E-mail : "}
+                              {company.email}{" "}
+                            </>
+                          )}
+                        </>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -203,7 +243,10 @@ const ContactInner = () => {
             {corporateOffice.map((company) => (
               <div className="col-lg-4" key={company.id}>
                 <div className="single-service-wrap">
-                  <div className="details hoverText" style={{ minHeight: "200px" }}>
+                  <div
+                    className="details hoverText"
+                    style={{ minHeight: "200px" }}
+                  >
                     {company?.name && (
                       <>
                         <h5> {company.name}</h5>

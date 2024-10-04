@@ -52,9 +52,10 @@ export const CompanyCard = ({office,key,handleKeyChange,id}) => {
         throw new Error("No file selected");
       }
 
+      console.log("editedOffice.tollfree",editedOffice)
       const formData = {
         type: editedOffice.type,
-        tollfreeNo: editedOffice.tollfree,
+        tollfreeNo: editedOffice.tollfreeNo,
         pincode: editedOffice.pincode,
         phone: editedOffice.phone,
         name: editedOffice.name,
@@ -328,7 +329,7 @@ export const CompanyCard = ({office,key,handleKeyChange,id}) => {
             <Grid item xs={12} md={6}>
               <TextField
                 label="Toll Free"
-                name="pincode"
+                name="tollfreeNo"
                 defaultValue={office.tollfreeNo}
                 onChange={handleInputChange}
                 fullWidth

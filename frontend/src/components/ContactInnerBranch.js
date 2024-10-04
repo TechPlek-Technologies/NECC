@@ -3,8 +3,6 @@ import ContactInnerBranchSearch from "./ContactInnerBranchSearch";
 import ContactInnerMapSelection from "./ContactInnerMapSelection";
 import axios from "axios";
 
-
-
 const ContactInnerBranch = () => {
   const [location, setLocation] = useState({
     country: "",
@@ -13,25 +11,23 @@ const ContactInnerBranch = () => {
     branch: "",
   });
 
-  const [filteredData,setFilteredData]=useState([]);
-
+  const [filteredData, setFilteredData] = useState([]);
 
   const updateLocation = (newLocation) => {
     setLocation({ ...location, ...newLocation });
   };
 
-  const [map,setMap]=useState("")
-  const [targetid,setTargetid]= useState(0)
+  const [map, setMap] = useState("");
+  const [targetid, setTargetid] = useState(0);
   const domain = process.env.REACT_APP_API_DOMAIN;
   const [data, setData] = useState([]);
-  
 
   useEffect(() => {
     // Function to fetch data
     const fetchData = async () => {
       try {
         const response = await axios.get(`${domain}/branch`);
-
+        console.log(response);
         setData(response.data); // Set the fetched data into state
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -59,10 +55,24 @@ const ContactInnerBranch = () => {
           </div>
         </div>
         <div className="row">
-           <ContactInnerBranchSearch location={location} updateLocation={updateLocation} data={data} setFilteredData={setFilteredData} setMap={setMap} setTargetid={setTargetid}/>
+          <ContactInnerBranchSearch
+            location={location}
+            updateLocation={updateLocation}
+            data={data}
+            setFilteredData={setFilteredData}
+            setMap={setMap}
+            setTargetid={setTargetid}
+          />
         </div>
         <div className="row">
-        <ContactInnerMapSelection data={filteredData} map={map} filteredData={filteredData} setMap={setMap} setTargetid={setTargetid} targetid={targetid}/>
+          <ContactInnerMapSelection
+            data={filteredData}
+            map={map}
+            filteredData={filteredData}
+            setMap={setMap}
+            setTargetid={setTargetid}
+            targetid={targetid}
+          />
         </div>
       </div>
     </div>
