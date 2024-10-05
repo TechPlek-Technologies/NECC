@@ -174,7 +174,7 @@ export const CompanyCard = ({office,key,handleKeyChange,id}) => {
 )}
 {office?.addressLine3 && office?.pincode && (
   <>
-    {"-"}
+    {"Pincode -"}
     {office.pincode}
     <br />
   </>
