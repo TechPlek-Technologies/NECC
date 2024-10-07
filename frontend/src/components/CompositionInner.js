@@ -17,11 +17,6 @@ const CompositionInner = ({id}) => {
         eventID: 1,
       },
       {
-        id: 3,
-        name: "Mr. Shyam Lal Yadav (Executive Member)",
-        eventID: 1,
-      },
-      {
         id: 4,
         name: "Mr. Vinod Nair (Executive Member)",
         eventID: 1,

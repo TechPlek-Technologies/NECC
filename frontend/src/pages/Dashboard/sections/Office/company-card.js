@@ -25,8 +25,7 @@ import { RiDeleteBin2Line, RiExpandRightFill } from "react-icons/ri";
 const token = window.localStorage.getItem("Token");
 const domain = process.env.REACT_APP_API_DOMAIN;
 
-export const CompanyCard = ({office,key,handleKeyChange,id}) => {
-
+export const CompanyCard = ({ office, key, handleKeyChange, id }) => {
   const [isEditOpen, setEditOpen] = useState(false);
   const [editedOffice, setEditedOffice] = useState({ ...office });
   const [success, setSuccess] = useState(false);
@@ -52,7 +51,8 @@ export const CompanyCard = ({office,key,handleKeyChange,id}) => {
         throw new Error("No file selected");
       }
 
-      console.log("editedOffice.tollfree",editedOffice)
+      console.log("editedOffice.tollfree", editedOffice);
+
       const formData = {
         type: editedOffice.type,
         tollfreeNo: editedOffice.tollfreeNo,
@@ -118,7 +118,6 @@ export const CompanyCard = ({office,key,handleKeyChange,id}) => {
 
   useEffect(() => {
     // Function to fetch data
-   
   }, [success]);
 
   return (
@@ -144,62 +143,61 @@ export const CompanyCard = ({office,key,handleKeyChange,id}) => {
           {office.city}
         </Typography>
         <Typography align="center" variant="body1">
-        {office?.name && (
-  <>
-    {office.name}
-    {","}
-    <br />
-  </>
-)}
-{office?.addressLine1 && (
-  <>
-    {office.addressLine1}
-    {","}
-    <br />
-  </>
-)}
-{office?.addressLine2 && (
-  <>
-    {office.addressLine2}
-    {","}
-    <br />
-  </>
-)}
-{office?.addressLine3 && (
-  <>
-    {office.addressLine3}
-    {","}
-    <br />
-  </>
-)}
-{office?.addressLine3 && office?.pincode && (
-  <>
-    {"Pincode -"}
-    {office.pincode}
-    <br />
-  </>
-)}
-{office?.tollfreeNo && (
-  <>
-    {"Toll Free No : "}
-    {office.tollfreeNo}
-    <br />
-  </>
-)}
-{office?.phone && (
-  <>
-    {"Phone : "}
-    {office.phone}
-    <br />
-  </>
-)}
-{office?.email && (
-  <>
-    {"E-mail : "}
-    {office.email}
-    {" "}
-  </>
-)}
+          {office?.name && (
+            <>
+              {office.name}
+              {","}
+              <br />
+            </>
+          )}
+          {office?.addressLine1 && (
+            <>
+              {office.addressLine1}
+              {","}
+              <br />
+            </>
+          )}
+          {office?.addressLine2 && (
+            <>
+              {office.addressLine2}
+              {","}
+              <br />
+            </>
+          )}
+          {office?.addressLine3 && (
+            <>
+              {office.addressLine3}
+              {","}
+              <br />
+            </>
+          )}
+          {office?.addressLine3 && office?.pincode && (
+            <>
+              {"Pincode -"}
+              {office.pincode}
+              <br />
+            </>
+          )}
+          {office?.tollfreeNo && (
+            <>
+              {"Toll Free No : "}
+              {office.tollfreeNo}
+              <br />
+            </>
+          )}
+          {office?.phone && (
+            <>
+              {"Phone : "}
+              {office.phone}
+              <br />
+            </>
+          )}
+          {office?.email && (
+            <>
+              {"E-mail : "}
+              {office.email}{" "}
+            </>
+          )}
         </Typography>
       </CardContent>
       <Box sx={{ flexGrow: 1 }} />
@@ -247,7 +245,7 @@ export const CompanyCard = ({office,key,handleKeyChange,id}) => {
               cursor: "pointer",
             },
           }}
-          onClick={()=>{
+          onClick={() => {
             handleDelete(id);
           }}
         >

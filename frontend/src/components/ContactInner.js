@@ -188,18 +188,18 @@ const ContactInner = () => {
                           )}
                           {company?.pincode && (
                             <>
-                              {"Pincode-"}
+                              {/* {"Pincode-"} */}
                               {company.pincode}
                               <br />
                             </>
                           )}
-                          {company?.tollfreeNo && (
+                          {/* {company?.tollfreeNo && (
                             <>
                               {"Toll Free No : "}
                               {company.tollfreeNo}
                               <br />
                             </>
-                          )}
+                          )} */}
                           {company?.phone && (
                             <>
                               {"Phone : "}
@@ -257,7 +257,7 @@ const ContactInner = () => {
                     {company?.addressLine3 && <>{company.addressLine3} </>}
                     {company?.pincode && (
                       <>
-                        {"Pincode-"}
+                        {/* {"Pincode-"} */}
                         {company.pincode}
                         <br />
                       </>
