@@ -118,7 +118,9 @@ const CiPdf = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${domain}/cipdf`);
-        setData(response.data); // Set the fetched data into state
+        const fetchedData=response.data
+        fetchedData.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        setData(fetchedData); // Set the fetched data into state
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
