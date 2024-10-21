@@ -28,8 +28,7 @@ import { useState } from "react";
 import { RiDeleteBin2Line, RiExpandRightFill } from "react-icons/ri";
 import axios from "axios";
 
-const token = window.localStorage.getItem("Token");
-const domain = process.env.REACT_APP_API_DOMAIN;
+
 
 export const BranchTable = (props) => {
   const {
@@ -42,6 +41,8 @@ export const BranchTable = (props) => {
     handleKeyChange = () => {},
     key = 0,
   } = props;
+  const token = window.localStorage.getItem("Token");
+const domain = process.env.REACT_APP_API_DOMAIN;
 
   const [isEditOpen, setEditOpen] = useState(false);
   const [editedOffice, setEditedOffice] = useState({  });
@@ -64,6 +65,7 @@ export const BranchTable = (props) => {
   };
 
   const handleUpdate = async () => {
+    console.log(token)
     try {
       if (!editedOffice) {
         throw new Error("No file selected");
