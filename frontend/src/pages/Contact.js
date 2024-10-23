@@ -40,7 +40,7 @@ const Contact = () => {
 
           {/* Breadcrumb */}
           {screenSize.width > 767 && (
-          <Breadcrumb title={"CONTACT US"} imgSrc={"/assets/img/banner/contact.webp"}/>)}
+          <Breadcrumb title={"CONTACT US"} imgSrc={"/assets/img/banner/contact.jpg"}/>)}
           {screenSize.width <= 767 && (
                         <div id="bg16">
                             <div className='breadcrumb-area bg-overlay-2'>

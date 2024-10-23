@@ -28,8 +28,6 @@ import { useState } from "react";
 import { RiDeleteBin2Line, RiExpandRightFill } from "react-icons/ri";
 import axios from "axios";
 
-
-
 export const BranchTable = (props) => {
   const {
     count = 0,
@@ -42,10 +40,10 @@ export const BranchTable = (props) => {
     key = 0,
   } = props;
   const token = window.localStorage.getItem("Token");
-const domain = process.env.REACT_APP_API_DOMAIN;
+  const domain = process.env.REACT_APP_API_DOMAIN;
 
   const [isEditOpen, setEditOpen] = useState(false);
-  const [editedOffice, setEditedOffice] = useState({  });
+  const [editedOffice, setEditedOffice] = useState({});
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
   const [successMsg, setSuccessMsg] = useState("");
@@ -65,7 +63,7 @@ const domain = process.env.REACT_APP_API_DOMAIN;
   };
 
   const handleUpdate = async () => {
-    console.log(token)
+    console.log(token);
     try {
       if (!editedOffice) {
         throw new Error("No file selected");
@@ -193,7 +191,6 @@ const domain = process.env.REACT_APP_API_DOMAIN;
                   <TableRow hover key={customer.id}>
                     <TableCell>
                       <Stack alignItems="center" direction="row" spacing={2}>
-                       
                         <Typography variant="subtitle2">
                           {customer.branch}
                         </Typography>
@@ -203,13 +200,42 @@ const domain = process.env.REACT_APP_API_DOMAIN;
                     <TableCell>{customer.email}</TableCell>
                     <TableCell>{customer.phone}</TableCell>
                     <TableCell>{customer.mobile}</TableCell>
-                    <TableCell  sx={{ maxHeight: '30px', maxWidth: '120px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{customer.address1}</TableCell>
-                    <TableCell  sx={{ maxHeight: '30px', maxWidth: '120px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{customer.address2}</TableCell>
+                    <TableCell
+                      sx={{
+                        maxHeight: "30px",
+                        maxWidth: "120px",
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {customer.address1}
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        maxHeight: "30px",
+                        maxWidth: "120px",
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {customer.address2}
+                    </TableCell>
                     <TableCell>{customer.city}</TableCell>
                     <TableCell>{customer.state}</TableCell>
                     <TableCell>{customer.country}</TableCell>
                     <TableCell>{customer.branchCode}</TableCell>
-                    <TableCell  sx={{ maxWidth: '150px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{customer.gtag}</TableCell>
+                    <TableCell
+                      sx={{
+                        maxWidth: "150px",
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {customer.gtag}
+                    </TableCell>
                     <Stack
                       alignItems="center"
                       justifyContent="center"

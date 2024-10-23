@@ -81,6 +81,40 @@ const ContactInner = () => {
 
   console.log("corporateOffice", corporateOffice);
 
+  const cityOrder = [
+    "Mumbai",
+    "Ahmedabad",
+    "Bangalore",
+    "Hyderabad",
+    "Chennai",
+    "Patna",
+    "Ranchi",
+    "Siliguri",
+    "Guwahati",
+    "Cuttak",
+  ];
+  // Create a lowercase version of cityOrder for case-insensitive comparison
+const normalizedCityOrder = cityOrder.map(city => city.toLowerCase());
+
+// Filter companies into ordered and unordered categories
+const orderedCompanies = companies.filter((company) => 
+  normalizedCityOrder.includes(company.city?.toLowerCase())
+);
+
+const unorderedCompanies = companies.filter((company) => 
+  !normalizedCityOrder.includes(company.city?.toLowerCase())
+);
+
+// Sort ordered companies based on their index in the cityOrder
+const sortedOrderedCompanies = orderedCompanies.sort((a, b) => 
+  normalizedCityOrder.indexOf(a.city?.toLowerCase()) - 
+  normalizedCityOrder.indexOf(b.city?.toLowerCase())
+);
+
+// Concatenate sorted ordered companies with unordered companies
+const finalSortedCompanies = [...sortedOrderedCompanies, ...unorderedCompanies];
+
+
   return (
     <>
       <Toaster position="bottom-center" reverseOrder={false} />
@@ -306,7 +340,7 @@ const ContactInner = () => {
             </div>
           </div>
           <div className="row">
-            {companies.map((company) => (
+            {finalSortedCompanies.map((company) => (
               <div className="col-lg-4" key={company.id}>
                 <div className="single-service-wrap">
                   <div
